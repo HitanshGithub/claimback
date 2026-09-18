@@ -1,0 +1,1137 @@
+{
+  "id": "sample-s1",
+  "created_at": "2026-09-17T10:16:25.114426Z",
+  "status": "complete",
+  "source": "sample",
+  "sample_id": "S1",
+  "policy_wording_id": null,
+  "title": "Gallbladder surgery - 'non-payable consumables' deductions (cashless)",
+  "documents": [
+    {
+      "kind": "policy_schedule",
+      "filename": "policy_schedule.pdf",
+      "content_type": "application/pdf"
+    },
+    {
+      "kind": "hospital_bill",
+      "filename": "hospital_bill.pdf",
+      "content_type": "application/pdf"
+    },
+    {
+      "kind": "insurer_letter",
+      "filename": "insurer_letter.pdf",
+      "content_type": "application/pdf"
+    },
+    {
+      "kind": "discharge_summary",
+      "filename": "discharge_summary.pdf",
+      "content_type": "application/pdf"
+    }
+  ],
+  "progress": [
+    {
+      "name": "read_documents",
+      "label": "Reading your documents",
+      "status": "done",
+      "detail": "Sample documents: 22 bill lines, 14 deductions"
+    },
+    {
+      "name": "check_items",
+      "label": "Checking every deduction against the policy's non-payable lists",
+      "status": "done",
+      "detail": "14 deductions checked, 10 found in the policy's lists"
+    },
+    {
+      "name": "check_policy",
+      "label": "Checking your policy wording",
+      "status": "done",
+      "detail": "Checked against Arogya Sanjeevani Policy, Niva Bupa Health Insurance Co. Ltd. (UIN NBHHLIP27056V042627)"
+    },
+    {
+      "name": "check_rules",
+      "label": "Checking IRDAI rules and deadlines",
+      "status": "done",
+      "detail": "4 claim-level checks, 11 IRDAI rules cited"
+    },
+    {
+      "name": "similar_cases",
+      "label": "Finding similar Ombudsman and court decisions",
+      "status": "done",
+      "detail": "3 similar decisions found"
+    },
+    {
+      "name": "ai_review",
+      "label": "Claude reviews anything the rules can't settle",
+      "status": "skipped",
+      "detail": "Off in this local build (rule engine only)"
+    },
+    {
+      "name": "write_report",
+      "label": "Writing your report",
+      "status": "done",
+      "detail": "You can challenge ₹11,600 of the ₹19,840 deducted"
+    }
+  ],
+  "claim_input": {
+    "policy": {
+      "policy_number": "NHI/AS/2026/0073311",
+      "insurer_name": "Nirmaan Health Insurance Co. Ltd.",
+      "product_name": "Arogya Sanjeevani Policy",
+      "policy_wording_id": "AS-NIVA-2026",
+      "sum_insured": 500000.0,
+      "cumulative_bonus": 75000.0,
+      "policy_period_start": "2026-01-10",
+      "policy_period_end": "2027-01-09",
+      "first_inception": "2023-01-10",
+      "continuous_cover_start": "2023-01-10",
+      "peds_declared": [],
+      "optional_covers": [],
+      "co_payment_pct": 5.0,
+      "holder_name": "Sunita Sharma",
+      "city": "Bengaluru",
+      "state": "Karnataka"
+    },
+    "admission": {
+      "patient_name": "Sunita Sharma",
+      "age": 52,
+      "gender": "Female",
+      "hospital_name": "Lakeview Multispeciality Hospital",
+      "hospital_city": "Bengaluru",
+      "network_hospital": true,
+      "claim_type": "cashless",
+      "admission_date": "2026-08-03",
+      "discharge_date": "2026-08-06",
+      "diagnosis": "Symptomatic cholelithiasis (gallbladder stones) with chronic cholecystitis",
+      "procedure": "Laparoscopic cholecystectomy",
+      "is_accident": false,
+      "comorbidities": []
+    },
+    "bill_lines": [
+      {
+        "code": "RM01",
+        "head": "room",
+        "description": "Room Rent - Single Room AC (incl. nursing & boarding)",
+        "qty": 3.0,
+        "rate": 4500.0,
+        "amount": 13500.0
+      },
+      {
+        "code": "NR01",
+        "head": "nursing",
+        "description": "Nursing Care Charges",
+        "qty": 3.0,
+        "rate": 800.0,
+        "amount": 2400.0
+      },
+      {
+        "code": "DR01",
+        "head": "doctor",
+        "description": "Consultant Visit - Dr. K. Rao (General Surgery)",
+        "qty": 3.0,
+        "rate": 1500.0,
+        "amount": 4500.0
+      },
+      {
+        "code": "DR02",
+        "head": "doctor",
+        "description": "Surgeon Fee - Laparoscopic Cholecystectomy",
+        "qty": 1.0,
+        "rate": 45000.0,
+        "amount": 45000.0
+      },
+      {
+        "code": "DR03",
+        "head": "doctor",
+        "description": "Anaesthetist Fee",
+        "qty": 1.0,
+        "rate": 12000.0,
+        "amount": 12000.0
+      },
+      {
+        "code": "OT01",
+        "head": "ot",
+        "description": "Operation Theatre Charges (Major)",
+        "qty": 1.0,
+        "rate": 18000.0,
+        "amount": 18000.0
+      },
+      {
+        "code": "PH01",
+        "head": "pharmacy",
+        "description": "Pharmacy - Medicines, Antibiotics & IV Fluids (as per annexure)",
+        "qty": 1.0,
+        "rate": 14860.0,
+        "amount": 14860.0
+      },
+      {
+        "code": "IN01",
+        "head": "investigations",
+        "description": "Investigations - CBC, LFT, RFT, Coagulation, USG Abdomen, ECG, Chest X-Ray",
+        "qty": 1.0,
+        "rate": 9600.0,
+        "amount": 9600.0
+      },
+      {
+        "code": "IN02",
+        "head": "investigations",
+        "description": "Histopathology - Gallbladder Specimen",
+        "qty": 1.0,
+        "rate": 2350.0,
+        "amount": 2350.0
+      },
+      {
+        "code": "CS01",
+        "head": "consumable",
+        "description": "Sutures - Vicryl 2-0 / Prolene 3-0",
+        "qty": 6.0,
+        "rate": 600.0,
+        "amount": 3600.0
+      },
+      {
+        "code": "CS02",
+        "head": "consumable",
+        "description": "Hem-o-lok Ligation Clips (Medium-Large)",
+        "qty": 6.0,
+        "rate": 700.0,
+        "amount": 4200.0
+      },
+      {
+        "code": "CS03",
+        "head": "consumable",
+        "description": "Closed Suction Drain Set (Romovac 14Fr)",
+        "qty": 1.0,
+        "rate": 1450.0,
+        "amount": 1450.0
+      },
+      {
+        "code": "CS04",
+        "head": "consumable",
+        "description": "Examination Gloves (pairs)",
+        "qty": 31.0,
+        "rate": 40.0,
+        "amount": 1240.0
+      },
+      {
+        "code": "CS05",
+        "head": "consumable",
+        "description": "IV Cannula - Vasofix Safety 20G",
+        "qty": 1.0,
+        "rate": 350.0,
+        "amount": 350.0
+      },
+      {
+        "code": "CS06",
+        "head": "consumable",
+        "description": "Nebulizer Kit",
+        "qty": 1.0,
+        "rate": 650.0,
+        "amount": 650.0
+      },
+      {
+        "code": "CS07",
+        "head": "consumable",
+        "description": "Gauze & Cotton (sterile)",
+        "qty": 1.0,
+        "rate": 900.0,
+        "amount": 900.0
+      },
+      {
+        "code": "MS01",
+        "head": "misc",
+        "description": "Admission Kit",
+        "qty": 1.0,
+        "rate": 1200.0,
+        "amount": 1200.0
+      },
+      {
+        "code": "MS02",
+        "head": "misc",
+        "description": "Registration Charges",
+        "qty": 1.0,
+        "rate": 500.0,
+        "amount": 500.0
+      },
+      {
+        "code": "MS03",
+        "head": "misc",
+        "description": "Attendant Food Charges",
+        "qty": 1.0,
+        "rate": 2100.0,
+        "amount": 2100.0
+      },
+      {
+        "code": "MS04",
+        "head": "misc",
+        "description": "Pulse Oximeter Charges",
+        "qty": 3.0,
+        "rate": 200.0,
+        "amount": 600.0
+      },
+      {
+        "code": "MS05",
+        "head": "misc",
+        "description": "Documentation Charges",
+        "qty": 1.0,
+        "rate": 400.0,
+        "amount": 400.0
+      },
+      {
+        "code": "MS06",
+        "head": "misc",
+        "description": "Medical Records Copy Charges",
+        "qty": 1.0,
+        "rate": 300.0,
+        "amount": 300.0
+      }
+    ],
+    "decision": {
+      "letter_type": "settlement",
+      "letter_date": "2026-08-06",
+      "claim_number": "CLM-NHI-26-0845521",
+      "documents_received_date": "2026-08-06",
+      "amount_claimed": 139700.0,
+      "total_deducted": 19840.0,
+      "admissible_amount": 119860.0,
+      "co_payment": 5993.0,
+      "amount_paid": 113867.0,
+      "deductions": [
+        {
+          "line_code": "CS01",
+          "description": "Sutures - Vicryl 2-0 / Prolene 3-0",
+          "billed": 3600.0,
+          "deducted": 3600.0,
+          "reason": "Non-payable consumables"
+        },
+        {
+          "line_code": "CS02",
+          "description": "Hem-o-lok Ligation Clips (Medium-Large)",
+          "billed": 4200.0,
+          "deducted": 4200.0,
+          "reason": "Non-payable consumables"
+        },
+        {
+          "line_code": "CS03",
+          "description": "Closed Suction Drain Set (Romovac 14Fr)",
+          "billed": 1450.0,
+          "deducted": 1450.0,
+          "reason": "Non-payable consumables"
+        },
+        {
+          "line_code": "IN02",
+          "description": "Histopathology - Gallbladder Specimen",
+          "billed": 2350.0,
+          "deducted": 2350.0,
+          "reason": "Diagnostic expenses not related to current treatment (Code Excl04)"
+        },
+        {
+          "line_code": "CS04",
+          "description": "Examination Gloves (pairs)",
+          "billed": 1240.0,
+          "deducted": 1240.0,
+          "reason": "Non-payable item - List I"
+        },
+        {
+          "line_code": "CS05",
+          "description": "IV Cannula - Vasofix Safety 20G",
+          "billed": 350.0,
+          "deducted": 350.0,
+          "reason": "Non-payable item - List I"
+        },
+        {
+          "line_code": "CS06",
+          "description": "Nebulizer Kit",
+          "billed": 650.0,
+          "deducted": 650.0,
+          "reason": "Non-payable item - List I"
+        },
+        {
+          "line_code": "CS07",
+          "description": "Gauze & Cotton (sterile)",
+          "billed": 900.0,
+          "deducted": 900.0,
+          "reason": "Subsumed into procedure charges - List III"
+        },
+        {
+          "line_code": "MS01",
+          "description": "Admission Kit",
+          "billed": 1200.0,
+          "deducted": 1200.0,
+          "reason": "Subsumed into room charges - List II"
+        },
+        {
+          "line_code": "MS02",
+          "description": "Registration Charges",
+          "billed": 500.0,
+          "deducted": 500.0,
+          "reason": "Subsumed into cost of treatment - List IV"
+        },
+        {
+          "line_code": "MS03",
+          "description": "Attendant Food Charges",
+          "billed": 2100.0,
+          "deducted": 2100.0,
+          "reason": "Non-payable item - List I"
+        },
+        {
+          "line_code": "MS04",
+          "description": "Pulse Oximeter Charges",
+          "billed": 600.0,
+          "deducted": 600.0,
+          "reason": "Subsumed into room charges - List II"
+        },
+        {
+          "line_code": "MS05",
+          "description": "Documentation Charges",
+          "billed": 400.0,
+          "deducted": 400.0,
+          "reason": "Subsumed into room charges - List II"
+        },
+        {
+          "line_code": "MS06",
+          "description": "Medical Records Copy Charges",
+          "billed": 300.0,
+          "deducted": 300.0,
+          "reason": "Non-payable item - List I"
+        }
+      ],
+      "repudiation_reason": null,
+      "clauses_cited": []
+    }
+  },
+  "report": {
+    "generated_at": "2026-09-17T10:16:25.139816Z",
+    "policy_wording_id": "AS-NIVA-2026",
+    "policy_wording_name": "Arogya Sanjeevani Policy, Niva Bupa Health Insurance Co. Ltd. (UIN NBHHLIP27056V042627)",
+    "headline": "You can challenge ₹11,600 of the ₹19,840 deducted",
+    "summary": "4 of 14 deductions don't hold up against your policy wording and IRDAI rules. If the insurer accepts, you could get about ₹11,020 more after the 5% co-pay. ₹3,600 (5 items) is part of room or procedure charges. The deduction is correct, but you can ask the hospital to waive it.",
+    "totals": {
+      "claimed": 139700.0,
+      "paid": 113867.0,
+      "total_deducted": 19840.0,
+      "challengeable_amount": 11600.0,
+      "needs_more_info_amount": 0.0,
+      "ask_hospital_amount": 3600.0,
+      "estimated_additional_payable": 11020.0,
+      "claim_rejected": false
+    },
+    "deduction_findings": [
+      {
+        "id": "D01",
+        "line_code": "CS01",
+        "description": "Sutures - Vicryl 2-0 / Prolene 3-0",
+        "billed": 3600.0,
+        "deducted": 3600.0,
+        "insurer_reason": "Non-payable consumables",
+        "category": "not_in_lists",
+        "verdict": "challengeable",
+        "strength": "strong",
+        "amount_challengeable": 3600.0,
+        "explanation": "This item isn't in your policy's lists of non-payable items (Annexure-A, List I-IV) and it is a medically necessary part of the surgery. An insurer can only deduct for exclusions actually written in the policy, and this letter cites no clause.",
+        "citations": [
+          "NIVA-AS-4.7-LISTS",
+          "R-NO-DEDUCTION-OUTSIDE-LISTED-EXCLUSIONS",
+          "R-REJECTION-MUST-CITE-SPECIFIC-CLAUSE"
+        ],
+        "matched_item": null
+      },
+      {
+        "id": "D02",
+        "line_code": "CS02",
+        "description": "Hem-o-lok Ligation Clips (Medium-Large)",
+        "billed": 4200.0,
+        "deducted": 4200.0,
+        "insurer_reason": "Non-payable consumables",
+        "category": "not_in_lists",
+        "verdict": "challengeable",
+        "strength": "strong",
+        "amount_challengeable": 4200.0,
+        "explanation": "This item isn't in your policy's lists of non-payable items (Annexure-A, List I-IV) and it is a medically necessary part of the surgery. An insurer can only deduct for exclusions actually written in the policy, and this letter cites no clause.",
+        "citations": [
+          "NIVA-AS-4.7-LISTS",
+          "R-NO-DEDUCTION-OUTSIDE-LISTED-EXCLUSIONS",
+          "R-REJECTION-MUST-CITE-SPECIFIC-CLAUSE"
+        ],
+        "matched_item": null
+      },
+      {
+        "id": "D03",
+        "line_code": "CS03",
+        "description": "Closed Suction Drain Set (Romovac 14Fr)",
+        "billed": 1450.0,
+        "deducted": 1450.0,
+        "insurer_reason": "Non-payable consumables",
+        "category": "not_in_lists",
+        "verdict": "challengeable",
+        "strength": "moderate",
+        "amount_challengeable": 1450.0,
+        "explanation": "This item isn't in your policy's lists of non-payable items (Annexure-A, List I-IV). An insurer can only deduct for exclusions actually written in the policy, and this letter cites no clause.",
+        "citations": [
+          "NIVA-AS-4.7-LISTS",
+          "R-NO-DEDUCTION-OUTSIDE-LISTED-EXCLUSIONS",
+          "R-REJECTION-MUST-CITE-SPECIFIC-CLAUSE"
+        ],
+        "matched_item": null
+      },
+      {
+        "id": "D04",
+        "line_code": "IN02",
+        "description": "Histopathology - Gallbladder Specimen",
+        "billed": 2350.0,
+        "deducted": 2350.0,
+        "insurer_reason": "Diagnostic expenses not related to current treatment (Code Excl04)",
+        "category": "exclusion",
+        "verdict": "challengeable",
+        "strength": "strong",
+        "amount_challengeable": 2350.0,
+        "explanation": "This exclusion only covers tests that are not related or incidental to the treatment. Examining the tissue removed during the laparoscopic cholecystectomy is part of that treatment.",
+        "citations": [
+          "NIVA-AS-7.1-EVAL",
+          "R-REJECTION-MUST-CITE-SPECIFIC-CLAUSE"
+        ],
+        "matched_item": null
+      },
+      {
+        "id": "D05",
+        "line_code": "CS04",
+        "description": "Examination Gloves (pairs)",
+        "billed": 1240.0,
+        "deducted": 1240.0,
+        "insurer_reason": "Non-payable item - List I",
+        "category": "non_payable_item",
+        "verdict": "fair",
+        "strength": null,
+        "amount_challengeable": 0.0,
+        "explanation": "\"Examination Gloves (pairs)\" is listed as \"Gloves\", which is in List I of your policy's Annexure-A (not covered). This deduction is correct.",
+        "citations": [
+          "NP-AS-LI-056"
+        ],
+        "matched_item": "GLOVES"
+      },
+      {
+        "id": "D06",
+        "line_code": "CS05",
+        "description": "IV Cannula - Vasofix Safety 20G",
+        "billed": 350.0,
+        "deducted": 350.0,
+        "insurer_reason": "Non-payable item - List I",
+        "category": "non_payable_item",
+        "verdict": "fair",
+        "strength": null,
+        "amount_challengeable": 0.0,
+        "explanation": "\"IV Cannula - Vasofix Safety 20G\" is listed as \"Vasofix safety\", which is in List I of your policy's Annexure-A (not covered). This deduction is correct.",
+        "citations": [
+          "NP-AS-LI-068"
+        ],
+        "matched_item": "VASOFIX SAFETY"
+      },
+      {
+        "id": "D07",
+        "line_code": "CS06",
+        "description": "Nebulizer Kit",
+        "billed": 650.0,
+        "deducted": 650.0,
+        "insurer_reason": "Non-payable item - List I",
+        "category": "non_payable_item",
+        "verdict": "fair",
+        "strength": null,
+        "amount_challengeable": 0.0,
+        "explanation": "\"Nebulizer Kit\" is listed as \"Nebulizer kit\", which is in List I of your policy's Annexure-A (not covered). This deduction is correct.",
+        "citations": [
+          "NP-AS-LI-038"
+        ],
+        "matched_item": "NEBULIZER KIT"
+      },
+      {
+        "id": "D08",
+        "line_code": "CS07",
+        "description": "Gauze & Cotton (sterile)",
+        "billed": 900.0,
+        "deducted": 900.0,
+        "insurer_reason": "Subsumed into procedure charges - List III",
+        "category": "non_payable_item",
+        "verdict": "fair_ask_hospital_to_absorb",
+        "strength": null,
+        "amount_challengeable": 0.0,
+        "explanation": "\"Gauze & Cotton (sterile)\" is listed as \"Cotton\" and \"Gauze\", which is in List III of your policy's Annexure-A: it counts as part of the procedure charges, so it isn't paid as a separate line. Because this was cashless at a network hospital, you can ask the hospital to absorb it. That's a request, not a legal right.",
+        "citations": [
+          "NP-AS-LIII-018",
+          "NP-AS-LIII-008"
+        ],
+        "matched_item": "COTTON"
+      },
+      {
+        "id": "D09",
+        "line_code": "MS01",
+        "description": "Admission Kit",
+        "billed": 1200.0,
+        "deducted": 1200.0,
+        "insurer_reason": "Subsumed into room charges - List II",
+        "category": "non_payable_item",
+        "verdict": "fair_ask_hospital_to_absorb",
+        "strength": null,
+        "amount_challengeable": 0.0,
+        "explanation": "\"Admission Kit\" is listed as \"Admission kit\", which is in List II of your policy's Annexure-A: it counts as part of the room charges, so it isn't paid as a separate line. Because this was cashless at a network hospital, you can ask the hospital to absorb it. That's a request, not a legal right.",
+        "citations": [
+          "NP-AS-LII-027"
+        ],
+        "matched_item": "ADMISSION KIT"
+      },
+      {
+        "id": "D10",
+        "line_code": "MS02",
+        "description": "Registration Charges",
+        "billed": 500.0,
+        "deducted": 500.0,
+        "insurer_reason": "Subsumed into cost of treatment - List IV",
+        "category": "non_payable_item",
+        "verdict": "fair_ask_hospital_to_absorb",
+        "strength": null,
+        "amount_challengeable": 0.0,
+        "explanation": "\"Registration Charges\" is listed as \"Admission/registration charges\", which is in List IV of your policy's Annexure-A: it counts as part of the cost of treatment, so it isn't paid as a separate line. Because this was cashless at a network hospital, you can ask the hospital to absorb it. That's a request, not a legal right.",
+        "citations": [
+          "NP-AS-LIV-001"
+        ],
+        "matched_item": "ADMISSION/REGISTRATION CHARGES"
+      },
+      {
+        "id": "D11",
+        "line_code": "MS03",
+        "description": "Attendant Food Charges",
+        "billed": 2100.0,
+        "deducted": 2100.0,
+        "insurer_reason": "Non-payable item - List I",
+        "category": "non_payable_item",
+        "verdict": "fair",
+        "strength": null,
+        "amount_challengeable": 0.0,
+        "explanation": "\"Attendant Food Charges\" is listed as \"Food charges (other than patient's diet provided by hospital)\", which is in List I of your policy's Annexure-A (not covered). This deduction is correct.",
+        "citations": [
+          "NP-AS-LI-009"
+        ],
+        "matched_item": "FOOD CHARGES (OTHER THAN PATIENT's DIET PROVIDED BY HOSPITAL)"
+      },
+      {
+        "id": "D12",
+        "line_code": "MS04",
+        "description": "Pulse Oximeter Charges",
+        "billed": 600.0,
+        "deducted": 600.0,
+        "insurer_reason": "Subsumed into room charges - List II",
+        "category": "non_payable_item",
+        "verdict": "fair_ask_hospital_to_absorb",
+        "strength": null,
+        "amount_challengeable": 0.0,
+        "explanation": "\"Pulse Oximeter Charges\" is listed as \"Pulseoxymeter charges\", which is in List II of your policy's Annexure-A: it counts as part of the room charges, so it isn't paid as a separate line. Because this was cashless at a network hospital, you can ask the hospital to absorb it. That's a request, not a legal right.",
+        "citations": [
+          "NP-AS-LII-037"
+        ],
+        "matched_item": "PULSEOXYMETER CHARGES"
+      },
+      {
+        "id": "D13",
+        "line_code": "MS05",
+        "description": "Documentation Charges",
+        "billed": 400.0,
+        "deducted": 400.0,
+        "insurer_reason": "Subsumed into room charges - List II",
+        "category": "non_payable_item",
+        "verdict": "fair_ask_hospital_to_absorb",
+        "strength": null,
+        "amount_challengeable": 0.0,
+        "explanation": "\"Documentation Charges\" is listed as \"Documentation charges / administrative expenses\", which is in List II of your policy's Annexure-A: it counts as part of the room charges, so it isn't paid as a separate line. Because this was cashless at a network hospital, you can ask the hospital to absorb it. That's a request, not a legal right.",
+        "citations": [
+          "NP-AS-LII-029"
+        ],
+        "matched_item": "DOCUMENTATION CHARGES / ADMINISTRATIVE EXPENSES"
+      },
+      {
+        "id": "D14",
+        "line_code": "MS06",
+        "description": "Medical Records Copy Charges",
+        "billed": 300.0,
+        "deducted": 300.0,
+        "insurer_reason": "Non-payable item - List I",
+        "category": "non_payable_item",
+        "verdict": "fair",
+        "strength": null,
+        "amount_challengeable": 0.0,
+        "explanation": "\"Medical Records Copy Charges\" is listed as \"Medical records\", which is in List I of your policy's Annexure-A (not covered). This deduction is correct.",
+        "citations": [
+          "NP-AS-LI-031"
+        ],
+        "matched_item": "MEDICAL RECORDS"
+      }
+    ],
+    "check_findings": [
+      {
+        "id": "C-CLAUSE-REFERENCES",
+        "issue": "Deduction letter does not cite policy clauses",
+        "verdict": "challengeable",
+        "strength": "moderate",
+        "explanation": "3 deductions only say things like \"Non-payable consumables\". When a claim is partly disallowed, the insurer must refer to the specific terms of the policy. Ask it to name the clause for each.",
+        "citations": [
+          "R-REJECTION-MUST-CITE-SPECIFIC-CLAUSE"
+        ],
+        "computed": {
+          "deductions": [
+            "D01",
+            "D02",
+            "D03"
+          ]
+        }
+      },
+      {
+        "id": "C-COPAY",
+        "issue": "Co-payment computation",
+        "verdict": "fair",
+        "strength": null,
+        "explanation": "The 5% co-pay (₹5,993) was correctly applied to the admissible amount after deductions (₹1,19,860).",
+        "citations": [
+          "NIVA-AS-9.5-COPAY"
+        ],
+        "computed": {
+          "admissible": 119860.0,
+          "co_payment": 5993.0
+        }
+      },
+      {
+        "id": "C-ROOM-RENT",
+        "issue": "Room rent",
+        "verdict": "fair",
+        "strength": null,
+        "explanation": "₹4,500/day doesn't exceed the eligible ₹5,000/day, so no proportionate deduction applies.",
+        "citations": [
+          "NIVA-AS-4.1-ROOM"
+        ],
+        "computed": {
+          "actual_per_day": 4500.0,
+          "eligible_per_day": 5000
+        }
+      },
+      {
+        "id": "C-WAITING",
+        "issue": "Specific waiting period: Calculi in urinary system, Gall Bladder and Bile duct, excluding malignancy",
+        "verdict": "not_applicable",
+        "strength": null,
+        "explanation": "Calculi in urinary system, Gall Bladder and Bile duct, excluding malignancy has a 24-month waiting period. Continuous cover since 10 Jan 2023 is 42 months at admission, so the waiting period is complete.",
+        "citations": [
+          "NIVA-AS-6.3-SPECIFIC",
+          "R-SPECIFIC-WAITING-MAX-36M"
+        ],
+        "computed": {
+          "computed_months": 42,
+          "required_months": 24
+        }
+      }
+    ],
+    "similar_cases": [
+      {
+        "case_id": "CASE-007",
+        "forum": "Insurance Ombudsman, Mumbai",
+        "decision_date": "2021-04-29",
+        "decision": "allowed",
+        "category": "non_payable_consumables",
+        "insurer_reason": "Anaesthesia machine and gases are consumables forming part of OT charges under the standard definition of OT and should not be billed separately; OT and anaesthesia charges in the bill had already been paid. (Separately, Rs 17,947 of items such as caps, gauze, masks, gloves and food were deducted as non-payable.)",
+        "reasoning": "The Forum noted that the hospital had billed the anaesthesia equipment and gases separately and clarified they were not part of OT charges; had they been included in OT charges the insurer would have paid them. Disallowing them merely because of how the hospital structured its bill was not justified, so the further Rs 10,890 was ordered to be paid.",
+        "amount_awarded_inr": 10890.0,
+        "decided_before_2024_health_rules": true,
+        "source_url": "https://web.archive.org/web/20240620075806/https://www.cioins.co.in/AwardsMonthwise/Apr2021/Health_individual%20April%202021.pdf"
+      },
+      {
+        "case_id": "CASE-008",
+        "forum": "Insurance Ombudsman, Mumbai",
+        "decision_date": "2021-04-26",
+        "decision": "dismissed",
+        "category": "non_payable_consumables",
+        "insurer_reason": "Rs 2,700 of nursing/RMO charges are included in room charges; Rs 23,837 was deducted as non-medical expenses, including Rs 7,392 for the drainage kit, which is not payable under clause 4.4.17 and Annexure II (item 180 - 'any kit not specified').",
+        "reasoning": "The Forum held that the drainage kit is a non-medical item listed as not payable in Annexure II (item 180) of the policy, so the settlement was in order and no relief could be granted.",
+        "amount_awarded_inr": null,
+        "decided_before_2024_health_rules": true,
+        "source_url": "https://web.archive.org/web/20240620075806/https://www.cioins.co.in/AwardsMonthwise/Apr2021/Health_individual%20April%202021.pdf"
+      },
+      {
+        "case_id": "CASE-009",
+        "forum": "State Commission Delhi (Delhi State Consumer Disputes Redressal Commission)",
+        "decision_date": "2021-02-25",
+        "decision": "dismissed",
+        "category": "non_payable_consumables",
+        "insurer_reason": "Deductions under exclusion 4.16 (external/durable medical equipment usable at home, e.g., knee support), 4.17 (non-medical items) and 4.26 (doctor's home visits and nursing/physiotherapy at home during pre- and post-hospitalisation), totalling Rs 78,490.",
+        "reasoning": "Applying the principle that insurance contracts are construed strictly (Sushilaben Indravadan Gandhi v. New India Assurance, SC 2020), the State Commission held the deducted items fell within the exclusion clauses. It set aside the District Forum's order and directed payment of only the originally approved Rs 9,527 (with 9% interest if not paid by 31.03.2021).",
+        "amount_awarded_inr": 9527.0,
+        "decided_before_2024_health_rules": true,
+        "source_url": "https://indiankanoon.org/doc/175017676/"
+      }
+    ],
+    "escalation": [
+      {
+        "step": 1,
+        "title": "Write to the insurer's grievance officer",
+        "action": "Send the complaint letter ClaimBack drafts, listing each disputed amount and the clause or rule behind it. Keep proof of sending.",
+        "due_date": "2026-09-17",
+        "deadline_note": "The insurer must acknowledge immediately and resolve it within 14 days, by 01 Oct 2026.",
+        "citations": [
+          "R-GRIEVANCE-ACK-IMMEDIATE-RESOLVE-14-DAYS",
+          "R-OMBUDSMAN-PRECONDITION-APPROACH-INSURER-FIRST"
+        ]
+      },
+      {
+        "step": 2,
+        "title": "Register it on Bima Bharosa",
+        "action": "Also log the complaint on IRDAI's Bima Bharosa portal (bimabharosa.irdai.gov.in) so it's tracked.",
+        "due_date": "2026-09-17",
+        "deadline_note": "Optional, but it puts the complaint on IRDAI's record.",
+        "citations": [
+          "R-BIMA-BHAROSA-ONLINE-COMPLAINT"
+        ]
+      },
+      {
+        "step": 3,
+        "title": "Go to the Insurance Ombudsman, Bengaluru",
+        "action": "If the insurer rejects your complaint, doesn't reply, or replies unsatisfactorily, file with the Ombudsman online at cioins.co.in. It's free.",
+        "due_date": "2026-10-17",
+        "deadline_note": "Possible after 30 days without a satisfactory reply. File within 1 year of the insurer's reply. Claims up to Rs 50 lakh.",
+        "citations": [
+          "R-OMBUDSMAN-AFTER-30-DAYS-OR-UNSATISFACTORY-DECISION",
+          "R-OMBUDSMAN-ONE-YEAR-LIMIT",
+          "R-OMBUDSMAN-NO-FEE-FILING-MODES",
+          "R-OMBUDSMAN-CLAIMS-UP-TO-50-LAKH"
+        ]
+      },
+      {
+        "step": 4,
+        "title": "Consumer commission (last resort)",
+        "action": "If the Ombudsman route doesn't work for you, a district consumer commission can hear the dispute. You can't pursue both for the same dispute.",
+        "due_date": null,
+        "deadline_note": "General information only; consider advice before filing.",
+        "citations": [
+          "R-OMBUDSMAN-BAR-IF-COURT-OR-FORUM-CASE"
+        ]
+      }
+    ],
+    "ombudsman_office": {
+      "city": "Bengaluru",
+      "address": "Office of the Insurance Ombudsman, Jeevan Soudha Building, PID No. 57-27-N-19, Ground Floor, 19/19, 24th Main Road, JP Nagar, 1st Phase, Bengaluru - 560 078",
+      "email": "oio.bengaluru@cioins.co.in",
+      "phone": "080-26652048 / 26652049"
+    },
+    "citations": {
+      "NIVA-AS-4.1-ROOM": {
+        "id": "NIVA-AS-4.1-ROOM",
+        "kind": "policy_clause",
+        "title": "Room rent and ICU limits",
+        "quote": "Room Rent, Boarding, Nursing Expenses as provided by the Hospital/ Nursing Home up to 2% of the sum insured subject to maximum of Rs.5000/- per day. ii. Intensive Care Unit (ICU) / Intensive Cardiac Care Unit (ICCU) expenses up to 5% of sum insured subject to maximum of Rs. 10,000/- per day.",
+        "source": "Arogya Sanjeevani Policy, Niva Bupa Health Insurance Co. Ltd.",
+        "source_detail": null,
+        "clause_ref": "Section 4.1(i)-(ii)",
+        "page": 6,
+        "url": "https://transactions.nivabupa.com/pages/doc/policy_wording/ArogyaSanjeevani-PolicyDocument.pdf?v=1.0"
+      },
+      "NIVA-AS-4.7-LISTS": {
+        "id": "NIVA-AS-4.7-LISTS",
+        "kind": "policy_clause",
+        "title": "Non-payable and subsumed items lists",
+        "quote": "The expenses that are not covered in this policy are placed under List-I of Annexure-A. The list of expenses that are to be subsumed into room charges, or procedure charges or costs of treatment are placed under List-II, List-III and List-IV of Annexure-A respectively.",
+        "source": "Arogya Sanjeevani Policy, Niva Bupa Health Insurance Co. Ltd.",
+        "source_detail": null,
+        "clause_ref": "Section 4.7",
+        "page": 7,
+        "url": "https://transactions.nivabupa.com/pages/doc/policy_wording/ArogyaSanjeevani-PolicyDocument.pdf?v=1.0"
+      },
+      "NIVA-AS-6.3-SPECIFIC": {
+        "id": "NIVA-AS-6.3-SPECIFIC",
+        "kind": "policy_clause",
+        "title": "Specific waiting periods do not apply to accidents",
+        "quote": "Expenses related to the treatment of the following listed conditions, surgeries/treatments shall be excluded until the expiry of 24/36 months of continuous coverage, as may be the case after the date of inception of the first policy with the insurer. This exclusion shall not be applicable for claims arising due to an accident.",
+        "source": "Arogya Sanjeevani Policy, Niva Bupa Health Insurance Co. Ltd.",
+        "source_detail": null,
+        "clause_ref": "Section 6.3 (Code Excl02)",
+        "page": 8,
+        "url": "https://transactions.nivabupa.com/pages/doc/policy_wording/ArogyaSanjeevani-PolicyDocument.pdf?v=1.0"
+      },
+      "NIVA-AS-7.1-EVAL": {
+        "id": "NIVA-AS-7.1-EVAL",
+        "kind": "policy_clause",
+        "title": "Admission primarily for diagnostics excluded",
+        "quote": "Expenses related to any admission primarily for diagnostics and evaluation purposes.",
+        "source": "Arogya Sanjeevani Policy, Niva Bupa Health Insurance Co. Ltd.",
+        "source_detail": null,
+        "clause_ref": "Section 7.1 (Code Excl04)",
+        "page": 9,
+        "url": "https://transactions.nivabupa.com/pages/doc/policy_wording/ArogyaSanjeevani-PolicyDocument.pdf?v=1.0"
+      },
+      "NIVA-AS-9.5-COPAY": {
+        "id": "NIVA-AS-9.5-COPAY",
+        "kind": "policy_clause",
+        "title": "5% co-payment on admissible amount",
+        "quote": "Each and every claim under the Policy shall be subject to a Copayment of 5% applicable to claim amount admissible and payable as per the terms and conditions of the Policy.",
+        "source": "Arogya Sanjeevani Policy, Niva Bupa Health Insurance Co. Ltd.",
+        "source_detail": null,
+        "clause_ref": "Section 9.5",
+        "page": 13,
+        "url": "https://transactions.nivabupa.com/pages/doc/policy_wording/ArogyaSanjeevani-PolicyDocument.pdf?v=1.0"
+      },
+      "NP-AS-LI-009": {
+        "id": "NP-AS-LI-009",
+        "kind": "non_payable_item",
+        "title": "Items for which coverage is not available in the policy: FOOD CHARGES (OTHER THAN PATIENT's DIET PROVIDED BY HOSPITAL)",
+        "quote": "Printed in the policy wording's Annexure-A List I (coverage not available). Deduction is fair.",
+        "source": "Arogya Sanjeevani policy wording, Annexure-A",
+        "source_detail": null,
+        "clause_ref": "Annexure-A, List I, item 9",
+        "page": 20,
+        "url": null
+      },
+      "NP-AS-LI-031": {
+        "id": "NP-AS-LI-031",
+        "kind": "non_payable_item",
+        "title": "Items for which coverage is not available in the policy: MEDICAL RECORDS",
+        "quote": "Printed in the policy wording's Annexure-A List I (coverage not available). Deduction is fair.",
+        "source": "Arogya Sanjeevani policy wording, Annexure-A",
+        "source_detail": null,
+        "clause_ref": "Annexure-A, List I, item 31",
+        "page": 20,
+        "url": null
+      },
+      "NP-AS-LI-038": {
+        "id": "NP-AS-LI-038",
+        "kind": "non_payable_item",
+        "title": "Items for which coverage is not available in the policy: NEBULIZER KIT",
+        "quote": "Printed in the policy wording's Annexure-A List I (coverage not available). Deduction is fair.",
+        "source": "Arogya Sanjeevani policy wording, Annexure-A",
+        "source_detail": null,
+        "clause_ref": "Annexure-A, List I, item 38",
+        "page": 20,
+        "url": null
+      },
+      "NP-AS-LI-056": {
+        "id": "NP-AS-LI-056",
+        "kind": "non_payable_item",
+        "title": "Items for which coverage is not available in the policy: GLOVES",
+        "quote": "Printed in the policy wording's Annexure-A List I (coverage not available). Deduction is fair.",
+        "source": "Arogya Sanjeevani policy wording, Annexure-A",
+        "source_detail": null,
+        "clause_ref": "Annexure-A, List I, item 56",
+        "page": 21,
+        "url": null
+      },
+      "NP-AS-LI-068": {
+        "id": "NP-AS-LI-068",
+        "kind": "non_payable_item",
+        "title": "Items for which coverage is not available in the policy: VASOFIX SAFETY",
+        "quote": "Printed in the policy wording's Annexure-A List I (coverage not available). Deduction is fair.",
+        "source": "Arogya Sanjeevani policy wording, Annexure-A",
+        "source_detail": null,
+        "clause_ref": "Annexure-A, List I, item 68",
+        "page": 21,
+        "url": null
+      },
+      "NP-AS-LII-027": {
+        "id": "NP-AS-LII-027",
+        "kind": "non_payable_item",
+        "title": "Items that are to be subsumed into Room Charges: ADMISSION KIT",
+        "quote": "The policy wording says this is subsumed into room charges, so it is not paid as a separate line and a separate-line deduction is fair. At a network hospital you can ask the hospital to absorb it, but the 2020 IRDAI instruction that insurers stop hospitals billing these items was superseded in May 2024, so this is a request, not an enforceable right. Challenge only if the room charge itself was cut because of it.",
+        "source": "Arogya Sanjeevani policy wording, Annexure-A",
+        "source_detail": null,
+        "clause_ref": "Annexure-A, List II, item 27",
+        "page": 22,
+        "url": null
+      },
+      "NP-AS-LII-029": {
+        "id": "NP-AS-LII-029",
+        "kind": "non_payable_item",
+        "title": "Items that are to be subsumed into Room Charges: DOCUMENTATION CHARGES / ADMINISTRATIVE EXPENSES",
+        "quote": "The policy wording says this is subsumed into room charges, so it is not paid as a separate line and a separate-line deduction is fair. At a network hospital you can ask the hospital to absorb it, but the 2020 IRDAI instruction that insurers stop hospitals billing these items was superseded in May 2024, so this is a request, not an enforceable right. Challenge only if the room charge itself was cut because of it.",
+        "source": "Arogya Sanjeevani policy wording, Annexure-A",
+        "source_detail": null,
+        "clause_ref": "Annexure-A, List II, item 29",
+        "page": 22,
+        "url": null
+      },
+      "NP-AS-LII-037": {
+        "id": "NP-AS-LII-037",
+        "kind": "non_payable_item",
+        "title": "Items that are to be subsumed into Room Charges: PULSEOXYMETER CHARGES",
+        "quote": "The policy wording says this is subsumed into room charges, so it is not paid as a separate line and a separate-line deduction is fair. At a network hospital you can ask the hospital to absorb it, but the 2020 IRDAI instruction that insurers stop hospitals billing these items was superseded in May 2024, so this is a request, not an enforceable right. Challenge only if the room charge itself was cut because of it.",
+        "source": "Arogya Sanjeevani policy wording, Annexure-A",
+        "source_detail": null,
+        "clause_ref": "Annexure-A, List II, item 37",
+        "page": 22,
+        "url": null
+      },
+      "NP-AS-LIII-008": {
+        "id": "NP-AS-LIII-008",
+        "kind": "non_payable_item",
+        "title": "Items that are to be subsumed into Procedure Charges: GAUZE",
+        "quote": "The policy wording says this is subsumed into procedure charges, so a separate-line deduction is fair. At a network hospital you can ask the hospital to absorb it (a request, not an enforceable right since the 2020 circular was superseded).",
+        "source": "Arogya Sanjeevani policy wording, Annexure-A",
+        "source_detail": null,
+        "clause_ref": "Annexure-A, List III, item 8",
+        "page": 22,
+        "url": null
+      },
+      "NP-AS-LIII-018": {
+        "id": "NP-AS-LIII-018",
+        "kind": "non_payable_item",
+        "title": "Items that are to be subsumed into Procedure Charges: COTTON",
+        "quote": "The policy wording says this is subsumed into procedure charges, so a separate-line deduction is fair. At a network hospital you can ask the hospital to absorb it (a request, not an enforceable right since the 2020 circular was superseded).",
+        "source": "Arogya Sanjeevani policy wording, Annexure-A",
+        "source_detail": null,
+        "clause_ref": "Annexure-A, List III, item 18",
+        "page": 22,
+        "url": null
+      },
+      "NP-AS-LIV-001": {
+        "id": "NP-AS-LIV-001",
+        "kind": "non_payable_item",
+        "title": "Items that are to be subsumed into costs of treatment: ADMISSION/REGISTRATION CHARGES",
+        "quote": "The policy wording says this is subsumed into cost of treatment (incl. diagnostics), so a separate-line deduction is fair. At a network hospital you can ask the hospital to absorb it (a request, not an enforceable right since the 2020 circular was superseded).",
+        "source": "Arogya Sanjeevani policy wording, Annexure-A",
+        "source_detail": null,
+        "clause_ref": "Annexure-A, List IV, item 1",
+        "page": 23,
+        "url": null
+      },
+      "R-BIMA-BHAROSA-ONLINE-COMPLAINT": {
+        "id": "R-BIMA-BHAROSA-ONLINE-COMPLAINT",
+        "kind": "rule",
+        "title": "Policyholders/claimants can also register a complaint online on IRDAI's Bima Bharosa portal.",
+        "quote": "The policyholder or the claimant also has the option to register the complaint on-line at IRDAI's Bima Bharosa by visiting https://bimabharosa.irdai.gov.in/.",
+        "source": "IRDAI Master Circular on Protection of Policyholders' Interests, 2024",
+        "source_detail": "Master Circular on Protection of Policyholders' Interests, 2024, Ref IRDAI/PP&GR/CIR/MISC/117/9/2024",
+        "clause_ref": "Section 1, Part B, VI(1)",
+        "page": 123,
+        "url": "https://irdai.gov.in/document-detail?documentId=5625747"
+      },
+      "R-GRIEVANCE-ACK-IMMEDIATE-RESOLVE-14-DAYS": {
+        "id": "R-GRIEVANCE-ACK-IMMEDIATE-RESOLVE-14-DAYS",
+        "kind": "rule",
+        "title": "Insurers must acknowledge a complaint immediately and resolve it within 14 days, giving reasons with specific reference to policy terms if the complaint is not accepted.",
+        "quote": "On receipt of a complaint, the complainant will have to be given an acknowledgement immediately. Insurers should provide resolution to the complaint within 14 days along with the reasons for not accepting the complaint with specific reference to the relevant terms and conditions of the policy.",
+        "source": "IRDAI Master Circular on Protection of Policyholders' Interests, 2024",
+        "source_detail": "Master Circular on Protection of Policyholders' Interests, 2024, Ref IRDAI/PP&GR/CIR/MISC/117/9/2024",
+        "clause_ref": "Section 1, Part B, VI(2)(i)",
+        "page": 123,
+        "url": "https://irdai.gov.in/document-detail?documentId=5625747"
+      },
+      "R-NO-DEDUCTION-OUTSIDE-LISTED-EXCLUSIONS": {
+        "id": "R-NO-DEDUCTION-OUTSIDE-LISTED-EXCLUSIONS",
+        "kind": "rule",
+        "title": "All applicable exclusions must be written into the policy document; the insurer cannot make further deductions from a claim in the name of any exclusion not in the policy.",
+        "quote": "Insurers shall mandatorily include in the policy document all the applicable exclusions for a particular product. No further deductions shall be made from the claim amount in the name of any other exclusions.",
+        "source": "IRDAI Master Circular on Protection of Policyholders' Interests, 2024",
+        "source_detail": "Master Circular on Protection of Policyholders' Interests, 2024, Ref IRDAI/PP&GR/CIR/MISC/117/9/2024",
+        "clause_ref": "Section 2, Chapter IV, para 16.3",
+        "page": 144,
+        "url": "https://irdai.gov.in/document-detail?documentId=5625747"
+      },
+      "R-OMBUDSMAN-AFTER-30-DAYS-OR-UNSATISFACTORY-DECISION": {
+        "id": "R-OMBUDSMAN-AFTER-30-DAYS-OR-UNSATISFACTORY-DECISION",
+        "kind": "rule",
+        "title": "A policyholder may approach the Insurance Ombudsman if the complaint is not resolved within 30 days or if the insurer's decision is not acceptable.",
+        "quote": "*(The policyholder may approach the Insurance Ombudsman if his / her complaint is not resolved within 30 days or if the decision of the company is not acceptable to the policyholder.)",
+        "source": "IRDAI Master Circular on Protection of Policyholders' Interests, 2024",
+        "source_detail": "Master Circular on Protection of Policyholders' Interests, 2024, Ref IRDAI/PP&GR/CIR/MISC/117/9/2024",
+        "clause_ref": "Schedule A, Citizens' Charter, note to item 6 'Complaints'",
+        "page": 157,
+        "url": "https://irdai.gov.in/document-detail?documentId=5625747"
+      },
+      "R-OMBUDSMAN-BAR-IF-COURT-OR-FORUM-CASE": {
+        "id": "R-OMBUDSMAN-BAR-IF-COURT-OR-FORUM-CASE",
+        "kind": "rule",
+        "title": "The Ombudsman cannot hear a complaint on the same subject matter that is pending before, or already decided by, a court, consumer forum or arbitrator.",
+        "quote": "No complaint before the Insurance Ombudsman shall be maintainable on the same subject matter on which proceedings are pending before or disposed of by any court or consumer forum or arbitrator.",
+        "source": "Insurance Ombudsman Rules, 2017 (as amended)",
+        "source_detail": "Insurance Ombudsman Rules, 2017 (as amended up to 09.11.2023; CIO consolidated copy)",
+        "clause_ref": "Rule 14(5)",
+        "page": 9,
+        "url": "https://www.cioins.co.in/notification/Insurance%20Ombudsman%20Rules,%202017(%20as%20amended%20till%2009.11.2023).pdf"
+      },
+      "R-OMBUDSMAN-CLAIMS-UP-TO-50-LAKH": {
+        "id": "R-OMBUDSMAN-CLAIMS-UP-TO-50-LAKH",
+        "kind": "rule",
+        "title": "If not satisfied with the insurer's grievance resolution, unresolved or partially resolved complaints can be escalated to the Insurance Ombudsman of the relevant jurisdiction where the claim amount is up to Rs 50 lakh.",
+        "quote": "In case the complainant is not satisfied with the resolution of grievance provided by the insurer, they can escalate the unresolved / partially resolved complaints to Insurance Ombudsman of concerned jurisdiction, in case the claim amount is up to Rs. 50 lakhs.",
+        "source": "IRDAI Master Circular on Protection of Policyholders' Interests, 2024",
+        "source_detail": "Master Circular on Protection of Policyholders' Interests, 2024, Ref IRDAI/PP&GR/CIR/MISC/117/9/2024",
+        "clause_ref": "Section 1, Part B, VI(3)(i)",
+        "page": 123,
+        "url": "https://irdai.gov.in/document-detail?documentId=5625747"
+      },
+      "R-OMBUDSMAN-NO-FEE-FILING-MODES": {
+        "id": "R-OMBUDSMAN-NO-FEE-FILING-MODES",
+        "kind": "rule",
+        "title": "An Ombudsman complaint is free of any charge/fee and can be filed in person, online at cioins.co.in, or in writing by post/email.",
+        "quote": "The policyholder has option to take up the matter before insurance ombudsman of competent jurisdiction without any charge / fee through any of the following options: a. In person; b. Online by visiting https://cioins.co.in/Complaint/Online; c. In writing through post or through email by giving complete details.",
+        "source": "IRDAI Master Circular on Protection of Policyholders' Interests, 2024",
+        "source_detail": "Master Circular on Protection of Policyholders' Interests, 2024, Ref IRDAI/PP&GR/CIR/MISC/117/9/2024",
+        "clause_ref": "Section 1, Part B, VI(3)(ii)",
+        "page": 123,
+        "url": "https://irdai.gov.in/document-detail?documentId=5625747"
+      },
+      "R-OMBUDSMAN-ONE-YEAR-LIMIT": {
+        "id": "R-OMBUDSMAN-ONE-YEAR-LIMIT",
+        "kind": "rule",
+        "title": "The Ombudsman complaint must be filed within one year of the insurer's rejection of the representation, of receiving its unsatisfactory decision, or of expiry of one month from sending the representation if no reply was received.",
+        "quote": "(b) The complaint is made within one year-- (i) after the order of the insurer 1 [or insurance broker, as the case may be,] rejecting the representation is received; or (ii) after receipt of decision of the insurer 1 [or insurance broker, as the case may be], which is not to the satisfaction of the complainant; (iii) after expiry of a period of one month from the date of sending the written representation to the insurer 1 [or insurance broker, as the case may be,] if the insurer or 1 [ insurance broker, as the case may be], named fails to furnish reply to the complainant.",
+        "source": "Insurance Ombudsman Rules, 2017 (as amended)",
+        "source_detail": "Insurance Ombudsman Rules, 2017 (as amended up to 09.11.2023; CIO consolidated copy)",
+        "clause_ref": "Rule 14(3)(b)",
+        "page": 9,
+        "url": "https://www.cioins.co.in/notification/Insurance%20Ombudsman%20Rules,%202017(%20as%20amended%20till%2009.11.2023).pdf"
+      },
+      "R-OMBUDSMAN-PRECONDITION-APPROACH-INSURER-FIRST": {
+        "id": "R-OMBUDSMAN-PRECONDITION-APPROACH-INSURER-FIRST",
+        "kind": "rule",
+        "title": "Before going to the Ombudsman, the complainant must have made a written/email/online representation to the insurer, and either it was rejected, no reply came within one month of the insurer receiving it, or the reply is unsatisfactory.",
+        "quote": "No complaint to the Insurance Ombudsman shall lie unless (a) the complainant 1 [has made a representation in writing or through electronic mail or online through website of the insurer or insurance broker concerned] named in the complaint and-- (i) either the insurer 1 [or insurance broker, as the case may be,] had rejected the complaint; or (ii) the complainant had not received any reply within a period of one month after the insurer 1 [or insurance broker, as the case may be,] received his representation; or (iii) the complainant is not satisfied with the reply given to him by the insurer 1 [or insurance broker, as the case may be.]",
+        "source": "Insurance Ombudsman Rules, 2017 (as amended)",
+        "source_detail": "Insurance Ombudsman Rules, 2017 (as amended up to 09.11.2023; CIO consolidated copy)",
+        "clause_ref": "Rule 14(3)(a) (as amended by G.S.R. 147(E) dated 02.03.2021)",
+        "page": 9,
+        "url": "https://www.cioins.co.in/notification/Insurance%20Ombudsman%20Rules,%202017(%20as%20amended%20till%2009.11.2023).pdf"
+      },
+      "R-REJECTION-MUST-CITE-SPECIFIC-CLAUSE": {
+        "id": "R-REJECTION-MUST-CITE-SPECIFIC-CLAUSE",
+        "kind": "rule",
+        "title": "Whenever a claim is repudiated, rejected or partly disallowed, the insurer must give full details with reference to the specific terms and conditions of the policy document.",
+        "quote": "In case, the claim is repudiated or rejected or disallowed partially, details shall be communicated to the claimant along with full details giving reference to the specific terms and conditions of the policy document.",
+        "source": "IRDAI Master Circular on Protection of Policyholders' Interests, 2024",
+        "source_detail": "Master Circular on Protection of Policyholders' Interests, 2024, Ref IRDAI/PP&GR/CIR/MISC/117/9/2024",
+        "clause_ref": "Section 1, Part B, V(3)(iii)(5)",
+        "page": 121,
+        "url": "https://irdai.gov.in/document-detail?documentId=5625747"
+      },
+      "R-SPECIFIC-WAITING-MAX-36M": {
+        "id": "R-SPECIFIC-WAITING-MAX-36M",
+        "kind": "rule",
+        "title": "A specific-disease/treatment waiting period can be at most 36 months from policy commencement, does not apply to treatment needed due to an accident, and the disease/treatment must be covered once the period is completed with continuous renewal.",
+        "quote": "\"Specific waiting period\" means a period up to 36 months from the commencement of a health insurance policy during which period specified diseases/treatments (except due to an accident) are not covered. On completion of the period, diseases/treatments shall be covered provided the policy has been continuously renewed without any break.",
+        "source": "IRDAI (Insurance Products) Regulations, 2024",
+        "source_detail": "Insurance Regulatory and Development Authority of India (Insurance Products) Regulations, 2024",
+        "clause_ref": "Schedule III, clause 1.7",
+        "page": 36,
+        "url": "https://irdai.gov.in/document-detail?documentId=4590475"
+      }
+    },
+    "alternate_wordings": [],
+    "reviewed_by_ai": false,
+    "disclaimer": "ClaimBack gives information, not legal advice. Check the cited clauses and rules before relying on them."
+  },
+  "letters": {
+    "grievance": {
+      "kind": "grievance",
+      "to": "Grievance Redressal Officer, Nirmaan Health Insurance Co. Ltd.",
+      "subject": "Grievance: claim no. CLM-NHI-26-0845521, policy no. NHI/AS/2026/0073311",
+      "body": "Date: 17 September 2026\n\nTo\nThe Grievance Redressal Officer\nNirmaan Health Insurance Co. Ltd.\n\nSubject: Grievance against deductions in claim no. CLM-NHI-26-0845521, policy no. NHI/AS/2026/0073311\n\nDear Sir/Madam,\n\nI am writing about the above claim for the hospitalisation of Sunita Sharma at Lakeview Multispeciality Hospital from 03 August 2026 to 06 August 2026 (Symptomatic cholelithiasis (gallbladder stones) with chronic cholecystitis). Your office settled the claim by letter dated 06 August 2026, paying ₹1,13,867 against ₹1,39,700 claimed.\n\nI have checked the decision against the policy wording (Arogya Sanjeevani Policy, Niva Bupa Health Insurance Co. Ltd. (UIN NBHHLIP27056V042627)) and IRDAI's regulations, and I dispute the following:\n\n1. Sutures - Vicryl 2-0 / Prolene 3-0: ₹3,600 of the ₹3,600 deducted as \"Non-payable consumables\". This item isn't in the policy's lists of non-payable items (Annexure-A, List I-IV) and it is a medically necessary part of the surgery. An insurer can only deduct for exclusions actually written in the policy, and your letter cites no clause. (Ref: Policy wording: Section 4.7; IRDAI Master Circular on Protection of Policyholders' Interests, 2024: Section 2, Chapter IV, para 16.3, Section 1, Part B, V(3)(iii)(5))\n2. Hem-o-lok Ligation Clips (Medium-Large): ₹4,200 of the ₹4,200 deducted as \"Non-payable consumables\". This item isn't in the policy's lists of non-payable items (Annexure-A, List I-IV) and it is a medically necessary part of the surgery. An insurer can only deduct for exclusions actually written in the policy, and your letter cites no clause. (Ref: Policy wording: Section 4.7; IRDAI Master Circular on Protection of Policyholders' Interests, 2024: Section 2, Chapter IV, para 16.3, Section 1, Part B, V(3)(iii)(5))\n3. Closed Suction Drain Set (Romovac 14Fr): ₹1,450 of the ₹1,450 deducted as \"Non-payable consumables\". This item isn't in the policy's lists of non-payable items (Annexure-A, List I-IV). An insurer can only deduct for exclusions actually written in the policy, and your letter cites no clause. (Ref: Policy wording: Section 4.7; IRDAI Master Circular on Protection of Policyholders' Interests, 2024: Section 2, Chapter IV, para 16.3, Section 1, Part B, V(3)(iii)(5))\n4. Histopathology - Gallbladder Specimen: ₹2,350 of the ₹2,350 deducted as \"Diagnostic expenses not related to current treatment (Code Excl04)\". This exclusion only covers tests that are not related or incidental to the treatment. Examining the tissue removed during the laparoscopic cholecystectomy is part of that treatment. (Ref: Policy wording: Section 7.1 (Code Excl04); IRDAI Master Circular on Protection of Policyholders' Interests, 2024: Section 1, Part B, V(3)(iii)(5))\n5. Deduction letter does not cite policy clauses: 3 deductions only say things like \"Non-payable consumables\". When a claim is partly disallowed, the insurer must refer to the specific terms of the policy. (Ref: IRDAI Master Circular on Protection of Policyholders' Interests, 2024: Section 1, Part B, V(3)(iii)(5))\n\nI request you to pay the wrongly deducted ₹11,600 (about ₹11,020 after co-payment), and to reply with reasons that refer to the specific terms of the policy. I understand IRDAI requires grievances to be acknowledged immediately and resolved within 14 days. If the grievance is not resolved, I will approach the Insurance Ombudsman under the Insurance Ombudsman Rules, 2017.\n\nEnclosures: policy schedule, hospital bill, discharge summary, your settlement letter dated 06 August 2026.\n\nYours faithfully,\nSunita Sharma\nPolicy no. NHI/AS/2026/0073311\n",
+      "generated_by": "template"
+    },
+    "ombudsman": {
+      "kind": "ombudsman",
+      "to": "Insurance Ombudsman, Bengaluru",
+      "subject": "Complaint against Nirmaan Health Insurance Co. Ltd.: claim no. CLM-NHI-26-0845521",
+      "body": "Date: 17 September 2026\n\nTo\nThe Insurance Ombudsman\nBengaluru\nOffice of the Insurance Ombudsman, Jeevan Soudha Building, PID No. 57-27-N-19, Ground Floor, 19/19, 24th Main Road, JP Nagar, 1st Phase, Bengaluru - 560 078\nEmail: oio.bengaluru@cioins.co.in\n\nSubject: Complaint against Nirmaan Health Insurance Co. Ltd. - claim no. CLM-NHI-26-0845521, policy no. NHI/AS/2026/0073311\n\nRespected Sir/Madam,\n\n1. Complainant: Sunita Sharma, policyholder under policy no. NHI/AS/2026/0073311 (Arogya Sanjeevani Policy) issued by Nirmaan Health Insurance Co. Ltd.\n\n2. The claim: hospitalisation of Sunita Sharma at Lakeview Multispeciality Hospital, Bengaluru, from 03 August 2026 to 06 August 2026 for Symptomatic cholelithiasis (gallbladder stones) with chronic cholecystitis. Amount claimed: ₹1,39,700. Amount paid: ₹1,13,867.\n\n3. The insurer's decision: partial settlement by letter dated 06 August 2026.\n\n4. I first represented to the insurer in writing on [date of your grievance] and [the insurer rejected it on (date) / did not reply within one month / replied on (date) and I am not satisfied]. (Insurance Ombudsman Rules, 2017 (as amended up to 09.11.2023; CIO consolidated copy), Rule 14(3)(a) (as amended by G.S.R. 147(E) dated 02.03.2021))\n\n5. Grounds of complaint:\n\n1. Sutures - Vicryl 2-0 / Prolene 3-0: ₹3,600 of the ₹3,600 deducted as \"Non-payable consumables\". This item isn't in the policy's lists of non-payable items (Annexure-A, List I-IV) and it is a medically necessary part of the surgery. An insurer can only deduct for exclusions actually written in the policy, and your letter cites no clause. (Ref: Policy wording: Section 4.7; IRDAI Master Circular on Protection of Policyholders' Interests, 2024: Section 2, Chapter IV, para 16.3, Section 1, Part B, V(3)(iii)(5))\n2. Hem-o-lok Ligation Clips (Medium-Large): ₹4,200 of the ₹4,200 deducted as \"Non-payable consumables\". This item isn't in the policy's lists of non-payable items (Annexure-A, List I-IV) and it is a medically necessary part of the surgery. An insurer can only deduct for exclusions actually written in the policy, and your letter cites no clause. (Ref: Policy wording: Section 4.7; IRDAI Master Circular on Protection of Policyholders' Interests, 2024: Section 2, Chapter IV, para 16.3, Section 1, Part B, V(3)(iii)(5))\n3. Closed Suction Drain Set (Romovac 14Fr): ₹1,450 of the ₹1,450 deducted as \"Non-payable consumables\". This item isn't in the policy's lists of non-payable items (Annexure-A, List I-IV). An insurer can only deduct for exclusions actually written in the policy, and your letter cites no clause. (Ref: Policy wording: Section 4.7; IRDAI Master Circular on Protection of Policyholders' Interests, 2024: Section 2, Chapter IV, para 16.3, Section 1, Part B, V(3)(iii)(5))\n4. Histopathology - Gallbladder Specimen: ₹2,350 of the ₹2,350 deducted as \"Diagnostic expenses not related to current treatment (Code Excl04)\". This exclusion only covers tests that are not related or incidental to the treatment. Examining the tissue removed during the laparoscopic cholecystectomy is part of that treatment. (Ref: Policy wording: Section 7.1 (Code Excl04); IRDAI Master Circular on Protection of Policyholders' Interests, 2024: Section 1, Part B, V(3)(iii)(5))\n5. Deduction letter does not cite policy clauses: 3 deductions only say things like \"Non-payable consumables\". When a claim is partly disallowed, the insurer must refer to the specific terms of the policy. (Ref: IRDAI Master Circular on Protection of Policyholders' Interests, 2024: Section 1, Part B, V(3)(iii)(5))\n\nRelief sought: direct the insurer to pay ₹11,020 (the wrongly deducted amount after co-payment) with interest at bank rate + 2% from the date the claim was reported.\n\nI confirm that the same dispute is not pending before, and has not been decided by, any court, consumer forum or arbitrator.\n\nEnclosures: policy schedule and wording, hospital bill, discharge summary, insurer's letter dated 06 August 2026, my grievance and the insurer's reply (if any).\n\nYours faithfully,\nSunita Sharma\n[Address, phone, email]\n",
+      "generated_by": "template"
+    }
+  },
+  "error": null
+}

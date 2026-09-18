@@ -1,0 +1,557 @@
+{
+  "id": "sample-s5",
+  "created_at": "2026-09-17T10:16:25.438005Z",
+  "status": "complete",
+  "source": "sample",
+  "sample_id": "S5",
+  "policy_wording_id": null,
+  "title": "Dengue admission - every deduction is fair",
+  "documents": [
+    {
+      "kind": "policy_schedule",
+      "filename": "policy_schedule.pdf",
+      "content_type": "application/pdf"
+    },
+    {
+      "kind": "hospital_bill",
+      "filename": "hospital_bill.pdf",
+      "content_type": "application/pdf"
+    },
+    {
+      "kind": "insurer_letter",
+      "filename": "insurer_letter.pdf",
+      "content_type": "application/pdf"
+    },
+    {
+      "kind": "discharge_summary",
+      "filename": "discharge_summary.pdf",
+      "content_type": "application/pdf"
+    }
+  ],
+  "progress": [
+    {
+      "name": "read_documents",
+      "label": "Reading your documents",
+      "status": "done",
+      "detail": "Sample documents: 10 bill lines, 6 deductions"
+    },
+    {
+      "name": "check_items",
+      "label": "Checking every deduction against the policy's non-payable lists",
+      "status": "done",
+      "detail": "6 deductions checked, 6 found in the policy's lists"
+    },
+    {
+      "name": "check_policy",
+      "label": "Checking your policy wording",
+      "status": "done",
+      "detail": "Checked against Arogya Sanjeevani Policy, Niva Bupa Health Insurance Co. Ltd. (UIN NBHHLIP27056V042627)"
+    },
+    {
+      "name": "check_rules",
+      "label": "Checking IRDAI rules and deadlines",
+      "status": "done",
+      "detail": "3 claim-level checks, 1 IRDAI rules cited"
+    },
+    {
+      "name": "similar_cases",
+      "label": "Finding similar Ombudsman and court decisions",
+      "status": "done",
+      "detail": "No close match needed: nothing to dispute"
+    },
+    {
+      "name": "ai_review",
+      "label": "Claude reviews anything the rules can't settle",
+      "status": "skipped",
+      "detail": "Off in this local build (rule engine only)"
+    },
+    {
+      "name": "write_report",
+      "label": "Writing your report",
+      "status": "done",
+      "detail": "Your insurer's deductions look correct"
+    }
+  ],
+  "claim_input": {
+    "policy": {
+      "policy_number": "NHI/AS/2026/0310552",
+      "insurer_name": "Nirmaan Health Insurance Co. Ltd.",
+      "product_name": "Arogya Sanjeevani Policy",
+      "policy_wording_id": "AS-NIVA-2026",
+      "sum_insured": 200000.0,
+      "cumulative_bonus": 10000.0,
+      "policy_period_start": "2026-03-01",
+      "policy_period_end": "2027-02-28",
+      "first_inception": "2024-03-01",
+      "continuous_cover_start": "2024-03-01",
+      "peds_declared": [],
+      "optional_covers": [],
+      "co_payment_pct": 5.0,
+      "holder_name": "Farhan Qureshi",
+      "city": "Bengaluru",
+      "state": "Karnataka"
+    },
+    "admission": {
+      "patient_name": "Farhan Qureshi",
+      "age": 41,
+      "gender": "Male",
+      "hospital_name": "Greenfield Hospital",
+      "hospital_city": "Bengaluru",
+      "network_hospital": false,
+      "claim_type": "reimbursement",
+      "admission_date": "2026-08-25",
+      "discharge_date": "2026-08-29",
+      "diagnosis": "Dengue fever with thrombocytopenia",
+      "procedure": "Medical management",
+      "is_accident": false,
+      "comorbidities": []
+    },
+    "bill_lines": [
+      {
+        "code": "RM01",
+        "head": "room",
+        "description": "Room Rent - General Ward Twin Sharing (incl. nursing)",
+        "qty": 4.0,
+        "rate": 2500.0,
+        "amount": 10000.0
+      },
+      {
+        "code": "DR01",
+        "head": "doctor",
+        "description": "Consultant Visits - Dr. N. Hegde (Internal Medicine)",
+        "qty": 8.0,
+        "rate": 800.0,
+        "amount": 6400.0
+      },
+      {
+        "code": "PH01",
+        "head": "pharmacy",
+        "description": "Pharmacy - IV Fluids, Antipyretics, Medicines",
+        "qty": 1.0,
+        "rate": 11210.0,
+        "amount": 11210.0
+      },
+      {
+        "code": "IN01",
+        "head": "investigations",
+        "description": "Investigations - Dengue NS1, CBC x 6, LFT, Serum Electrolytes",
+        "qty": 1.0,
+        "rate": 7850.0,
+        "amount": 7850.0
+      },
+      {
+        "code": "MS01",
+        "head": "misc",
+        "description": "Attendant Food Charges",
+        "qty": 1.0,
+        "rate": 1800.0,
+        "amount": 1800.0
+      },
+      {
+        "code": "MS02",
+        "head": "misc",
+        "description": "Toiletries (soap, lotion, powder)",
+        "qty": 1.0,
+        "rate": 450.0,
+        "amount": 450.0
+      },
+      {
+        "code": "MS03",
+        "head": "misc",
+        "description": "Television Charges",
+        "qty": 4.0,
+        "rate": 100.0,
+        "amount": 400.0
+      },
+      {
+        "code": "MS04",
+        "head": "misc",
+        "description": "Laundry Charges",
+        "qty": 1.0,
+        "rate": 300.0,
+        "amount": 300.0
+      },
+      {
+        "code": "MS05",
+        "head": "misc",
+        "description": "Admission Kit",
+        "qty": 1.0,
+        "rate": 850.0,
+        "amount": 850.0
+      },
+      {
+        "code": "MS06",
+        "head": "misc",
+        "description": "Registration Charges",
+        "qty": 1.0,
+        "rate": 500.0,
+        "amount": 500.0
+      }
+    ],
+    "decision": {
+      "letter_type": "settlement",
+      "letter_date": "2026-09-12",
+      "claim_number": "CLM-NHI-26-0902214",
+      "documents_received_date": "2026-09-02",
+      "amount_claimed": 39760.0,
+      "total_deducted": 4300.0,
+      "admissible_amount": 35460.0,
+      "co_payment": 1773.0,
+      "amount_paid": 33687.0,
+      "deductions": [
+        {
+          "line_code": "MS01",
+          "description": "Attendant Food Charges",
+          "billed": 1800.0,
+          "deducted": 1800.0,
+          "reason": "Non-payable item - List I"
+        },
+        {
+          "line_code": "MS02",
+          "description": "Toiletries (soap, lotion, powder)",
+          "billed": 450.0,
+          "deducted": 450.0,
+          "reason": "Non-payable item - List I (toiletries)"
+        },
+        {
+          "line_code": "MS03",
+          "description": "Television Charges",
+          "billed": 400.0,
+          "deducted": 400.0,
+          "reason": "Non-payable item - List I"
+        },
+        {
+          "line_code": "MS04",
+          "description": "Laundry Charges",
+          "billed": 300.0,
+          "deducted": 300.0,
+          "reason": "Non-payable item - List I"
+        },
+        {
+          "line_code": "MS05",
+          "description": "Admission Kit",
+          "billed": 850.0,
+          "deducted": 850.0,
+          "reason": "Subsumed into room charges - List II"
+        },
+        {
+          "line_code": "MS06",
+          "description": "Registration Charges",
+          "billed": 500.0,
+          "deducted": 500.0,
+          "reason": "Subsumed into cost of treatment - List IV"
+        }
+      ],
+      "repudiation_reason": null,
+      "clauses_cited": []
+    }
+  },
+  "report": {
+    "generated_at": "2026-09-17T10:16:25.446206Z",
+    "policy_wording_id": "AS-NIVA-2026",
+    "policy_wording_name": "Arogya Sanjeevani Policy, Niva Bupa Health Insurance Co. Ltd. (UIN NBHHLIP27056V042627)",
+    "headline": "Your insurer's deductions look correct",
+    "summary": "All 6 deductions (₹4,300) match your policy wording, so there's nothing to challenge.",
+    "totals": {
+      "claimed": 39760.0,
+      "paid": 33687.0,
+      "total_deducted": 4300.0,
+      "challengeable_amount": 0.0,
+      "needs_more_info_amount": 0.0,
+      "ask_hospital_amount": 0.0,
+      "estimated_additional_payable": 0.0,
+      "claim_rejected": false
+    },
+    "deduction_findings": [
+      {
+        "id": "D01",
+        "line_code": "MS01",
+        "description": "Attendant Food Charges",
+        "billed": 1800.0,
+        "deducted": 1800.0,
+        "insurer_reason": "Non-payable item - List I",
+        "category": "non_payable_item",
+        "verdict": "fair",
+        "strength": null,
+        "amount_challengeable": 0.0,
+        "explanation": "\"Attendant Food Charges\" is listed as \"Food charges (other than patient's diet provided by hospital)\", which is in List I of your policy's Annexure-A (not covered). This deduction is correct.",
+        "citations": [
+          "NP-AS-LI-009"
+        ],
+        "matched_item": "FOOD CHARGES (OTHER THAN PATIENT's DIET PROVIDED BY HOSPITAL)"
+      },
+      {
+        "id": "D02",
+        "line_code": "MS02",
+        "description": "Toiletries (soap, lotion, powder)",
+        "billed": 450.0,
+        "deducted": 450.0,
+        "insurer_reason": "Non-payable item - List I (toiletries)",
+        "category": "non_payable_item",
+        "verdict": "fair",
+        "strength": null,
+        "amount_challengeable": 0.0,
+        "explanation": "\"Toiletries (soap, lotion, powder)\" is listed as \"Creams powders lotions (toiletries are not payable, only prescribed medical pharmaceuticals payable)\", which is in List I of your policy's Annexure-A (not covered). This deduction is correct.",
+        "citations": [
+          "NP-AS-LI-054"
+        ],
+        "matched_item": "CREAMS POWDERS LOTIONS (Toiletries are not payable, only prescribed medical pharmaceuticals payable)"
+      },
+      {
+        "id": "D03",
+        "line_code": "MS03",
+        "description": "Television Charges",
+        "billed": 400.0,
+        "deducted": 400.0,
+        "insurer_reason": "Non-payable item - List I",
+        "category": "non_payable_item",
+        "verdict": "fair",
+        "strength": null,
+        "amount_challengeable": 0.0,
+        "explanation": "\"Television Charges\" is listed as \"Television charges\", which is in List I of your policy's Annexure-A (not covered). This deduction is correct.",
+        "citations": [
+          "NP-AS-LI-022"
+        ],
+        "matched_item": "Television Charges"
+      },
+      {
+        "id": "D04",
+        "line_code": "MS04",
+        "description": "Laundry Charges",
+        "billed": 300.0,
+        "deducted": 300.0,
+        "insurer_reason": "Non-payable item - List I",
+        "category": "non_payable_item",
+        "verdict": "fair",
+        "strength": null,
+        "amount_challengeable": 0.0,
+        "explanation": "\"Laundry Charges\" is listed as \"Laundry charges\", which is in List I of your policy's Annexure-A (not covered). This deduction is correct.",
+        "citations": [
+          "NP-AS-LI-011"
+        ],
+        "matched_item": "LAUNDRY CHARGES"
+      },
+      {
+        "id": "D05",
+        "line_code": "MS05",
+        "description": "Admission Kit",
+        "billed": 850.0,
+        "deducted": 850.0,
+        "insurer_reason": "Subsumed into room charges - List II",
+        "category": "non_payable_item",
+        "verdict": "fair",
+        "strength": null,
+        "amount_challengeable": 0.0,
+        "explanation": "\"Admission Kit\" is listed as \"Admission kit\", which is in List II of your policy's Annexure-A: it counts as part of the room charges, so it isn't paid as a separate line. The deduction is correct.",
+        "citations": [
+          "NP-AS-LII-027"
+        ],
+        "matched_item": "ADMISSION KIT"
+      },
+      {
+        "id": "D06",
+        "line_code": "MS06",
+        "description": "Registration Charges",
+        "billed": 500.0,
+        "deducted": 500.0,
+        "insurer_reason": "Subsumed into cost of treatment - List IV",
+        "category": "non_payable_item",
+        "verdict": "fair",
+        "strength": null,
+        "amount_challengeable": 0.0,
+        "explanation": "\"Registration Charges\" is listed as \"Admission/registration charges\", which is in List IV of your policy's Annexure-A: it counts as part of the cost of treatment, so it isn't paid as a separate line. The deduction is correct.",
+        "citations": [
+          "NP-AS-LIV-001"
+        ],
+        "matched_item": "ADMISSION/REGISTRATION CHARGES"
+      }
+    ],
+    "check_findings": [
+      {
+        "id": "C-COPAY",
+        "issue": "Co-payment computation",
+        "verdict": "fair",
+        "strength": null,
+        "explanation": "The 5% co-pay (₹1,773) was correctly applied to the admissible amount after deductions (₹35,460).",
+        "citations": [
+          "NIVA-AS-9.5-COPAY"
+        ],
+        "computed": {
+          "admissible": 35460.0,
+          "co_payment": 1773.0
+        }
+      },
+      {
+        "id": "C-ROOM-RENT",
+        "issue": "Room rent",
+        "verdict": "fair",
+        "strength": null,
+        "explanation": "₹2,500/day doesn't exceed the eligible ₹4,000/day, so no proportionate deduction applies.",
+        "citations": [
+          "NIVA-AS-4.1-ROOM"
+        ],
+        "computed": {
+          "actual_per_day": 2500.0,
+          "eligible_per_day": 4000.0
+        }
+      },
+      {
+        "id": "C-TIMELINE",
+        "issue": "Settlement timeline",
+        "verdict": "fair",
+        "strength": null,
+        "explanation": "Documents received 02 Sep 2026, decided 12 Sep 2026: 10 days, within the 15-day limit.",
+        "citations": [
+          "NIVA-AS-9.6-SETTLEMENT",
+          "R-REIMBURSEMENT-SETTLEMENT-15-DAYS"
+        ],
+        "computed": {
+          "documents_received": "2026-09-02",
+          "decision_date": "2026-09-12",
+          "days_taken": 10,
+          "allowed_days": 15
+        }
+      }
+    ],
+    "similar_cases": [],
+    "escalation": [],
+    "ombudsman_office": {
+      "city": "Bengaluru",
+      "address": "Office of the Insurance Ombudsman, Jeevan Soudha Building, PID No. 57-27-N-19, Ground Floor, 19/19, 24th Main Road, JP Nagar, 1st Phase, Bengaluru - 560 078",
+      "email": "oio.bengaluru@cioins.co.in",
+      "phone": "080-26652048 / 26652049"
+    },
+    "citations": {
+      "NIVA-AS-4.1-ROOM": {
+        "id": "NIVA-AS-4.1-ROOM",
+        "kind": "policy_clause",
+        "title": "Room rent and ICU limits",
+        "quote": "Room Rent, Boarding, Nursing Expenses as provided by the Hospital/ Nursing Home up to 2% of the sum insured subject to maximum of Rs.5000/- per day. ii. Intensive Care Unit (ICU) / Intensive Cardiac Care Unit (ICCU) expenses up to 5% of sum insured subject to maximum of Rs. 10,000/- per day.",
+        "source": "Arogya Sanjeevani Policy, Niva Bupa Health Insurance Co. Ltd.",
+        "source_detail": null,
+        "clause_ref": "Section 4.1(i)-(ii)",
+        "page": 6,
+        "url": "https://transactions.nivabupa.com/pages/doc/policy_wording/ArogyaSanjeevani-PolicyDocument.pdf?v=1.0"
+      },
+      "NIVA-AS-9.5-COPAY": {
+        "id": "NIVA-AS-9.5-COPAY",
+        "kind": "policy_clause",
+        "title": "5% co-payment on admissible amount",
+        "quote": "Each and every claim under the Policy shall be subject to a Copayment of 5% applicable to claim amount admissible and payable as per the terms and conditions of the Policy.",
+        "source": "Arogya Sanjeevani Policy, Niva Bupa Health Insurance Co. Ltd.",
+        "source_detail": null,
+        "clause_ref": "Section 9.5",
+        "page": 13,
+        "url": "https://transactions.nivabupa.com/pages/doc/policy_wording/ArogyaSanjeevani-PolicyDocument.pdf?v=1.0"
+      },
+      "NIVA-AS-9.6-SETTLEMENT": {
+        "id": "NIVA-AS-9.6-SETTLEMENT",
+        "kind": "policy_clause",
+        "title": "Settle or reject within 15 days, else penal interest",
+        "quote": "The Company shall settle or reject a claim, as the case may be, within 15 days from the claim submission date. ii. ln the case of delay in the payment of a claim, the Company shall be liable to pay interest from the date of receipt of claim intimation till the date of payment of claim at a rate of 2% above the bank rate.",
+        "source": "Arogya Sanjeevani Policy, Niva Bupa Health Insurance Co. Ltd.",
+        "source_detail": null,
+        "clause_ref": "Section 9.6",
+        "page": 13,
+        "url": "https://transactions.nivabupa.com/pages/doc/policy_wording/ArogyaSanjeevani-PolicyDocument.pdf?v=1.0"
+      },
+      "NP-AS-LI-009": {
+        "id": "NP-AS-LI-009",
+        "kind": "non_payable_item",
+        "title": "Items for which coverage is not available in the policy: FOOD CHARGES (OTHER THAN PATIENT's DIET PROVIDED BY HOSPITAL)",
+        "quote": "Printed in the policy wording's Annexure-A List I (coverage not available). Deduction is fair.",
+        "source": "Arogya Sanjeevani policy wording, Annexure-A",
+        "source_detail": null,
+        "clause_ref": "Annexure-A, List I, item 9",
+        "page": 20,
+        "url": null
+      },
+      "NP-AS-LI-011": {
+        "id": "NP-AS-LI-011",
+        "kind": "non_payable_item",
+        "title": "Items for which coverage is not available in the policy: LAUNDRY CHARGES",
+        "quote": "Printed in the policy wording's Annexure-A List I (coverage not available). Deduction is fair.",
+        "source": "Arogya Sanjeevani policy wording, Annexure-A",
+        "source_detail": null,
+        "clause_ref": "Annexure-A, List I, item 11",
+        "page": 20,
+        "url": null
+      },
+      "NP-AS-LI-022": {
+        "id": "NP-AS-LI-022",
+        "kind": "non_payable_item",
+        "title": "Items for which coverage is not available in the policy: Television Charges",
+        "quote": "Printed in the policy wording's Annexure-A List I (coverage not available). Deduction is fair.",
+        "source": "Arogya Sanjeevani policy wording, Annexure-A",
+        "source_detail": null,
+        "clause_ref": "Annexure-A, List I, item 22",
+        "page": 20,
+        "url": null
+      },
+      "NP-AS-LI-054": {
+        "id": "NP-AS-LI-054",
+        "kind": "non_payable_item",
+        "title": "Items for which coverage is not available in the policy: CREAMS POWDERS LOTIONS (Toiletries are not payable, only prescribed medical pharmaceuticals payable)",
+        "quote": "Printed in the policy wording's Annexure-A List I (coverage not available). Deduction is fair.",
+        "source": "Arogya Sanjeevani policy wording, Annexure-A",
+        "source_detail": null,
+        "clause_ref": "Annexure-A, List I, item 54",
+        "page": 21,
+        "url": null
+      },
+      "NP-AS-LII-027": {
+        "id": "NP-AS-LII-027",
+        "kind": "non_payable_item",
+        "title": "Items that are to be subsumed into Room Charges: ADMISSION KIT",
+        "quote": "The policy wording says this is subsumed into room charges, so it is not paid as a separate line and a separate-line deduction is fair. At a network hospital you can ask the hospital to absorb it, but the 2020 IRDAI instruction that insurers stop hospitals billing these items was superseded in May 2024, so this is a request, not an enforceable right. Challenge only if the room charge itself was cut because of it.",
+        "source": "Arogya Sanjeevani policy wording, Annexure-A",
+        "source_detail": null,
+        "clause_ref": "Annexure-A, List II, item 27",
+        "page": 22,
+        "url": null
+      },
+      "NP-AS-LIV-001": {
+        "id": "NP-AS-LIV-001",
+        "kind": "non_payable_item",
+        "title": "Items that are to be subsumed into costs of treatment: ADMISSION/REGISTRATION CHARGES",
+        "quote": "The policy wording says this is subsumed into cost of treatment (incl. diagnostics), so a separate-line deduction is fair. At a network hospital you can ask the hospital to absorb it (a request, not an enforceable right since the 2020 circular was superseded).",
+        "source": "Arogya Sanjeevani policy wording, Annexure-A",
+        "source_detail": null,
+        "clause_ref": "Annexure-A, List IV, item 1",
+        "page": 23,
+        "url": null
+      },
+      "R-REIMBURSEMENT-SETTLEMENT-15-DAYS": {
+        "id": "R-REIMBURSEMENT-SETTLEMENT-15-DAYS",
+        "kind": "rule",
+        "title": "Reimbursement (non-cashless) health claims must be settled within 15 days from submission of the claim.",
+        "quote": "Settlement of claims (other than cashless) shall be settled within fifteen days from submission of claim.",
+        "source": "IRDAI Master Circular on Protection of Policyholders' Interests, 2024",
+        "source_detail": "Master Circular on Protection of Policyholders' Interests, 2024, Ref IRDAI/PP&GR/CIR/MISC/117/9/2024",
+        "clause_ref": "Section 1, Part B, V(3)(iii)(6)",
+        "page": 121,
+        "url": "https://irdai.gov.in/document-detail?documentId=5625747"
+      }
+    },
+    "alternate_wordings": [],
+    "reviewed_by_ai": false,
+    "disclaimer": "ClaimBack gives information, not legal advice. Check the cited clauses and rules before relying on them."
+  },
+  "letters": {
+    "grievance": {
+      "kind": "grievance",
+      "to": "Grievance Redressal Officer, Nirmaan Health Insurance Co. Ltd.",
+      "subject": "Grievance: claim no. CLM-NHI-26-0902214, policy no. NHI/AS/2026/0310552",
+      "body": "Date: 17 September 2026\n\nTo\nThe Grievance Redressal Officer\nNirmaan Health Insurance Co. Ltd.\n\nSubject: Grievance against deductions in claim no. CLM-NHI-26-0902214, policy no. NHI/AS/2026/0310552\n\nDear Sir/Madam,\n\nI am writing about the above claim for the hospitalisation of Farhan Qureshi at Greenfield Hospital from 25 August 2026 to 29 August 2026 (Dengue fever with thrombocytopenia). Your office settled the claim by letter dated 12 September 2026, paying ₹33,687 against ₹39,760 claimed.\n\nI have checked the decision against the policy wording (Arogya Sanjeevani Policy, Niva Bupa Health Insurance Co. Ltd. (UIN NBHHLIP27056V042627)) and IRDAI's regulations, and I dispute the following:\n\nNone.\n\nI request you to pay the wrongly deducted ₹0 (about ₹0 after co-payment), and to reply with reasons that refer to the specific terms of the policy. I understand IRDAI requires grievances to be acknowledged immediately and resolved within 14 days. If the grievance is not resolved, I will approach the Insurance Ombudsman under the Insurance Ombudsman Rules, 2017.\n\nEnclosures: policy schedule, hospital bill, discharge summary, your settlement letter dated 12 September 2026.\n\nYours faithfully,\nFarhan Qureshi\nPolicy no. NHI/AS/2026/0310552\n",
+      "generated_by": "template"
+    },
+    "ombudsman": {
+      "kind": "ombudsman",
+      "to": "Insurance Ombudsman, Bengaluru",
+      "subject": "Complaint against Nirmaan Health Insurance Co. Ltd.: claim no. CLM-NHI-26-0902214",
+      "body": "Date: 17 September 2026\n\nTo\nThe Insurance Ombudsman\nBengaluru\nOffice of the Insurance Ombudsman, Jeevan Soudha Building, PID No. 57-27-N-19, Ground Floor, 19/19, 24th Main Road, JP Nagar, 1st Phase, Bengaluru - 560 078\nEmail: oio.bengaluru@cioins.co.in\n\nSubject: Complaint against Nirmaan Health Insurance Co. Ltd. - claim no. CLM-NHI-26-0902214, policy no. NHI/AS/2026/0310552\n\nRespected Sir/Madam,\n\n1. Complainant: Farhan Qureshi, policyholder under policy no. NHI/AS/2026/0310552 (Arogya Sanjeevani Policy) issued by Nirmaan Health Insurance Co. Ltd.\n\n2. The claim: hospitalisation of Farhan Qureshi at Greenfield Hospital, Bengaluru, from 25 August 2026 to 29 August 2026 for Dengue fever with thrombocytopenia. Amount claimed: ₹39,760. Amount paid: ₹33,687.\n\n3. The insurer's decision: partial settlement by letter dated 12 September 2026.\n\n4. I first represented to the insurer in writing on [date of your grievance] and [the insurer rejected it on (date) / did not reply within one month / replied on (date) and I am not satisfied]. (Insurance Ombudsman Rules, 2017 (as amended up to 09.11.2023; CIO consolidated copy), Rule 14(3)(a) (as amended by G.S.R. 147(E) dated 02.03.2021))\n\n5. Grounds of complaint:\n\nSee enclosed grievance.\n\nRelief sought: direct the insurer to pay ₹0 (the wrongly deducted amount after co-payment) with interest at bank rate + 2% from the date the claim was reported.\n\nI confirm that the same dispute is not pending before, and has not been decided by, any court, consumer forum or arbitrator.\n\nEnclosures: policy schedule and wording, hospital bill, discharge summary, insurer's letter dated 12 September 2026, my grievance and the insurer's reply (if any).\n\nYours faithfully,\nFarhan Qureshi\n[Address, phone, email]\n",
+      "generated_by": "template"
+    }
+  },
+  "error": null
+}

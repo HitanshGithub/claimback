@@ -1,0 +1,714 @@
+{
+  "id": "sample-s3",
+  "created_at": "2026-09-17T10:16:25.279098Z",
+  "status": "complete",
+  "source": "sample",
+  "sample_id": "S3",
+  "policy_wording_id": null,
+  "title": "Heart attack - claim rejected for 'non-disclosure' after 7 years of cover",
+  "documents": [
+    {
+      "kind": "policy_schedule",
+      "filename": "policy_schedule.pdf",
+      "content_type": "application/pdf"
+    },
+    {
+      "kind": "hospital_bill",
+      "filename": "hospital_bill.pdf",
+      "content_type": "application/pdf"
+    },
+    {
+      "kind": "insurer_letter",
+      "filename": "insurer_letter.pdf",
+      "content_type": "application/pdf"
+    },
+    {
+      "kind": "discharge_summary",
+      "filename": "discharge_summary.pdf",
+      "content_type": "application/pdf"
+    }
+  ],
+  "progress": [
+    {
+      "name": "read_documents",
+      "label": "Reading your documents",
+      "status": "done",
+      "detail": "Sample documents: 11 bill lines, 0 deductions"
+    },
+    {
+      "name": "check_items",
+      "label": "Checking every deduction against the policy's non-payable lists",
+      "status": "done",
+      "detail": "No line-item deductions: the insurer rejected the whole claim"
+    },
+    {
+      "name": "check_policy",
+      "label": "Checking your policy wording",
+      "status": "done",
+      "detail": "Checked against Arogya Sanjeevani Policy, Niva Bupa Health Insurance Co. Ltd. (UIN NBHHLIP27056V042627)"
+    },
+    {
+      "name": "check_rules",
+      "label": "Checking IRDAI rules and deadlines",
+      "status": "done",
+      "detail": "7 claim-level checks, 18 IRDAI rules cited"
+    },
+    {
+      "name": "similar_cases",
+      "label": "Finding similar Ombudsman and court decisions",
+      "status": "done",
+      "detail": "5 similar decisions found"
+    },
+    {
+      "name": "ai_review",
+      "label": "Claude reviews anything the rules can't settle",
+      "status": "skipped",
+      "detail": "Off in this local build (rule engine only)"
+    },
+    {
+      "name": "write_report",
+      "label": "Writing your report",
+      "status": "done",
+      "detail": "Your ₹2,59,100 claim was rejected, and the rejection doesn't hold up"
+    }
+  ],
+  "claim_input": {
+    "policy": {
+      "policy_number": "NHI/AS/2026/0102245",
+      "insurer_name": "Nirmaan Health Insurance Co. Ltd.",
+      "product_name": "Arogya Sanjeevani Policy",
+      "policy_wording_id": "AS-NIVA-2026",
+      "sum_insured": 500000.0,
+      "cumulative_bonus": 50000.0,
+      "policy_period_start": "2026-06-15",
+      "policy_period_end": "2027-06-14",
+      "first_inception": "2023-06-15",
+      "continuous_cover_start": "2019-06-15",
+      "peds_declared": [],
+      "optional_covers": [],
+      "co_payment_pct": 5.0,
+      "holder_name": "Meena Iyer",
+      "city": "Bengaluru",
+      "state": "Karnataka"
+    },
+    "admission": {
+      "patient_name": "Meena Iyer",
+      "age": 64,
+      "gender": "Female",
+      "hospital_name": "Riverbend Heart Institute",
+      "hospital_city": "Bengaluru",
+      "network_hospital": false,
+      "claim_type": "reimbursement",
+      "admission_date": "2026-07-10",
+      "discharge_date": "2026-07-14",
+      "diagnosis": "Acute anterior wall ST-elevation myocardial infarction",
+      "procedure": "Primary PTCA with drug eluting stent to LAD",
+      "is_accident": false,
+      "comorbidities": [
+        "Type 2 Diabetes Mellitus",
+        "Hypertension"
+      ]
+    },
+    "bill_lines": [
+      {
+        "code": "IC01",
+        "head": "icu",
+        "description": "ICCU Charges (incl. nursing & monitoring)",
+        "qty": 2.0,
+        "rate": 9000.0,
+        "amount": 18000.0
+      },
+      {
+        "code": "RM01",
+        "head": "room",
+        "description": "Room Rent - Single Room (incl. nursing)",
+        "qty": 2.0,
+        "rate": 4500.0,
+        "amount": 9000.0
+      },
+      {
+        "code": "DR01",
+        "head": "doctor",
+        "description": "Interventional Cardiologist Fee - PTCA",
+        "qty": 1.0,
+        "rate": 60000.0,
+        "amount": 60000.0
+      },
+      {
+        "code": "DR02",
+        "head": "doctor",
+        "description": "Consultant Visits - Cardiology",
+        "qty": 4.0,
+        "rate": 1500.0,
+        "amount": 6000.0
+      },
+      {
+        "code": "OT01",
+        "head": "ot",
+        "description": "Cath Lab Charges",
+        "qty": 1.0,
+        "rate": 45000.0,
+        "amount": 45000.0
+      },
+      {
+        "code": "IM01",
+        "head": "implant",
+        "description": "Drug Eluting Stent 3.0 x 28 mm (with sticker)",
+        "qty": 1.0,
+        "rate": 31500.0,
+        "amount": 31500.0
+      },
+      {
+        "code": "CS01",
+        "head": "consumable",
+        "description": "Cath Lab Disposables - Guide Catheter, Guide Wire, PTCA Balloon, Inflation Device",
+        "qty": 1.0,
+        "rate": 42000.0,
+        "amount": 42000.0
+      },
+      {
+        "code": "PH01",
+        "head": "pharmacy",
+        "description": "Pharmacy - Antiplatelets, Heparin, Statins, IV Fluids",
+        "qty": 1.0,
+        "rate": 28600.0,
+        "amount": 28600.0
+      },
+      {
+        "code": "IN01",
+        "head": "investigations",
+        "description": "Investigations - ECG, 2D Echo, Troponin-I, Lipid Profile, HbA1c, RFT",
+        "qty": 1.0,
+        "rate": 16400.0,
+        "amount": 16400.0
+      },
+      {
+        "code": "MS01",
+        "head": "misc",
+        "description": "Attendant Charges",
+        "qty": 2.0,
+        "rate": 500.0,
+        "amount": 1000.0
+      },
+      {
+        "code": "MS02",
+        "head": "misc",
+        "description": "Attendant Food Charges",
+        "qty": 1.0,
+        "rate": 1600.0,
+        "amount": 1600.0
+      }
+    ],
+    "decision": {
+      "letter_type": "repudiation",
+      "letter_date": "2026-08-21",
+      "claim_number": "CLM-NHI-26-0733019",
+      "documents_received_date": "2026-07-22",
+      "amount_claimed": 259100.0,
+      "total_deducted": 259100.0,
+      "admissible_amount": null,
+      "co_payment": null,
+      "amount_paid": 0.0,
+      "deductions": [],
+      "repudiation_reason": "On scrutiny of the indoor case papers, it is observed that the insured patient is a known case of Type 2 Diabetes Mellitus and Hypertension for 10 years. These conditions were not disclosed in the proposal form at the time of inception of the policy. As the claim is related to the non-disclosed pre-existing conditions, the claim stands repudiated under Clause 10.1 (Disclosure of Information) and Code Excl01 (Pre-Existing Diseases) of the policy terms and conditions.",
+      "clauses_cited": [
+        "Clause 10.1 (Disclosure of Information)",
+        "Code Excl01 (Pre-Existing Diseases)"
+      ]
+    }
+  },
+  "report": {
+    "generated_at": "2026-09-17T10:16:25.289228Z",
+    "policy_wording_id": "AS-NIVA-2026",
+    "policy_wording_name": "Arogya Sanjeevani Policy, Niva Bupa Health Insurance Co. Ltd. (UIN NBHHLIP27056V042627)",
+    "headline": "Your ₹2,59,100 claim was rejected, and the rejection doesn't hold up",
+    "summary": "The rejection is weak because it came after the 60-month moratorium, when non-disclosure can no longer be used; the pre-existing disease waiting period was long over; and the decision was late, so interest is also due. If it's overturned, about ₹2,43,675 should be payable after the 5% co-pay.",
+    "totals": {
+      "claimed": 259100.0,
+      "paid": 0.0,
+      "total_deducted": 259100.0,
+      "challengeable_amount": 256500.0,
+      "needs_more_info_amount": 0.0,
+      "ask_hospital_amount": 0.0,
+      "estimated_additional_payable": 243675.0,
+      "claim_rejected": true
+    },
+    "deduction_findings": [],
+    "check_findings": [
+      {
+        "id": "C-MORATORIUM",
+        "issue": "Non-disclosure after the moratorium",
+        "verdict": "challengeable",
+        "strength": "strong",
+        "explanation": "Continuous cover from 15 Jun 2019 (including the ported policy) to admission on 10 Jul 2026 is 84 months, beyond the 60-month moratorium. After that, a claim can't be contested for non-disclosure or misrepresentation except for established fraud, and the letter doesn't allege or prove fraud.",
+        "citations": [
+          "NIVA-AS-8-MORATORIUM",
+          "R-MORATORIUM-60M",
+          "R-PORTABILITY-CREDITS"
+        ],
+        "computed": {
+          "continuous_cover_start": "2019-06-15",
+          "admission_date": "2026-07-10",
+          "continuous_months": 84,
+          "moratorium_months": 60
+        }
+      },
+      {
+        "id": "C-PED",
+        "issue": "Pre-existing disease exclusion (Excl01)",
+        "verdict": "challengeable",
+        "strength": "strong",
+        "explanation": "Even if the condition counts as pre-existing, the waiting period is 36 months of continuous cover, and portability credit counts. 84 months had passed. The insurer's real argument, that the condition wasn't declared, is the non-disclosure ground the moratorium bars.",
+        "citations": [
+          "NIVA-AS-6.1-PED",
+          "R-PED-WAITING-MAX-36M",
+          "R-PORTABILITY-CREDITS",
+          "NIVA-AS-8-MORATORIUM"
+        ],
+        "computed": {}
+      },
+      {
+        "id": "C-PERMANENT-EXCLUSIONS",
+        "issue": "Moratorium caveat - permanent exclusions",
+        "verdict": "not_applicable",
+        "strength": null,
+        "explanation": "The moratorium doesn't override permanent exclusions written in the policy. This rejection doesn't rely on one, so the caveat doesn't save it.",
+        "citations": [
+          "R-MORATORIUM-PERMANENT-EXCLUSIONS-SURVIVE"
+        ],
+        "computed": {}
+      },
+      {
+        "id": "C-PROPOSAL-FORM",
+        "issue": "What exactly the proposal form asked",
+        "verdict": "needs_more_info",
+        "strength": "moderate",
+        "explanation": "Non-disclosure can only relate to information the proposal form explicitly asked for. Ask the insurer for a copy of the proposal form and the portability records.",
+        "citations": [
+          "R-MATERIAL-INFORMATION-ONLY-WHAT-PROPOSAL-ASKED",
+          "R-PROPOSAL-FORM-COPY-WITHIN-15-DAYS"
+        ],
+        "computed": {}
+      },
+      {
+        "id": "C-GOOD-FAITH",
+        "issue": "Good-faith misstatement",
+        "verdict": "challengeable",
+        "strength": "moderate",
+        "explanation": "Fraud needs deliberate intent. Someone who didn't realise a controlled, long-standing condition had to be declared can rely on the good-faith protection in the policy.",
+        "citations": [
+          "NIVA-AS-10.9-FRAUD"
+        ],
+        "computed": {}
+      },
+      {
+        "id": "C-CRC-APPROVAL",
+        "issue": "Repudiation approval",
+        "verdict": "needs_more_info",
+        "strength": "moderate",
+        "explanation": "No claim may be rejected without approval from the insurer's Claims Review Committee. Ask the insurer to confirm that approval.",
+        "citations": [
+          "R-REPUDIATION-NEEDS-CRC-APPROVAL"
+        ],
+        "computed": {}
+      },
+      {
+        "id": "C-TIMELINE",
+        "issue": "Delayed decision - interest is due",
+        "verdict": "challengeable",
+        "strength": "strong",
+        "explanation": "Documents were received on 22 Jul 2026 and the decision came 30 days later, beyond the 15-day limit. When the claim is paid, interest at the RBI bank rate + 2% is due from the date the claim was reported.",
+        "citations": [
+          "NIVA-AS-9.6-SETTLEMENT",
+          "R-REIMBURSEMENT-SETTLEMENT-15-DAYS",
+          "R-CLAIM-DELAY-INTEREST",
+          "R-BANK-RATE-DEFINITION"
+        ],
+        "computed": {
+          "documents_received": "2026-07-22",
+          "decision_date": "2026-08-21",
+          "days_taken": 30,
+          "allowed_days": 15
+        }
+      }
+    ],
+    "similar_cases": [
+      {
+        "case_id": "CASE-019",
+        "forum": "NCDRC (National Consumer Disputes Redressal Commission)",
+        "decision_date": "2024-04-10",
+        "decision": "allowed",
+        "category": "ped_non_disclosure",
+        "insurer_reason": "Suppression of pre-existing coronary artery disease and dyslipidaemia in breach of utmost good faith (Clause 7.1 - disclosure of information norm); the proposer was responsible for filling all proposal form columns correctly.",
+        "reasoning": "The NCDRC noted that this was not a case of a false 'no' - the complainant declared that he had a pre-existing disease and disclosed hypertension - and the insurer should have asked him to complete the blank columns or arranged a medical examination for a 60+ proposer before issuing the policy. Following Manmohan Nanda v. United India Assurance (SC), an insurer that accepts premium and issues a policy despite blank columns cannot later repudiate for non-disclosure; the insurer also had no evidence of CAD treatment beyond a single 2014 visit. The State Commission's award of the claim with interest, Rs 50,000 compensation and Rs 25,000 costs was upheld.",
+        "amount_awarded_inr": null,
+        "decided_before_2024_health_rules": true,
+        "source_url": "https://indiankanoon.org/doc/193384457/"
+      },
+      {
+        "case_id": "CASE-018",
+        "forum": "Insurance Ombudsman, Mumbai",
+        "decision_date": "2021-04-30",
+        "decision": "allowed",
+        "category": "ped_non_disclosure",
+        "insurer_reason": "Non-disclosure of material facts (ischaemic heart disease with CABG, paralysis, diabetes, hypertension) while porting; claim repudiated under Condition 9 and the insured's cover deleted under Condition 14.",
+        "reasoning": "Although the complainant had failed to disclose his health history while porting, the Forum held that under portability rules the new insurer must itself verify medical and claim history from the previous insurer when previous policy details are furnished. Having accepted the proposal and premium without doing so, it could not use non-disclosure to wipe out long-standing continuous cover, particularly as it had not shown that the present ailment was related to the undisclosed conditions. The insurer was directed to reinstate the cover and pay the admissible claim less non-medical expenses.",
+        "amount_awarded_inr": null,
+        "decided_before_2024_health_rules": true,
+        "source_url": "https://web.archive.org/web/20240620075806/https://www.cioins.co.in/AwardsMonthwise/Apr2021/Health_individual%20April%202021.pdf"
+      },
+      {
+        "case_id": "CASE-021",
+        "forum": "Insurance Ombudsman, Mumbai",
+        "decision_date": "2021-04-29",
+        "decision": "dismissed",
+        "category": "ped_non_disclosure",
+        "insurer_reason": "Non-disclosure of DVT diagnosed and treated about a year before inception; the proposal answered 'no' to other diseases; claim repudiated under the non-disclosure condition and cover cancelled under Condition 12.",
+        "reasoning": "The Forum relied on the 2018 DVT discharge summary and IRDAI's definition of a pre-existing disease as one diagnosed or treated within 48 months before the policy. The ailment fell within that window and the complainant produced no evidence of disclosure to the agent, so the repudiation was held to be in accordance with the policy terms and no relief was granted.",
+        "amount_awarded_inr": null,
+        "decided_before_2024_health_rules": true,
+        "source_url": "https://web.archive.org/web/20240620075806/https://www.cioins.co.in/AwardsMonthwise/Apr2021/Health_individual%20April%202021.pdf"
+      },
+      {
+        "case_id": "CASE-020",
+        "forum": "Insurance Ombudsman, Pune",
+        "decision_date": "2021-04-22",
+        "decision": "partly_allowed",
+        "category": "ped_non_disclosure",
+        "insurer_reason": "Non-disclosure of hypertension since 2013 (certified by a hospital) in breach of the Duty of Disclosure clause (General Terms VIII), with the admission said to be related to the pre-existing illness.",
+        "reasoning": "Given that hypertension was admittedly undisclosed but the claim was for cancer treatment, the Forum asked the insurer to settle the claim excluding hypertension-related expenses. The insurer computed Rs 77,825, and the Forum awarded that amount, with interest at bank rate plus 2% if not yet paid.",
+        "amount_awarded_inr": 77825.0,
+        "decided_before_2024_health_rules": true,
+        "source_url": "https://web.archive.org/web/20240620075806/https://www.cioins.co.in/AwardsMonthwise/Apr2021/Health_individual%20April%202021.pdf"
+      },
+      {
+        "case_id": "CASE-022",
+        "forum": "Supreme Court of India (civil appeal from NCDRC)",
+        "decision_date": "2009-07-10",
+        "decision": "dismissed",
+        "category": "ped_non_disclosure",
+        "insurer_reason": "Suppression of material facts about long-standing diabetes and chronic renal failure in the proposal form.",
+        "reasoning": "The Supreme Court held that when a proposal form asks specific questions, the proposer must truthfully disclose facts within his knowledge, and any fact that would influence a prudent insurer's decision is material. A person on regular haemodialysis could not have been unaware of his condition, so the 'sound health' answer was untrue to his knowledge and the insurer was justified in repudiating; the appeal was dismissed.",
+        "amount_awarded_inr": null,
+        "decided_before_2024_health_rules": true,
+        "source_url": "https://indiankanoon.org/doc/951514/"
+      }
+    ],
+    "escalation": [
+      {
+        "step": 1,
+        "title": "Write to the insurer's grievance officer",
+        "action": "Send the complaint letter ClaimBack drafts, listing each disputed amount and the clause or rule behind it. Keep proof of sending.",
+        "due_date": "2026-09-17",
+        "deadline_note": "The insurer must acknowledge immediately and resolve it within 14 days, by 01 Oct 2026.",
+        "citations": [
+          "R-GRIEVANCE-ACK-IMMEDIATE-RESOLVE-14-DAYS",
+          "R-OMBUDSMAN-PRECONDITION-APPROACH-INSURER-FIRST"
+        ]
+      },
+      {
+        "step": 2,
+        "title": "Register it on Bima Bharosa",
+        "action": "Also log the complaint on IRDAI's Bima Bharosa portal (bimabharosa.irdai.gov.in) so it's tracked.",
+        "due_date": "2026-09-17",
+        "deadline_note": "Optional, but it puts the complaint on IRDAI's record.",
+        "citations": [
+          "R-BIMA-BHAROSA-ONLINE-COMPLAINT"
+        ]
+      },
+      {
+        "step": 3,
+        "title": "Go to the Insurance Ombudsman, Bengaluru",
+        "action": "If the insurer rejects your complaint, doesn't reply, or replies unsatisfactorily, file with the Ombudsman online at cioins.co.in. It's free.",
+        "due_date": "2026-10-17",
+        "deadline_note": "Possible after 30 days without a satisfactory reply. File within 1 year of the insurer's reply. Claims up to Rs 50 lakh.",
+        "citations": [
+          "R-OMBUDSMAN-AFTER-30-DAYS-OR-UNSATISFACTORY-DECISION",
+          "R-OMBUDSMAN-ONE-YEAR-LIMIT",
+          "R-OMBUDSMAN-NO-FEE-FILING-MODES",
+          "R-OMBUDSMAN-CLAIMS-UP-TO-50-LAKH"
+        ]
+      },
+      {
+        "step": 4,
+        "title": "Consumer commission (last resort)",
+        "action": "If the Ombudsman route doesn't work for you, a district consumer commission can hear the dispute. You can't pursue both for the same dispute.",
+        "due_date": null,
+        "deadline_note": "General information only; consider advice before filing.",
+        "citations": [
+          "R-OMBUDSMAN-BAR-IF-COURT-OR-FORUM-CASE"
+        ]
+      }
+    ],
+    "ombudsman_office": {
+      "city": "Bengaluru",
+      "address": "Office of the Insurance Ombudsman, Jeevan Soudha Building, PID No. 57-27-N-19, Ground Floor, 19/19, 24th Main Road, JP Nagar, 1st Phase, Bengaluru - 560 078",
+      "email": "oio.bengaluru@cioins.co.in",
+      "phone": "080-26652048 / 26652049"
+    },
+    "citations": {
+      "NIVA-AS-10.9-FRAUD": {
+        "id": "NIVA-AS-10.9-FRAUD",
+        "kind": "policy_clause",
+        "title": "No repudiation for fraud where misstatement was bona fide",
+        "quote": "The Company shall not repudiate the claim and / or forfeit the policy benefits on the ground of Fraud, if the insured person / beneficiary can prove that the misstatement was true to the best of his knowledge and there was no deliberate intention to suppress the fact or that such misstatement of or suppression of material fact are within the knowledge of the insurer.",
+        "source": "Arogya Sanjeevani Policy, Niva Bupa Health Insurance Co. Ltd.",
+        "source_detail": null,
+        "clause_ref": "Section 10.9",
+        "page": 15,
+        "url": "https://transactions.nivabupa.com/pages/doc/policy_wording/ArogyaSanjeevani-PolicyDocument.pdf?v=1.0"
+      },
+      "NIVA-AS-6.1-PED": {
+        "id": "NIVA-AS-6.1-PED",
+        "kind": "policy_clause",
+        "title": "Pre-existing disease waiting period 36 months",
+        "quote": "Expenses related to the treatment of a pre-existing Disease (PED) and its direct complications shall be excluded until the expiry of 36 months of continuous coverage after the date of inception of the first policy.",
+        "source": "Arogya Sanjeevani Policy, Niva Bupa Health Insurance Co. Ltd.",
+        "source_detail": null,
+        "clause_ref": "Section 6.1 (Code Excl01)",
+        "page": 8,
+        "url": "https://transactions.nivabupa.com/pages/doc/policy_wording/ArogyaSanjeevani-PolicyDocument.pdf?v=1.0"
+      },
+      "NIVA-AS-8-MORATORIUM": {
+        "id": "NIVA-AS-8-MORATORIUM",
+        "kind": "policy_clause",
+        "title": "Moratorium after sixty continuous months",
+        "quote": "After completion of sixty continuous months of coverage (including portability and migration) in health insurance policy, no policy and claim shall be contestable by the insurer on the grounds of non-disclosure, misrepresentation, except on grounds of established fraud.",
+        "source": "Arogya Sanjeevani Policy, Niva Bupa Health Insurance Co. Ltd.",
+        "source_detail": null,
+        "clause_ref": "Section 8",
+        "page": 11,
+        "url": "https://transactions.nivabupa.com/pages/doc/policy_wording/ArogyaSanjeevani-PolicyDocument.pdf?v=1.0"
+      },
+      "NIVA-AS-9.6-SETTLEMENT": {
+        "id": "NIVA-AS-9.6-SETTLEMENT",
+        "kind": "policy_clause",
+        "title": "Settle or reject within 15 days, else penal interest",
+        "quote": "The Company shall settle or reject a claim, as the case may be, within 15 days from the claim submission date. ii. ln the case of delay in the payment of a claim, the Company shall be liable to pay interest from the date of receipt of claim intimation till the date of payment of claim at a rate of 2% above the bank rate.",
+        "source": "Arogya Sanjeevani Policy, Niva Bupa Health Insurance Co. Ltd.",
+        "source_detail": null,
+        "clause_ref": "Section 9.6",
+        "page": 13,
+        "url": "https://transactions.nivabupa.com/pages/doc/policy_wording/ArogyaSanjeevani-PolicyDocument.pdf?v=1.0"
+      },
+      "R-BANK-RATE-DEFINITION": {
+        "id": "R-BANK-RATE-DEFINITION",
+        "kind": "rule",
+        "title": "'Bank Rate' for interest calculations is the RBI bank rate prevailing on 1 April of the financial year in which the claim fell due.",
+        "quote": "\"Bank Rate\" means Bank rate fixed by the Reserve Bank of India (RBI) which is prevalent as on 1st day of the financial year in which the claim has fallen due.",
+        "source": "IRDAI (Protection of Policyholders' Interests) Regulations, 2024",
+        "source_detail": "Insurance Regulatory and Development Authority of India (Protection of Policyholders' Interests, Operations and Allied Matters of Insurers) Regulations, 2024",
+        "clause_ref": "Regulation 5(3)",
+        "page": 19,
+        "url": "https://irdai.gov.in/document-detail?documentId=4590885"
+      },
+      "R-BIMA-BHAROSA-ONLINE-COMPLAINT": {
+        "id": "R-BIMA-BHAROSA-ONLINE-COMPLAINT",
+        "kind": "rule",
+        "title": "Policyholders/claimants can also register a complaint online on IRDAI's Bima Bharosa portal.",
+        "quote": "The policyholder or the claimant also has the option to register the complaint on-line at IRDAI's Bima Bharosa by visiting https://bimabharosa.irdai.gov.in/.",
+        "source": "IRDAI Master Circular on Protection of Policyholders' Interests, 2024",
+        "source_detail": "Master Circular on Protection of Policyholders' Interests, 2024, Ref IRDAI/PP&GR/CIR/MISC/117/9/2024",
+        "clause_ref": "Section 1, Part B, VI(1)",
+        "page": 123,
+        "url": "https://irdai.gov.in/document-detail?documentId=5625747"
+      },
+      "R-CLAIM-DELAY-INTEREST": {
+        "id": "R-CLAIM-DELAY-INTEREST",
+        "kind": "rule",
+        "title": "If a claim is not settled within the specified timelines, the claimant is entitled to interest at bank rate + 2% from the date of claim intimation until payment, payable by the insurer on its own (suo motu).",
+        "quote": "In case the claim is not settled within the specified timelines, then the claimant is entitled for interest at bank rate plus 2 percent from the date of receipt of intimation to till the date of payment. Such interest shall be suo-moto paid by the insurers.",
+        "source": "IRDAI Master Circular on Protection of Policyholders' Interests, 2024",
+        "source_detail": "Master Circular on Protection of Policyholders' Interests, 2024, Ref IRDAI/PP&GR/CIR/MISC/117/9/2024",
+        "clause_ref": "Section 1, Part B, V(2)(ii)",
+        "page": 120,
+        "url": "https://irdai.gov.in/document-detail?documentId=5625747"
+      },
+      "R-GRIEVANCE-ACK-IMMEDIATE-RESOLVE-14-DAYS": {
+        "id": "R-GRIEVANCE-ACK-IMMEDIATE-RESOLVE-14-DAYS",
+        "kind": "rule",
+        "title": "Insurers must acknowledge a complaint immediately and resolve it within 14 days, giving reasons with specific reference to policy terms if the complaint is not accepted.",
+        "quote": "On receipt of a complaint, the complainant will have to be given an acknowledgement immediately. Insurers should provide resolution to the complaint within 14 days along with the reasons for not accepting the complaint with specific reference to the relevant terms and conditions of the policy.",
+        "source": "IRDAI Master Circular on Protection of Policyholders' Interests, 2024",
+        "source_detail": "Master Circular on Protection of Policyholders' Interests, 2024, Ref IRDAI/PP&GR/CIR/MISC/117/9/2024",
+        "clause_ref": "Section 1, Part B, VI(2)(i)",
+        "page": 123,
+        "url": "https://irdai.gov.in/document-detail?documentId=5625747"
+      },
+      "R-MATERIAL-INFORMATION-ONLY-WHAT-PROPOSAL-ASKED": {
+        "id": "R-MATERIAL-INFORMATION-ONLY-WHAT-PROPOSAL-ASKED",
+        "kind": "rule",
+        "title": "'Material information' is the important, essential and relevant information and documents explicitly sought by the insurer in the proposal form; disclosure duties apply to both insurer and prospect.",
+        "quote": "\"Material Information\" for the purpose of these regulations shall mean all important, essential and relevant information and documents explicitly sought by insurer in the proposal form.",
+        "source": "IRDAI (Protection of Policyholders' Interests) Regulations, 2024",
+        "source_detail": "Insurance Regulatory and Development Authority of India (Protection of Policyholders' Interests, Operations and Allied Matters of Insurers) Regulations, 2024",
+        "clause_ref": "Regulation 5(10), Explanation (i)",
+        "page": 20,
+        "url": "https://irdai.gov.in/document-detail?documentId=4590885"
+      },
+      "R-MORATORIUM-60M": {
+        "id": "R-MORATORIUM-60M",
+        "kind": "rule",
+        "title": "After 60 continuous months of health cover (portability and migration periods count), the insurer cannot contest the policy or any claim on grounds of non-disclosure or misrepresentation, except for established fraud.",
+        "quote": "After completion of sixty continuous months of coverage (including portability and migration) in health insurance policy, no policy and claim shall be contestable by the insurer on grounds of non-disclosure, misrepresentation, except on grounds of established fraud. This period of sixty continuous months is called as moratorium period.",
+        "source": "IRDAI (Insurance Products) Regulations, 2024",
+        "source_detail": "Insurance Regulatory and Development Authority of India (Insurance Products) Regulations, 2024",
+        "clause_ref": "Schedule III, clause 8",
+        "page": 37,
+        "url": "https://irdai.gov.in/document-detail?documentId=4590475"
+      },
+      "R-MORATORIUM-PERMANENT-EXCLUSIONS-SURVIVE": {
+        "id": "R-MORATORIUM-PERMANENT-EXCLUSIONS-SURVIVE",
+        "kind": "rule",
+        "title": "Even after the moratorium, the policy is non-contestable except for proven fraud, but permanent exclusions written in the policy contract still apply.",
+        "quote": "After the expiry of Moratorium Period no health insurance policy shall be contestable except for proven fraud and permanent exclusions specified in the policy contract.",
+        "source": "IRDAI Master Circular on Health Insurance Business, 2024 (Annexures)",
+        "source_detail": "Annexures to Master Circular on Health Insurance Business dated 29.05.2024",
+        "clause_ref": "Annexure-1, row 12 'Things to remember' - Moratorium Period",
+        "page": 5,
+        "url": "https://irdai.gov.in/document-detail?documentId=4942918"
+      },
+      "R-OMBUDSMAN-AFTER-30-DAYS-OR-UNSATISFACTORY-DECISION": {
+        "id": "R-OMBUDSMAN-AFTER-30-DAYS-OR-UNSATISFACTORY-DECISION",
+        "kind": "rule",
+        "title": "A policyholder may approach the Insurance Ombudsman if the complaint is not resolved within 30 days or if the insurer's decision is not acceptable.",
+        "quote": "*(The policyholder may approach the Insurance Ombudsman if his / her complaint is not resolved within 30 days or if the decision of the company is not acceptable to the policyholder.)",
+        "source": "IRDAI Master Circular on Protection of Policyholders' Interests, 2024",
+        "source_detail": "Master Circular on Protection of Policyholders' Interests, 2024, Ref IRDAI/PP&GR/CIR/MISC/117/9/2024",
+        "clause_ref": "Schedule A, Citizens' Charter, note to item 6 'Complaints'",
+        "page": 157,
+        "url": "https://irdai.gov.in/document-detail?documentId=5625747"
+      },
+      "R-OMBUDSMAN-BAR-IF-COURT-OR-FORUM-CASE": {
+        "id": "R-OMBUDSMAN-BAR-IF-COURT-OR-FORUM-CASE",
+        "kind": "rule",
+        "title": "The Ombudsman cannot hear a complaint on the same subject matter that is pending before, or already decided by, a court, consumer forum or arbitrator.",
+        "quote": "No complaint before the Insurance Ombudsman shall be maintainable on the same subject matter on which proceedings are pending before or disposed of by any court or consumer forum or arbitrator.",
+        "source": "Insurance Ombudsman Rules, 2017 (as amended)",
+        "source_detail": "Insurance Ombudsman Rules, 2017 (as amended up to 09.11.2023; CIO consolidated copy)",
+        "clause_ref": "Rule 14(5)",
+        "page": 9,
+        "url": "https://www.cioins.co.in/notification/Insurance%20Ombudsman%20Rules,%202017(%20as%20amended%20till%2009.11.2023).pdf"
+      },
+      "R-OMBUDSMAN-CLAIMS-UP-TO-50-LAKH": {
+        "id": "R-OMBUDSMAN-CLAIMS-UP-TO-50-LAKH",
+        "kind": "rule",
+        "title": "If not satisfied with the insurer's grievance resolution, unresolved or partially resolved complaints can be escalated to the Insurance Ombudsman of the relevant jurisdiction where the claim amount is up to Rs 50 lakh.",
+        "quote": "In case the complainant is not satisfied with the resolution of grievance provided by the insurer, they can escalate the unresolved / partially resolved complaints to Insurance Ombudsman of concerned jurisdiction, in case the claim amount is up to Rs. 50 lakhs.",
+        "source": "IRDAI Master Circular on Protection of Policyholders' Interests, 2024",
+        "source_detail": "Master Circular on Protection of Policyholders' Interests, 2024, Ref IRDAI/PP&GR/CIR/MISC/117/9/2024",
+        "clause_ref": "Section 1, Part B, VI(3)(i)",
+        "page": 123,
+        "url": "https://irdai.gov.in/document-detail?documentId=5625747"
+      },
+      "R-OMBUDSMAN-NO-FEE-FILING-MODES": {
+        "id": "R-OMBUDSMAN-NO-FEE-FILING-MODES",
+        "kind": "rule",
+        "title": "An Ombudsman complaint is free of any charge/fee and can be filed in person, online at cioins.co.in, or in writing by post/email.",
+        "quote": "The policyholder has option to take up the matter before insurance ombudsman of competent jurisdiction without any charge / fee through any of the following options: a. In person; b. Online by visiting https://cioins.co.in/Complaint/Online; c. In writing through post or through email by giving complete details.",
+        "source": "IRDAI Master Circular on Protection of Policyholders' Interests, 2024",
+        "source_detail": "Master Circular on Protection of Policyholders' Interests, 2024, Ref IRDAI/PP&GR/CIR/MISC/117/9/2024",
+        "clause_ref": "Section 1, Part B, VI(3)(ii)",
+        "page": 123,
+        "url": "https://irdai.gov.in/document-detail?documentId=5625747"
+      },
+      "R-OMBUDSMAN-ONE-YEAR-LIMIT": {
+        "id": "R-OMBUDSMAN-ONE-YEAR-LIMIT",
+        "kind": "rule",
+        "title": "The Ombudsman complaint must be filed within one year of the insurer's rejection of the representation, of receiving its unsatisfactory decision, or of expiry of one month from sending the representation if no reply was received.",
+        "quote": "(b) The complaint is made within one year-- (i) after the order of the insurer 1 [or insurance broker, as the case may be,] rejecting the representation is received; or (ii) after receipt of decision of the insurer 1 [or insurance broker, as the case may be], which is not to the satisfaction of the complainant; (iii) after expiry of a period of one month from the date of sending the written representation to the insurer 1 [or insurance broker, as the case may be,] if the insurer or 1 [ insurance broker, as the case may be], named fails to furnish reply to the complainant.",
+        "source": "Insurance Ombudsman Rules, 2017 (as amended)",
+        "source_detail": "Insurance Ombudsman Rules, 2017 (as amended up to 09.11.2023; CIO consolidated copy)",
+        "clause_ref": "Rule 14(3)(b)",
+        "page": 9,
+        "url": "https://www.cioins.co.in/notification/Insurance%20Ombudsman%20Rules,%202017(%20as%20amended%20till%2009.11.2023).pdf"
+      },
+      "R-OMBUDSMAN-PRECONDITION-APPROACH-INSURER-FIRST": {
+        "id": "R-OMBUDSMAN-PRECONDITION-APPROACH-INSURER-FIRST",
+        "kind": "rule",
+        "title": "Before going to the Ombudsman, the complainant must have made a written/email/online representation to the insurer, and either it was rejected, no reply came within one month of the insurer receiving it, or the reply is unsatisfactory.",
+        "quote": "No complaint to the Insurance Ombudsman shall lie unless (a) the complainant 1 [has made a representation in writing or through electronic mail or online through website of the insurer or insurance broker concerned] named in the complaint and-- (i) either the insurer 1 [or insurance broker, as the case may be,] had rejected the complaint; or (ii) the complainant had not received any reply within a period of one month after the insurer 1 [or insurance broker, as the case may be,] received his representation; or (iii) the complainant is not satisfied with the reply given to him by the insurer 1 [or insurance broker, as the case may be.]",
+        "source": "Insurance Ombudsman Rules, 2017 (as amended)",
+        "source_detail": "Insurance Ombudsman Rules, 2017 (as amended up to 09.11.2023; CIO consolidated copy)",
+        "clause_ref": "Rule 14(3)(a) (as amended by G.S.R. 147(E) dated 02.03.2021)",
+        "page": 9,
+        "url": "https://www.cioins.co.in/notification/Insurance%20Ombudsman%20Rules,%202017(%20as%20amended%20till%2009.11.2023).pdf"
+      },
+      "R-PED-WAITING-MAX-36M": {
+        "id": "R-PED-WAITING-MAX-36M",
+        "kind": "rule",
+        "title": "The waiting period for disclosed pre-existing diseases cannot exceed 36 months of continuous coverage.",
+        "quote": "Waiting period for pre-existing diseases disclosed by the persons to be insured, shall be maximum up to 36 months of continuous coverage under the Health Insurance policy.",
+        "source": "IRDAI (Insurance Products) Regulations, 2024",
+        "source_detail": "Insurance Regulatory and Development Authority of India (Insurance Products) Regulations, 2024",
+        "clause_ref": "Schedule III, clause 7",
+        "page": 37,
+        "url": "https://irdai.gov.in/document-detail?documentId=4590475"
+      },
+      "R-PORTABILITY-CREDITS": {
+        "id": "R-PORTABILITY-CREDITS",
+        "kind": "rule",
+        "title": "On porting to a new insurer, credits for sum insured, NCB, specific waiting periods, PED waiting period and moratorium transfer from the existing insurer to the acquiring insurer.",
+        "quote": "By porting, the policyholder is entitled to transfer the credits gained to the extent of the Sum Insured, No Claim Bonus, specific waiting periods, waiting period for pre-existing disease, Moratorium period etc. from the Existing Insurer to the Acquiring Insurer in the previous policy.",
+        "source": "IRDAI Master Circular on Protection of Policyholders' Interests, 2024",
+        "source_detail": "Master Circular on Protection of Policyholders' Interests, 2024, Ref IRDAI/PP&GR/CIR/MISC/117/9/2024",
+        "clause_ref": "Section 1, Part B, VII(3)(ii)",
+        "page": 125,
+        "url": "https://irdai.gov.in/document-detail?documentId=5625747"
+      },
+      "R-PROPOSAL-FORM-COPY-WITHIN-15-DAYS": {
+        "id": "R-PROPOSAL-FORM-COPY-WITHIN-15-DAYS",
+        "kind": "rule",
+        "title": "The insurer must give the insured a copy of the proposal form submitted, along with the policy document, free of charge within 15 days of accepting the proposal.",
+        "quote": "It is the duty of the insurer to furnish to the insured, with no additional charges, either a soft copy or a hard copy of the proposal form submitted by the prospect, along with the policy document within 15 days of the acceptance of a proposal.",
+        "source": "IRDAI Master Circular on Protection of Policyholders' Interests, 2024",
+        "source_detail": "Master Circular on Protection of Policyholders' Interests, 2024, Ref IRDAI/PP&GR/CIR/MISC/117/9/2024",
+        "clause_ref": "Section 2, Chapter III, para 12.4",
+        "page": 142,
+        "url": "https://irdai.gov.in/document-detail?documentId=5625747"
+      },
+      "R-REIMBURSEMENT-SETTLEMENT-15-DAYS": {
+        "id": "R-REIMBURSEMENT-SETTLEMENT-15-DAYS",
+        "kind": "rule",
+        "title": "Reimbursement (non-cashless) health claims must be settled within 15 days from submission of the claim.",
+        "quote": "Settlement of claims (other than cashless) shall be settled within fifteen days from submission of claim.",
+        "source": "IRDAI Master Circular on Protection of Policyholders' Interests, 2024",
+        "source_detail": "Master Circular on Protection of Policyholders' Interests, 2024, Ref IRDAI/PP&GR/CIR/MISC/117/9/2024",
+        "clause_ref": "Section 1, Part B, V(3)(iii)(6)",
+        "page": 121,
+        "url": "https://irdai.gov.in/document-detail?documentId=5625747"
+      },
+      "R-REPUDIATION-NEEDS-CRC-APPROVAL": {
+        "id": "R-REPUDIATION-NEEDS-CRC-APPROVAL",
+        "kind": "rule",
+        "title": "No claim may be repudiated without approval of the insurer's Product Management Committee or its three-member Claims Review Committee (CRC).",
+        "quote": "No claim shall be repudiated without the approval of Product Management Committee (PMC) or a three-member sub-group of PMC called the Claims Review Committee (CRC).",
+        "source": "IRDAI Master Circular on Protection of Policyholders' Interests, 2024",
+        "source_detail": "Master Circular on Protection of Policyholders' Interests, 2024, Ref IRDAI/PP&GR/CIR/MISC/117/9/2024",
+        "clause_ref": "Section 1, Part B, V(3)(iii)(4)",
+        "page": 121,
+        "url": "https://irdai.gov.in/document-detail?documentId=5625747"
+      }
+    },
+    "alternate_wordings": [],
+    "reviewed_by_ai": false,
+    "disclaimer": "ClaimBack gives information, not legal advice. Check the cited clauses and rules before relying on them."
+  },
+  "letters": {
+    "grievance": {
+      "kind": "grievance",
+      "to": "Grievance Redressal Officer, Nirmaan Health Insurance Co. Ltd.",
+      "subject": "Grievance: claim no. CLM-NHI-26-0733019, policy no. NHI/AS/2026/0102245",
+      "body": "Date: 17 September 2026\n\nTo\nThe Grievance Redressal Officer\nNirmaan Health Insurance Co. Ltd.\n\nSubject: Grievance against repudiation in claim no. CLM-NHI-26-0733019, policy no. NHI/AS/2026/0102245\n\nDear Sir/Madam,\n\nI am writing about the above claim for the hospitalisation of Meena Iyer at Riverbend Heart Institute from 10 July 2026 to 14 July 2026 (Acute anterior wall ST-elevation myocardial infarction). Your office repudiated the claim by letter dated 21 August 2026.\n\nI have checked the decision against the policy wording (Arogya Sanjeevani Policy, Niva Bupa Health Insurance Co. Ltd. (UIN NBHHLIP27056V042627)) and IRDAI's regulations, and I dispute the following:\n\n1. Non-disclosure after the moratorium: Continuous cover from 15 Jun 2019 (including the ported policy) to admission on 10 Jul 2026 is 84 months, beyond the 60-month moratorium. After that, a claim can't be contested for non-disclosure or misrepresentation except for established fraud, and your letter doesn't allege or prove fraud. (Ref: Policy wording: Section 8; IRDAI (Insurance Products) Regulations, 2024: Schedule III, clause 8; IRDAI Master Circular on Protection of Policyholders' Interests, 2024: Section 1, Part B, VII(3)(ii))\n2. Pre-existing disease exclusion (Excl01): Even if the condition counts as pre-existing, the waiting period is 36 months of continuous cover, and portability credit counts. 84 months had passed. Your real argument, that the condition wasn't declared, is the non-disclosure ground the moratorium bars. (Ref: Policy wording: Section 6.1 (Code Excl01), Section 8; IRDAI (Insurance Products) Regulations, 2024: Schedule III, clause 7; IRDAI Master Circular on Protection of Policyholders' Interests, 2024: Section 1, Part B, VII(3)(ii))\n3. Good-faith misstatement: Fraud needs deliberate intent. Someone who didn't realise a controlled, long-standing condition had to be declared can rely on the good-faith protection in the policy. (Ref: Policy wording: Section 10.9)\n4. Delayed decision - interest is due: Documents were received on 22 Jul 2026 and the decision came 30 days later, beyond the 15-day limit. When the claim is paid, interest at the RBI bank rate + 2% is due from the date the claim was reported. (Ref: Policy wording: Section 9.6; IRDAI Master Circular on Protection of Policyholders' Interests, 2024: Section 1, Part B, V(3)(iii)(6), Section 1, Part B, V(2)(ii); IRDAI (Protection of Policyholders' Interests) Regulations, 2024: Regulation 5(3))\n\nIn addition, please give me the basis for the following, with reference to the specific policy terms:\n\n1. What exactly the proposal form asked: please send a copy of the proposal form and portability records, and show which question the alleged non-disclosure relates to. (Ref: IRDAI (Protection of Policyholders' Interests) Regulations, 2024: Regulation 5(10), Explanation (i); IRDAI Master Circular on Protection of Policyholders' Interests, 2024: Section 2, Chapter III, para 12.4)\n2. Repudiation approval: please confirm that the Claims Review Committee approved this repudiation, with the date of approval. (Ref: IRDAI Master Circular on Protection of Policyholders' Interests, 2024: Section 1, Part B, V(3)(iii)(4))\n\nI request you to reconsider and settle the claim, paying about ₹2,43,675 after co-payment, together with interest at bank rate + 2% for the delayed decision, and to reply with reasons that refer to the specific terms of the policy. I understand IRDAI requires grievances to be acknowledged immediately and resolved within 14 days. If the grievance is not resolved, I will approach the Insurance Ombudsman under the Insurance Ombudsman Rules, 2017.\n\nEnclosures: policy schedule, hospital bill, discharge summary, your repudiation letter dated 21 August 2026.\n\nYours faithfully,\nMeena Iyer\nPolicy no. NHI/AS/2026/0102245\n",
+      "generated_by": "template"
+    },
+    "ombudsman": {
+      "kind": "ombudsman",
+      "to": "Insurance Ombudsman, Bengaluru",
+      "subject": "Complaint against Nirmaan Health Insurance Co. Ltd.: claim no. CLM-NHI-26-0733019",
+      "body": "Date: 17 September 2026\n\nTo\nThe Insurance Ombudsman\nBengaluru\nOffice of the Insurance Ombudsman, Jeevan Soudha Building, PID No. 57-27-N-19, Ground Floor, 19/19, 24th Main Road, JP Nagar, 1st Phase, Bengaluru - 560 078\nEmail: oio.bengaluru@cioins.co.in\n\nSubject: Complaint against Nirmaan Health Insurance Co. Ltd. - claim no. CLM-NHI-26-0733019, policy no. NHI/AS/2026/0102245\n\nRespected Sir/Madam,\n\n1. Complainant: Meena Iyer, policyholder under policy no. NHI/AS/2026/0102245 (Arogya Sanjeevani Policy) issued by Nirmaan Health Insurance Co. Ltd.\n\n2. The claim: hospitalisation of Meena Iyer at Riverbend Heart Institute, Bengaluru, from 10 July 2026 to 14 July 2026 for Acute anterior wall ST-elevation myocardial infarction. Amount claimed: ₹2,59,100. Amount paid: ₹0.\n\n3. The insurer's decision: repudiation by letter dated 21 August 2026.\n\n4. I first represented to the insurer in writing on [date of your grievance] and [the insurer rejected it on (date) / did not reply within one month / replied on (date) and I am not satisfied]. (Insurance Ombudsman Rules, 2017 (as amended up to 09.11.2023; CIO consolidated copy), Rule 14(3)(a) (as amended by G.S.R. 147(E) dated 02.03.2021))\n\n5. Grounds of complaint:\n\n1. Non-disclosure after the moratorium: Continuous cover from 15 Jun 2019 (including the ported policy) to admission on 10 Jul 2026 is 84 months, beyond the 60-month moratorium. After that, a claim can't be contested for non-disclosure or misrepresentation except for established fraud, and your letter doesn't allege or prove fraud. (Ref: Policy wording: Section 8; IRDAI (Insurance Products) Regulations, 2024: Schedule III, clause 8; IRDAI Master Circular on Protection of Policyholders' Interests, 2024: Section 1, Part B, VII(3)(ii))\n2. Pre-existing disease exclusion (Excl01): Even if the condition counts as pre-existing, the waiting period is 36 months of continuous cover, and portability credit counts. 84 months had passed. Your real argument, that the condition wasn't declared, is the non-disclosure ground the moratorium bars. (Ref: Policy wording: Section 6.1 (Code Excl01), Section 8; IRDAI (Insurance Products) Regulations, 2024: Schedule III, clause 7; IRDAI Master Circular on Protection of Policyholders' Interests, 2024: Section 1, Part B, VII(3)(ii))\n3. Good-faith misstatement: Fraud needs deliberate intent. Someone who didn't realise a controlled, long-standing condition had to be declared can rely on the good-faith protection in the policy. (Ref: Policy wording: Section 10.9)\n4. Delayed decision - interest is due: Documents were received on 22 Jul 2026 and the decision came 30 days later, beyond the 15-day limit. When the claim is paid, interest at the RBI bank rate + 2% is due from the date the claim was reported. (Ref: Policy wording: Section 9.6; IRDAI Master Circular on Protection of Policyholders' Interests, 2024: Section 1, Part B, V(3)(iii)(6), Section 1, Part B, V(2)(ii); IRDAI (Protection of Policyholders' Interests) Regulations, 2024: Regulation 5(3))\n\n6. The insurer has not given the basis for:\n\n1. What exactly the proposal form asked: please send a copy of the proposal form and portability records, and show which question the alleged non-disclosure relates to. (Ref: IRDAI (Protection of Policyholders' Interests) Regulations, 2024: Regulation 5(10), Explanation (i); IRDAI Master Circular on Protection of Policyholders' Interests, 2024: Section 2, Chapter III, para 12.4)\n2. Repudiation approval: please confirm that the Claims Review Committee approved this repudiation, with the date of approval. (Ref: IRDAI Master Circular on Protection of Policyholders' Interests, 2024: Section 1, Part B, V(3)(iii)(4))\n\nRelief sought: direct the insurer to pay ₹2,43,675 (the claim after co-payment) with interest at bank rate + 2% from the date the claim was reported.\n\nI confirm that the same dispute is not pending before, and has not been decided by, any court, consumer forum or arbitrator.\n\nEnclosures: policy schedule and wording, hospital bill, discharge summary, insurer's letter dated 21 August 2026, my grievance and the insurer's reply (if any).\n\nYours faithfully,\nMeena Iyer\n[Address, phone, email]\n",
+      "generated_by": "template"
+    }
+  },
+  "error": null
+}

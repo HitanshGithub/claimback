@@ -1,0 +1,42 @@
+[
+  {
+    "id": "S1",
+    "title": "Gallbladder surgery - 'non-payable consumables' deductions (cashless)",
+    "summary": "Cashless laparoscopic cholecystectomy at a network hospital. The insurer deducted 14 lines as non-payable; 4 of them (sutures, ligation clips, drain, histopathology) are not on any IRDAI list or were wrongly excluded.",
+    "claimed": 139700,
+    "paid": 113867,
+    "letter_type": "settlement"
+  },
+  {
+    "id": "S2",
+    "title": "Pneumonia admission - proportionate deduction applied to the whole bill",
+    "summary": "Patient stayed in a Rs 8,000/day room against a Rs 5,000/day limit. The insurer cut 37.5% from room, doctor fees, pharmacy AND investigations. Under the Niva Bupa wording only room/nursing/doctor/OT charges can be pro-rated.",
+    "claimed": 116100,
+    "paid": 66975,
+    "letter_type": "settlement"
+  },
+  {
+    "id": "S3",
+    "title": "Heart attack - claim rejected for 'non-disclosure' after 7 years of cover",
+    "summary": "Claim of Rs 2,59,100 fully repudiated because diabetes and hypertension were allegedly not disclosed at inception in 2019. The insured has 84+ months of continuous cover (ported in 2023), so the 60-month moratorium bars non-disclosure grounds unless fraud is established. The decision also came late.",
+    "claimed": 259100,
+    "paid": 0,
+    "letter_type": "repudiation"
+  },
+  {
+    "id": "S4",
+    "title": "ACL surgery - surgeon fee halved as 'reasonable and customary'",
+    "summary": "Cashless knee ligament reconstruction after a weekend football injury. The insurer restricted the Rs 1,20,000 surgeon fee to Rs 60,000 citing 'reasonable and customary charges', plus smaller policy-limit deductions. The fee cut needs the insurer's benchmark before it can be judged.",
+    "claimed": 257300,
+    "paid": 172710,
+    "letter_type": "settlement"
+  },
+  {
+    "id": "S5",
+    "title": "Dengue admission - every deduction is fair",
+    "summary": "Reimbursement claim for dengue at a non-network hospital. Deductions are genuine List I-IV items and the 5% co-pay is computed correctly on the admissible amount. ClaimBack should say: nothing to challenge.",
+    "claimed": 39760,
+    "paid": 33687,
+    "letter_type": "settlement"
+  }
+]
