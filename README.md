@@ -58,7 +58,9 @@ Every quote in the datasets is verified against its source PDF with `python scri
 
 ## Deploy (Ship It)
 
-See [DEPLOY.md](DEPLOY.md). In short: `sam build` and `sam deploy` for the API and pipeline, then `infra/setup_knowledge_base.py` for the Knowledge Base, then Amplify Hosting for the frontend.
+Deployed to ap-south-1 (Mumbai), and every push to `main` redeploys it: GitHub Actions runs the tests, deploys the
+SAM stack, ships the site to Amplify Hosting and smoke-tests the live API, authenticating to AWS with OIDC so no
+keys are stored in GitHub. See [DEPLOY.md](DEPLOY.md).
 
 ## Repository
 

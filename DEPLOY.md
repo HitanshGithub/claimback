@@ -19,6 +19,28 @@ cd frontend && VITE_API_BASE=https://pngg77cn4c.execute-api.ap-south-1.amazonaws
 uv run --project backend python infra/deploy_frontend.py --region ap-south-1
 ```
 
+## Continuous deployment
+
+Every push to `main` that touches `backend/`, `frontend/`, `infra/`, `data/`, `samples/` or `knowledge-base/` runs
+[.github/workflows/deploy.yml](.github/workflows/deploy.yml): backend tests, Lambda bundle, `sam deploy`, site build,
+Amplify upload, then a smoke test that runs a real sample claim against the live API and deletes it.
+
+GitHub authenticates with OIDC by assuming `claimback-github-deploy` (defined in `infra/template.yaml`), so **no AWS
+keys are stored in GitHub**. The role trusts only this repository and can only touch this stack's resources. Its ARN
+is the repository variable `AWS_DEPLOY_ROLE_ARN`.
+
+Wiring it up on another repo or account:
+
+```bash
+sam deploy ... --capabilities CAPABILITY_NAMED_IAM --parameter-overrides GitHubRepo=<owner>/<repo> ...
+gh variable set AWS_DEPLOY_ROLE_ARN --body "<GitHubDeployRoleArn output>"
+```
+
+**Gotcha:** GitHub now issues OIDC subjects containing immutable numeric ids
+(`repo:owner@167395477/repo@1375710113:ref:refs/heads/main`). A trust policy that only matches the old
+`repo:owner/repo:*` form fails with "Not authorized to perform sts:AssumeRoleWithWebIdentity". The template accepts
+both forms.
+
 ## Two things learned the hard way
 
 1. **The Messages-API Bedrock endpoint (`bedrock-mantle`) does not exist in ap-south-1** - it returns 404, while the same call in us-east-1 returns a normal 403 for an ungranted model. So in Mumbai, call Claude through `bedrock-runtime` InvokeModel: parameter `BedrockClient=invoke` with an inference-profile model id (`global.anthropic.claude-opus-5`). `apac.anthropic.claude-opus-5` does not exist; `global.` does, and it may serve requests outside India.
