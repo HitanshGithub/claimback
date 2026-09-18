@@ -1,0 +1,398 @@
+{
+  "title": "Arogya Sanjeevani policy terms relevant to claim deductions and rejections",
+  "note": "Arogya Sanjeevani is an IRDAI-mandated standard product, but insurers' wordings still differ on some clauses (e.g. which expenses the room-rent proportionate deduction applies to). Always judge a claim against the claimant's own insurer wording. Figures below were extracted on 2026-09-17.",
+  "policies": [
+    {
+      "policy_id": "AS-NIVA-2026",
+      "product": "Arogya Sanjeevani Policy, Niva Bupa Health Insurance Co. Ltd.",
+      "insurer": "Niva Bupa Health Insurance Company Limited",
+      "uin": "NBHHLIP27056V042627",
+      "file": "knowledge-base/policy-wordings/arogya-sanjeevani-niva-bupa-2026-27.pdf",
+      "source_url": "https://transactions.nivabupa.com/pages/doc/policy_wording/ArogyaSanjeevani-PolicyDocument.pdf?v=1.0",
+      "limits": {
+        "sum_insured_range_inr": [
+          50000,
+          1000000
+        ],
+        "room_rent_per_day": {
+          "pct_of_sum_insured": 2,
+          "max_inr": 5000
+        },
+        "icu_iccu_per_day": {
+          "pct_of_sum_insured": 5,
+          "max_inr": 10000
+        },
+        "cataract_per_eye_per_year": {
+          "pct_of_sum_insured": 25,
+          "max_inr": 40000,
+          "rule": "whichever is lower"
+        },
+        "modern_treatments": {
+          "pct_of_sum_insured": 50,
+          "procedures": [
+            "Uterine Artery Embolization and HIFU",
+            "Balloon Sinuplasty",
+            "Deep Brain Stimulation",
+            "Oral Chemotherapy",
+            "Immunotherapy - Monoclonal Antibody to be given as injection",
+            "Intra Vitreal Injections",
+            "Robotic Surgeries",
+            "Stereotactic Radio Surgeries",
+            "Bronchical Thermoplasty",
+            "Vaporisation of the Prostrate (Green Laser treatment or Holmium Laser Treatment)",
+            "IONM (Intra Operative Neuro Monitoring)",
+            "Stem Cell Therapy: Hematopoietic stem cells for bone marrow transplant for haematological conditions"
+          ]
+        },
+        "road_ambulance_per_hospitalisation_inr": 2000,
+        "co_payment_pct": 5,
+        "pre_hospitalisation_days": 30,
+        "post_hospitalisation_days": 60,
+        "cumulative_bonus": {
+          "pct_per_claim_free_year": 5,
+          "max_pct_of_sum_insured": 50
+        },
+        "ayush": "up to sum insured"
+      },
+      "proportionate_deduction": {
+        "applies_to": [
+          "room rent",
+          "nursing charges",
+          "medical practitioners' fees",
+          "operation theatre charges"
+        ],
+        "does_not_apply_to": [
+          "medicines and drugs / pharmacy",
+          "diagnostics / investigations",
+          "implants and surgical appliances",
+          "consumables billed outside the listed heads"
+        ],
+        "formula": "(eligible room limit / room rent actually incurred) * total associated medical expenses",
+        "clause_ref": "Section 4.1, Note 2",
+        "page": 6,
+        "applies_to_bill_heads": [
+          "room",
+          "nursing",
+          "doctor",
+          "ot"
+        ],
+        "note_bill_heads": "Machine-readable mapping of the clause onto ClaimBack bill heads; derived from applies_to / does_not_apply_to."
+      },
+      "waiting_periods": {
+        "initial_days": 30,
+        "initial_exception": "accidents; also not applicable if continuous coverage for more than twelve months",
+        "pre_existing_disease_months": 36,
+        "specific_24_months": [
+          "Benign ENT disorders",
+          "Tonsillectomy",
+          "Adenoidectomy",
+          "Mastoidectomy",
+          "Tympanoplasty",
+          "Hysterectomy",
+          "All internal and external benign tumours, cysts, polyps of any kind, including benign breast lumps",
+          "Benign prostate hypertrophy",
+          "Cataract and age related eye ailments",
+          "Gastric/ Duodenal Ulcer",
+          "Gout and Rheumatism",
+          "Hernia of all types",
+          "Hydrocele",
+          "Non Infective Arthritis",
+          "Piles, Fissures and Fistula in anus",
+          "Pilonidal sinus, Sinusitis and related disorders",
+          "Prolapse inter Vertebral Disc and Spinal Diseases unless arising from accident",
+          "Calculi in urinary system, Gall Bladder and Bile duct, excluding malignancy",
+          "Varicose Veins and Varicose Ulcers",
+          "Internal Congenital Anomalies"
+        ],
+        "specific_36_months": [
+          "Treatment for joint replacement unless arising from accident",
+          "Age-related Osteoarthritis & Osteoporosis"
+        ],
+        "specific_waiting_accident_exception": true,
+        "moratorium_months": 60
+      },
+      "claim_rules": {
+        "notify_emergency": "within 24 hours of emergency hospitalisation or before discharge, whichever is earlier",
+        "notify_planned": "at least 48 hours before admission",
+        "late_notification": "may be condoned on merit if delay was for reasons beyond the insured person's control",
+        "cashless_discharge_tat_hours": 3,
+        "cashless_discharge_delay_consequence": "additional amount charged by the hospital borne by the insurer, over and above policy limits",
+        "settle_or_reject_within_days": 15,
+        "penal_interest": "2% above the bank rate, from date of receipt of claim intimation till payment"
+      },
+      "grievance": {
+        "insurer_channels": [
+          "www.nivabupa.com",
+          "Toll free 1860-500-8888",
+          "GRO@nivabupa.com",
+          "https://transactions.nivabupa.com/pages/grievance-redressal.aspx"
+        ],
+        "bima_bharosa": "www.bimabharosa.irdai.gov.in",
+        "ombudsman": "Insurance Ombudsman of the respective area as per Insurance Ombudsman Rules 2017 (addresses in Annexure B)"
+      },
+      "clauses": [
+        {
+          "id": "NIVA-AS-4.1-ROOM",
+          "clause_ref": "Section 4.1(i)-(ii)",
+          "title": "Room rent and ICU limits",
+          "page": 6,
+          "verbatim_quote": "Room Rent, Boarding, Nursing Expenses as provided by the Hospital/ Nursing Home up to 2% of the sum insured subject to maximum of Rs.5000/- per day. ii. Intensive Care Unit (ICU) / Intensive Cardiac Care Unit (ICCU) expenses up to 5% of sum insured subject to maximum of Rs. 10,000/- per day.",
+          "use_when": "Checking whether room / ICU charges were capped correctly."
+        },
+        {
+          "id": "NIVA-AS-4.1-PRORATA",
+          "clause_ref": "Section 4.1, Note 2",
+          "title": "Proportionate deduction limited to associated medical expenses",
+          "page": 6,
+          "verbatim_quote": "If the Insured Person is admitted in a room / ICU / ICCU at rates exceeding the aforesaid limits, then We shall be liable to pay only a pro-rated portion of the total Associated Medical Expenses (including surcharge or taxes thereon) as per the following formula: (eligible Room limit / Room Rent actually incurred) * total Associated Medical Expenses Associated Medical Expenses shall include Room Rent, nursing charges, Medical Practitioners' fees and operation theatre charges",
+          "use_when": "Insurer applied a proportionate / pro-rata deduction to pharmacy, diagnostics, implants or other heads outside room rent, nursing, doctor fees and OT charges - challengeable."
+        },
+        {
+          "id": "NIVA-AS-4.1-24H",
+          "clause_ref": "Section 4.1.1, Note 1",
+          "title": "24-hour rule does not apply to day care",
+          "page": 6,
+          "verbatim_quote": "Expenses of Hospitalization for a minimum period of 24 consecutive hours only shall be admissible. However, the time limit shall not apply in respect of Day Care Treatment.",
+          "use_when": "Claim rejected for hospitalisation under 24 hours - check whether the treatment is day care."
+        },
+        {
+          "id": "NIVA-AS-4.3-CATARACT",
+          "clause_ref": "Section 4.3",
+          "title": "Cataract sub-limit",
+          "page": 6,
+          "verbatim_quote": "The Company shall indemnify medical expenses incurred for treatment of Cataract, subject to a limit of 25% of Sum Insured or Rs. 40,000/-, whichever is lower, per each eye in one policy year.",
+          "use_when": "Cataract claim capped - verify the cap was computed per eye using the lower of 25% SI or Rs 40,000."
+        },
+        {
+          "id": "NIVA-AS-4.6-MODERN",
+          "clause_ref": "Section 4.6",
+          "title": "Modern treatments covered up to 50% of sum insured",
+          "page": 7,
+          "verbatim_quote": "The following procedures will be covered (wherever medically indicated) either as inpatient or as part of day care treatment in a hospital up to 50% of Sum Insured, specified in the policy schedule, during the policy period:",
+          "use_when": "Robotic surgery, oral chemotherapy, immunotherapy, intra-vitreal injections etc. rejected or capped below 50% of SI."
+        },
+        {
+          "id": "NIVA-AS-4.7-LISTS",
+          "clause_ref": "Section 4.7",
+          "title": "Non-payable and subsumed items lists",
+          "page": 7,
+          "verbatim_quote": "The expenses that are not covered in this policy are placed under List-I of Annexure-A. The list of expenses that are to be subsumed into room charges, or procedure charges or costs of treatment are placed under List-II, List-III and List-IV of Annexure-A respectively.",
+          "use_when": "Checking a line item deducted as non-payable."
+        },
+        {
+          "id": "NIVA-AS-6.1-PED",
+          "clause_ref": "Section 6.1 (Code Excl01)",
+          "title": "Pre-existing disease waiting period 36 months",
+          "page": 8,
+          "verbatim_quote": "Expenses related to the treatment of a pre-existing Disease (PED) and its direct complications shall be excluded until the expiry of 36 months of continuous coverage after the date of inception of the first policy.",
+          "use_when": "Claim rejected as PED - compute months of continuous coverage (including portability) at date of admission."
+        },
+        {
+          "id": "NIVA-AS-6.3-SPECIFIC",
+          "clause_ref": "Section 6.3 (Code Excl02)",
+          "title": "Specific waiting periods do not apply to accidents",
+          "page": 8,
+          "verbatim_quote": "Expenses related to the treatment of the following listed conditions, surgeries/treatments shall be excluded until the expiry of 24/36 months of continuous coverage, as may be the case after the date of inception of the first policy with the insurer. This exclusion shall not be applicable for claims arising due to an accident.",
+          "use_when": "Claim for a listed condition rejected under waiting period - check coverage months and whether it arose from an accident."
+        },
+        {
+          "id": "NIVA-AS-7.1-EVAL",
+          "clause_ref": "Section 7.1 (Code Excl04)",
+          "title": "Admission primarily for diagnostics excluded",
+          "page": 9,
+          "verbatim_quote": "Expenses related to any admission primarily for diagnostics and evaluation purposes.",
+          "use_when": "Claim rejected as 'admission only for investigation' - check if active treatment was given."
+        },
+        {
+          "id": "NIVA-AS-8-MORATORIUM",
+          "clause_ref": "Section 8",
+          "title": "Moratorium after sixty continuous months",
+          "page": 11,
+          "verbatim_quote": "After completion of sixty continuous months of coverage (including portability and migration) in health insurance policy, no policy and claim shall be contestable by the insurer on the grounds of non-disclosure, misrepresentation, except on grounds of established fraud.",
+          "use_when": "Claim rejected for non-disclosure / misrepresentation after 60+ months of continuous cover - strong challenge unless fraud is established."
+        },
+        {
+          "id": "NIVA-AS-9.1-DISCHARGE",
+          "clause_ref": "Section 9.1(vi)",
+          "title": "Cashless discharge within three hours",
+          "page": 12,
+          "verbatim_quote": "Once the final authorization request is received for discharge, the same will be processed within three hours from the final documents received. In case of delay from our end, any additional amount charged by the hospital will be borne by us. This amount will be paid over and above the policy limits.",
+          "use_when": "Hospital charged extra room rent because final cashless approval was delayed."
+        },
+        {
+          "id": "NIVA-AS-9.1-NONMEDICAL",
+          "clause_ref": "Section 9.1(iv)",
+          "title": "Insured pays non-medical and inadmissible expenses at discharge",
+          "page": 12,
+          "verbatim_quote": "At the time of discharge, the insured person has to verify and sign the discharge papers, pay for non-medical and inadmissible expenses.",
+          "use_when": "Explaining why some genuinely non-payable items were collected from the patient."
+        },
+        {
+          "id": "NIVA-AS-9.3-NOTIFY",
+          "clause_ref": "Section 9.3",
+          "title": "Claim notification timelines",
+          "page": 12,
+          "verbatim_quote": "Within 24hours from the date of emergency hospitalization required or before the Insured Person's discharge from Hospital, whichever is earlier. ii. At least 48 hours prior to admission in Hospital in case of a planned Hospitalization.",
+          "use_when": "Claim rejected or reduced for late intimation."
+        },
+        {
+          "id": "NIVA-AS-9.4-CONDONE",
+          "clause_ref": "Section 9.4, Note 3",
+          "title": "Delay can be condoned",
+          "page": 13,
+          "verbatim_quote": "Any delay in notification or submission may be condoned on merit where delay is proved to be for reasons beyond the control of the Insured Person.",
+          "use_when": "Claim rejected only for delayed intimation or document submission - challengeable if the delay had a genuine reason (emergency, ICU stay, etc.)."
+        },
+        {
+          "id": "NIVA-AS-9.5-COPAY",
+          "clause_ref": "Section 9.5",
+          "title": "5% co-payment on admissible amount",
+          "page": 13,
+          "verbatim_quote": "Each and every claim under the Policy shall be subject to a Copayment of 5% applicable to claim amount admissible and payable as per the terms and conditions of the Policy.",
+          "use_when": "Checking co-pay was computed on the admissible amount (after other deductions), not on the gross bill."
+        },
+        {
+          "id": "NIVA-AS-9.6-SETTLEMENT",
+          "clause_ref": "Section 9.6",
+          "title": "Settle or reject within 15 days, else penal interest",
+          "page": 13,
+          "verbatim_quote": "The Company shall settle or reject a claim, as the case may be, within 15 days from the claim submission date. ii. ln the case of delay in the payment of a claim, the Company shall be liable to pay interest from the date of receipt of claim intimation till the date of payment of claim at a rate of 2% above the bank rate.",
+          "use_when": "Claim decision delayed - demand interest."
+        },
+        {
+          "id": "NIVA-AS-10.9-FRAUD",
+          "clause_ref": "Section 10.9",
+          "title": "No repudiation for fraud where misstatement was bona fide",
+          "page": 15,
+          "verbatim_quote": "The Company shall not repudiate the claim and / or forfeit the policy benefits on the ground of Fraud, if the insured person / beneficiary can prove that the misstatement was true to the best of his knowledge and there was no deliberate intention to suppress the fact or that such misstatement of or suppression of material fact are within the knowledge of the insurer.",
+          "use_when": "Claim rejected alleging fraud / suppression where the insured acted in good faith."
+        },
+        {
+          "id": "NIVA-AS-11-GRIEVANCE",
+          "clause_ref": "Section 11",
+          "title": "Grievance redressal ladder",
+          "page": 18,
+          "verbatim_quote": "Grievance may also be lodged at IRDAI integrated Grievance Management System",
+          "use_when": "Drafting escalation steps."
+        },
+        {
+          "id": "NIVA-AS-3.29-MEDICAL-EXPENSES",
+          "clause_ref": "Definition 3.29",
+          "title": "Medical expenses limited to locality rates (reasonable & customary basis)",
+          "page": 4,
+          "verbatim_quote": "Medical Expenses means those expenses that an insured person has necessarily and actually incurred for medical treatment on account of illness or accident on the advice of a medical practitioner, as long as these are no more than would have been payable if the insured person had not been insured and no more than other hospitals or doctors in the same locality would have charged for the same medical treatment.",
+          "use_when": "Insurer cut a fee as 'not reasonable and customary' - the insurer must show what other hospitals/doctors in the same locality charge for the same treatment."
+        },
+        {
+          "id": "NIVA-AS-4.1.1-AMBULANCE",
+          "clause_ref": "Section 4.1.1(v)",
+          "title": "Road ambulance capped at Rs 2,000",
+          "page": 6,
+          "verbatim_quote": "Expenses incurred on road Ambulance subject to a maximum of Rs.2000/- per hospitalisation.",
+          "use_when": "Ambulance charge above Rs 2,000 restricted."
+        },
+        {
+          "id": "NIVA-AS-7.6-SPORTS",
+          "clause_ref": "Section 7.6 (Code Excl09)",
+          "title": "Hazardous sports exclusion applies only to professionals",
+          "page": 10,
+          "verbatim_quote": "Expenses related to any treatment necessitated due to participation as a professional in hazardous or adventure sports",
+          "use_when": "Injury from sport or adventure activity rejected - exclusion needs professional participation."
+        }
+      ]
+    },
+    {
+      "policy_id": "AS-STAR-2025",
+      "product": "Arogya Sanjeevani Policy, Star Health And Allied Insurance Co Ltd.",
+      "insurer": "Star Health and Allied Insurance Company Limited",
+      "uin": "SHAHLIP26045V042526",
+      "file": "knowledge-base/policy-wordings/arogya-sanjeevani-star-health-2025-26.pdf",
+      "source_url": "https://d28c6jni2fmamz.cloudfront.net/Policy_Arogya_Sanjeevani_Insurance_Policy_V_12_84d133b97f.pdf",
+      "limits": {
+        "room_rent_per_day": {
+          "pct_of_sum_insured": 2,
+          "max_inr": 5000
+        },
+        "icu_iccu_per_day": {
+          "pct_of_sum_insured": 5,
+          "max_inr": 10000
+        },
+        "cataract_per_eye_per_year": {
+          "pct_of_sum_insured": 25,
+          "max_inr": 40000,
+          "rule": "whichever is lower"
+        },
+        "road_ambulance_per_hospitalisation_inr": 2000,
+        "pre_hospitalisation_days": 30,
+        "post_hospitalisation_days": 60
+      },
+      "proportionate_deduction": {
+        "applies_to": [
+          "all other expenses incurred at the hospital"
+        ],
+        "does_not_apply_to": [
+          "cost of medicines"
+        ],
+        "clause_ref": "Coverage, Note 2",
+        "page": 8,
+        "applies_to_bill_heads": [
+          "room",
+          "icu",
+          "nursing",
+          "doctor",
+          "ot",
+          "implant",
+          "investigations",
+          "consumable",
+          "misc",
+          "ambulance",
+          "other"
+        ],
+        "note_bill_heads": "Machine-readable mapping of the clause onto ClaimBack bill heads; derived from applies_to / does_not_apply_to."
+      },
+      "waiting_periods": {
+        "pre_existing_disease_months": 36,
+        "moratorium_months": 60
+      },
+      "claim_rules": {
+        "submit_reimbursement_documents": "within thirty days of date of discharge from hospital",
+        "submit_post_hospitalisation_documents": "within fifteen days from completion of post hospitalization treatment",
+        "late_notification": "may be condoned on merit if delay was for reasons beyond the insured person's control"
+      },
+      "clauses": [
+        {
+          "id": "STAR-AS-PRORATA",
+          "clause_ref": "Coverage, Note 2",
+          "title": "Proportionate deduction excludes only medicines",
+          "page": 8,
+          "verbatim_quote": "In case of admission to a room/ ICU/ICCU at rates exceeding the aforesaid limits, the reimbursement/ payment of all other expenses incurred at the Hospital, with the exception of cost of medicines, shall be effected in the same proportion as the admissible rate per day bears to the actual rate per day of Room Rent/ICU/ICCU charges.",
+          "use_when": "Star Health claim with room rent above the cap - proportionate deduction on medicines is challengeable; on other heads it follows the contract."
+        },
+        {
+          "id": "STAR-AS-MORATORIUM",
+          "clause_ref": "Moratorium Period",
+          "title": "Moratorium after sixty continuous months",
+          "page": 18,
+          "verbatim_quote": "no Policy and claim shall be contestable by the insurer on grounds of non-disclosure, misrepresentation, except on grounds of established fraud.",
+          "use_when": "Non-disclosure rejection after 60+ months of continuous cover."
+        },
+        {
+          "id": "STAR-AS-PED",
+          "clause_ref": "Excl01",
+          "title": "Pre-existing disease waiting period 36 months",
+          "page": 10,
+          "verbatim_quote": "Expenses related to the treatment of a Pre-Existing Disease (PED) and its direct complications shall be excluded until the expiry of 36 months of continuous coverage after the date of inception of the first Policy with insurer",
+          "use_when": "PED rejection - compute continuous coverage months."
+        },
+        {
+          "id": "STAR-AS-CONDONE",
+          "clause_ref": "Claim Procedure, Note 3",
+          "title": "Delay can be condoned",
+          "page": 16,
+          "verbatim_quote": "Any delay in notification or submission may be condoned on merit where delay is proved to be for reasons beyond the control of the Insured Person",
+          "use_when": "Rejection for late intimation / late documents."
+        }
+      ]
+    }
+  ]
+}

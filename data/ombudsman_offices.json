@@ -1,0 +1,770 @@
+{
+  "title": "Offices of the Insurance Ombudsman (India)",
+  "source_url": "https://www.cioins.co.in/Ombudsman",
+  "source": "Council for Insurance Ombudsmen (CIO) website - 'Contact details of Ombudsman Centres' page (current visible tab list). The same HTML page also contains an older, hidden (display:none) list with previous ombudsmen/addresses, which was ignored.",
+  "retrieved_on": "2026-09-17",
+  "verification": {
+    "status": "current as of retrieval",
+    "checks": [
+      "18 centres listed on cioins.co.in/Ombudsman (visible list).",
+      "Centre e-mail IDs match the list printed in the CIO Annual Report 2024-2025 (https://cioins.co.in/annualreports/AnnualReport2024-2025.pdf).",
+      "Ombudsman names, addresses, phones and jurisdictions match the list on New India Assurance's insurance-ombudsmen page (https://www.newindia.co.in/insurance-ombudsmen) retrieved the same day, except the Noida phone number (see Noida notes).",
+      "CIO notification dated 29.07.2026 (engagement of Secretary (Admin)) refers only to existing centres (Chandigarh, Lucknow, Noida, Thane) - no new centre found.",
+      "The Life Insurance Council page (lifeinscouncil.org) still shows a 2016 list with old gbic.co.in e-mails - outdated, do not use."
+    ],
+    "caveat": "Ombudsman names change as posts fall vacant; re-check cioins.co.in/Ombudsman before quoting a name. Addresses/e-mails are more stable."
+  },
+  "council_for_insurance_ombudsmen": {
+    "address": "Council for Insurance Ombudsmen, 3rd Floor, Jeevan Seva Annexe, S. V. Road, Santacruz (W), Mumbai - 400 054",
+    "email": "inscoun@cioins.co.in",
+    "phone": "022-69038800",
+    "source_url": "https://www.cioins.co.in/ContactUs"
+  },
+  "complaint_portal": {
+    "register_online": "https://cioins.co.in/Complaint/Online",
+    "track": "https://cioins.co.in/Complaint/Track",
+    "source_url": "https://www.cioins.co.in/"
+  },
+  "offices": [
+    {
+      "city": "Ahmedabad",
+      "ombudsman": "Dr. Pranai Prabhakar",
+      "address": "Office of the Insurance Ombudsman, Jeevan Prakash Building, 6th floor, Tilak Marg, Relief Road, Ahmedabad - 380 001",
+      "phone": "079-25501201/02",
+      "email": "oio.ahmedabad@cioins.co.in",
+      "jurisdiction_as_listed": "Gujarat, Dadra & Nagar Haveli, Daman and Diu.",
+      "states": [
+        "Gujarat"
+      ],
+      "union_territories": [
+        "Dadra & Nagar Haveli",
+        "Daman and Diu"
+      ],
+      "districts": [],
+      "in_charge": {
+        "name": "Shri S D Dattani",
+        "designation": "Dy Secretary",
+        "phone": "079-25501202",
+        "source_url": "https://www.cioins.co.in/SecretaryCenterwise"
+      },
+      "source_url": "https://www.cioins.co.in/Ombudsman"
+    },
+    {
+      "city": "Bengaluru",
+      "ombudsman": "Ms Neerja Kapur",
+      "address": "Office of the Insurance Ombudsman, Jeevan Soudha Building, PID No. 57-27-N-19, Ground Floor, 19/19, 24th Main Road, JP Nagar, 1st Phase, Bengaluru - 560 078",
+      "phone": "080-26652048 / 26652049",
+      "email": "oio.bengaluru@cioins.co.in",
+      "jurisdiction_as_listed": "Karnataka.",
+      "states": [
+        "Karnataka"
+      ],
+      "union_territories": [],
+      "districts": [],
+      "in_charge": {
+        "name": "Ms. Nirmala Devi N",
+        "designation": "Secretary",
+        "phone": "080-26652049",
+        "source_url": "https://www.cioins.co.in/SecretaryCenterwise"
+      },
+      "source_url": "https://www.cioins.co.in/Ombudsman"
+    },
+    {
+      "city": "Bhopal",
+      "ombudsman": "Shri Ajay Kumar",
+      "address": "Office of the Insurance Ombudsman, 1st floor, 'Jeevan Shikha', 60-B, Hoshangabad Road, Opp. Gayatri Mandir, Arera Hills, Bhopal - 462 011",
+      "phone": "0755-2769201 / 2769202 / 2769203",
+      "email": "oio.bhopal@cioins.co.in",
+      "jurisdiction_as_listed": "Madhya Pradesh, Chhattisgarh.",
+      "states": [
+        "Madhya Pradesh",
+        "Chhattisgarh"
+      ],
+      "union_territories": [],
+      "districts": [],
+      "in_charge": {
+        "name": "Ms. Neera Apte",
+        "designation": "Dy. Secretary",
+        "phone": "0755-2769201",
+        "source_url": "https://www.cioins.co.in/SecretaryCenterwise"
+      },
+      "source_url": "https://www.cioins.co.in/Ombudsman"
+    },
+    {
+      "city": "Bhubaneswar",
+      "ombudsman": "Shri Rashmi Raman Singh",
+      "address": "Office of the Insurance Ombudsman, 62, Forest Park, Bhubaneswar - 751 009",
+      "phone": "0674-2596461 / 2596455 / 2596429 / 2596003",
+      "email": "oio.bhubaneswar@cioins.co.in",
+      "jurisdiction_as_listed": "Odisha.",
+      "states": [
+        "Odisha"
+      ],
+      "union_territories": [],
+      "districts": [],
+      "in_charge": {
+        "name": "Mrs. Minati Das",
+        "designation": "Secretary",
+        "phone": "0674-2596429",
+        "source_url": "https://www.cioins.co.in/SecretaryCenterwise"
+      },
+      "source_url": "https://www.cioins.co.in/Ombudsman"
+    },
+    {
+      "city": "Chandigarh",
+      "ombudsman": "Ms Alka Jha",
+      "address": "Office of the Insurance Ombudsman, Jeevan Deep Building, SCO 20-27, Ground Floor, Sector 17 A, Chandigarh - 160 017",
+      "phone": "0172-2706468",
+      "email": "oio.chandigarh@cioins.co.in",
+      "jurisdiction_as_listed": "Punjab, Haryana (excluding Gurugram, Faridabad, Sonepat and Bahadurgarh), Himachal Pradesh, Union Territories of Jammu & Kashmir, Ladakh & Chandigarh.",
+      "states": [
+        "Punjab",
+        "Haryana (excluding Gurugram, Faridabad, Sonepat and Bahadurgarh)",
+        "Himachal Pradesh"
+      ],
+      "union_territories": [
+        "Jammu & Kashmir",
+        "Ladakh",
+        "Chandigarh"
+      ],
+      "districts": [],
+      "in_charge": {
+        "name": "Manju Kapoor",
+        "designation": "Dy Secretary",
+        "phone": "0172-2705861",
+        "source_url": "https://www.cioins.co.in/SecretaryCenterwise"
+      },
+      "source_url": "https://www.cioins.co.in/Ombudsman"
+    },
+    {
+      "city": "Chennai",
+      "ombudsman": "Shri K. Vinayak Rao",
+      "address": "Office of the Insurance Ombudsman, Fatima Akhtar Court, 4th Floor, 453, Anna Salai, Teynampet, Chennai - 600 018",
+      "phone": "044-24333668 / 24333678",
+      "email": "oio.chennai@cioins.co.in",
+      "jurisdiction_as_listed": "Tamil Nadu, Puducherry Town and Karaikal (which are part of Puducherry).",
+      "states": [
+        "Tamil Nadu"
+      ],
+      "union_territories": [
+        "Puducherry (Puducherry town and Karaikal only)"
+      ],
+      "districts": [],
+      "in_charge": {
+        "name": "Smt. Jayshree Anandan",
+        "designation": "Secretary",
+        "phone": "044-24333668",
+        "source_url": "https://www.cioins.co.in/SecretaryCenterwise"
+      },
+      "source_url": "https://www.cioins.co.in/Ombudsman"
+    },
+    {
+      "city": "Delhi",
+      "ombudsman": "Shri Mukhmeet Singh Bhatia",
+      "address": "Office of the Insurance Ombudsman, 2/2 A, Universal Insurance Building, Asaf Ali Road, New Delhi - 110 002",
+      "phone": "011-46013992 / 23213504 / 23232481",
+      "email": "oio.delhi@cioins.co.in",
+      "jurisdiction_as_listed": "Delhi & following Districts of Haryana - Gurugram, Faridabad, Sonepat & Bahadurgarh.",
+      "states": [],
+      "union_territories": [
+        "Delhi (NCT)"
+      ],
+      "districts": [
+        {
+          "state": "Haryana",
+          "districts": [
+            "Gurugram",
+            "Faridabad",
+            "Sonepat",
+            "Bahadurgarh"
+          ]
+        }
+      ],
+      "in_charge": {
+        "name": "Mr. H. Kumar",
+        "designation": "Secretary",
+        "phone": "1146013992 (as printed on CIO page; presumably 011-46013992)",
+        "source_url": "https://www.cioins.co.in/SecretaryCenterwise"
+      },
+      "source_url": "https://www.cioins.co.in/Ombudsman"
+    },
+    {
+      "city": "Guwahati",
+      "ombudsman": "Shri Ajay Kumar Sharma",
+      "address": "Office of the Insurance Ombudsman, Jeevan Nivesh, 5th Floor, Near Pan Bazar, S.S. Road, Guwahati - 781 001 (Assam)",
+      "phone": "0361-2632204 / 2602205 / 2631307",
+      "email": "oio.guwahati@cioins.co.in",
+      "jurisdiction_as_listed": "Assam, Meghalaya, Manipur, Mizoram, Arunachal Pradesh, Nagaland and Tripura.",
+      "states": [
+        "Assam",
+        "Meghalaya",
+        "Manipur",
+        "Mizoram",
+        "Arunachal Pradesh",
+        "Nagaland",
+        "Tripura"
+      ],
+      "union_territories": [],
+      "districts": [],
+      "in_charge": {
+        "name": "Mr. Kalyan Das",
+        "designation": "Dy. Secretary",
+        "phone": "0361-2632204",
+        "source_url": "https://www.cioins.co.in/SecretaryCenterwise"
+      },
+      "source_url": "https://www.cioins.co.in/Ombudsman"
+    },
+    {
+      "city": "Hyderabad",
+      "ombudsman": "Ms G Shobha Reddy",
+      "address": "Office of the Insurance Ombudsman, 6-2-46, 1st floor, 'Moin Court', Lane Opp. Hyundai Showroom, A.C. Guards, Lakdi-Ka-Pool, Hyderabad - 500 004",
+      "phone": "040-23312122 / 23376991 / 23376599 / 23328709 / 23325325",
+      "email": "oio.hyderabad@cioins.co.in",
+      "jurisdiction_as_listed": "Andhra Pradesh, Telangana, Yanam and part of Union Territory of Puducherry.",
+      "states": [
+        "Andhra Pradesh",
+        "Telangana"
+      ],
+      "union_territories": [
+        "Puducherry (Yanam)"
+      ],
+      "districts": [],
+      "in_charge": {
+        "name": "Rajasekhar P",
+        "designation": "Secretary",
+        "phone": "040-23376991",
+        "source_url": "https://www.cioins.co.in/SecretaryCenterwise"
+      },
+      "source_url": "https://www.cioins.co.in/Ombudsman"
+    },
+    {
+      "city": "Jaipur",
+      "ombudsman": "Shri Satyajeet Rajan",
+      "address": "Office of the Insurance Ombudsman, Jeevan Nidhi - II Bldg., Gr. Floor, Bhawani Singh Marg, Jaipur - 302 005",
+      "phone": "0141-2740363",
+      "email": "oio.jaipur@cioins.co.in",
+      "jurisdiction_as_listed": "Rajasthan.",
+      "states": [
+        "Rajasthan"
+      ],
+      "union_territories": [],
+      "districts": [],
+      "in_charge": {
+        "name": "Ms. Sonali Sarin",
+        "designation": "Secretary",
+        "phone": "0141-2740363",
+        "source_url": "https://www.cioins.co.in/SecretaryCenterwise"
+      },
+      "source_url": "https://www.cioins.co.in/Ombudsman"
+    },
+    {
+      "city": "Kochi",
+      "ombudsman": "Shri Pradeep Kumar Jain",
+      "address": "Office of the Insurance Ombudsman, 10th Floor, Jeevan Prakash, LIC Building, Opp. to Maharaja's College Ground, M.G. Road, Kochi - 682 011",
+      "phone": "0484-2358759",
+      "email": "oio.ernakulam@cioins.co.in",
+      "jurisdiction_as_listed": "Kerala, Lakshadweep, Mahe - a part of Union Territory of Puducherry.",
+      "states": [
+        "Kerala"
+      ],
+      "union_territories": [
+        "Lakshadweep",
+        "Puducherry (Mahe)"
+      ],
+      "districts": [],
+      "in_charge": {
+        "name": "Mr. Shiyas A",
+        "designation": "Secretary",
+        "phone": "0484-2358759",
+        "source_url": "https://www.cioins.co.in/SecretaryCenterwise"
+      },
+      "source_url": "https://www.cioins.co.in/Ombudsman"
+    },
+    {
+      "city": "Kolkata",
+      "ombudsman": "Ms. Manju Bagga",
+      "address": "Office of the Insurance Ombudsman, Hindustan Bldg. Annexe, 7th Floor, 4, C.R. Avenue, Kolkata - 700 072",
+      "phone": "033-22124339 / 22124341",
+      "email": "oio.kolkata@cioins.co.in",
+      "jurisdiction_as_listed": "West Bengal, Sikkim, Andaman & Nicobar Islands.",
+      "states": [
+        "West Bengal",
+        "Sikkim"
+      ],
+      "union_territories": [
+        "Andaman & Nicobar Islands"
+      ],
+      "districts": [],
+      "in_charge": {
+        "name": "Shri Jhadeshwar Majhi",
+        "designation": "Secretary",
+        "phone": "033-22124342",
+        "source_url": "https://www.cioins.co.in/SecretaryCenterwise"
+      },
+      "source_url": "https://www.cioins.co.in/Ombudsman"
+    },
+    {
+      "city": "Lucknow",
+      "ombudsman": "Shri Sanjai Singh",
+      "address": "Office of the Insurance Ombudsman, 6th Floor, Jeevan Bhawan, Phase-II, Nawal Kishore Road, Hazratganj, Lucknow - 226 001",
+      "phone": "0522-4002082 / 3500613",
+      "email": "oio.lucknow@cioins.co.in",
+      "jurisdiction_as_listed": "Districts of Uttar Pradesh : Lalitpur, Jhansi, Mahoba, Hamirpur, Banda, Chitrakoot, Allahabad, Mirzapur, Sonbhabdra, Fatehpur, Pratapgarh, Jaunpur, Varanasi, Gazipur, Jalaun, Kanpur, Lucknow, Unnao, Sitapur, Lakhimpur, Bahraich, Barabanki, Raebareli, Sravasti, Gonda, Faizabad, Amethi, Kaushambi, Balrampur, Basti, Ambedkarnagar, Sultanpur, Maharajgang, Santkabirnagar, Azamgarh, Kushinagar, Gorkhpur, Deoria, Mau, Ghazipur, Chandauli, Ballia, Sidharathnagar.",
+      "states": [],
+      "union_territories": [],
+      "districts": [
+        {
+          "state": "Uttar Pradesh",
+          "districts": [
+            "Lalitpur",
+            "Jhansi",
+            "Mahoba",
+            "Hamirpur",
+            "Banda",
+            "Chitrakoot",
+            "Allahabad",
+            "Mirzapur",
+            "Sonbhabdra",
+            "Fatehpur",
+            "Pratapgarh",
+            "Jaunpur",
+            "Varanasi",
+            "Gazipur",
+            "Jalaun",
+            "Kanpur",
+            "Lucknow",
+            "Unnao",
+            "Sitapur",
+            "Lakhimpur",
+            "Bahraich",
+            "Barabanki",
+            "Raebareli",
+            "Sravasti",
+            "Gonda",
+            "Faizabad",
+            "Amethi",
+            "Kaushambi",
+            "Balrampur",
+            "Basti",
+            "Ambedkarnagar",
+            "Sultanpur",
+            "Maharajgang",
+            "Santkabirnagar",
+            "Azamgarh",
+            "Kushinagar",
+            "Gorkhpur",
+            "Deoria",
+            "Mau",
+            "Ghazipur",
+            "Chandauli",
+            "Ballia",
+            "Sidharathnagar"
+          ]
+        }
+      ],
+      "notes": "District names/spellings reproduced exactly as listed by CIO; several use older names (e.g., Allahabad = Prayagraj, Faizabad = Ayodhya, Sonbhabdra = Sonbhadra) and Gazipur/Ghazipur appear twice. UP districts not in this list are listed under Noida.",
+      "in_charge": {
+        "name": "Shri Atul Misra",
+        "designation": "Dy. Secretary",
+        "phone": "0522-4002082",
+        "source_url": "https://www.cioins.co.in/SecretaryCenterwise"
+      },
+      "source_url": "https://www.cioins.co.in/Ombudsman"
+    },
+    {
+      "city": "Mumbai",
+      "ombudsman": "Ms Sarojini S Dikhale",
+      "address": "Office of the Insurance Ombudsman, 3rd Floor, Jeevan Seva Annexe, S. V. Road, Santacruz (W), Mumbai - 400 054",
+      "phone": "022-69038800/27/29/31/32/33",
+      "email": "oio.mumbai@cioins.co.in",
+      "jurisdiction_as_listed": "List of wards under Mumbai Metropolitan Region excluding wards in Mumbai - i.e M/E, M/W, N, S and T covered under Office of Insurance Ombudsman Thane and excluding areas of Navi Mumbai.",
+      "states": [],
+      "union_territories": [],
+      "districts": [
+        {
+          "state": "Maharashtra",
+          "districts": [
+            "Mumbai wards (see mumbai_wards)"
+          ]
+        }
+      ],
+      "mumbai_wards": [
+        {
+          "ward": "A",
+          "pin_codes": [
+            "400001",
+            "400003",
+            "400004",
+            "400020",
+            "400021",
+            "400023",
+            "400032"
+          ]
+        },
+        {
+          "ward": "B",
+          "pin_codes": [
+            "400001",
+            "400003",
+            "400008",
+            "400010",
+            "400012"
+          ]
+        },
+        {
+          "ward": "C",
+          "pin_codes": [
+            "400002",
+            "400003",
+            "400004",
+            "400001",
+            "400020"
+          ]
+        },
+        {
+          "ward": "D",
+          "pin_codes": [
+            "400007",
+            "400008",
+            "400052",
+            "400004",
+            "400002",
+            "400006",
+            "400026",
+            "400011",
+            "400020",
+            "400034",
+            "400035"
+          ]
+        },
+        {
+          "ward": "E",
+          "pin_codes": [
+            "400011",
+            "400033",
+            "400008",
+            "400009",
+            "400027",
+            "400087",
+            "400096",
+            "400099"
+          ]
+        },
+        {
+          "ward": "F/N",
+          "pin_codes": [
+            "400019",
+            "400022",
+            "400031",
+            "400037"
+          ]
+        },
+        {
+          "ward": "F/S",
+          "pin_codes": [
+            "400012",
+            "400015"
+          ]
+        },
+        {
+          "ward": "G/N",
+          "pin_codes": [
+            "400014",
+            "400028",
+            "400016"
+          ]
+        },
+        {
+          "ward": "G/S",
+          "pin_codes": [
+            "400013",
+            "400018",
+            "400025",
+            "400030"
+          ]
+        },
+        {
+          "ward": "H/E",
+          "pin_codes": [
+            "400051",
+            "400052",
+            "400055",
+            "400098",
+            "400017",
+            "400029",
+            "400056",
+            "400012",
+            "400054"
+          ]
+        },
+        {
+          "ward": "H/W",
+          "pin_codes": [
+            "400050",
+            "400052",
+            "400055"
+          ]
+        },
+        {
+          "ward": "K/E",
+          "pin_codes": [
+            "400049",
+            "400058",
+            "400059",
+            "400060",
+            "400093",
+            "400069"
+          ]
+        },
+        {
+          "ward": "K/W",
+          "pin_codes": [
+            "400053",
+            "400102",
+            "400057",
+            "400061"
+          ]
+        },
+        {
+          "ward": "L",
+          "pin_codes": [
+            "400070",
+            "400072",
+            "400076",
+            "400005",
+            "400024"
+          ]
+        },
+        {
+          "ward": "P/N",
+          "pin_codes": [
+            "400064",
+            "400095"
+          ]
+        },
+        {
+          "ward": "P/S",
+          "pin_codes": [
+            "400104",
+            "400097",
+            "400102",
+            "400063",
+            "400065"
+          ]
+        },
+        {
+          "ward": "R/C",
+          "pin_codes": [
+            "400066",
+            "400092",
+            "400091",
+            "400067",
+            "400103"
+          ]
+        },
+        {
+          "ward": "R/N",
+          "pin_codes": [
+            "400068"
+          ]
+        },
+        {
+          "ward": "R/S",
+          "pin_codes": [
+            "400067",
+            "400101",
+            "400053"
+          ]
+        }
+      ],
+      "notes": "Ward list and PIN codes from CIO 'Annexure B - Jurisdiction of Office of Insurance Ombudsman Mumbai'. PIN codes are as printed in the annexure and some overlap between wards; the ward is the deciding criterion. Goa is under Pune.",
+      "annexure_url": "https://www.cioins.co.in/notification/Mumbai%20jurisdiction-%20Annexure%20B.pdf",
+      "in_charge": {
+        "name": "Ms. Preetha G Nair",
+        "designation": "Secretary",
+        "phone": "022-69038821",
+        "source_url": "https://www.cioins.co.in/SecretaryCenterwise"
+      },
+      "source_url": "https://www.cioins.co.in/Ombudsman"
+    },
+    {
+      "city": "Noida",
+      "ombudsman": "Shri Rajiv Talwar",
+      "address": "Office of the Insurance Ombudsman, Bhagwan Sahai Palace, 4th Floor, Main Road, Naya Bans, Sector 15, Distt: Gautam Buddh Nagar, U.P. - 201301",
+      "phone": "0120-4027589",
+      "email": "oio.noida@cioins.co.in",
+      "jurisdiction_as_listed": "State of Uttarakhand and the following Districts of Uttar Pradesh: Agra, Aligarh, Bagpat, Bareilly, Bijnor, Budaun, Bulandshehar, Etah, Kannauj, Mainpuri, Mathura, Meerut, Moradabad, Muzaffarnagar, Oraiyya, Pilibhit, Etawah, Farrukhabad, Firozbad, Gautam Buddh nagar, Ghaziabad, Hardoi, Shahjahanpur, Hapur, Shamli, Rampur, Kashganj, Sambhal, Amroha, Hathras, Kanshiramnagar, Saharanpur.",
+      "states": [
+        "Uttarakhand"
+      ],
+      "union_territories": [],
+      "districts": [
+        {
+          "state": "Uttar Pradesh",
+          "districts": [
+            "Agra",
+            "Aligarh",
+            "Bagpat",
+            "Bareilly",
+            "Bijnor",
+            "Budaun",
+            "Bulandshehar",
+            "Etah",
+            "Kannauj",
+            "Mainpuri",
+            "Mathura",
+            "Meerut",
+            "Moradabad",
+            "Muzaffarnagar",
+            "Oraiyya",
+            "Pilibhit",
+            "Etawah",
+            "Farrukhabad",
+            "Firozbad",
+            "Gautam Buddh Nagar",
+            "Ghaziabad",
+            "Hardoi",
+            "Shahjahanpur",
+            "Hapur",
+            "Shamli",
+            "Rampur",
+            "Kashganj",
+            "Sambhal",
+            "Amroha",
+            "Hathras",
+            "Kanshiramnagar",
+            "Saharanpur"
+          ]
+        }
+      ],
+      "notes": "District names reproduced as listed by CIO (Kanshiramnagar is the former name of Kasganj/Kashganj). New India Assurance's ombudsman page lists the Noida phone as 0120-2514252 / 2514253.",
+      "in_charge": {
+        "name": "Santosh Kumar Kesarwani",
+        "designation": "Asst. Secretary",
+        "phone": "0120-2514253",
+        "source_url": "https://www.cioins.co.in/SecretaryCenterwise"
+      },
+      "source_url": "https://www.cioins.co.in/Ombudsman"
+    },
+    {
+      "city": "Patna",
+      "ombudsman": "Shri Inderjeet Singh",
+      "address": "Office of the Insurance Ombudsman, 2nd Floor, Lalit Bhawan, Bailey Road, Patna - 800 001",
+      "phone": "0612-2547068",
+      "email": "oio.patna@cioins.co.in",
+      "jurisdiction_as_listed": "Bihar, Jharkhand.",
+      "states": [
+        "Bihar",
+        "Jharkhand"
+      ],
+      "union_territories": [],
+      "districts": [],
+      "in_charge": {
+        "name": "Prasad M",
+        "designation": "Dy Secretary",
+        "phone": "0612-2547068",
+        "source_url": "https://www.cioins.co.in/SecretaryCenterwise"
+      },
+      "source_url": "https://www.cioins.co.in/Ombudsman"
+    },
+    {
+      "city": "Pune",
+      "ombudsman": "Ms. Rachna Khare",
+      "address": "Office of the Insurance Ombudsman, Jeevan Darshan Bldg., 3rd Floor, C.T.S. Nos. 195 to 198, N.C. Kelkar Road, Narayan Peth, Pune - 411 030",
+      "phone": "020-24471175",
+      "email": "oio.pune@cioins.co.in",
+      "jurisdiction_as_listed": "State of Goa and State of Maharashtra excluding areas of Navi Mumbai, Thane district, Palghar District, Raigad district & Mumbai Metropolitan Region",
+      "states": [
+        "Goa",
+        "Maharashtra (excluding Navi Mumbai, Thane district, Palghar district, Raigad district and Mumbai Metropolitan Region)"
+      ],
+      "union_territories": [],
+      "districts": [],
+      "in_charge": {
+        "name": "Ms. Parvathy Iyer",
+        "designation": "Dy Secretary",
+        "phone": "020-24471175",
+        "source_url": "https://www.cioins.co.in/SecretaryCenterwise"
+      },
+      "source_url": "https://www.cioins.co.in/Ombudsman"
+    },
+    {
+      "city": "Thane",
+      "ombudsman": "Shri Umesh Sinha",
+      "address": "Office of the Insurance Ombudsman, Jeevan Chintamani Building, 2nd Floor, Near New RTO Office, Louis Wadi, Vasantrao Naik Mahamarg, Thane (West) - 400604",
+      "phone": "022-20812868/69",
+      "email": "oio.thane@cioins.co.in",
+      "jurisdiction_as_listed": "Area of Navi Mumbai, Thane District, Raigad District, Palghar District and wards of Mumbai, M/East, M/West, N, S and T.",
+      "states": [],
+      "union_territories": [],
+      "districts": [
+        {
+          "state": "Maharashtra",
+          "districts": [
+            "Thane",
+            "Raigad",
+            "Palghar",
+            "Navi Mumbai area",
+            "Mumbai wards M/East, M/West, N, S and T (see mumbai_wards)"
+          ]
+        }
+      ],
+      "mumbai_wards": [
+        {
+          "ward": "M/E",
+          "pin_codes": [
+            "400088",
+            "400074",
+            "400043",
+            "400094",
+            "400085"
+          ]
+        },
+        {
+          "ward": "M/W",
+          "pin_codes": [
+            "400088",
+            "400071",
+            "400074",
+            "400089"
+          ]
+        },
+        {
+          "ward": "N",
+          "pin_codes": [
+            "400077",
+            "400086",
+            "400075",
+            "400084"
+          ]
+        },
+        {
+          "ward": "S",
+          "pin_codes": [
+            "400078",
+            "400042",
+            "400079",
+            "400083"
+          ]
+        },
+        {
+          "ward": "T",
+          "pin_codes": [
+            "400080",
+            "400081",
+            "400082"
+          ]
+        }
+      ],
+      "notes": "Ward list and PIN codes from CIO 'Annexure A - The jurisdiction of Thane centre'. PIN codes as printed; some overlap with other wards.",
+      "annexure_url": "https://www.cioins.co.in/notification/Thane%20jurisdiction%20-Annexure%20A.pdf",
+      "in_charge": {
+        "name": "Mr. Arun A Sawant",
+        "designation": "Asst. Secretary",
+        "phone": "022-20812869",
+        "source_url": "https://www.cioins.co.in/SecretaryCenterwise"
+      },
+      "source_url": "https://www.cioins.co.in/Ombudsman"
+    }
+  ]
+}

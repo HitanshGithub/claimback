@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+.venv/
+backend/.claims/
+backend/.fixture-claims/
+backend/.build/
+.pytest_cache/
+
+# Node
+node_modules/
+frontend/dist/
+
+# SAM
+infra/.aws-sam/
+samconfig.toml
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# local env
+.env
+.env.local
+
+# third-party documents are not redistributed: run `python scripts/download_sources.py`
+knowledge-base/**/*.pdf
+reference/
+backend/.fixture-claims/
+
+# screenshots: keep the curated set, not every run
+frontend/screenshots/live/
+frontend/screenshots/deployed/*mobile*

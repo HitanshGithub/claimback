@@ -1,0 +1,293 @@
+id,schedule,list,sl_no,item,treatment,aliases,page
+NP-AI-LI-001,annexure_i,I,1,BABY FOOD,optional_item,,26
+NP-AI-LI-002,annexure_i,I,2,BABY UTILITIES CHARGES,optional_item,,26
+NP-AI-LI-003,annexure_i,I,3,BEAUTY SERVICES,optional_item,,26
+NP-AI-LI-004,annexure_i,I,4,BELTS/ BRACES,optional_item,,26
+NP-AI-LI-005,annexure_i,I,5,BUDS,optional_item,,26
+NP-AI-LI-006,annexure_i,I,6,COLD PACK/HOT PACK,optional_item,,26
+NP-AI-LI-007,annexure_i,I,7,CARRY BAGS,optional_item,,26
+NP-AI-LI-008,annexure_i,I,8,EMAIL / INTERNET CHARGES,optional_item,,26
+NP-AI-LI-009,annexure_i,I,9,FOOD CHARGES (OTHER THAN PATIENT's DIET PROVIDED BY HOSPITAL),optional_item,attendant food|visitor food|canteen|cafeteria,26
+NP-AI-LI-010,annexure_i,I,10,LEGGINGS,optional_item,,26
+NP-AI-LI-011,annexure_i,I,11,LAUNDRY CHARGES,optional_item,laundry|linen charges,26
+NP-AI-LI-012,annexure_i,I,12,MINERAL WATER,optional_item,water bottle|packaged drinking water,26
+NP-AI-LI-013,annexure_i,I,13,SANITARY PAD,optional_item,sanitary napkin|maternity pad,26
+NP-AI-LI-014,annexure_i,I,14,TELEPHONE CHARGES,optional_item,telephone|phone charges,26
+NP-AI-LI-015,annexure_i,I,15,GUEST SERVICES,optional_item,,26
+NP-AI-LI-016,annexure_i,I,16,CREPE BANDAGE,optional_item,crepe|elastic bandage,26
+NP-AI-LI-017,annexure_i,I,17,DIAPER OF ANY TYPE,optional_item,diaper|adult diaper|diapers,26
+NP-AI-LI-018,annexure_i,I,18,EYELET COLLAR,optional_item,,26
+NP-AI-LI-019,annexure_i,I,19,SLINGS,optional_item,,26
+NP-AI-LI-020,annexure_i,I,20,BLOOD GROUPING AND CROSS MATCHING OF DONORS SAMPLES,optional_item,,26
+NP-AI-LI-021,annexure_i,I,21,SERVICE CHARGES WHERE NURSING CHARGE ALSO CHARGED,optional_item,,26
+NP-AI-LI-022,annexure_i,I,22,Television Charges,optional_item,tv charges|television,26
+NP-AI-LI-023,annexure_i,I,23,SURCHARGES,optional_item,,26
+NP-AI-LI-024,annexure_i,I,24,ATTENDANT CHARGES,optional_item,attendant|attendant bed|companion charges,26
+NP-AI-LI-025,annexure_i,I,25,EXTRA DIET OF PATIENT (OTHER THAN THAT WHICH FORMS PART OF BED CHARGE),optional_item,,26
+NP-AI-LI-026,annexure_i,I,26,BIRTH CERTIFICATE,optional_item,,27
+NP-AI-LI-027,annexure_i,I,27,CERTIFICATE CHARGES,optional_item,fitness certificate,27
+NP-AI-LI-028,annexure_i,I,28,COURIER CHARGES,optional_item,,27
+NP-AI-LI-029,annexure_i,I,29,CONVEYANCE CHARGES,optional_item,,27
+NP-AI-LI-030,annexure_i,I,30,MEDICAL CERTIFICATE,optional_item,,27
+NP-AI-LI-031,annexure_i,I,31,MEDICAL RECORDS,optional_item,medical record charges|mrd charges|case sheet copy,27
+NP-AI-LI-032,annexure_i,I,32,PHOTOCOPIES CHARGES,optional_item,photocopy|xerox,27
+NP-AI-LI-033,annexure_i,I,33,MORTUARY CHARGES,optional_item,,27
+NP-AI-LI-034,annexure_i,I,34,WALKING AIDS CHARGES,optional_item,walker|walking stick|crutches,27
+NP-AI-LI-035,annexure_i,I,35,OXYGEN CYLINDER (FOR USAGE OUTSIDE THE HOSPITAL),optional_item,,27
+NP-AI-LI-036,annexure_i,I,36,SPACER,optional_item,,27
+NP-AI-LI-037,annexure_i,I,37,SPIROMETRE,optional_item,,27
+NP-AI-LI-038,annexure_i,I,38,NEBULIZER KIT,optional_item,nebuliser kit|nebulizer mask|neb kit,27
+NP-AI-LI-039,annexure_i,I,39,STEAM INHALER,optional_item,,27
+NP-AI-LI-040,annexure_i,I,40,ARMSLING,optional_item,,27
+NP-AI-LI-041,annexure_i,I,41,THERMOMETER,optional_item,digital thermometer,27
+NP-AI-LI-042,annexure_i,I,42,CERVICAL COLLAR,optional_item,,27
+NP-AI-LI-043,annexure_i,I,43,SPLINT,optional_item,,27
+NP-AI-LI-044,annexure_i,I,44,DIABETIC FOOT WEAR,optional_item,,27
+NP-AI-LI-045,annexure_i,I,45,KNEE BRACES (LONG/ SHORT/ HINGED),optional_item,,27
+NP-AI-LI-046,annexure_i,I,46,KNEE IMMOBILIZER/SHOULDER IMMOBILIZER,optional_item,,27
+NP-AI-LI-047,annexure_i,I,47,LUMBO SACRAL BELT,optional_item,,27
+NP-AI-LI-048,annexure_i,I,48,NIMBUS BED OR WATER OR AIR BED CHARGES,optional_item,,27
+NP-AI-LI-049,annexure_i,I,49,AMBULANCE COLLAR,optional_item,,27
+NP-AI-LI-050,annexure_i,I,50,AMBULANCE EQUIPMENT,optional_item,,27
+NP-AI-LI-051,annexure_i,I,51,ABDOMINAL BINDER,optional_item,,27
+NP-AI-LI-052,annexure_i,I,52,PRIVATE NURSES CHARGES- SPECIAL NURSING CHARGES,optional_item,special nursing|private nurse,27
+NP-AI-LI-053,annexure_i,I,53,SUGAR FREE Tablets,optional_item,,27
+NP-AI-LI-054,annexure_i,I,54,"CREAMS POWDERS LOTIONS (Toiletries are not payable, only prescribed medical pharmaceuticals payable)",optional_item,toiletries|body lotion|powder|moisturiser,27
+NP-AI-LI-055,annexure_i,I,55,ECG ELECTRODES,optional_item,ecg electrode|electrodes,27
+NP-AI-LI-056,annexure_i,I,56,GLOVES,optional_item,glove|gloves sterile|surgical gloves|examination gloves|nitrile gloves,27
+NP-AI-LI-057,annexure_i,I,57,NEBULISATION KIT,optional_item,nebulisation set|nebulization kit,27
+NP-AI-LI-058,annexure_i,I,58,"ANY KIT WITH NO DETAILS MENTIONED [DELIVERY KIT, ORTHOKIT, RECOVERY KIT, ETC]",optional_item,delivery kit|ortho kit|recovery kit|patient kit,27
+NP-AI-LI-059,annexure_i,I,59,KIDNEY TRAY,optional_item,kidney dish,27
+NP-AI-LI-060,annexure_i,I,60,MASK,optional_item,face mask|surgical mask|n95 mask|3 ply mask,27
+NP-AI-LI-061,annexure_i,I,61,OUNCE GLASS,optional_item,,27
+NP-AI-LI-062,annexure_i,I,62,OXYGEN MASK,optional_item,o2 mask,27
+NP-AI-LI-063,annexure_i,I,63,PELVIC TRACTION BELT,optional_item,,28
+NP-AI-LI-064,annexure_i,I,64,PAN CAN,optional_item,,28
+NP-AI-LI-065,annexure_i,I,65,TROLLY COVER,optional_item,,28
+NP-AI-LI-066,annexure_i,I,66,"UROMETER, URINE JUG",optional_item,,28
+NP-AI-LI-067,annexure_i,I,67,AMBULANCE,optional_item,,28
+NP-AI-LI-068,annexure_i,I,68,VASOFIX SAFETY,optional_item,vasofix|iv cannula|cannula,28
+NP-AI-LII-001,annexure_i,II,1,BABY CHARGES (UNLESS SPECIFIED/INDICATED),subsumed_into_room_charges,,28
+NP-AI-LII-002,annexure_i,II,2,HAND WASH,subsumed_into_room_charges,handwash|hand sanitiser|hand sanitizer,28
+NP-AI-LII-003,annexure_i,II,3,SHOE COVER,subsumed_into_room_charges,shoe covers,28
+NP-AI-LII-004,annexure_i,II,4,CAPS,subsumed_into_room_charges,surgical cap|head cap|bouffant cap,28
+NP-AI-LII-005,annexure_i,II,5,CRADLE CHARGES,subsumed_into_room_charges,,28
+NP-AI-LII-006,annexure_i,II,6,COMB,subsumed_into_room_charges,,28
+NP-AI-LII-007,annexure_i,II,7,EAU-DE-COLOGNE / ROOM FRESHNERS,subsumed_into_room_charges,,28
+NP-AI-LII-008,annexure_i,II,8,FOOT COVER,subsumed_into_room_charges,,28
+NP-AI-LII-009,annexure_i,II,9,GOWN,subsumed_into_room_charges,patient gown|surgical gown|disposable gown,28
+NP-AI-LII-010,annexure_i,II,10,SLIPPERS,subsumed_into_room_charges,,28
+NP-AI-LII-011,annexure_i,II,11,TISSUE PAPER,subsumed_into_room_charges,tissue roll|tissues|wet wipes,28
+NP-AI-LII-012,annexure_i,II,12,TOOTH PASTE,subsumed_into_room_charges,,28
+NP-AI-LII-013,annexure_i,II,13,TOOTH BRUSH,subsumed_into_room_charges,,28
+NP-AI-LII-014,annexure_i,II,14,BED PAN,subsumed_into_room_charges,bedpan,28
+NP-AI-LII-015,annexure_i,II,15,FACE MASK,subsumed_into_room_charges,,28
+NP-AI-LII-016,annexure_i,II,16,FLEXI MASK,subsumed_into_room_charges,,28
+NP-AI-LII-017,annexure_i,II,17,HAND HOLDER,subsumed_into_room_charges,,28
+NP-AI-LII-018,annexure_i,II,18,SPUTUM CUP,subsumed_into_room_charges,,29
+NP-AI-LII-019,annexure_i,II,19,DISINFECTANT LOTIONS,subsumed_into_room_charges,disinfectant,29
+NP-AI-LII-020,annexure_i,II,20,LUXURY TAX,subsumed_into_room_charges,,29
+NP-AI-LII-021,annexure_i,II,21,HVAC,subsumed_into_room_charges,,29
+NP-AI-LII-022,annexure_i,II,22,HOUSE KEEPING CHARGES,subsumed_into_room_charges,housekeeping|housekeeping charges,29
+NP-AI-LII-023,annexure_i,II,23,AIR CONDITIONER CHARGES,subsumed_into_room_charges,ac charges,29
+NP-AI-LII-024,annexure_i,II,24,IM IV INJECTION CHARGES,subsumed_into_room_charges,injection charges|iv injection charges|im injection charges,29
+NP-AI-LII-025,annexure_i,II,25,CLEAN SHEET,subsumed_into_room_charges,,29
+NP-AI-LII-026,annexure_i,II,26,BLANKET/WARMER BLANKET,subsumed_into_room_charges,,29
+NP-AI-LII-027,annexure_i,II,27,ADMISSION KIT,subsumed_into_room_charges,admission kit|welcome kit|patient care kit,29
+NP-AI-LII-028,annexure_i,II,28,DIABETIC CHART CHARGES,subsumed_into_room_charges,,29
+NP-AI-LII-029,annexure_i,II,29,DOCUMENTATION CHARGES / ADMINISTRATIVE EXPENSES,subsumed_into_room_charges,documentation charges|administrative charges|admin charges,29
+NP-AI-LII-030,annexure_i,II,30,DISCHARGE PROCEDURE CHARGES,subsumed_into_room_charges,discharge charges|discharge processing,29
+NP-AI-LII-031,annexure_i,II,31,DAILY CHART CHARGES,subsumed_into_room_charges,,29
+NP-AI-LII-032,annexure_i,II,32,ENTRANCE PASS / VISITORS PASS CHARGES,subsumed_into_room_charges,visitor pass|gate pass,29
+NP-AI-LII-033,annexure_i,II,33,EXPENSES RELATED TO PRESCRIPTION ON DISCHARGE,subsumed_into_room_charges,discharge medicines|take home medicines|ttk medicines,29
+NP-AI-LII-034,annexure_i,II,34,FILE OPENING CHARGES,subsumed_into_room_charges,file charges|file opening,29
+NP-AI-LII-035,annexure_i,II,35,INCIDENTAL EXPENSES / MISC. CHARGES (NOT EXPLAINED),subsumed_into_room_charges,miscellaneous|misc charges|incidental charges|sundries,29
+NP-AI-LII-036,annexure_i,II,36,PATIENT IDENTIFICATION BAND / NAME TAG,subsumed_into_room_charges,id band|wrist band|name band,29
+NP-AI-LII-037,annexure_i,II,37,PULSEOXYMETER CHARGES,subsumed_into_room_charges,pulse oximeter|pulse oximetry charges|spo2 monitoring,29
+NP-AI-LIII-001,annexure_i,III,1,HAIR REMOVAL CREAM,subsumed_into_procedure_charges,,29
+NP-AI-LIII-002,annexure_i,III,2,DISPOSABLES RAZORS CHARGES (for site preparations),subsumed_into_procedure_charges,razor|disposable razor,29
+NP-AI-LIII-003,annexure_i,III,3,EYE PAD,subsumed_into_procedure_charges,,29
+NP-AI-LIII-004,annexure_i,III,4,EYE SHEILD,subsumed_into_procedure_charges,,29
+NP-AI-LIII-005,annexure_i,III,5,CAMERA COVER,subsumed_into_procedure_charges,,29
+NP-AI-LIII-006,annexure_i,III,6,"DVD, CD CHARGES",subsumed_into_procedure_charges,,29
+NP-AI-LIII-007,annexure_i,III,7,GAUSE SOFT,subsumed_into_procedure_charges,,29
+NP-AI-LIII-008,annexure_i,III,8,GAUZE,subsumed_into_procedure_charges,gauze pieces|gauze swab|sterile gauze,29
+NP-AI-LIII-009,annexure_i,III,9,WARD AND THEATRE BOOKING CHARGES,subsumed_into_procedure_charges,ot booking|theatre booking,29
+NP-AI-LIII-010,annexure_i,III,10,ARTHROSCOPY AND ENDOSCOPY INSTRUMENTS,subsumed_into_procedure_charges,arthroscopy instrument|arthroscopy instruments|endoscopy instrument|endoscopy instruments,29
+NP-AI-LIII-011,annexure_i,III,11,MICROSCOPE COVER,subsumed_into_procedure_charges,,29
+NP-AI-LIII-012,annexure_i,III,12,"SURGICAL BLADES, HARMONICSCALPEL,SHAVER",subsumed_into_procedure_charges,surgical blade|blade no|harmonic scalpel,30
+NP-AI-LIII-013,annexure_i,III,13,SURGICAL DRILL,subsumed_into_procedure_charges,,30
+NP-AI-LIII-014,annexure_i,III,14,EYE KIT,subsumed_into_procedure_charges,,30
+NP-AI-LIII-015,annexure_i,III,15,EYE DRAPE,subsumed_into_procedure_charges,,30
+NP-AI-LIII-016,annexure_i,III,16,X-RAY FILM,subsumed_into_procedure_charges,xray film,30
+NP-AI-LIII-017,annexure_i,III,17,BOYLES APPARATUS CHARGES,subsumed_into_procedure_charges,,30
+NP-AI-LIII-018,annexure_i,III,18,COTTON,subsumed_into_procedure_charges,cotton roll|absorbent cotton,30
+NP-AI-LIII-019,annexure_i,III,19,COTTON BANDAGE,subsumed_into_procedure_charges,,30
+NP-AI-LIII-020,annexure_i,III,20,SURGICAL TAPE,subsumed_into_procedure_charges,micropore|leucoplast|adhesive tape,30
+NP-AI-LIII-021,annexure_i,III,21,APRON,subsumed_into_procedure_charges,,30
+NP-AI-LIII-022,annexure_i,III,22,TORNIQUET,subsumed_into_procedure_charges,,30
+NP-AI-LIII-023,annexure_i,III,23,"ORTHOBUNDLE, GYNAEC BUNDLE",subsumed_into_procedure_charges,ortho bundle|gynaec bundle|drape pack,30
+NP-AI-LIV-001,annexure_i,IV,1,ADMISSION/REGISTRATION CHARGES,subsumed_into_cost_of_treatment,registration charges|registration fee|admission charges|admission fee,30
+NP-AI-LIV-002,annexure_i,IV,2,HOSPITALISATION FOR EVALUATION/ DIAGNOSTIC PURPOSE,subsumed_into_cost_of_treatment,,30
+NP-AI-LIV-003,annexure_i,IV,3,URINE CONTAINER,subsumed_into_cost_of_treatment,urine pot,30
+NP-AI-LIV-004,annexure_i,IV,4,BLOOD RESERVATION CHARGES AND ANTE NATAL BOOKING CHARGES,subsumed_into_cost_of_treatment,,30
+NP-AI-LIV-005,annexure_i,IV,5,BIPAP MACHINE,subsumed_into_cost_of_treatment,bipap,30
+NP-AI-LIV-006,annexure_i,IV,6,CPAP/ CAPD EQUIPMENTS,subsumed_into_cost_of_treatment,cpap|capd,30
+NP-AI-LIV-007,annexure_i,IV,7,INFUSION PUMP– COST,subsumed_into_cost_of_treatment,infusion pump|syringe pump,30
+NP-AI-LIV-008,annexure_i,IV,8,HYDROGEN PEROXIDE\SPIRIT\ DISINFECTANTS ETC,subsumed_into_cost_of_treatment,hydrogen peroxide|surgical spirit|betadine solution,30
+NP-AI-LIV-009,annexure_i,IV,9,NUTRITION PLANNING CHARGES - DIETICIAN CHARGES- DIET CHARGES,subsumed_into_cost_of_treatment,dietician charges|dietitian charges|diet consultation,30
+NP-AI-LIV-010,annexure_i,IV,10,HIV KIT,subsumed_into_cost_of_treatment,,30
+NP-AI-LIV-011,annexure_i,IV,11,ANTISEPTIC MOUTHWASH,subsumed_into_cost_of_treatment,mouthwash|mouth wash,30
+NP-AI-LIV-012,annexure_i,IV,12,LOZENGES,subsumed_into_cost_of_treatment,,30
+NP-AI-LIV-013,annexure_i,IV,13,MOUTH PAINT,subsumed_into_cost_of_treatment,,30
+NP-AI-LIV-014,annexure_i,IV,14,VACCINATION CHARGES,subsumed_into_cost_of_treatment,vaccine|vaccination,30
+NP-AI-LIV-015,annexure_i,IV,15,ALCOHOL SWABES,subsumed_into_cost_of_treatment,alcohol swab|alcohol swabs|spirit swab,30
+NP-AI-LIV-016,annexure_i,IV,16,SCRUB SOLUTION/STERILLIUM,subsumed_into_cost_of_treatment,sterillium|scrub solution|hand rub,30
+NP-AI-LIV-017,annexure_i,IV,17,Glucometer & Strips,subsumed_into_cost_of_treatment,glucometer strips|glucose strips|grbs strips,30
+NP-AI-LIV-018,annexure_i,IV,18,URINE BAG,subsumed_into_cost_of_treatment,uro bag|urine collection bag,31
+NP-AS-LI-001,arogya_sanjeevani,I,1,BABY FOOD,not_covered,,136
+NP-AS-LI-002,arogya_sanjeevani,I,2,BABY UTILITIES CHARGES,not_covered,,136
+NP-AS-LI-003,arogya_sanjeevani,I,3,BEAUTY SERVICES,not_covered,,136
+NP-AS-LI-004,arogya_sanjeevani,I,4,BELTS/ BRACES,not_covered,,136
+NP-AS-LI-005,arogya_sanjeevani,I,5,BUDS,not_covered,,136
+NP-AS-LI-006,arogya_sanjeevani,I,6,COLD PACK/HOT PACK,not_covered,,136
+NP-AS-LI-007,arogya_sanjeevani,I,7,CARRY BAGS,not_covered,,136
+NP-AS-LI-008,arogya_sanjeevani,I,8,EMAIL / INTERNET CHARGES,not_covered,,136
+NP-AS-LI-009,arogya_sanjeevani,I,9,FOOD CHARGES (OTHER THAN PATIENT's DIET PROVIDED BY HOSPITAL),not_covered,attendant food|visitor food|canteen|cafeteria,136
+NP-AS-LI-010,arogya_sanjeevani,I,10,LEGGINGS,not_covered,,136
+NP-AS-LI-011,arogya_sanjeevani,I,11,LAUNDRY CHARGES,not_covered,laundry|linen charges,136
+NP-AS-LI-012,arogya_sanjeevani,I,12,MINERAL WATER,not_covered,water bottle|packaged drinking water,136
+NP-AS-LI-013,arogya_sanjeevani,I,13,SANITARY PAD,not_covered,sanitary napkin|maternity pad,136
+NP-AS-LI-014,arogya_sanjeevani,I,14,TELEPHONE CHARGES,not_covered,telephone|phone charges,136
+NP-AS-LI-015,arogya_sanjeevani,I,15,GUEST SERVICES,not_covered,,136
+NP-AS-LI-016,arogya_sanjeevani,I,16,CREPE BANDAGE,not_covered,crepe|elastic bandage,136
+NP-AS-LI-017,arogya_sanjeevani,I,17,DIAPER OF ANY TYPE,not_covered,diaper|adult diaper|diapers,136
+NP-AS-LI-018,arogya_sanjeevani,I,18,EYELET COLLAR,not_covered,,136
+NP-AS-LI-019,arogya_sanjeevani,I,19,SLINGS,not_covered,,136
+NP-AS-LI-020,arogya_sanjeevani,I,20,BLOOD GROUPING AND CROSS MATCHING OF DONORS SAMPLES,not_covered,,136
+NP-AS-LI-021,arogya_sanjeevani,I,21,SERVICE CHARGES WHERE NURSING CHARGE ALSO CHARGED,not_covered,,136
+NP-AS-LI-022,arogya_sanjeevani,I,22,Television Charges,not_covered,tv charges|television,136
+NP-AS-LI-023,arogya_sanjeevani,I,23,SURCHARGES,not_covered,,136
+NP-AS-LI-024,arogya_sanjeevani,I,24,ATTENDANT CHARGES,not_covered,attendant|attendant bed|companion charges,136
+NP-AS-LI-025,arogya_sanjeevani,I,25,EXTRA DIET OF PATIENT (OTHER THAN THAT WHICH FORMS PART OF BED CHARGE),not_covered,,136
+NP-AS-LI-026,arogya_sanjeevani,I,26,BIRTH CERTIFICATE,not_covered,,136
+NP-AS-LI-027,arogya_sanjeevani,I,27,CERTIFICATE CHARGES,not_covered,fitness certificate,136
+NP-AS-LI-028,arogya_sanjeevani,I,28,COURIER CHARGES,not_covered,,136
+NP-AS-LI-029,arogya_sanjeevani,I,29,CONVEYANCE CHARGES,not_covered,,136
+NP-AS-LI-030,arogya_sanjeevani,I,30,MEDICAL CERTIFICATE,not_covered,,136
+NP-AS-LI-031,arogya_sanjeevani,I,31,MEDICAL RECORDS,not_covered,medical record charges|mrd charges|case sheet copy,136
+NP-AS-LI-032,arogya_sanjeevani,I,32,PHOTOCOPIES CHARGES,not_covered,photocopy|xerox,136
+NP-AS-LI-033,arogya_sanjeevani,I,33,MORTUARY CHARGES,not_covered,,136
+NP-AS-LI-034,arogya_sanjeevani,I,34,WALKING AIDS CHARGES,not_covered,walker|walking stick|crutches,136
+NP-AS-LI-035,arogya_sanjeevani,I,35,OXYGEN CYLINDER (FOR USAGE OUTSIDE THE HOSPITAL),not_covered,,136
+NP-AS-LI-036,arogya_sanjeevani,I,36,SPACER,not_covered,,136
+NP-AS-LI-037,arogya_sanjeevani,I,37,SPIROMETRE,not_covered,,136
+NP-AS-LI-038,arogya_sanjeevani,I,38,NEBULIZER KIT,not_covered,nebuliser kit|nebulizer mask|neb kit,136
+NP-AS-LI-039,arogya_sanjeevani,I,39,STEAM INHALER,not_covered,,136
+NP-AS-LI-040,arogya_sanjeevani,I,40,ARMSLING,not_covered,,136
+NP-AS-LI-041,arogya_sanjeevani,I,41,THERMOMETER,not_covered,digital thermometer,136
+NP-AS-LI-042,arogya_sanjeevani,I,42,CERVICAL COLLAR,not_covered,,137
+NP-AS-LI-043,arogya_sanjeevani,I,43,SPLINT,not_covered,,137
+NP-AS-LI-044,arogya_sanjeevani,I,44,DIABETIC FOOT WEAR,not_covered,,137
+NP-AS-LI-045,arogya_sanjeevani,I,45,KNEE BRACES (LONG/ SHORT/ HINGED),not_covered,,137
+NP-AS-LI-046,arogya_sanjeevani,I,46,KNEE IMMOBILIZER/SHOULDER IMMOBILIZER,not_covered,,137
+NP-AS-LI-047,arogya_sanjeevani,I,47,LUMBO SACRAL BELT,not_covered,,137
+NP-AS-LI-048,arogya_sanjeevani,I,48,NIMBUS BED OR WATER OR AIR BED CHARGES,not_covered,,137
+NP-AS-LI-049,arogya_sanjeevani,I,49,AMBULANCE COLLAR,not_covered,,137
+NP-AS-LI-050,arogya_sanjeevani,I,50,AMBULANCE EQUIPMENT,not_covered,,137
+NP-AS-LI-051,arogya_sanjeevani,I,51,ABDOMINAL BINDER,not_covered,,137
+NP-AS-LI-052,arogya_sanjeevani,I,52,PRIVATE NURSES CHARGES- SPECIAL NURSING CHARGES,not_covered,special nursing|private nurse,137
+NP-AS-LI-053,arogya_sanjeevani,I,53,SUGAR FREE Tablets,not_covered,,137
+NP-AS-LI-054,arogya_sanjeevani,I,54,"CREAMS POWDERS LOTIONS (Toiletries are not payable, only prescribed medical pharmaceuticals payable)",not_covered,toiletries|body lotion|powder|moisturiser,137
+NP-AS-LI-055,arogya_sanjeevani,I,55,ECG ELECTRODES,not_covered,ecg electrode|electrodes,137
+NP-AS-LI-056,arogya_sanjeevani,I,56,GLOVES,not_covered,glove|gloves sterile|surgical gloves|examination gloves|nitrile gloves,137
+NP-AS-LI-057,arogya_sanjeevani,I,57,NEBULISATION KIT,not_covered,nebulisation set|nebulization kit,137
+NP-AS-LI-058,arogya_sanjeevani,I,58,"ANY KIT WITH NO DETAILS MENTIONED [DELIVERY KIT, ORTHOKIT, RECOVERY KIT, ETC]",not_covered,delivery kit|ortho kit|recovery kit|patient kit,137
+NP-AS-LI-059,arogya_sanjeevani,I,59,KIDNEY TRAY,not_covered,kidney dish,137
+NP-AS-LI-060,arogya_sanjeevani,I,60,MASK,not_covered,face mask|surgical mask|n95 mask|3 ply mask,137
+NP-AS-LI-061,arogya_sanjeevani,I,61,OUNCE GLASS,not_covered,,137
+NP-AS-LI-062,arogya_sanjeevani,I,62,OXYGEN MASK,not_covered,o2 mask,137
+NP-AS-LI-063,arogya_sanjeevani,I,63,PELVIC TRACTION BELT,not_covered,,137
+NP-AS-LI-064,arogya_sanjeevani,I,64,PAN CAN,not_covered,,137
+NP-AS-LI-065,arogya_sanjeevani,I,65,TROLLY COVER,not_covered,,137
+NP-AS-LI-066,arogya_sanjeevani,I,66,"UROMETER, URINE JUG",not_covered,,137
+NP-AS-LI-067,arogya_sanjeevani,I,67,AMBULANCE,not_covered,,137
+NP-AS-LI-068,arogya_sanjeevani,I,68,VASOFIX SAFETY,not_covered,vasofix|iv cannula|cannula,137
+NP-AS-LII-001,arogya_sanjeevani,II,1,BABY CHARGES (UNLESS SPECIFIED/INDICATED),subsumed_into_room_charges,,137
+NP-AS-LII-002,arogya_sanjeevani,II,2,HAND WASH,subsumed_into_room_charges,handwash|hand sanitiser|hand sanitizer,137
+NP-AS-LII-003,arogya_sanjeevani,II,3,SHOE COVER,subsumed_into_room_charges,shoe covers,137
+NP-AS-LII-004,arogya_sanjeevani,II,4,CAPS,subsumed_into_room_charges,surgical cap|head cap|bouffant cap,137
+NP-AS-LII-005,arogya_sanjeevani,II,5,CRADLE CHARGES,subsumed_into_room_charges,,137
+NP-AS-LII-006,arogya_sanjeevani,II,6,COMB,subsumed_into_room_charges,,137
+NP-AS-LII-007,arogya_sanjeevani,II,7,EAU-DE-COLOGNE / ROOM FRESHNERS,subsumed_into_room_charges,,137
+NP-AS-LII-008,arogya_sanjeevani,II,8,FOOT COVER,subsumed_into_room_charges,,137
+NP-AS-LII-009,arogya_sanjeevani,II,9,GOWN,subsumed_into_room_charges,patient gown|surgical gown|disposable gown,137
+NP-AS-LII-010,arogya_sanjeevani,II,10,SLIPPERS,subsumed_into_room_charges,,137
+NP-AS-LII-011,arogya_sanjeevani,II,11,TISSUE PAPER,subsumed_into_room_charges,tissue roll|tissues|wet wipes,137
+NP-AS-LII-012,arogya_sanjeevani,II,12,TOOTH PASTE,subsumed_into_room_charges,,137
+NP-AS-LII-013,arogya_sanjeevani,II,13,TOOTH BRUSH,subsumed_into_room_charges,,137
+NP-AS-LII-014,arogya_sanjeevani,II,14,BED PAN,subsumed_into_room_charges,bedpan,137
+NP-AS-LII-015,arogya_sanjeevani,II,15,FACE MASK,subsumed_into_room_charges,,138
+NP-AS-LII-016,arogya_sanjeevani,II,16,FLEXI MASK,subsumed_into_room_charges,,138
+NP-AS-LII-017,arogya_sanjeevani,II,17,HAND HOLDER,subsumed_into_room_charges,,138
+NP-AS-LII-018,arogya_sanjeevani,II,18,SPUTUM CUP,subsumed_into_room_charges,,138
+NP-AS-LII-019,arogya_sanjeevani,II,19,DISINFECTANT LOTIONS,subsumed_into_room_charges,disinfectant,138
+NP-AS-LII-020,arogya_sanjeevani,II,20,LUXURY TAX,subsumed_into_room_charges,,138
+NP-AS-LII-021,arogya_sanjeevani,II,21,HVAC,subsumed_into_room_charges,,138
+NP-AS-LII-022,arogya_sanjeevani,II,22,HOUSE KEEPING CHARGES,subsumed_into_room_charges,housekeeping|housekeeping charges,138
+NP-AS-LII-023,arogya_sanjeevani,II,23,AIR CONDITIONER CHARGES,subsumed_into_room_charges,ac charges,138
+NP-AS-LII-024,arogya_sanjeevani,II,24,IM IV INJECTION CHARGES,subsumed_into_room_charges,injection charges|iv injection charges|im injection charges,138
+NP-AS-LII-025,arogya_sanjeevani,II,25,CLEAN SHEET,subsumed_into_room_charges,,138
+NP-AS-LII-026,arogya_sanjeevani,II,26,BLANKET/WARMER BLANKET,subsumed_into_room_charges,,138
+NP-AS-LII-027,arogya_sanjeevani,II,27,ADMISSION KIT,subsumed_into_room_charges,admission kit|welcome kit|patient care kit,138
+NP-AS-LII-028,arogya_sanjeevani,II,28,DIABETIC CHART CHARGES,subsumed_into_room_charges,,138
+NP-AS-LII-029,arogya_sanjeevani,II,29,DOCUMENTATION CHARGES / ADMINISTRATIVE EXPENSES,subsumed_into_room_charges,documentation charges|administrative charges|admin charges,138
+NP-AS-LII-030,arogya_sanjeevani,II,30,DISCHARGE PROCEDURE CHARGES,subsumed_into_room_charges,discharge charges|discharge processing,138
+NP-AS-LII-031,arogya_sanjeevani,II,31,DAILY CHART CHARGES,subsumed_into_room_charges,,138
+NP-AS-LII-032,arogya_sanjeevani,II,32,ENTRANCE PASS / VISITORS PASS CHARGES,subsumed_into_room_charges,visitor pass|gate pass,138
+NP-AS-LII-033,arogya_sanjeevani,II,33,EXPENSES RELATED TO PRESCRIPTION ON DISCHARGE,subsumed_into_room_charges,discharge medicines|take home medicines|ttk medicines,138
+NP-AS-LII-034,arogya_sanjeevani,II,34,FILE OPENING CHARGES,subsumed_into_room_charges,file charges|file opening,138
+NP-AS-LII-035,arogya_sanjeevani,II,35,INCIDENTAL EXPENSES / MISC. CHARGES (NOT EXPLAINED),subsumed_into_room_charges,miscellaneous|misc charges|incidental charges|sundries,138
+NP-AS-LII-036,arogya_sanjeevani,II,36,PATIENT IDENTIFICATION BAND / NAME TAG,subsumed_into_room_charges,id band|wrist band|name band,138
+NP-AS-LII-037,arogya_sanjeevani,II,37,PULSEOXYMETER CHARGES,subsumed_into_room_charges,pulse oximeter|pulse oximetry charges|spo2 monitoring,138
+NP-AS-LIII-001,arogya_sanjeevani,III,1,HAIR REMOVAL CREAM,subsumed_into_procedure_charges,,138
+NP-AS-LIII-002,arogya_sanjeevani,III,2,DISPOSABLES RAZORS CHARGES (for site preparations),subsumed_into_procedure_charges,razor|disposable razor,138
+NP-AS-LIII-003,arogya_sanjeevani,III,3,EYE PAD,subsumed_into_procedure_charges,,138
+NP-AS-LIII-004,arogya_sanjeevani,III,4,EYE SHEILD,subsumed_into_procedure_charges,,138
+NP-AS-LIII-005,arogya_sanjeevani,III,5,CAMERA COVER,subsumed_into_procedure_charges,,138
+NP-AS-LIII-006,arogya_sanjeevani,III,6,"DVD, CD CHARGES",subsumed_into_procedure_charges,,138
+NP-AS-LIII-007,arogya_sanjeevani,III,7,GAUSE SOFT,subsumed_into_procedure_charges,,138
+NP-AS-LIII-008,arogya_sanjeevani,III,8,GAUZE,subsumed_into_procedure_charges,gauze pieces|gauze swab|sterile gauze,138
+NP-AS-LIII-009,arogya_sanjeevani,III,9,WARD AND THEATRE BOOKING CHARGES,subsumed_into_procedure_charges,ot booking|theatre booking,138
+NP-AS-LIII-010,arogya_sanjeevani,III,10,ARTHROSCOPY AND ENDOSCOPY INSTRUMENTS,subsumed_into_procedure_charges,arthroscopy instrument|arthroscopy instruments|endoscopy instrument|endoscopy instruments,138
+NP-AS-LIII-011,arogya_sanjeevani,III,11,MICROSCOPE COVER,subsumed_into_procedure_charges,,138
+NP-AS-LIII-012,arogya_sanjeevani,III,12,"SURGICAL BLADES, HARMONICSCALPEL,SHAVER",subsumed_into_procedure_charges,surgical blade|blade no|harmonic scalpel,138
+NP-AS-LIII-013,arogya_sanjeevani,III,13,SURGICAL DRILL,subsumed_into_procedure_charges,,138
+NP-AS-LIII-014,arogya_sanjeevani,III,14,EYE KIT,subsumed_into_procedure_charges,,138
+NP-AS-LIII-015,arogya_sanjeevani,III,15,EYE DRAPE,subsumed_into_procedure_charges,,138
+NP-AS-LIII-016,arogya_sanjeevani,III,16,X-RAY FILM,subsumed_into_procedure_charges,xray film,138
+NP-AS-LIII-017,arogya_sanjeevani,III,17,BOYLES APPARATUS CHARGES,subsumed_into_procedure_charges,,138
+NP-AS-LIII-018,arogya_sanjeevani,III,18,COTTON,subsumed_into_procedure_charges,cotton roll|absorbent cotton,138
+NP-AS-LIII-019,arogya_sanjeevani,III,19,COTTON BANDAGE,subsumed_into_procedure_charges,,138
+NP-AS-LIII-020,arogya_sanjeevani,III,20,SURGICAL TAPE,subsumed_into_procedure_charges,micropore|leucoplast|adhesive tape,139
+NP-AS-LIII-021,arogya_sanjeevani,III,21,APRON,subsumed_into_procedure_charges,,139
+NP-AS-LIII-022,arogya_sanjeevani,III,22,TORNIQUET,subsumed_into_procedure_charges,,139
+NP-AS-LIII-023,arogya_sanjeevani,III,23,"ORTHOBUNDLE, GYNAEC BUNDLE",subsumed_into_procedure_charges,ortho bundle|gynaec bundle|drape pack,139
+NP-AS-LIV-001,arogya_sanjeevani,IV,1,ADMISSION/REGISTRATION CHARGES,subsumed_into_cost_of_treatment,registration charges|registration fee|admission charges|admission fee,139
+NP-AS-LIV-002,arogya_sanjeevani,IV,2,HOSPITALISATION FOR EVALUATION/ DIAGNOSTIC PURPOSE,subsumed_into_cost_of_treatment,,139
+NP-AS-LIV-003,arogya_sanjeevani,IV,3,URINE CONTAINER,subsumed_into_cost_of_treatment,urine pot,139
+NP-AS-LIV-004,arogya_sanjeevani,IV,4,BLOOD RESERVATION CHARGES AND ANTE NATAL BOOKING CHARGES,subsumed_into_cost_of_treatment,,139
+NP-AS-LIV-005,arogya_sanjeevani,IV,5,BIPAP MACHINE,subsumed_into_cost_of_treatment,bipap,139
+NP-AS-LIV-006,arogya_sanjeevani,IV,6,CPAP/ CAPD EQUIPMENTS,subsumed_into_cost_of_treatment,cpap|capd,139
+NP-AS-LIV-007,arogya_sanjeevani,IV,7,INFUSION PUMP– COST,subsumed_into_cost_of_treatment,infusion pump|syringe pump,139
+NP-AS-LIV-008,arogya_sanjeevani,IV,8,HYDROGEN PEROXIDE\SPIRIT\ DISINFECTANTS ETC,subsumed_into_cost_of_treatment,hydrogen peroxide|surgical spirit|betadine solution,139
+NP-AS-LIV-009,arogya_sanjeevani,IV,9,NUTRITION PLANNING CHARGES - DIETICIAN CHARGES- DIET CHARGES,subsumed_into_cost_of_treatment,dietician charges|dietitian charges|diet consultation,139
+NP-AS-LIV-010,arogya_sanjeevani,IV,10,HIV KIT,subsumed_into_cost_of_treatment,,139
+NP-AS-LIV-011,arogya_sanjeevani,IV,11,ANTISEPTIC MOUTHWASH,subsumed_into_cost_of_treatment,mouthwash|mouth wash,139
+NP-AS-LIV-012,arogya_sanjeevani,IV,12,LOZENGES,subsumed_into_cost_of_treatment,,139
+NP-AS-LIV-013,arogya_sanjeevani,IV,13,MOUTH PAINT,subsumed_into_cost_of_treatment,,139
+NP-AS-LIV-014,arogya_sanjeevani,IV,14,VACCINATION CHARGES,subsumed_into_cost_of_treatment,vaccine|vaccination,139
+NP-AS-LIV-015,arogya_sanjeevani,IV,15,ALCOHOL SWABES,subsumed_into_cost_of_treatment,alcohol swab|alcohol swabs|spirit swab,139
+NP-AS-LIV-016,arogya_sanjeevani,IV,16,SCRUB SOLUTION/STERILLIUM,subsumed_into_cost_of_treatment,sterillium|scrub solution|hand rub,139
+NP-AS-LIV-017,arogya_sanjeevani,IV,17,Glucometer& Strips,subsumed_into_cost_of_treatment,glucometer strips|glucose strips|grbs strips,139
+NP-AS-LIV-018,arogya_sanjeevani,IV,18,URINE BAG,subsumed_into_cost_of_treatment,uro bag|urine collection bag,139
