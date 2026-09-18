@@ -1,0 +1,97 @@
+{
+  "scenario_id": "S3",
+  "hospital": "Riverbend Heart Institute",
+  "patient": "Meena Iyer",
+  "bill_date": "14-07-2026",
+  "gross_total": 259100,
+  "lines": [
+    {
+      "code": "IC01",
+      "head": "icu",
+      "description": "ICCU Charges (incl. nursing & monitoring)",
+      "qty": 2,
+      "rate": 9000,
+      "amount": 18000
+    },
+    {
+      "code": "RM01",
+      "head": "room",
+      "description": "Room Rent - Single Room (incl. nursing)",
+      "qty": 2,
+      "rate": 4500,
+      "amount": 9000
+    },
+    {
+      "code": "DR01",
+      "head": "doctor",
+      "description": "Interventional Cardiologist Fee - PTCA",
+      "qty": 1,
+      "rate": 60000,
+      "amount": 60000
+    },
+    {
+      "code": "DR02",
+      "head": "doctor",
+      "description": "Consultant Visits - Cardiology",
+      "qty": 4,
+      "rate": 1500,
+      "amount": 6000
+    },
+    {
+      "code": "OT01",
+      "head": "ot",
+      "description": "Cath Lab Charges",
+      "qty": 1,
+      "rate": 45000,
+      "amount": 45000
+    },
+    {
+      "code": "IM01",
+      "head": "implant",
+      "description": "Drug Eluting Stent 3.0 x 28 mm (with sticker)",
+      "qty": 1,
+      "rate": 31500,
+      "amount": 31500
+    },
+    {
+      "code": "CS01",
+      "head": "consumable",
+      "description": "Cath Lab Disposables - Guide Catheter, Guide Wire, PTCA Balloon, Inflation Device",
+      "qty": 1,
+      "rate": 42000,
+      "amount": 42000
+    },
+    {
+      "code": "PH01",
+      "head": "pharmacy",
+      "description": "Pharmacy - Antiplatelets, Heparin, Statins, IV Fluids",
+      "qty": 1,
+      "rate": 28600,
+      "amount": 28600
+    },
+    {
+      "code": "IN01",
+      "head": "investigations",
+      "description": "Investigations - ECG, 2D Echo, Troponin-I, Lipid Profile, HbA1c, RFT",
+      "qty": 1,
+      "rate": 16400,
+      "amount": 16400
+    },
+    {
+      "code": "MS01",
+      "head": "misc",
+      "description": "Attendant Charges",
+      "qty": 2,
+      "rate": 500,
+      "amount": 1000
+    },
+    {
+      "code": "MS02",
+      "head": "misc",
+      "description": "Attendant Food Charges",
+      "qty": 1,
+      "rate": 1600,
+      "amount": 1600
+    }
+  ]
+}

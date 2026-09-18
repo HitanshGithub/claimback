@@ -1,0 +1,326 @@
+{
+  "policy": {
+    "policy_number": "NHI/AS/2026/0073311",
+    "insurer_name": "Nirmaan Health Insurance Co. Ltd.",
+    "product_name": "Arogya Sanjeevani Policy",
+    "policy_wording_id": "AS-NIVA-2026",
+    "sum_insured": 500000,
+    "cumulative_bonus": 75000,
+    "policy_period_start": "2026-01-10",
+    "policy_period_end": "2027-01-09",
+    "first_inception": "2023-01-10",
+    "continuous_cover_start": "2023-01-10",
+    "peds_declared": [],
+    "optional_covers": [],
+    "co_payment_pct": 5,
+    "holder_name": "Sunita Sharma",
+    "city": "Bengaluru",
+    "state": "Karnataka"
+  },
+  "admission": {
+    "patient_name": "Sunita Sharma",
+    "age": 52,
+    "gender": "Female",
+    "hospital_name": "Lakeview Multispeciality Hospital",
+    "hospital_city": "Bengaluru",
+    "network_hospital": true,
+    "claim_type": "cashless",
+    "admission_date": "2026-08-03",
+    "discharge_date": "2026-08-06",
+    "diagnosis": "Symptomatic cholelithiasis (gallbladder stones) with chronic cholecystitis",
+    "procedure": "Laparoscopic cholecystectomy",
+    "is_accident": false,
+    "comorbidities": []
+  },
+  "bill_lines": [
+    {
+      "code": "RM01",
+      "head": "room",
+      "description": "Room Rent - Single Room AC (incl. nursing & boarding)",
+      "qty": 3,
+      "rate": 4500,
+      "amount": 13500
+    },
+    {
+      "code": "NR01",
+      "head": "nursing",
+      "description": "Nursing Care Charges",
+      "qty": 3,
+      "rate": 800,
+      "amount": 2400
+    },
+    {
+      "code": "DR01",
+      "head": "doctor",
+      "description": "Consultant Visit - Dr. K. Rao (General Surgery)",
+      "qty": 3,
+      "rate": 1500,
+      "amount": 4500
+    },
+    {
+      "code": "DR02",
+      "head": "doctor",
+      "description": "Surgeon Fee - Laparoscopic Cholecystectomy",
+      "qty": 1,
+      "rate": 45000,
+      "amount": 45000
+    },
+    {
+      "code": "DR03",
+      "head": "doctor",
+      "description": "Anaesthetist Fee",
+      "qty": 1,
+      "rate": 12000,
+      "amount": 12000
+    },
+    {
+      "code": "OT01",
+      "head": "ot",
+      "description": "Operation Theatre Charges (Major)",
+      "qty": 1,
+      "rate": 18000,
+      "amount": 18000
+    },
+    {
+      "code": "PH01",
+      "head": "pharmacy",
+      "description": "Pharmacy - Medicines, Antibiotics & IV Fluids (as per annexure)",
+      "qty": 1,
+      "rate": 14860,
+      "amount": 14860
+    },
+    {
+      "code": "IN01",
+      "head": "investigations",
+      "description": "Investigations - CBC, LFT, RFT, Coagulation, USG Abdomen, ECG, Chest X-Ray",
+      "qty": 1,
+      "rate": 9600,
+      "amount": 9600
+    },
+    {
+      "code": "IN02",
+      "head": "investigations",
+      "description": "Histopathology - Gallbladder Specimen",
+      "qty": 1,
+      "rate": 2350,
+      "amount": 2350
+    },
+    {
+      "code": "CS01",
+      "head": "consumable",
+      "description": "Sutures - Vicryl 2-0 / Prolene 3-0",
+      "qty": 6,
+      "rate": 600,
+      "amount": 3600
+    },
+    {
+      "code": "CS02",
+      "head": "consumable",
+      "description": "Hem-o-lok Ligation Clips (Medium-Large)",
+      "qty": 6,
+      "rate": 700,
+      "amount": 4200
+    },
+    {
+      "code": "CS03",
+      "head": "consumable",
+      "description": "Closed Suction Drain Set (Romovac 14Fr)",
+      "qty": 1,
+      "rate": 1450,
+      "amount": 1450
+    },
+    {
+      "code": "CS04",
+      "head": "consumable",
+      "description": "Examination Gloves (pairs)",
+      "qty": 31,
+      "rate": 40,
+      "amount": 1240
+    },
+    {
+      "code": "CS05",
+      "head": "consumable",
+      "description": "IV Cannula - Vasofix Safety 20G",
+      "qty": 1,
+      "rate": 350,
+      "amount": 350
+    },
+    {
+      "code": "CS06",
+      "head": "consumable",
+      "description": "Nebulizer Kit",
+      "qty": 1,
+      "rate": 650,
+      "amount": 650
+    },
+    {
+      "code": "CS07",
+      "head": "consumable",
+      "description": "Gauze & Cotton (sterile)",
+      "qty": 1,
+      "rate": 900,
+      "amount": 900
+    },
+    {
+      "code": "MS01",
+      "head": "misc",
+      "description": "Admission Kit",
+      "qty": 1,
+      "rate": 1200,
+      "amount": 1200
+    },
+    {
+      "code": "MS02",
+      "head": "misc",
+      "description": "Registration Charges",
+      "qty": 1,
+      "rate": 500,
+      "amount": 500
+    },
+    {
+      "code": "MS03",
+      "head": "misc",
+      "description": "Attendant Food Charges",
+      "qty": 1,
+      "rate": 2100,
+      "amount": 2100
+    },
+    {
+      "code": "MS04",
+      "head": "misc",
+      "description": "Pulse Oximeter Charges",
+      "qty": 3,
+      "rate": 200,
+      "amount": 600
+    },
+    {
+      "code": "MS05",
+      "head": "misc",
+      "description": "Documentation Charges",
+      "qty": 1,
+      "rate": 400,
+      "amount": 400
+    },
+    {
+      "code": "MS06",
+      "head": "misc",
+      "description": "Medical Records Copy Charges",
+      "qty": 1,
+      "rate": 300,
+      "amount": 300
+    }
+  ],
+  "decision": {
+    "letter_type": "settlement",
+    "letter_date": "2026-08-06",
+    "claim_number": "CLM-NHI-26-0845521",
+    "documents_received_date": "2026-08-06",
+    "amount_claimed": 139700,
+    "total_deducted": 19840,
+    "admissible_amount": 119860,
+    "co_payment": 5993,
+    "amount_paid": 113867,
+    "deductions": [
+      {
+        "line_code": "CS01",
+        "description": "Sutures - Vicryl 2-0 / Prolene 3-0",
+        "billed": 3600,
+        "deducted": 3600,
+        "reason": "Non-payable consumables"
+      },
+      {
+        "line_code": "CS02",
+        "description": "Hem-o-lok Ligation Clips (Medium-Large)",
+        "billed": 4200,
+        "deducted": 4200,
+        "reason": "Non-payable consumables"
+      },
+      {
+        "line_code": "CS03",
+        "description": "Closed Suction Drain Set (Romovac 14Fr)",
+        "billed": 1450,
+        "deducted": 1450,
+        "reason": "Non-payable consumables"
+      },
+      {
+        "line_code": "IN02",
+        "description": "Histopathology - Gallbladder Specimen",
+        "billed": 2350,
+        "deducted": 2350,
+        "reason": "Diagnostic expenses not related to current treatment (Code Excl04)"
+      },
+      {
+        "line_code": "CS04",
+        "description": "Examination Gloves (pairs)",
+        "billed": 1240,
+        "deducted": 1240,
+        "reason": "Non-payable item - List I"
+      },
+      {
+        "line_code": "CS05",
+        "description": "IV Cannula - Vasofix Safety 20G",
+        "billed": 350,
+        "deducted": 350,
+        "reason": "Non-payable item - List I"
+      },
+      {
+        "line_code": "CS06",
+        "description": "Nebulizer Kit",
+        "billed": 650,
+        "deducted": 650,
+        "reason": "Non-payable item - List I"
+      },
+      {
+        "line_code": "CS07",
+        "description": "Gauze & Cotton (sterile)",
+        "billed": 900,
+        "deducted": 900,
+        "reason": "Subsumed into procedure charges - List III"
+      },
+      {
+        "line_code": "MS01",
+        "description": "Admission Kit",
+        "billed": 1200,
+        "deducted": 1200,
+        "reason": "Subsumed into room charges - List II"
+      },
+      {
+        "line_code": "MS02",
+        "description": "Registration Charges",
+        "billed": 500,
+        "deducted": 500,
+        "reason": "Subsumed into cost of treatment - List IV"
+      },
+      {
+        "line_code": "MS03",
+        "description": "Attendant Food Charges",
+        "billed": 2100,
+        "deducted": 2100,
+        "reason": "Non-payable item - List I"
+      },
+      {
+        "line_code": "MS04",
+        "description": "Pulse Oximeter Charges",
+        "billed": 600,
+        "deducted": 600,
+        "reason": "Subsumed into room charges - List II"
+      },
+      {
+        "line_code": "MS05",
+        "description": "Documentation Charges",
+        "billed": 400,
+        "deducted": 400,
+        "reason": "Subsumed into room charges - List II"
+      },
+      {
+        "line_code": "MS06",
+        "description": "Medical Records Copy Charges",
+        "billed": 300,
+        "deducted": 300,
+        "reason": "Non-payable item - List I"
+      }
+    ],
+    "repudiation_reason": null,
+    "clauses_cited": []
+  }
+}

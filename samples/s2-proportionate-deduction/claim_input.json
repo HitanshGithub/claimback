@@ -1,0 +1,121 @@
+{
+  "policy": {
+    "policy_number": "NHI/AS/2025/0419087",
+    "insurer_name": "Nirmaan Health Insurance Co. Ltd.",
+    "product_name": "Arogya Sanjeevani Policy",
+    "policy_wording_id": "AS-NIVA-2026",
+    "sum_insured": 300000,
+    "cumulative_bonus": 30000,
+    "policy_period_start": "2026-04-01",
+    "policy_period_end": "2027-03-31",
+    "first_inception": "2022-04-01",
+    "continuous_cover_start": "2022-04-01",
+    "peds_declared": [],
+    "optional_covers": [],
+    "co_payment_pct": 5,
+    "holder_name": "Rajesh Kumar",
+    "city": "Bengaluru",
+    "state": "Karnataka"
+  },
+  "admission": {
+    "patient_name": "Rajesh Kumar",
+    "age": 58,
+    "gender": "Male",
+    "hospital_name": "Greenfield Hospital",
+    "hospital_city": "Bengaluru",
+    "network_hospital": false,
+    "claim_type": "reimbursement",
+    "admission_date": "2026-07-14",
+    "discharge_date": "2026-07-19",
+    "diagnosis": "Community-acquired pneumonia, right lower lobe",
+    "procedure": "Medical management (IV antibiotics, nebulisation, oxygen support)",
+    "is_accident": false,
+    "comorbidities": []
+  },
+  "bill_lines": [
+    {
+      "code": "RM01",
+      "head": "room",
+      "description": "Room Rent - Deluxe Single Room (incl. nursing & boarding)",
+      "qty": 5,
+      "rate": 8000,
+      "amount": 40000
+    },
+    {
+      "code": "DR01",
+      "head": "doctor",
+      "description": "Consultant Visits - Dr. S. Pillai (Pulmonology)",
+      "qty": 10,
+      "rate": 1200,
+      "amount": 12000
+    },
+    {
+      "code": "PH01",
+      "head": "pharmacy",
+      "description": "Pharmacy - Antibiotics, Nebulisation Drugs & IV Fluids",
+      "qty": 1,
+      "rate": 38400,
+      "amount": 38400
+    },
+    {
+      "code": "IN01",
+      "head": "investigations",
+      "description": "Investigations - HRCT Chest, Blood Cultures, CBC, CRP, Procalcitonin, ABG",
+      "qty": 1,
+      "rate": 22400,
+      "amount": 22400
+    },
+    {
+      "code": "CS01",
+      "head": "consumable",
+      "description": "Examination Gloves (pairs)",
+      "qty": 20,
+      "rate": 40,
+      "amount": 800
+    },
+    {
+      "code": "MS01",
+      "head": "misc",
+      "description": "Attendant Bed Charges",
+      "qty": 5,
+      "rate": 500,
+      "amount": 2500
+    }
+  ],
+  "decision": {
+    "letter_type": "settlement",
+    "letter_date": "2026-08-04",
+    "claim_number": "CLM-NHI-26-0791240",
+    "documents_received_date": "2026-07-24",
+    "amount_claimed": 116100,
+    "total_deducted": 45600,
+    "admissible_amount": 70500,
+    "co_payment": 3525,
+    "amount_paid": 66975,
+    "deductions": [
+      {
+        "line_code": "CS01",
+        "description": "Examination Gloves (pairs)",
+        "billed": 800,
+        "deducted": 800,
+        "reason": "Non-payable item - List I"
+      },
+      {
+        "line_code": "MS01",
+        "description": "Attendant Bed Charges",
+        "billed": 2500,
+        "deducted": 2500,
+        "reason": "Non-payable item - List I"
+      },
+      {
+        "line_code": null,
+        "description": "Room rent and associated hospital charges",
+        "billed": null,
+        "deducted": 42300,
+        "reason": "Proportionate deduction - room rent Rs 8,000/day exceeds eligible Rs 5,000/day (62.5% payable)"
+      }
+    ],
+    "repudiation_reason": null,
+    "clauses_cited": []
+  }
+}

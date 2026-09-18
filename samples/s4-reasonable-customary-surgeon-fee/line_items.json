@@ -1,0 +1,97 @@
+{
+  "scenario_id": "S4",
+  "hospital": "Northstar Ortho & Sports Injury Hospital",
+  "patient": "Arjun Menon",
+  "bill_date": "14-08-2026",
+  "gross_total": 257300,
+  "lines": [
+    {
+      "code": "RM01",
+      "head": "room",
+      "description": "Room Rent - Single Room (incl. nursing)",
+      "qty": 2,
+      "rate": 5000,
+      "amount": 10000
+    },
+    {
+      "code": "DR01",
+      "head": "doctor",
+      "description": "Surgeon Fee - Arthroscopic ACL Reconstruction",
+      "qty": 1,
+      "rate": 120000,
+      "amount": 120000
+    },
+    {
+      "code": "DR02",
+      "head": "doctor",
+      "description": "Anaesthetist Fee",
+      "qty": 1,
+      "rate": 18000,
+      "amount": 18000
+    },
+    {
+      "code": "DR03",
+      "head": "doctor",
+      "description": "Consultant Visits - Orthopaedics",
+      "qty": 2,
+      "rate": 1500,
+      "amount": 3000
+    },
+    {
+      "code": "OT01",
+      "head": "ot",
+      "description": "Operation Theatre Charges",
+      "qty": 1,
+      "rate": 35000,
+      "amount": 35000
+    },
+    {
+      "code": "IM01",
+      "head": "implant",
+      "description": "Implants - Adjustable Loop Cortical Button + Bioabsorbable Interference Screw",
+      "qty": 1,
+      "rate": 42000,
+      "amount": 42000
+    },
+    {
+      "code": "OT02",
+      "head": "ot",
+      "description": "Arthroscopy Instrument Charges",
+      "qty": 1,
+      "rate": 8000,
+      "amount": 8000
+    },
+    {
+      "code": "PH01",
+      "head": "pharmacy",
+      "description": "Pharmacy - Medicines, Antibiotics, Analgesics",
+      "qty": 1,
+      "rate": 9800,
+      "amount": 9800
+    },
+    {
+      "code": "PT01",
+      "head": "misc",
+      "description": "In-patient Physiotherapy",
+      "qty": 2,
+      "rate": 1000,
+      "amount": 2000
+    },
+    {
+      "code": "CS01",
+      "head": "consumable",
+      "description": "Hinged Knee Brace (Long)",
+      "qty": 1,
+      "rate": 6500,
+      "amount": 6500
+    },
+    {
+      "code": "AM01",
+      "head": "ambulance",
+      "description": "Road Ambulance",
+      "qty": 1,
+      "rate": 3000,
+      "amount": 3000
+    }
+  ]
+}

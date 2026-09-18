@@ -1,0 +1,93 @@
+[
+  {
+    "scenario_id": "S1",
+    "folder": "samples/s1-consumables-mix-cashless",
+    "title": "Gallbladder surgery - 'non-payable consumables' deductions (cashless)",
+    "claim_totals": {
+      "claimed": 139700,
+      "deducted": 19840,
+      "admissible": 119860,
+      "co_payment": 5993,
+      "paid": 113867
+    },
+    "result": {
+      "challengeable_amount": 11600,
+      "needs_more_info_amount": 0,
+      "estimated_additional_payable_after_copay": 11020,
+      "upside_if_needs_more_info_resolved_after_copay": 0,
+      "ask_hospital_to_absorb_amount": 3600
+    }
+  },
+  {
+    "scenario_id": "S2",
+    "folder": "samples/s2-proportionate-deduction",
+    "title": "Pneumonia admission - proportionate deduction applied to the whole bill",
+    "claim_totals": {
+      "claimed": 116100,
+      "deducted": 45600,
+      "admissible": 70500,
+      "co_payment": 3525,
+      "paid": 66975
+    },
+    "result": {
+      "challengeable_amount": 22800,
+      "needs_more_info_amount": 0,
+      "estimated_additional_payable_after_copay": 21660,
+      "upside_if_needs_more_info_resolved_after_copay": 0,
+      "ask_hospital_to_absorb_amount": 0
+    }
+  },
+  {
+    "scenario_id": "S3",
+    "folder": "samples/s3-non-disclosure-after-moratorium",
+    "title": "Heart attack - claim rejected for 'non-disclosure' after 7 years of cover",
+    "claim_totals": {
+      "claimed": 259100,
+      "deducted": 259100,
+      "admissible": 0,
+      "co_payment": 0,
+      "paid": 0
+    },
+    "result": {
+      "claim_rejected": true
+    }
+  },
+  {
+    "scenario_id": "S4",
+    "folder": "samples/s4-reasonable-customary-surgeon-fee",
+    "title": "ACL surgery - surgeon fee halved as 'reasonable and customary'",
+    "claim_totals": {
+      "claimed": 257300,
+      "deducted": 75500,
+      "admissible": 181800,
+      "co_payment": 9090,
+      "paid": 172710
+    },
+    "result": {
+      "challengeable_amount": 0,
+      "needs_more_info_amount": 60000,
+      "estimated_additional_payable_after_copay": 0,
+      "upside_if_needs_more_info_resolved_after_copay": 57000,
+      "ask_hospital_to_absorb_amount": 8000
+    }
+  },
+  {
+    "scenario_id": "S5",
+    "folder": "samples/s5-all-deductions-fair",
+    "title": "Dengue admission - every deduction is fair",
+    "claim_totals": {
+      "claimed": 39760,
+      "deducted": 4300,
+      "admissible": 35460,
+      "co_payment": 1773,
+      "paid": 33687
+    },
+    "result": {
+      "challengeable_amount": 0,
+      "needs_more_info_amount": 0,
+      "estimated_additional_payable_after_copay": 0,
+      "upside_if_needs_more_info_resolved_after_copay": 0,
+      "ask_hospital_to_absorb_amount": 0
+    }
+  }
+]

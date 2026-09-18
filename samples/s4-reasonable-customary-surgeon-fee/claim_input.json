@@ -1,0 +1,168 @@
+{
+  "policy": {
+    "policy_number": "NHI/AS/2025/0987765",
+    "insurer_name": "Nirmaan Health Insurance Co. Ltd.",
+    "product_name": "Arogya Sanjeevani Policy",
+    "policy_wording_id": "AS-NIVA-2026",
+    "sum_insured": 300000,
+    "cumulative_bonus": 0,
+    "policy_period_start": "2025-11-01",
+    "policy_period_end": "2026-10-31",
+    "first_inception": "2025-11-01",
+    "continuous_cover_start": "2025-11-01",
+    "peds_declared": [],
+    "optional_covers": [],
+    "co_payment_pct": 5,
+    "holder_name": "Arjun Menon",
+    "city": "Bengaluru",
+    "state": "Karnataka"
+  },
+  "admission": {
+    "patient_name": "Arjun Menon",
+    "age": 34,
+    "gender": "Male",
+    "hospital_name": "Northstar Ortho & Sports Injury Hospital",
+    "hospital_city": "Bengaluru",
+    "network_hospital": true,
+    "claim_type": "cashless",
+    "admission_date": "2026-08-12",
+    "discharge_date": "2026-08-14",
+    "diagnosis": "Complete tear of anterior cruciate ligament, right knee (sports injury on 02-08-2026)",
+    "procedure": "Arthroscopic ACL reconstruction with hamstring graft",
+    "is_accident": true,
+    "comorbidities": []
+  },
+  "bill_lines": [
+    {
+      "code": "RM01",
+      "head": "room",
+      "description": "Room Rent - Single Room (incl. nursing)",
+      "qty": 2,
+      "rate": 5000,
+      "amount": 10000
+    },
+    {
+      "code": "DR01",
+      "head": "doctor",
+      "description": "Surgeon Fee - Arthroscopic ACL Reconstruction",
+      "qty": 1,
+      "rate": 120000,
+      "amount": 120000
+    },
+    {
+      "code": "DR02",
+      "head": "doctor",
+      "description": "Anaesthetist Fee",
+      "qty": 1,
+      "rate": 18000,
+      "amount": 18000
+    },
+    {
+      "code": "DR03",
+      "head": "doctor",
+      "description": "Consultant Visits - Orthopaedics",
+      "qty": 2,
+      "rate": 1500,
+      "amount": 3000
+    },
+    {
+      "code": "OT01",
+      "head": "ot",
+      "description": "Operation Theatre Charges",
+      "qty": 1,
+      "rate": 35000,
+      "amount": 35000
+    },
+    {
+      "code": "IM01",
+      "head": "implant",
+      "description": "Implants - Adjustable Loop Cortical Button + Bioabsorbable Interference Screw",
+      "qty": 1,
+      "rate": 42000,
+      "amount": 42000
+    },
+    {
+      "code": "OT02",
+      "head": "ot",
+      "description": "Arthroscopy Instrument Charges",
+      "qty": 1,
+      "rate": 8000,
+      "amount": 8000
+    },
+    {
+      "code": "PH01",
+      "head": "pharmacy",
+      "description": "Pharmacy - Medicines, Antibiotics, Analgesics",
+      "qty": 1,
+      "rate": 9800,
+      "amount": 9800
+    },
+    {
+      "code": "PT01",
+      "head": "misc",
+      "description": "In-patient Physiotherapy",
+      "qty": 2,
+      "rate": 1000,
+      "amount": 2000
+    },
+    {
+      "code": "CS01",
+      "head": "consumable",
+      "description": "Hinged Knee Brace (Long)",
+      "qty": 1,
+      "rate": 6500,
+      "amount": 6500
+    },
+    {
+      "code": "AM01",
+      "head": "ambulance",
+      "description": "Road Ambulance",
+      "qty": 1,
+      "rate": 3000,
+      "amount": 3000
+    }
+  ],
+  "decision": {
+    "letter_type": "settlement",
+    "letter_date": "2026-08-14",
+    "claim_number": "CLM-NHI-26-0851877",
+    "documents_received_date": "2026-08-14",
+    "amount_claimed": 257300,
+    "total_deducted": 75500,
+    "admissible_amount": 181800,
+    "co_payment": 9090,
+    "amount_paid": 172710,
+    "deductions": [
+      {
+        "line_code": "DR01",
+        "description": "Surgeon Fee - Arthroscopic ACL Reconstruction",
+        "billed": 120000,
+        "deducted": 60000,
+        "reason": "Reasonable & customary charges - surgeon fee restricted to Rs 60,000 as per prevailing rates in the locality"
+      },
+      {
+        "line_code": "OT02",
+        "description": "Arthroscopy Instrument Charges",
+        "billed": 8000,
+        "deducted": 8000,
+        "reason": "Subsumed into procedure charges - List III"
+      },
+      {
+        "line_code": "CS01",
+        "description": "Hinged Knee Brace (Long)",
+        "billed": 6500,
+        "deducted": 6500,
+        "reason": "Non-payable item - List I"
+      },
+      {
+        "line_code": "AM01",
+        "description": "Road Ambulance",
+        "billed": 3000,
+        "deducted": 1000,
+        "reason": "Road ambulance restricted to policy limit of Rs 2,000"
+      }
+    ],
+    "repudiation_reason": null,
+    "clauses_cited": []
+  }
+}

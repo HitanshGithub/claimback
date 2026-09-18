@@ -1,0 +1,247 @@
+{
+  "scenario_id": "S3",
+  "title": "Heart attack - claim rejected for 'non-disclosure' after 7 years of cover",
+  "summary": "Claim of Rs 2,59,100 fully repudiated because diabetes and hypertension were allegedly not disclosed at inception in 2019. The insured has 84+ months of continuous cover (ported in 2023), so the 60-month moratorium bars non-disclosure grounds unless fraud is established. The decision also came late.",
+  "fictional": true,
+  "evaluate_with_policy_wording": "AS-NIVA-2026",
+  "documents": [
+    "policy_schedule.pdf",
+    "hospital_bill.pdf",
+    "discharge_summary.pdf",
+    "insurer_letter.pdf"
+  ],
+  "patient": {
+    "name": "Meena Iyer",
+    "age": 64,
+    "gender": "Female",
+    "uhid": "RHI-2026-033571",
+    "ip_no": "IP/CARD/26/0712",
+    "relation": "Self"
+  },
+  "policy": {
+    "policy_no": "NHI/AS/2026/0102245",
+    "sum_insured": 500000,
+    "cumulative_bonus": 50000,
+    "period": [
+      "15-06-2026",
+      "14-06-2027"
+    ],
+    "first_inception": "15-06-2023",
+    "history": "15-06-2019 to 14-06-2023: Vardaan General Insurance Co. Ltd. (Arogya Sanjeevani), continuously renewed. Ported to Nirmaan Health on 15-06-2023 with full continuity benefits.",
+    "peds_declared": "None",
+    "city": "Bengaluru",
+    "phone": "94480 00000"
+  },
+  "admission": {
+    "hospital": "riverbend",
+    "claim_type": "Reimbursement (cashless request denied pending investigation)",
+    "doa": "10-07-2026",
+    "dod": "14-07-2026",
+    "doctor": "Dr. A. Venkatesh, DM (Cardiology)",
+    "ward": "ICCU / Single Room",
+    "diagnosis": "Acute anterior wall ST-elevation myocardial infarction",
+    "procedure": "Primary PTCA with drug eluting stent to LAD",
+    "icd": "I21.0",
+    "hospital_name": "Riverbend Heart Institute",
+    "network_hospital": false
+  },
+  "letter": {
+    "type": "repudiation",
+    "date": "21-08-2026",
+    "claim_no": "CLM-NHI-26-0733019",
+    "received": "22-07-2026",
+    "mode": "Reimbursement",
+    "reason": "On scrutiny of the indoor case papers, it is observed that the insured patient is a known case of Type 2 Diabetes Mellitus and Hypertension for 10 years. These conditions were not disclosed in the proposal form at the time of inception of the policy. As the claim is related to the non-disclosed pre-existing conditions, the claim stands repudiated under Clause 10.1 (Disclosure of Information) and Code Excl01 (Pre-Existing Diseases) of the policy terms and conditions."
+  },
+  "claim_totals": {
+    "claimed": 259100,
+    "deducted": 259100,
+    "admissible": 0,
+    "co_payment": 0,
+    "paid": 0
+  },
+  "deductions": [],
+  "result": {
+    "claim_rejected": true
+  },
+  "rejection_checks": [
+    {
+      "issue": "Non-disclosure / misrepresentation after moratorium",
+      "verdict": "challengeable",
+      "strength": "strong",
+      "explanation": "Continuous coverage from 15-06-2019 (including portability) to admission on 10-07-2026 is 84 months - beyond the 60-month moratorium. After that, no claim is contestable on grounds of non-disclosure or misrepresentation except established fraud, and the letter does not allege or prove fraud.",
+      "computed": {
+        "continuous_cover_start": "2019-06-15",
+        "admission_date": "2026-07-10",
+        "continuous_months": 84,
+        "moratorium_months": 60
+      },
+      "citations": [
+        "NIVA-AS-8-MORATORIUM",
+        "R-MORATORIUM-60M",
+        "R-PORTABILITY-CREDITS"
+      ]
+    },
+    {
+      "issue": "Pre-existing disease exclusion (Excl01)",
+      "verdict": "challengeable",
+      "strength": "strong",
+      "explanation": "Even if diabetes/hypertension are treated as PEDs, the PED waiting period is 36 months of continuous coverage and portability credit counts; 84 months have elapsed. The insurer relies on the 'declared and accepted' condition, which is exactly the non-disclosure ground the moratorium bars.",
+      "citations": [
+        "NIVA-AS-6.1-PED",
+        "R-PED-WAITING-MAX-36M",
+        "R-PORTABILITY-CREDITS",
+        "NIVA-AS-8-MORATORIUM"
+      ]
+    },
+    {
+      "issue": "Moratorium caveat - permanent exclusions",
+      "verdict": "not_applicable",
+      "explanation": "The moratorium does not override permanent exclusions written in the policy. Heart disease is not a permanent exclusion in this wording, so the caveat does not save the rejection.",
+      "citations": [
+        "R-MORATORIUM-PERMANENT-EXCLUSIONS-SURVIVE"
+      ]
+    },
+    {
+      "issue": "What exactly the proposal form asked",
+      "verdict": "needs_more_info",
+      "strength": "moderate",
+      "explanation": "Non-disclosure can only relate to information explicitly sought in the proposal form. Ask the insurer for a copy of the 2019 proposal form and the portability records - useful if the moratorium argument is disputed.",
+      "citations": [
+        "R-MATERIAL-INFORMATION-ONLY-WHAT-PROPOSAL-ASKED",
+        "R-PROPOSAL-FORM-COPY-WITHIN-15-DAYS"
+      ]
+    },
+    {
+      "issue": "Repudiation approval",
+      "verdict": "needs_more_info",
+      "strength": "moderate",
+      "explanation": "No claim may be repudiated without approval of the insurer's Product Management Committee / Claims Review Committee. Ask the insurer to confirm CRC approval.",
+      "citations": [
+        "R-REPUDIATION-NEEDS-CRC-APPROVAL"
+      ]
+    },
+    {
+      "issue": "Good-faith misstatement",
+      "verdict": "challengeable",
+      "strength": "moderate",
+      "explanation": "Fraud requires deliberate intent; a policyholder who did not think controlled diabetes/BP had to be declared can rely on the good-faith proviso.",
+      "citations": [
+        "NIVA-AS-10.9-FRAUD"
+      ]
+    },
+    {
+      "issue": "Delayed decision - penal interest",
+      "verdict": "challengeable",
+      "strength": "strong",
+      "explanation": "Documents received 22-07-2026; decision issued 21-08-2026 = 30 days, beyond the 15 days in Section 9.6. If the claim is later paid, interest at 2% above bank rate is due from the date of claim intimation.",
+      "computed": {
+        "documents_received": "2026-07-22",
+        "decision_date": "2026-08-21",
+        "days_taken": 30,
+        "allowed_days": 15
+      },
+      "citations": [
+        "NIVA-AS-9.6-SETTLEMENT",
+        "R-REIMBURSEMENT-SETTLEMENT-15-DAYS",
+        "R-CLAIM-DELAY-INTEREST",
+        "R-BANK-RATE-DEFINITION"
+      ]
+    }
+  ],
+  "next_steps": [
+    {
+      "step": 1,
+      "action": "Written grievance to the insurer's GRO citing the moratorium, portability credits and delay interest; request the proposal form copy and CRC approval.",
+      "deadline": "Insurer must resolve within 14 days",
+      "citations": [
+        "R-GRIEVANCE-ACK-IMMEDIATE-RESOLVE-14-DAYS"
+      ]
+    },
+    {
+      "step": 2,
+      "action": "Register the complaint on Bima Bharosa in parallel for tracking.",
+      "citations": [
+        "R-BIMA-BHAROSA-ONLINE-COMPLAINT"
+      ]
+    },
+    {
+      "step": 3,
+      "action": "If rejected, unanswered for 30 days or unsatisfactory: file with the Insurance Ombudsman, Bengaluru (free; within 1 year; claim up to Rs 50 lakh).",
+      "citations": [
+        "R-OMBUDSMAN-AFTER-30-DAYS-OR-UNSATISFACTORY-DECISION",
+        "R-OMBUDSMAN-ONE-YEAR-LIMIT",
+        "R-OMBUDSMAN-NO-FEE-FILING-MODES",
+        "R-OMBUDSMAN-CLAIMS-UP-TO-50-LAKH"
+      ]
+    }
+  ],
+  "if_claim_accepted": {
+    "claimed": 259100,
+    "non_payable_list_i": 2600,
+    "admissible": 256500,
+    "co_payment": 12825,
+    "estimated_payable": 243675,
+    "non_payable_citations": [
+      "NP-AS-LI-024",
+      "NP-AS-LI-009"
+    ]
+  },
+  "similar_real_cases": [
+    {
+      "case_id": "CASE-018",
+      "category": "ped_non_disclosure",
+      "forum": "Insurance Ombudsman, Mumbai",
+      "decision_date": "2021-04-30",
+      "decision": "allowed",
+      "insurer_reason": "Non-disclosure of material facts (ischaemic heart disease with CABG, paralysis, diabetes, hypertension) while porting; claim repudiated under Condition 9 and the insured's cover deleted under Condition 14.",
+      "reasoning": "Although the complainant had failed to disclose his health history while porting, the Forum held that under portability rules the new insurer must itself verify medical and claim history from the previous insurer when previous policy details are furnished. Having accepted the proposal and premium without doing so, it could not use non-disclosure to wipe out long-standing continuous cover, particularly as it had not shown that the present ailment was related to the undisclosed conditions. The insurer was directed to reinstate the cover and pay the admissible claim less non-medical expenses.",
+      "decided_before_2024_health_rules": true,
+      "source_url": "https://web.archive.org/web/20240620075806/https://www.cioins.co.in/AwardsMonthwise/Apr2021/Health_individual%20April%202021.pdf"
+    },
+    {
+      "case_id": "CASE-019",
+      "category": "ped_non_disclosure",
+      "forum": "NCDRC (National Consumer Disputes Redressal Commission)",
+      "decision_date": "2024-04-10",
+      "decision": "allowed",
+      "insurer_reason": "Suppression of pre-existing coronary artery disease and dyslipidaemia in breach of utmost good faith (Clause 7.1 - disclosure of information norm); the proposer was responsible for filling all proposal form columns correctly.",
+      "reasoning": "The NCDRC noted that this was not a case of a false 'no' - the complainant declared that he had a pre-existing disease and disclosed hypertension - and the insurer should have asked him to complete the blank columns or arranged a medical examination for a 60+ proposer before issuing the policy. Following Manmohan Nanda v. United India Assurance (SC), an insurer that accepts premium and issues a policy despite blank columns cannot later repudiate for non-disclosure; the insurer also had no evidence of CAD treatment beyond a single 2014 visit. The State Commission's award of the claim with interest, Rs 50,000 compensation and Rs 25,000 costs was upheld.",
+      "decided_before_2024_health_rules": true,
+      "source_url": "https://indiankanoon.org/doc/193384457/"
+    },
+    {
+      "case_id": "CASE-020",
+      "category": "ped_non_disclosure",
+      "forum": "Insurance Ombudsman, Pune",
+      "decision_date": "2021-04-22",
+      "decision": "partly_allowed",
+      "insurer_reason": "Non-disclosure of hypertension since 2013 (certified by a hospital) in breach of the Duty of Disclosure clause (General Terms VIII), with the admission said to be related to the pre-existing illness.",
+      "reasoning": "Given that hypertension was admittedly undisclosed but the claim was for cancer treatment, the Forum asked the insurer to settle the claim excluding hypertension-related expenses. The insurer computed Rs 77,825, and the Forum awarded that amount, with interest at bank rate plus 2% if not yet paid.",
+      "decided_before_2024_health_rules": true,
+      "source_url": "https://web.archive.org/web/20240620075806/https://www.cioins.co.in/AwardsMonthwise/Apr2021/Health_individual%20April%202021.pdf"
+    },
+    {
+      "case_id": "CASE-021",
+      "category": "ped_non_disclosure",
+      "forum": "Insurance Ombudsman, Mumbai",
+      "decision_date": "2021-04-29",
+      "decision": "dismissed",
+      "insurer_reason": "Non-disclosure of DVT diagnosed and treated about a year before inception; the proposal answered 'no' to other diseases; claim repudiated under the non-disclosure condition and cover cancelled under Condition 12.",
+      "reasoning": "The Forum relied on the 2018 DVT discharge summary and IRDAI's definition of a pre-existing disease as one diagnosed or treated within 48 months before the policy. The ailment fell within that window and the complainant produced no evidence of disclosure to the agent, so the repudiation was held to be in accordance with the policy terms and no relief was granted.",
+      "decided_before_2024_health_rules": true,
+      "source_url": "https://web.archive.org/web/20240620075806/https://www.cioins.co.in/AwardsMonthwise/Apr2021/Health_individual%20April%202021.pdf"
+    },
+    {
+      "case_id": "CASE-022",
+      "category": "ped_non_disclosure",
+      "forum": "Supreme Court of India (civil appeal from NCDRC)",
+      "decision_date": "2009-07-10",
+      "decision": "dismissed",
+      "insurer_reason": "Suppression of material facts about long-standing diabetes and chronic renal failure in the proposal form.",
+      "reasoning": "The Supreme Court held that when a proposal form asks specific questions, the proposer must truthfully disclose facts within his knowledge, and any fact that would influence a prudent insurer's decision is material. A person on regular haemodialysis could not have been unaware of his condition, so the 'sound health' answer was untrue to his knowledge and the insurer was justified in repudiating; the appeal was dismissed.",
+      "decided_before_2024_health_rules": true,
+      "source_url": "https://indiankanoon.org/doc/951514/"
+    }
+  ]
+}

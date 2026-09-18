@@ -1,0 +1,185 @@
+{
+  "scenario_id": "S1",
+  "hospital": "Lakeview Multispeciality Hospital",
+  "patient": "Sunita Sharma",
+  "bill_date": "06-08-2026",
+  "gross_total": 139700,
+  "lines": [
+    {
+      "code": "RM01",
+      "head": "room",
+      "description": "Room Rent - Single Room AC (incl. nursing & boarding)",
+      "qty": 3,
+      "rate": 4500,
+      "amount": 13500
+    },
+    {
+      "code": "NR01",
+      "head": "nursing",
+      "description": "Nursing Care Charges",
+      "qty": 3,
+      "rate": 800,
+      "amount": 2400
+    },
+    {
+      "code": "DR01",
+      "head": "doctor",
+      "description": "Consultant Visit - Dr. K. Rao (General Surgery)",
+      "qty": 3,
+      "rate": 1500,
+      "amount": 4500
+    },
+    {
+      "code": "DR02",
+      "head": "doctor",
+      "description": "Surgeon Fee - Laparoscopic Cholecystectomy",
+      "qty": 1,
+      "rate": 45000,
+      "amount": 45000
+    },
+    {
+      "code": "DR03",
+      "head": "doctor",
+      "description": "Anaesthetist Fee",
+      "qty": 1,
+      "rate": 12000,
+      "amount": 12000
+    },
+    {
+      "code": "OT01",
+      "head": "ot",
+      "description": "Operation Theatre Charges (Major)",
+      "qty": 1,
+      "rate": 18000,
+      "amount": 18000
+    },
+    {
+      "code": "PH01",
+      "head": "pharmacy",
+      "description": "Pharmacy - Medicines, Antibiotics & IV Fluids (as per annexure)",
+      "qty": 1,
+      "rate": 14860,
+      "amount": 14860
+    },
+    {
+      "code": "IN01",
+      "head": "investigations",
+      "description": "Investigations - CBC, LFT, RFT, Coagulation, USG Abdomen, ECG, Chest X-Ray",
+      "qty": 1,
+      "rate": 9600,
+      "amount": 9600
+    },
+    {
+      "code": "IN02",
+      "head": "investigations",
+      "description": "Histopathology - Gallbladder Specimen",
+      "qty": 1,
+      "rate": 2350,
+      "amount": 2350
+    },
+    {
+      "code": "CS01",
+      "head": "consumable",
+      "description": "Sutures - Vicryl 2-0 / Prolene 3-0",
+      "qty": 6,
+      "rate": 600,
+      "amount": 3600
+    },
+    {
+      "code": "CS02",
+      "head": "consumable",
+      "description": "Hem-o-lok Ligation Clips (Medium-Large)",
+      "qty": 6,
+      "rate": 700,
+      "amount": 4200
+    },
+    {
+      "code": "CS03",
+      "head": "consumable",
+      "description": "Closed Suction Drain Set (Romovac 14Fr)",
+      "qty": 1,
+      "rate": 1450,
+      "amount": 1450
+    },
+    {
+      "code": "CS04",
+      "head": "consumable",
+      "description": "Examination Gloves (pairs)",
+      "qty": 31,
+      "rate": 40,
+      "amount": 1240
+    },
+    {
+      "code": "CS05",
+      "head": "consumable",
+      "description": "IV Cannula - Vasofix Safety 20G",
+      "qty": 1,
+      "rate": 350,
+      "amount": 350
+    },
+    {
+      "code": "CS06",
+      "head": "consumable",
+      "description": "Nebulizer Kit",
+      "qty": 1,
+      "rate": 650,
+      "amount": 650
+    },
+    {
+      "code": "CS07",
+      "head": "consumable",
+      "description": "Gauze & Cotton (sterile)",
+      "qty": 1,
+      "rate": 900,
+      "amount": 900
+    },
+    {
+      "code": "MS01",
+      "head": "misc",
+      "description": "Admission Kit",
+      "qty": 1,
+      "rate": 1200,
+      "amount": 1200
+    },
+    {
+      "code": "MS02",
+      "head": "misc",
+      "description": "Registration Charges",
+      "qty": 1,
+      "rate": 500,
+      "amount": 500
+    },
+    {
+      "code": "MS03",
+      "head": "misc",
+      "description": "Attendant Food Charges",
+      "qty": 1,
+      "rate": 2100,
+      "amount": 2100
+    },
+    {
+      "code": "MS04",
+      "head": "misc",
+      "description": "Pulse Oximeter Charges",
+      "qty": 3,
+      "rate": 200,
+      "amount": 600
+    },
+    {
+      "code": "MS05",
+      "head": "misc",
+      "description": "Documentation Charges",
+      "qty": 1,
+      "rate": 400,
+      "amount": 400
+    },
+    {
+      "code": "MS06",
+      "head": "misc",
+      "description": "Medical Records Copy Charges",
+      "qty": 1,
+      "rate": 300,
+      "amount": 300
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "policy": {
+    "policy_number": "NHI/AS/2026/0310552",
+    "insurer_name": "Nirmaan Health Insurance Co. Ltd.",
+    "product_name": "Arogya Sanjeevani Policy",
+    "policy_wording_id": "AS-NIVA-2026",
+    "sum_insured": 200000,
+    "cumulative_bonus": 10000,
+    "policy_period_start": "2026-03-01",
+    "policy_period_end": "2027-02-28",
+    "first_inception": "2024-03-01",
+    "continuous_cover_start": "2024-03-01",
+    "peds_declared": [],
+    "optional_covers": [],
+    "co_payment_pct": 5,
+    "holder_name": "Farhan Qureshi",
+    "city": "Bengaluru",
+    "state": "Karnataka"
+  },
+  "admission": {
+    "patient_name": "Farhan Qureshi",
+    "age": 41,
+    "gender": "Male",
+    "hospital_name": "Greenfield Hospital",
+    "hospital_city": "Bengaluru",
+    "network_hospital": false,
+    "claim_type": "reimbursement",
+    "admission_date": "2026-08-25",
+    "discharge_date": "2026-08-29",
+    "diagnosis": "Dengue fever with thrombocytopenia",
+    "procedure": "Medical management",
+    "is_accident": false,
+    "comorbidities": []
+  },
+  "bill_lines": [
+    {
+      "code": "RM01",
+      "head": "room",
+      "description": "Room Rent - General Ward Twin Sharing (incl. nursing)",
+      "qty": 4,
+      "rate": 2500,
+      "amount": 10000
+    },
+    {
+      "code": "DR01",
+      "head": "doctor",
+      "description": "Consultant Visits - Dr. N. Hegde (Internal Medicine)",
+      "qty": 8,
+      "rate": 800,
+      "amount": 6400
+    },
+    {
+      "code": "PH01",
+      "head": "pharmacy",
+      "description": "Pharmacy - IV Fluids, Antipyretics, Medicines",
+      "qty": 1,
+      "rate": 11210,
+      "amount": 11210
+    },
+    {
+      "code": "IN01",
+      "head": "investigations",
+      "description": "Investigations - Dengue NS1, CBC x 6, LFT, Serum Electrolytes",
+      "qty": 1,
+      "rate": 7850,
+      "amount": 7850
+    },
+    {
+      "code": "MS01",
+      "head": "misc",
+      "description": "Attendant Food Charges",
+      "qty": 1,
+      "rate": 1800,
+      "amount": 1800
+    },
+    {
+      "code": "MS02",
+      "head": "misc",
+      "description": "Toiletries (soap, lotion, powder)",
+      "qty": 1,
+      "rate": 450,
+      "amount": 450
+    },
+    {
+      "code": "MS03",
+      "head": "misc",
+      "description": "Television Charges",
+      "qty": 4,
+      "rate": 100,
+      "amount": 400
+    },
+    {
+      "code": "MS04",
+      "head": "misc",
+      "description": "Laundry Charges",
+      "qty": 1,
+      "rate": 300,
+      "amount": 300
+    },
+    {
+      "code": "MS05",
+      "head": "misc",
+      "description": "Admission Kit",
+      "qty": 1,
+      "rate": 850,
+      "amount": 850
+    },
+    {
+      "code": "MS06",
+      "head": "misc",
+      "description": "Registration Charges",
+      "qty": 1,
+      "rate": 500,
+      "amount": 500
+    }
+  ],
+  "decision": {
+    "letter_type": "settlement",
+    "letter_date": "2026-09-12",
+    "claim_number": "CLM-NHI-26-0902214",
+    "documents_received_date": "2026-09-02",
+    "amount_claimed": 39760,
+    "total_deducted": 4300,
+    "admissible_amount": 35460,
+    "co_payment": 1773,
+    "amount_paid": 33687,
+    "deductions": [
+      {
+        "line_code": "MS01",
+        "description": "Attendant Food Charges",
+        "billed": 1800,
+        "deducted": 1800,
+        "reason": "Non-payable item - List I"
+      },
+      {
+        "line_code": "MS02",
+        "description": "Toiletries (soap, lotion, powder)",
+        "billed": 450,
+        "deducted": 450,
+        "reason": "Non-payable item - List I (toiletries)"
+      },
+      {
+        "line_code": "MS03",
+        "description": "Television Charges",
+        "billed": 400,
+        "deducted": 400,
+        "reason": "Non-payable item - List I"
+      },
+      {
+        "line_code": "MS04",
+        "description": "Laundry Charges",
+        "billed": 300,
+        "deducted": 300,
+        "reason": "Non-payable item - List I"
+      },
+      {
+        "line_code": "MS05",
+        "description": "Admission Kit",
+        "billed": 850,
+        "deducted": 850,
+        "reason": "Subsumed into room charges - List II"
+      },
+      {
+        "line_code": "MS06",
+        "description": "Registration Charges",
+        "billed": 500,
+        "deducted": 500,
+        "reason": "Subsumed into cost of treatment - List IV"
+      }
+    ],
+    "repudiation_reason": null,
+    "clauses_cited": []
+  }
+}

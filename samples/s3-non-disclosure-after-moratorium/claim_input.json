@@ -1,0 +1,145 @@
+{
+  "policy": {
+    "policy_number": "NHI/AS/2026/0102245",
+    "insurer_name": "Nirmaan Health Insurance Co. Ltd.",
+    "product_name": "Arogya Sanjeevani Policy",
+    "policy_wording_id": "AS-NIVA-2026",
+    "sum_insured": 500000,
+    "cumulative_bonus": 50000,
+    "policy_period_start": "2026-06-15",
+    "policy_period_end": "2027-06-14",
+    "first_inception": "2023-06-15",
+    "continuous_cover_start": "2019-06-15",
+    "peds_declared": [],
+    "optional_covers": [],
+    "co_payment_pct": 5,
+    "holder_name": "Meena Iyer",
+    "city": "Bengaluru",
+    "state": "Karnataka"
+  },
+  "admission": {
+    "patient_name": "Meena Iyer",
+    "age": 64,
+    "gender": "Female",
+    "hospital_name": "Riverbend Heart Institute",
+    "hospital_city": "Bengaluru",
+    "network_hospital": false,
+    "claim_type": "reimbursement",
+    "admission_date": "2026-07-10",
+    "discharge_date": "2026-07-14",
+    "diagnosis": "Acute anterior wall ST-elevation myocardial infarction",
+    "procedure": "Primary PTCA with drug eluting stent to LAD",
+    "is_accident": false,
+    "comorbidities": [
+      "Type 2 Diabetes Mellitus",
+      "Hypertension"
+    ]
+  },
+  "bill_lines": [
+    {
+      "code": "IC01",
+      "head": "icu",
+      "description": "ICCU Charges (incl. nursing & monitoring)",
+      "qty": 2,
+      "rate": 9000,
+      "amount": 18000
+    },
+    {
+      "code": "RM01",
+      "head": "room",
+      "description": "Room Rent - Single Room (incl. nursing)",
+      "qty": 2,
+      "rate": 4500,
+      "amount": 9000
+    },
+    {
+      "code": "DR01",
+      "head": "doctor",
+      "description": "Interventional Cardiologist Fee - PTCA",
+      "qty": 1,
+      "rate": 60000,
+      "amount": 60000
+    },
+    {
+      "code": "DR02",
+      "head": "doctor",
+      "description": "Consultant Visits - Cardiology",
+      "qty": 4,
+      "rate": 1500,
+      "amount": 6000
+    },
+    {
+      "code": "OT01",
+      "head": "ot",
+      "description": "Cath Lab Charges",
+      "qty": 1,
+      "rate": 45000,
+      "amount": 45000
+    },
+    {
+      "code": "IM01",
+      "head": "implant",
+      "description": "Drug Eluting Stent 3.0 x 28 mm (with sticker)",
+      "qty": 1,
+      "rate": 31500,
+      "amount": 31500
+    },
+    {
+      "code": "CS01",
+      "head": "consumable",
+      "description": "Cath Lab Disposables - Guide Catheter, Guide Wire, PTCA Balloon, Inflation Device",
+      "qty": 1,
+      "rate": 42000,
+      "amount": 42000
+    },
+    {
+      "code": "PH01",
+      "head": "pharmacy",
+      "description": "Pharmacy - Antiplatelets, Heparin, Statins, IV Fluids",
+      "qty": 1,
+      "rate": 28600,
+      "amount": 28600
+    },
+    {
+      "code": "IN01",
+      "head": "investigations",
+      "description": "Investigations - ECG, 2D Echo, Troponin-I, Lipid Profile, HbA1c, RFT",
+      "qty": 1,
+      "rate": 16400,
+      "amount": 16400
+    },
+    {
+      "code": "MS01",
+      "head": "misc",
+      "description": "Attendant Charges",
+      "qty": 2,
+      "rate": 500,
+      "amount": 1000
+    },
+    {
+      "code": "MS02",
+      "head": "misc",
+      "description": "Attendant Food Charges",
+      "qty": 1,
+      "rate": 1600,
+      "amount": 1600
+    }
+  ],
+  "decision": {
+    "letter_type": "repudiation",
+    "letter_date": "2026-08-21",
+    "claim_number": "CLM-NHI-26-0733019",
+    "documents_received_date": "2026-07-22",
+    "amount_claimed": 259100,
+    "total_deducted": 259100,
+    "admissible_amount": null,
+    "co_payment": null,
+    "amount_paid": 0,
+    "deductions": [],
+    "repudiation_reason": "On scrutiny of the indoor case papers, it is observed that the insured patient is a known case of Type 2 Diabetes Mellitus and Hypertension for 10 years. These conditions were not disclosed in the proposal form at the time of inception of the policy. As the claim is related to the non-disclosed pre-existing conditions, the claim stands repudiated under Clause 10.1 (Disclosure of Information) and Code Excl01 (Pre-Existing Diseases) of the policy terms and conditions.",
+    "clauses_cited": [
+      "Clause 10.1 (Disclosure of Information)",
+      "Code Excl01 (Pre-Existing Diseases)"
+    ]
+  }
+}

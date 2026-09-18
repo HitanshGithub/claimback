@@ -1,0 +1,185 @@
+{
+  "scenario_id": "S4",
+  "title": "ACL surgery - surgeon fee halved as 'reasonable and customary'",
+  "summary": "Cashless knee ligament reconstruction after a weekend football injury. The insurer restricted the Rs 1,20,000 surgeon fee to Rs 60,000 citing 'reasonable and customary charges', plus smaller policy-limit deductions. The fee cut needs the insurer's benchmark before it can be judged.",
+  "fictional": true,
+  "evaluate_with_policy_wording": "AS-NIVA-2026",
+  "documents": [
+    "policy_schedule.pdf",
+    "hospital_bill.pdf",
+    "discharge_summary.pdf",
+    "insurer_letter.pdf"
+  ],
+  "patient": {
+    "name": "Arjun Menon",
+    "age": 34,
+    "gender": "Male",
+    "uhid": "NOH-2026-557120",
+    "ip_no": "IP-26-3390",
+    "relation": "Self"
+  },
+  "policy": {
+    "policy_no": "NHI/AS/2025/0987765",
+    "sum_insured": 300000,
+    "cumulative_bonus": 0,
+    "period": [
+      "01-11-2025",
+      "31-10-2026"
+    ],
+    "first_inception": "01-11-2025",
+    "history": "New policy (no prior insurance)",
+    "peds_declared": "None",
+    "city": "Bengaluru",
+    "phone": "97400 00000"
+  },
+  "admission": {
+    "hospital": "northstar",
+    "claim_type": "Cashless",
+    "doa": "12-08-2026",
+    "dod": "14-08-2026",
+    "doctor": "Dr. R. D'Souza, MS (Ortho), Fellowship Arthroscopy",
+    "ward": "Single Room",
+    "diagnosis": "Complete tear of anterior cruciate ligament, right knee (sports injury on 02-08-2026)",
+    "procedure": "Arthroscopic ACL reconstruction with hamstring graft",
+    "icd": "S83.511A",
+    "hospital_name": "Northstar Ortho & Sports Injury Hospital",
+    "network_hospital": true
+  },
+  "letter": {
+    "type": "settlement",
+    "date": "14-08-2026",
+    "claim_no": "CLM-NHI-26-0851877",
+    "received": "14-08-2026",
+    "mode": "Cashless - final authorisation at discharge"
+  },
+  "claim_totals": {
+    "claimed": 257300,
+    "deducted": 75500,
+    "admissible": 181800,
+    "co_payment": 9090,
+    "paid": 172710
+  },
+  "deductions": [
+    {
+      "line_code": "DR01",
+      "description": "Surgeon Fee - Arthroscopic ACL Reconstruction",
+      "billed": 120000,
+      "deducted": 60000,
+      "insurer_reason": "Reasonable & customary charges - surgeon fee restricted to Rs 60,000 as per prevailing rates in the locality",
+      "expected_verdict": "needs_more_info",
+      "explanation": "The policy's definition of Medical Expenses lets the insurer limit charges to what other hospitals/doctors in the same locality charge, but the letter gives no benchmark. Ask the insurer in writing for the data used; for a network hospital, also ask whether the fee matches the tariff/package agreed with the insurer. If they cannot show comparable local rates, escalate.",
+      "citations": [
+        "NIVA-AS-3.29-MEDICAL-EXPENSES",
+        "R-REJECTION-MUST-CITE-SPECIFIC-CLAUSE"
+      ],
+      "strength": "moderate"
+    },
+    {
+      "line_code": "OT02",
+      "description": "Arthroscopy Instrument Charges",
+      "billed": 8000,
+      "deducted": 8000,
+      "insurer_reason": "Subsumed into procedure charges - List III",
+      "expected_verdict": "fair_ask_hospital_to_absorb",
+      "explanation": "Arthroscopy instruments are List III in the policy's Annexure-A - part of procedure charges, so not paid separately. It was cashless at a network hospital, so you can ask the hospital to absorb it (a request, not an enforceable right).",
+      "citations": [
+        "NP-AS-LIII-010"
+      ]
+    },
+    {
+      "line_code": "CS01",
+      "description": "Hinged Knee Brace (Long)",
+      "billed": 6500,
+      "deducted": 6500,
+      "insurer_reason": "Non-payable item - List I",
+      "expected_verdict": "fair",
+      "explanation": "Knee braces are List I (not covered).",
+      "citations": [
+        "NP-AS-LI-045"
+      ]
+    },
+    {
+      "line_code": "AM01",
+      "description": "Road Ambulance",
+      "billed": 3000,
+      "deducted": 1000,
+      "insurer_reason": "Road ambulance restricted to policy limit of Rs 2,000",
+      "expected_verdict": "fair",
+      "explanation": "Road ambulance is capped at Rs 2,000 per hospitalisation (Section 4.1.1(v)).",
+      "citations": [
+        "NIVA-AS-4.1.1-AMBULANCE"
+      ]
+    }
+  ],
+  "result": {
+    "challengeable_amount": 0,
+    "needs_more_info_amount": 60000,
+    "estimated_additional_payable_after_copay": 0,
+    "upside_if_needs_more_info_resolved_after_copay": 57000,
+    "ask_hospital_to_absorb_amount": 8000
+  },
+  "other_checks": [
+    {
+      "issue": "Hazardous / adventure sports exclusion (Excl09)",
+      "verdict": "not_applicable",
+      "explanation": "Excl09 applies only to participation as a professional. The injury was recreational football, and the insurer did not invoke it - good to know in case it is raised in reply.",
+      "citations": [
+        "NIVA-AS-7.6-SPORTS"
+      ]
+    },
+    {
+      "issue": "30-day / specific waiting periods",
+      "verdict": "not_applicable",
+      "explanation": "Policy is 9 months old, so the 30-day wait is over, and specific waiting periods do not apply to accidents.",
+      "citations": [
+        "NIVA-AS-6.3-SPECIFIC"
+      ]
+    }
+  ],
+  "similar_real_cases": [
+    {
+      "case_id": "CASE-010",
+      "category": "reasonable_customary",
+      "forum": "Insurance Ombudsman, Mumbai",
+      "decision_date": "2021-04-16",
+      "decision": "allowed",
+      "insurer_reason": "Reasonable and customary charges (clause 3.29): comparable Mumbai hospitals charged Rs 18,000-30,000 for cataract surgery; package rates are negotiated with network (PPN) hospitals; for non-PPN reimbursement claims only the cost of a monofocal lens is payable; the insured should act as if uninsured when agreeing to rates.",
+      "reasoning": "The Forum held that PPN rates are negotiated between the insurer/TPA and specific hospitals and cannot be used as the benchmark for a non-network hospital. The policy did not require treatment at a PPN hospital, had no cap on cataract surgery and did not restrict cover to a monofocal lens, and the expenses were not unreasonable. The balance of Rs 18,935 was ordered to be paid, less non-medical expenses if any.",
+      "decided_before_2024_health_rules": true,
+      "source_url": "https://web.archive.org/web/20240620075806/https://www.cioins.co.in/AwardsMonthwise/Apr2021/Health_individual%20April%202021.pdf"
+    },
+    {
+      "case_id": "CASE-011",
+      "category": "reasonable_customary",
+      "forum": "Insurance Ombudsman, Mumbai",
+      "decision_date": "2021-04-30",
+      "decision": "partly_allowed",
+      "insurer_reason": "Surgeon's fee restricted under the Reasonable & Customary clause 2.37; excess room rent and proportionate deduction under clause 3.2; C-arm charges included in OT; dressing included in nursing; OT replacement medicines without break-up; non-medical items not payable.",
+      "reasoning": "The Forum upheld the room-rent cap and proportionate deduction under clause 3.2 (which exempts only medicines) and the non-medical deductions. It allowed C-arm (Rs 16,000), dressing (Rs 3,500) and OT replacement (Rs 10,900) as genuinely billed. On the surgeon's fee, it held the insurer may apply the reasonable & customary clause by comparing prevailing charges in the area even without a specific cap, but to strike a balance allowed half (Rs 40,750) of the Rs 81,500 deducted.",
+      "decided_before_2024_health_rules": true,
+      "source_url": "https://web.archive.org/web/20240620075806/https://www.cioins.co.in/AwardsMonthwise/Apr2021/Health_individual%20April%202021.pdf"
+    },
+    {
+      "case_id": "CASE-012",
+      "category": "reasonable_customary",
+      "forum": "Insurance Ombudsman, Pune",
+      "decision_date": "2021-04-30",
+      "decision": "allowed",
+      "insurer_reason": "Covid-19 has no established protocol or standardised costs, so the claim was settled at the General Insurance Council's schedule of Covid treatment rates: Rs 59,550 deducted as in excess of GIC rates, plus Rs 3,098 for non-medical items (masks, caps, sheets) and Rs 300 miscellaneous charges.",
+      "reasoning": "The Forum observed that the GI Council tariff was never circulated to policyholders or disclosed at claim intimation, had not been reviewed as expected and did not match actual hospital charges. As per IRDAI guidelines Covid claims must be assessed under each policy's terms; this policy had no head-wise ceilings and the insurer raised no specific objection on the reasonableness of the bill. Only the non-payable items (Rs 3,098) and miscellaneous charges (Rs 300) were upheld and the balance Rs 1,16,203 was awarded.",
+      "decided_before_2024_health_rules": true,
+      "source_url": "https://web.archive.org/web/20240620075806/https://www.cioins.co.in/AwardsMonthwise/Apr2021/Health_individual%20April%202021.pdf"
+    },
+    {
+      "case_id": "CASE-013",
+      "category": "reasonable_customary",
+      "forum": "State Commission Gujarat (Consumer Disputes Redressal Commission, Gujarat State, Ahmedabad)",
+      "decision_date": "2023-06-30",
+      "decision": "allowed",
+      "insurer_reason": "A multifocal lens primarily has a cosmetic benefit of eliminating spectacles; cost of spectacles, surgery for correction of vision and cosmetic treatment are excluded (clauses 4.6(b), 4.7), and only medically necessary, reasonable and customary expenses are payable (clauses 3.22, 3.33).",
+      "reasoning": "The Commission held the procedure was a cataract surgery, not a cosmetic one, and the insurer produced no contrary evidence; the spectacles/contact lens exclusion concerns external aids, not an implanted lens. The policy set no limit on cataract charges or type of lens, so the insurer could not override the treating doctor's choice of implant or use the reasonable & customary clause to restrict it. The full Rs 82,000 was awarded with 8% interest from the date of complaint.",
+      "decided_before_2024_health_rules": true,
+      "source_url": "https://indiankanoon.org/doc/24168089/"
+    }
+  ]
+}

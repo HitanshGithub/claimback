@@ -1,0 +1,89 @@
+{
+  "scenario_id": "S5",
+  "hospital": "Greenfield Hospital",
+  "patient": "Farhan Qureshi",
+  "bill_date": "29-08-2026",
+  "gross_total": 39760,
+  "lines": [
+    {
+      "code": "RM01",
+      "head": "room",
+      "description": "Room Rent - General Ward Twin Sharing (incl. nursing)",
+      "qty": 4,
+      "rate": 2500,
+      "amount": 10000
+    },
+    {
+      "code": "DR01",
+      "head": "doctor",
+      "description": "Consultant Visits - Dr. N. Hegde (Internal Medicine)",
+      "qty": 8,
+      "rate": 800,
+      "amount": 6400
+    },
+    {
+      "code": "PH01",
+      "head": "pharmacy",
+      "description": "Pharmacy - IV Fluids, Antipyretics, Medicines",
+      "qty": 1,
+      "rate": 11210,
+      "amount": 11210
+    },
+    {
+      "code": "IN01",
+      "head": "investigations",
+      "description": "Investigations - Dengue NS1, CBC x 6, LFT, Serum Electrolytes",
+      "qty": 1,
+      "rate": 7850,
+      "amount": 7850
+    },
+    {
+      "code": "MS01",
+      "head": "misc",
+      "description": "Attendant Food Charges",
+      "qty": 1,
+      "rate": 1800,
+      "amount": 1800
+    },
+    {
+      "code": "MS02",
+      "head": "misc",
+      "description": "Toiletries (soap, lotion, powder)",
+      "qty": 1,
+      "rate": 450,
+      "amount": 450
+    },
+    {
+      "code": "MS03",
+      "head": "misc",
+      "description": "Television Charges",
+      "qty": 4,
+      "rate": 100,
+      "amount": 400
+    },
+    {
+      "code": "MS04",
+      "head": "misc",
+      "description": "Laundry Charges",
+      "qty": 1,
+      "rate": 300,
+      "amount": 300
+    },
+    {
+      "code": "MS05",
+      "head": "misc",
+      "description": "Admission Kit",
+      "qty": 1,
+      "rate": 850,
+      "amount": 850
+    },
+    {
+      "code": "MS06",
+      "head": "misc",
+      "description": "Registration Charges",
+      "qty": 1,
+      "rate": 500,
+      "amount": 500
+    }
+  ]
+}

@@ -1,0 +1,305 @@
+{
+  "scenario_id": "S1",
+  "title": "Gallbladder surgery - 'non-payable consumables' deductions (cashless)",
+  "summary": "Cashless laparoscopic cholecystectomy at a network hospital. The insurer deducted 14 lines as non-payable; 4 of them (sutures, ligation clips, drain, histopathology) are not on any IRDAI list or were wrongly excluded.",
+  "fictional": true,
+  "evaluate_with_policy_wording": "AS-NIVA-2026",
+  "documents": [
+    "policy_schedule.pdf",
+    "hospital_bill.pdf",
+    "discharge_summary.pdf",
+    "insurer_letter.pdf",
+    "hospital_bill_photo.jpg"
+  ],
+  "patient": {
+    "name": "Sunita Sharma",
+    "age": 52,
+    "gender": "Female",
+    "uhid": "LMH-2026-448812",
+    "ip_no": "IP/26/08/1193",
+    "relation": "Self"
+  },
+  "policy": {
+    "policy_no": "NHI/AS/2026/0073311",
+    "sum_insured": 500000,
+    "cumulative_bonus": 75000,
+    "period": [
+      "10-01-2026",
+      "09-01-2027"
+    ],
+    "first_inception": "10-01-2023",
+    "history": "Continuous with Nirmaan Health since 10-01-2023",
+    "peds_declared": "None",
+    "city": "Bengaluru",
+    "phone": "98450 00000"
+  },
+  "admission": {
+    "hospital": "lakeview",
+    "claim_type": "Cashless",
+    "doa": "03-08-2026",
+    "dod": "06-08-2026",
+    "doctor": "Dr. K. Rao, MS (General Surgery)",
+    "ward": "Single Room AC",
+    "diagnosis": "Symptomatic cholelithiasis (gallbladder stones) with chronic cholecystitis",
+    "procedure": "Laparoscopic cholecystectomy",
+    "icd": "K80.10",
+    "hospital_name": "Lakeview Multispeciality Hospital",
+    "network_hospital": true
+  },
+  "letter": {
+    "type": "settlement",
+    "date": "06-08-2026",
+    "claim_no": "CLM-NHI-26-0845521",
+    "received": "06-08-2026",
+    "mode": "Cashless - final authorisation at discharge"
+  },
+  "claim_totals": {
+    "claimed": 139700,
+    "deducted": 19840,
+    "admissible": 119860,
+    "co_payment": 5993,
+    "paid": 113867
+  },
+  "deductions": [
+    {
+      "line_code": "CS01",
+      "description": "Sutures - Vicryl 2-0 / Prolene 3-0",
+      "billed": 3600,
+      "deducted": 3600,
+      "insurer_reason": "Non-payable consumables",
+      "expected_verdict": "challengeable",
+      "explanation": "Sutures are not in the policy's Annexure-A List I-IV and are a medically necessary part of surgery, covered under Section 4.1(iv) (surgical appliances and similar expenses). No deduction can be made for an exclusion not written in the policy, and the letter cites no clause.",
+      "citations": [
+        "NIVA-AS-4.7-LISTS",
+        "R-NO-DEDUCTION-OUTSIDE-LISTED-EXCLUSIONS",
+        "R-REJECTION-MUST-CITE-SPECIFIC-CLAUSE"
+      ],
+      "strength": "strong"
+    },
+    {
+      "line_code": "CS02",
+      "description": "Hem-o-lok Ligation Clips (Medium-Large)",
+      "billed": 4200,
+      "deducted": 4200,
+      "insurer_reason": "Non-payable consumables",
+      "expected_verdict": "challengeable",
+      "explanation": "Ligation clips stay inside the body to close the cystic duct/artery - they work like an implant/surgical appliance and are not in the policy's Annexure-A lists or any written exclusion.",
+      "citations": [
+        "NIVA-AS-4.7-LISTS",
+        "R-NO-DEDUCTION-OUTSIDE-LISTED-EXCLUSIONS",
+        "R-REJECTION-MUST-CITE-SPECIFIC-CLAUSE"
+      ],
+      "strength": "strong"
+    },
+    {
+      "line_code": "CS03",
+      "description": "Closed Suction Drain Set (Romovac 14Fr)",
+      "billed": 1450,
+      "deducted": 1450,
+      "insurer_reason": "Non-payable consumables",
+      "expected_verdict": "challengeable",
+      "explanation": "A surgical drain is a medically necessary surgical consumable that is not in the policy's Annexure-A lists or any written exclusion.",
+      "citations": [
+        "NIVA-AS-4.7-LISTS",
+        "R-NO-DEDUCTION-OUTSIDE-LISTED-EXCLUSIONS"
+      ],
+      "strength": "moderate"
+    },
+    {
+      "line_code": "IN02",
+      "description": "Histopathology - Gallbladder Specimen",
+      "billed": 2350,
+      "deducted": 2350,
+      "insurer_reason": "Diagnostic expenses not related to current treatment (Code Excl04)",
+      "expected_verdict": "challengeable",
+      "explanation": "Excl04 only excludes diagnostics 'not related or not incidental to the current diagnosis and treatment'. Histopathology of the gallbladder removed in this very surgery is incidental to the treatment.",
+      "citations": [
+        "NIVA-AS-7.1-EVAL",
+        "R-REJECTION-MUST-CITE-SPECIFIC-CLAUSE"
+      ],
+      "strength": "strong"
+    },
+    {
+      "line_code": "CS04",
+      "description": "Examination Gloves (pairs)",
+      "billed": 1240,
+      "deducted": 1240,
+      "insurer_reason": "Non-payable item - List I",
+      "expected_verdict": "fair",
+      "explanation": "Gloves are List I (not covered) in Arogya Sanjeevani.",
+      "citations": [
+        "NP-AS-LI-056"
+      ]
+    },
+    {
+      "line_code": "CS05",
+      "description": "IV Cannula - Vasofix Safety 20G",
+      "billed": 350,
+      "deducted": 350,
+      "insurer_reason": "Non-payable item - List I",
+      "expected_verdict": "fair",
+      "explanation": "Vasofix Safety is List I (not covered).",
+      "citations": [
+        "NP-AS-LI-068"
+      ]
+    },
+    {
+      "line_code": "CS06",
+      "description": "Nebulizer Kit",
+      "billed": 650,
+      "deducted": 650,
+      "insurer_reason": "Non-payable item - List I",
+      "expected_verdict": "fair",
+      "explanation": "Nebulizer kit is List I (not covered).",
+      "citations": [
+        "NP-AS-LI-038"
+      ]
+    },
+    {
+      "line_code": "CS07",
+      "description": "Gauze & Cotton (sterile)",
+      "billed": 900,
+      "deducted": 900,
+      "insurer_reason": "Subsumed into procedure charges - List III",
+      "expected_verdict": "fair_ask_hospital_to_absorb",
+      "explanation": "Gauze and cotton are List III - part of the procedure charge, so not payable as a separate line. It was a cashless claim at a network hospital, so you can ask the hospital to absorb it - but since the 2020 IRDAI circular was superseded in 2024 this is a request, not an enforceable right.",
+      "citations": [
+        "NP-AS-LIII-008",
+        "NP-AS-LIII-018"
+      ]
+    },
+    {
+      "line_code": "MS01",
+      "description": "Admission Kit",
+      "billed": 1200,
+      "deducted": 1200,
+      "insurer_reason": "Subsumed into room charges - List II",
+      "expected_verdict": "fair_ask_hospital_to_absorb",
+      "explanation": "Admission kit is List II - part of room charges. It was a cashless claim at a network hospital, so you can ask the hospital to absorb it - but since the 2020 IRDAI circular was superseded in 2024 this is a request, not an enforceable right.",
+      "citations": [
+        "NP-AS-LII-027"
+      ]
+    },
+    {
+      "line_code": "MS02",
+      "description": "Registration Charges",
+      "billed": 500,
+      "deducted": 500,
+      "insurer_reason": "Subsumed into cost of treatment - List IV",
+      "expected_verdict": "fair_ask_hospital_to_absorb",
+      "explanation": "Registration charges are List IV - part of treatment cost. It was a cashless claim at a network hospital, so you can ask the hospital to absorb it - but since the 2020 IRDAI circular was superseded in 2024 this is a request, not an enforceable right.",
+      "citations": [
+        "NP-AS-LIV-001"
+      ]
+    },
+    {
+      "line_code": "MS03",
+      "description": "Attendant Food Charges",
+      "billed": 2100,
+      "deducted": 2100,
+      "insurer_reason": "Non-payable item - List I",
+      "expected_verdict": "fair",
+      "explanation": "Food for attendants is List I (not covered).",
+      "citations": [
+        "NP-AS-LI-009"
+      ]
+    },
+    {
+      "line_code": "MS04",
+      "description": "Pulse Oximeter Charges",
+      "billed": 600,
+      "deducted": 600,
+      "insurer_reason": "Subsumed into room charges - List II",
+      "expected_verdict": "fair_ask_hospital_to_absorb",
+      "explanation": "Pulse oximeter charges are List II - part of room charges. It was a cashless claim at a network hospital, so you can ask the hospital to absorb it - but since the 2020 IRDAI circular was superseded in 2024 this is a request, not an enforceable right.",
+      "citations": [
+        "NP-AS-LII-037"
+      ]
+    },
+    {
+      "line_code": "MS05",
+      "description": "Documentation Charges",
+      "billed": 400,
+      "deducted": 400,
+      "insurer_reason": "Subsumed into room charges - List II",
+      "expected_verdict": "fair_ask_hospital_to_absorb",
+      "explanation": "Documentation charges are List II - part of room charges. It was a cashless claim at a network hospital, so you can ask the hospital to absorb it - but since the 2020 IRDAI circular was superseded in 2024 this is a request, not an enforceable right.",
+      "citations": [
+        "NP-AS-LII-029"
+      ]
+    },
+    {
+      "line_code": "MS06",
+      "description": "Medical Records Copy Charges",
+      "billed": 300,
+      "deducted": 300,
+      "insurer_reason": "Non-payable item - List I",
+      "expected_verdict": "fair",
+      "explanation": "Medical records charges are List I (not covered).",
+      "citations": [
+        "NP-AS-LI-031"
+      ]
+    }
+  ],
+  "result": {
+    "challengeable_amount": 11600,
+    "needs_more_info_amount": 0,
+    "estimated_additional_payable_after_copay": 11020,
+    "upside_if_needs_more_info_resolved_after_copay": 0,
+    "ask_hospital_to_absorb_amount": 3600
+  },
+  "other_checks": [
+    {
+      "issue": "Deduction letter does not cite policy clauses",
+      "verdict": "challengeable",
+      "strength": "moderate",
+      "explanation": "Three deductions say only 'Non-payable consumables'. A partial disallowance must give full details with reference to the specific terms and conditions of the policy - ask the insurer to name the clause for each.",
+      "citations": [
+        "R-REJECTION-MUST-CITE-SPECIFIC-CLAUSE"
+      ]
+    },
+    {
+      "issue": "Specific waiting period for gallbladder calculi",
+      "verdict": "not_applicable",
+      "explanation": "Calculi of the gall bladder have a 24-month waiting period; the policy has been continuous since 10-01-2023 (43 months at admission).",
+      "citations": [
+        "NIVA-AS-6.3-SPECIFIC"
+      ]
+    }
+  ],
+  "similar_real_cases": [
+    {
+      "case_id": "CASE-007",
+      "category": "non_payable_consumables",
+      "forum": "Insurance Ombudsman, Mumbai",
+      "decision_date": "2021-04-29",
+      "decision": "allowed",
+      "insurer_reason": "Anaesthesia machine and gases are consumables forming part of OT charges under the standard definition of OT and should not be billed separately; OT and anaesthesia charges in the bill had already been paid. (Separately, Rs 17,947 of items such as caps, gauze, masks, gloves and food were deducted as non-payable.)",
+      "reasoning": "The Forum noted that the hospital had billed the anaesthesia equipment and gases separately and clarified they were not part of OT charges; had they been included in OT charges the insurer would have paid them. Disallowing them merely because of how the hospital structured its bill was not justified, so the further Rs 10,890 was ordered to be paid.",
+      "decided_before_2024_health_rules": true,
+      "source_url": "https://web.archive.org/web/20240620075806/https://www.cioins.co.in/AwardsMonthwise/Apr2021/Health_individual%20April%202021.pdf"
+    },
+    {
+      "case_id": "CASE-008",
+      "category": "non_payable_consumables",
+      "forum": "Insurance Ombudsman, Mumbai",
+      "decision_date": "2021-04-26",
+      "decision": "dismissed",
+      "insurer_reason": "Rs 2,700 of nursing/RMO charges are included in room charges; Rs 23,837 was deducted as non-medical expenses, including Rs 7,392 for the drainage kit, which is not payable under clause 4.4.17 and Annexure II (item 180 - 'any kit not specified').",
+      "reasoning": "The Forum held that the drainage kit is a non-medical item listed as not payable in Annexure II (item 180) of the policy, so the settlement was in order and no relief could be granted.",
+      "decided_before_2024_health_rules": true,
+      "source_url": "https://web.archive.org/web/20240620075806/https://www.cioins.co.in/AwardsMonthwise/Apr2021/Health_individual%20April%202021.pdf"
+    },
+    {
+      "case_id": "CASE-009",
+      "category": "non_payable_consumables",
+      "forum": "State Commission Delhi (Delhi State Consumer Disputes Redressal Commission)",
+      "decision_date": "2021-02-25",
+      "decision": "dismissed",
+      "insurer_reason": "Deductions under exclusion 4.16 (external/durable medical equipment usable at home, e.g., knee support), 4.17 (non-medical items) and 4.26 (doctor's home visits and nursing/physiotherapy at home during pre- and post-hospitalisation), totalling Rs 78,490.",
+      "reasoning": "Applying the principle that insurance contracts are construed strictly (Sushilaben Indravadan Gandhi v. New India Assurance, SC 2020), the State Commission held the deducted items fell within the exclusion clauses. It set aside the District Forum's order and directed payment of only the originally approved Rs 9,527 (with 9% interest if not paid by 31.03.2021).",
+      "decided_before_2024_health_rules": true,
+      "source_url": "https://indiankanoon.org/doc/175017676/"
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "scenario_id": "S2",
+  "title": "Pneumonia admission - proportionate deduction applied to the whole bill",
+  "summary": "Patient stayed in a Rs 8,000/day room against a Rs 5,000/day limit. The insurer cut 37.5% from room, doctor fees, pharmacy AND investigations. Under the Niva Bupa wording only room/nursing/doctor/OT charges can be pro-rated.",
+  "fictional": true,
+  "evaluate_with_policy_wording": "AS-NIVA-2026",
+  "documents": [
+    "policy_schedule.pdf",
+    "hospital_bill.pdf",
+    "discharge_summary.pdf",
+    "insurer_letter.pdf"
+  ],
+  "patient": {
+    "name": "Rajesh Kumar",
+    "age": 58,
+    "gender": "Male",
+    "uhid": "GFH-2026-102934",
+    "ip_no": "IP-7781/26",
+    "relation": "Self"
+  },
+  "policy": {
+    "policy_no": "NHI/AS/2025/0419087",
+    "sum_insured": 300000,
+    "cumulative_bonus": 30000,
+    "period": [
+      "01-04-2026",
+      "31-03-2027"
+    ],
+    "first_inception": "01-04-2022",
+    "history": "Continuous with Nirmaan Health since 01-04-2022",
+    "peds_declared": "None",
+    "city": "Bengaluru",
+    "phone": "99000 00000"
+  },
+  "admission": {
+    "hospital": "greenfield",
+    "claim_type": "Reimbursement",
+    "doa": "14-07-2026",
+    "dod": "19-07-2026",
+    "doctor": "Dr. S. Pillai, MD DM (Pulmonology)",
+    "ward": "Deluxe Single Room",
+    "diagnosis": "Community-acquired pneumonia, right lower lobe",
+    "procedure": "Medical management (IV antibiotics, nebulisation, oxygen support)",
+    "icd": "J18.1",
+    "hospital_name": "Greenfield Hospital",
+    "network_hospital": false
+  },
+  "letter": {
+    "type": "settlement",
+    "date": "04-08-2026",
+    "claim_no": "CLM-NHI-26-0791240",
+    "received": "24-07-2026",
+    "mode": "Reimbursement - NEFT"
+  },
+  "claim_totals": {
+    "claimed": 116100,
+    "deducted": 45600,
+    "admissible": 70500,
+    "co_payment": 3525,
+    "paid": 66975
+  },
+  "deductions": [
+    {
+      "line_code": null,
+      "description": "Proportionate deduction on room rent & doctor fees",
+      "billed": null,
+      "deducted": 19500,
+      "insurer_reason": "Proportionate deduction - room rent Rs 8,000/day exceeds eligible Rs 5,000/day (62.5% payable)",
+      "expected_verdict": "fair",
+      "explanation": "Pro-rata on associated medical expenses (room incl. nursing Rs 40,000.00 + doctor fees Rs 12,000.00) is allowed by Section 4.1 Note 2.",
+      "citations": [
+        "NIVA-AS-4.1-ROOM",
+        "NIVA-AS-4.1-PRORATA"
+      ]
+    },
+    {
+      "line_code": null,
+      "description": "Proportionate deduction wrongly applied to pharmacy & investigations",
+      "billed": null,
+      "deducted": 22800,
+      "insurer_reason": "Proportionate deduction - room rent Rs 8,000/day exceeds eligible Rs 5,000/day (62.5% payable)",
+      "expected_verdict": "challengeable",
+      "explanation": "The insurer applied the 37.5% cut to pharmacy (Rs 38,400.00) and investigations (Rs 22,400.00) too. Under this policy's Section 4.1 Note 2, associated medical expenses are only room rent, nursing, medical practitioners' fees and OT charges - so medicines and diagnostics must be paid in full.",
+      "citations": [
+        "NIVA-AS-4.1-PRORATA",
+        "R-POLICY-MUST-STATE-SUBLIMITS-PROPORTIONATE-DEDUCTIONS",
+        "R-NO-DEDUCTION-OUTSIDE-LISTED-EXCLUSIONS"
+      ],
+      "strength": "strong"
+    },
+    {
+      "line_code": "CS01",
+      "description": "Examination Gloves (pairs)",
+      "billed": 800,
+      "deducted": 800,
+      "insurer_reason": "Non-payable item - List I",
+      "expected_verdict": "fair",
+      "explanation": "Gloves are List I (not covered).",
+      "citations": [
+        "NP-AS-LI-056"
+      ]
+    },
+    {
+      "line_code": "MS01",
+      "description": "Attendant Bed Charges",
+      "billed": 2500,
+      "deducted": 2500,
+      "insurer_reason": "Non-payable item - List I",
+      "expected_verdict": "fair",
+      "explanation": "Attendant charges are List I (not covered).",
+      "citations": [
+        "NP-AS-LI-024"
+      ]
+    }
+  ],
+  "result": {
+    "challengeable_amount": 22800,
+    "needs_more_info_amount": 0,
+    "estimated_additional_payable_after_copay": 21660,
+    "upside_if_needs_more_info_resolved_after_copay": 0,
+    "ask_hospital_to_absorb_amount": 0
+  },
+  "room_rent_check": {
+    "actual_per_day": 8000,
+    "eligible_per_day": 5000,
+    "payable_ratio": 0.625,
+    "insurer_pro_rated_base": 112800,
+    "correct_pro_rated_base": 52000
+  },
+  "alternate_wordings": [
+    {
+      "wording_id": "AS-STAR-2025",
+      "note": "Same bill under Star Health's Arogya Sanjeevani wording, which exempts only medicines from proportionate deduction.",
+      "correct_proportionate_deduction": 27900,
+      "challengeable_amount": 14400,
+      "estimated_additional_payable_after_copay": 13680,
+      "citations": [
+        "STAR-AS-PRORATA"
+      ]
+    }
+  ],
+  "demo_point": "Same bill, two insurers' 'standard' wordings: Rs 22,800.00 challengeable under Niva Bupa vs Rs 14,400.00 under Star Health.",
+  "similar_real_cases": [
+    {
+      "case_id": "CASE-001",
+      "category": "proportionate_deduction",
+      "forum": "Insurance Ombudsman, Mumbai",
+      "decision_date": "2021-04-30",
+      "decision": "allowed",
+      "insurer_reason": "ICU charges of Rs 8,750/day exceeded the ICU limit of 2% of sum insured per day, so all other hospital expenses except medicines were paid in the same proportion under clause 3.2 (proportionate deduction); remaining deductions were non-medical items under Annexure 2.",
+      "reasoning": "The Forum accepted the hospital tariff showing that all charges other than the bed charge were the same whether the patient was in a ward or the ICU. Disallowing room rent above the limit and non-medical items was in order, but reducing other charges proportionately when the hospital has no class-based tariff was held unjustified and against IRDAI guidelines; the insurer itself conceded that proportionate deduction would not apply to doctor fees and investigations at this hospital. The balance admissible expenses deducted proportionately were ordered to be paid (amount not quantified in the award).",
+      "decided_before_2024_health_rules": true,
+      "source_url": "https://web.archive.org/web/20240620075806/https://www.cioins.co.in/AwardsMonthwise/Apr2021/Health_individual%20April%202021.pdf"
+    },
+    {
+      "case_id": "CASE-002",
+      "category": "proportionate_deduction",
+      "forum": "Insurance Ombudsman, Mumbai",
+      "decision_date": "2021-04-30",
+      "decision": "partly_allowed",
+      "insurer_reason": "Excess room and nursing charges disallowed (eligible Rs 3,000/day); doctor fees and hospital service charges paid in proportion to the eligible room rent under policy condition 3.1; diet charges not payable; PPE kits paid for only one day for a non-Covid patient; investigation charges lacked a break-up. On reassessment the TPA found a further Rs 6,538 payable.",
+      "reasoning": "The Forum held that deducting diet charges, excess room charges and the proportionate reduction of other charges were as per policy terms and in order. However, disallowing PPE kit charges during Covid times was not justified even for a non-Covid patient, and the additional investigation bills had to be considered. The insurer was directed to pay the PPE deduction, the admissible investigation charges and the Rs 6,538 it had already found payable.",
+      "decided_before_2024_health_rules": true,
+      "source_url": "https://web.archive.org/web/20240620075806/https://www.cioins.co.in/AwardsMonthwise/Apr2021/Health_individual%20April%202021.pdf"
+    },
+    {
+      "case_id": "CASE-003",
+      "category": "proportionate_deduction",
+      "forum": "State Commission Karnataka (Karnataka State Consumer Disputes Redressal Commission, Bengaluru)",
+      "decision_date": "2022-07-06",
+      "decision": "partly_allowed",
+      "insurer_reason": "Claim settled as per Mediclaim 2012 terms: room rent restricted to 1% of sum insured per day with proportionate deduction of other charges, consumables non-payable, and only 80% of the admissible claim payable for an insured over 55 years without 48 months of claim-free continuous cover.",
+      "reasoning": "Relying on the Supreme Court's decision in Jacob Punnen v. United India Insurance (2021), the Commission held that the insurer had not notified this long-standing policyholder of the revised, more restrictive terms before renewal, so settling the claim on those terms was deficient. It also relied on the NCDRC ruling in New India Assurance v. A.K. Kariappa that applying a mechanical proportionate deduction, instead of finding out what the hospital would have charged for the eligible room category, is a faulty procedure. The insurer was directed to pay up to the Rs 3,00,000 sum insured less the amount paid (Rs 1,76,029) with 6% interest, Rs 25,000 compensation and Rs 10,000 costs.",
+      "decided_before_2024_health_rules": true,
+      "source_url": "https://indiankanoon.org/doc/135438575/"
+    },
+    {
+      "case_id": "CASE-004",
+      "category": "proportionate_deduction",
+      "forum": "State Commission Gujarat (Consumer Disputes Redressal Commission, Gujarat State, Ahmedabad)",
+      "decision_date": "2023-05-10",
+      "decision": "partly_allowed",
+      "insurer_reason": "Room rent eligibility was 1% of sum insured (Rs 3,000/day) and a higher room was taken, so proportionate deduction applied; the silver plan carries a 10% co-payment; nursing and non-medical items not payable; OT consumables and procedure charges included in OT charges.",
+      "reasoning": "The State Commission found that the policy wording justified only four deductions: excess room rent (Rs 3,000), nursing charges (Rs 1,050), non-medical items (Rs 6,456) and the 10% co-payment on implants (Rs 16,065), totalling Rs 26,571. The insurer could not justify the proportionate cuts on surgeon/doctor fees, investigations, gases and physiotherapy or the 'included in OT' deductions (Rs 65,792), which amounted to deficiency in service. The District Commission's award was reduced from Rs 92,363 to Rs 65,792.",
+      "decided_before_2024_health_rules": true,
+      "source_url": "https://indiankanoon.org/doc/63692738/"
+    },
+    {
+      "case_id": "CASE-005",
+      "category": "proportionate_deduction",
+      "forum": "State Commission West Bengal (West Bengal State Consumer Disputes Redressal Commission, Kolkata)",
+      "decision_date": "2019-12-31",
+      "decision": "dismissed",
+      "insurer_reason": "Clause 3.1(d): room rent, boarding and nursing limited to 1% of sum insured per day (2% for ICU/ICCU); if the room rate exceeds the limit, all other hospital expenses except medicines are paid in the same proportion as the admissible rate bears to the actual room rate.",
+      "reasoning": "Reading clause 3.1(d), the Commission held that once a patient is admitted to a room/ICU above the entitled category, all admissible expenses other than medicines are reimbursable at proportionate rates and not at actuals. It found no inaccuracy in the TPA's deductions and held that the complainant had misread the policy, so no relief was granted.",
+      "decided_before_2024_health_rules": true,
+      "source_url": "https://indiankanoon.org/doc/143370717/"
+    },
+    {
+      "case_id": "CASE-006",
+      "category": "room_rent_cap",
+      "forum": "State Commission West Bengal (West Bengal State Consumer Disputes Redressal Commission, Kolkata)",
+      "decision_date": "2018-08-09",
+      "decision": "partly_allowed",
+      "insurer_reason": "The patient occupied rooms above her entitlement, so room rent was capped and doctor, nursing and other expenses were reimbursed proportionately; doctor fees paid directly outside the hospital bill were not reimbursed.",
+      "reasoning": "The Commission upheld the room-rent deduction of Rs 12,950 as fully justified by the 1%-of-sum-insured cap (Rs 4,250 x 5 days). But it found the proportionate deductions were wrongly computed - for example, on a day when the room was 21.29% above eligibility, 52.77% of the OT equipment charge was deducted - and held that doctor fees paid directly could not be refused without written reasons, given the insurer's own head-office guideline. The insurer was ordered to recompute, pay the balance with 9% interest, furnish a calculation sheet and pay Rs 25,000 litigation costs.",
+      "decided_before_2024_health_rules": true,
+      "source_url": "https://indiankanoon.org/doc/147121355/"
+    }
+  ]
+}

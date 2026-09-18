@@ -1,0 +1,171 @@
+{
+  "scenario_id": "S5",
+  "title": "Dengue admission - every deduction is fair",
+  "summary": "Reimbursement claim for dengue at a non-network hospital. Deductions are genuine List I-IV items and the 5% co-pay is computed correctly on the admissible amount. ClaimBack should say: nothing to challenge.",
+  "fictional": true,
+  "evaluate_with_policy_wording": "AS-NIVA-2026",
+  "documents": [
+    "policy_schedule.pdf",
+    "hospital_bill.pdf",
+    "discharge_summary.pdf",
+    "insurer_letter.pdf"
+  ],
+  "patient": {
+    "name": "Farhan Qureshi",
+    "age": 41,
+    "gender": "Male",
+    "uhid": "GFH-2026-118470",
+    "ip_no": "IP-8812/26",
+    "relation": "Self"
+  },
+  "policy": {
+    "policy_no": "NHI/AS/2026/0310552",
+    "sum_insured": 200000,
+    "cumulative_bonus": 10000,
+    "period": [
+      "01-03-2026",
+      "28-02-2027"
+    ],
+    "first_inception": "01-03-2024",
+    "history": "Continuous with Nirmaan Health since 01-03-2024",
+    "peds_declared": "None",
+    "city": "Bengaluru",
+    "phone": "96110 00000"
+  },
+  "admission": {
+    "hospital": "greenfield",
+    "claim_type": "Reimbursement",
+    "doa": "25-08-2026",
+    "dod": "29-08-2026",
+    "doctor": "Dr. N. Hegde, MD (Internal Medicine)",
+    "ward": "General Ward (Twin Sharing)",
+    "diagnosis": "Dengue fever with thrombocytopenia",
+    "procedure": "Medical management",
+    "icd": "A90",
+    "hospital_name": "Greenfield Hospital",
+    "network_hospital": false
+  },
+  "letter": {
+    "type": "settlement",
+    "date": "12-09-2026",
+    "claim_no": "CLM-NHI-26-0902214",
+    "received": "02-09-2026",
+    "mode": "Reimbursement - NEFT"
+  },
+  "claim_totals": {
+    "claimed": 39760,
+    "deducted": 4300,
+    "admissible": 35460,
+    "co_payment": 1773,
+    "paid": 33687
+  },
+  "deductions": [
+    {
+      "line_code": "MS01",
+      "description": "Attendant Food Charges",
+      "billed": 1800,
+      "deducted": 1800,
+      "insurer_reason": "Non-payable item - List I",
+      "expected_verdict": "fair",
+      "explanation": "Food for attendants is List I (not covered).",
+      "citations": [
+        "NP-AS-LI-009"
+      ]
+    },
+    {
+      "line_code": "MS02",
+      "description": "Toiletries (soap, lotion, powder)",
+      "billed": 450,
+      "deducted": 450,
+      "insurer_reason": "Non-payable item - List I (toiletries)",
+      "expected_verdict": "fair",
+      "explanation": "Toiletries are List I (only prescribed medical pharmaceuticals are payable).",
+      "citations": [
+        "NP-AS-LI-054"
+      ]
+    },
+    {
+      "line_code": "MS03",
+      "description": "Television Charges",
+      "billed": 400,
+      "deducted": 400,
+      "insurer_reason": "Non-payable item - List I",
+      "expected_verdict": "fair",
+      "explanation": "Television charges are List I (not covered).",
+      "citations": [
+        "NP-AS-LI-022"
+      ]
+    },
+    {
+      "line_code": "MS04",
+      "description": "Laundry Charges",
+      "billed": 300,
+      "deducted": 300,
+      "insurer_reason": "Non-payable item - List I",
+      "expected_verdict": "fair",
+      "explanation": "Laundry charges are List I (not covered).",
+      "citations": [
+        "NP-AS-LI-011"
+      ]
+    },
+    {
+      "line_code": "MS05",
+      "description": "Admission Kit",
+      "billed": 850,
+      "deducted": 850,
+      "insurer_reason": "Subsumed into room charges - List II",
+      "expected_verdict": "fair",
+      "explanation": "Admission kit is List II - part of room charges. Reimbursement at a non-network hospital: the claim is settled per policy terms, so this deduction is fair.",
+      "citations": [
+        "NP-AS-LII-027"
+      ]
+    },
+    {
+      "line_code": "MS06",
+      "description": "Registration Charges",
+      "billed": 500,
+      "deducted": 500,
+      "insurer_reason": "Subsumed into cost of treatment - List IV",
+      "expected_verdict": "fair",
+      "explanation": "Registration charges are List IV. Reimbursement at a non-network hospital: the claim is settled per policy terms, so this deduction is fair.",
+      "citations": [
+        "NP-AS-LIV-001"
+      ]
+    }
+  ],
+  "result": {
+    "challengeable_amount": 0,
+    "needs_more_info_amount": 0,
+    "estimated_additional_payable_after_copay": 0,
+    "upside_if_needs_more_info_resolved_after_copay": 0,
+    "ask_hospital_to_absorb_amount": 0
+  },
+  "other_checks": [
+    {
+      "issue": "Co-payment computation",
+      "verdict": "fair",
+      "explanation": "5% co-pay applied on the admissible amount after deductions, as Section 9.5 requires.",
+      "citations": [
+        "NIVA-AS-9.5-COPAY"
+      ]
+    },
+    {
+      "issue": "Settlement timeline",
+      "verdict": "fair",
+      "explanation": "Documents received 02-09-2026, settled 12-09-2026 = 10 days, within the 15 days in Section 9.6.",
+      "citations": [
+        "NIVA-AS-9.6-SETTLEMENT",
+        "R-REIMBURSEMENT-SETTLEMENT-15-DAYS"
+      ]
+    },
+    {
+      "issue": "Room rent",
+      "verdict": "fair",
+      "explanation": "Rs 2,500/day is within the eligible Rs 4,000/day (2% of Rs 2,00,000), so no proportionate deduction applies.",
+      "citations": [
+        "NIVA-AS-4.1-ROOM"
+      ]
+    }
+  ],
+  "similar_real_cases": []
+}

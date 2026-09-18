@@ -1,0 +1,57 @@
+{
+  "scenario_id": "S2",
+  "hospital": "Greenfield Hospital",
+  "patient": "Rajesh Kumar",
+  "bill_date": "19-07-2026",
+  "gross_total": 116100,
+  "lines": [
+    {
+      "code": "RM01",
+      "head": "room",
+      "description": "Room Rent - Deluxe Single Room (incl. nursing & boarding)",
+      "qty": 5,
+      "rate": 8000,
+      "amount": 40000
+    },
+    {
+      "code": "DR01",
+      "head": "doctor",
+      "description": "Consultant Visits - Dr. S. Pillai (Pulmonology)",
+      "qty": 10,
+      "rate": 1200,
+      "amount": 12000
+    },
+    {
+      "code": "PH01",
+      "head": "pharmacy",
+      "description": "Pharmacy - Antibiotics, Nebulisation Drugs & IV Fluids",
+      "qty": 1,
+      "rate": 38400,
+      "amount": 38400
+    },
+    {
+      "code": "IN01",
+      "head": "investigations",
+      "description": "Investigations - HRCT Chest, Blood Cultures, CBC, CRP, Procalcitonin, ABG",
+      "qty": 1,
+      "rate": 22400,
+      "amount": 22400
+    },
+    {
+      "code": "CS01",
+      "head": "consumable",
+      "description": "Examination Gloves (pairs)",
+      "qty": 20,
+      "rate": 40,
+      "amount": 800
+    },
+    {
+      "code": "MS01",
+      "head": "misc",
+      "description": "Attendant Bed Charges",
+      "qty": 5,
+      "rate": 500,
+      "amount": 2500
+    }
+  ]
+}
