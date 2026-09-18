@@ -1,0 +1,24 @@
+[project]
+name = "claimback"
+version = "0.1.0"
+description = "ClaimBack - check Indian health insurance claim deductions against policy wording and IRDAI rules"
+requires-python = ">=3.13"
+dependencies = [
+    "anthropic[bedrock]>=1.6.0",
+    "boto3>=1.40",
+    "fastapi>=0.115",
+    "mangum>=0.19",
+    "pydantic>=2.9",
+    "python-multipart>=0.0.12",
+]
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "pytest>=8.3",
+    "uvicorn[standard]>=0.32",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

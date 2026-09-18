@@ -1,0 +1,644 @@
+{
+  "id": "sample-s2",
+  "created_at": "2026-09-17T10:16:25.198351Z",
+  "status": "complete",
+  "source": "sample",
+  "sample_id": "S2",
+  "policy_wording_id": null,
+  "title": "Pneumonia admission - proportionate deduction applied to the whole bill",
+  "documents": [
+    {
+      "kind": "policy_schedule",
+      "filename": "policy_schedule.pdf",
+      "content_type": "application/pdf"
+    },
+    {
+      "kind": "hospital_bill",
+      "filename": "hospital_bill.pdf",
+      "content_type": "application/pdf"
+    },
+    {
+      "kind": "insurer_letter",
+      "filename": "insurer_letter.pdf",
+      "content_type": "application/pdf"
+    },
+    {
+      "kind": "discharge_summary",
+      "filename": "discharge_summary.pdf",
+      "content_type": "application/pdf"
+    }
+  ],
+  "progress": [
+    {
+      "name": "read_documents",
+      "label": "Reading your documents",
+      "status": "done",
+      "detail": "Sample documents: 6 bill lines, 3 deductions"
+    },
+    {
+      "name": "check_items",
+      "label": "Checking every deduction against the policy's non-payable lists",
+      "status": "done",
+      "detail": "3 deductions checked, 2 found in the policy's lists"
+    },
+    {
+      "name": "check_policy",
+      "label": "Checking your policy wording",
+      "status": "done",
+      "detail": "Checked against Arogya Sanjeevani Policy, Niva Bupa Health Insurance Co. Ltd. (UIN NBHHLIP27056V042627)"
+    },
+    {
+      "name": "check_rules",
+      "label": "Checking IRDAI rules and deadlines",
+      "status": "done",
+      "detail": "2 claim-level checks, 11 IRDAI rules cited"
+    },
+    {
+      "name": "similar_cases",
+      "label": "Finding similar Ombudsman and court decisions",
+      "status": "done",
+      "detail": "6 similar decisions found"
+    },
+    {
+      "name": "ai_review",
+      "label": "Claude reviews anything the rules can't settle",
+      "status": "skipped",
+      "detail": "Off in this local build (rule engine only)"
+    },
+    {
+      "name": "write_report",
+      "label": "Writing your report",
+      "status": "done",
+      "detail": "You can challenge ₹22,800 of the ₹45,600 deducted"
+    }
+  ],
+  "claim_input": {
+    "policy": {
+      "policy_number": "NHI/AS/2025/0419087",
+      "insurer_name": "Nirmaan Health Insurance Co. Ltd.",
+      "product_name": "Arogya Sanjeevani Policy",
+      "policy_wording_id": "AS-NIVA-2026",
+      "sum_insured": 300000.0,
+      "cumulative_bonus": 30000.0,
+      "policy_period_start": "2026-04-01",
+      "policy_period_end": "2027-03-31",
+      "first_inception": "2022-04-01",
+      "continuous_cover_start": "2022-04-01",
+      "peds_declared": [],
+      "optional_covers": [],
+      "co_payment_pct": 5.0,
+      "holder_name": "Rajesh Kumar",
+      "city": "Bengaluru",
+      "state": "Karnataka"
+    },
+    "admission": {
+      "patient_name": "Rajesh Kumar",
+      "age": 58,
+      "gender": "Male",
+      "hospital_name": "Greenfield Hospital",
+      "hospital_city": "Bengaluru",
+      "network_hospital": false,
+      "claim_type": "reimbursement",
+      "admission_date": "2026-07-14",
+      "discharge_date": "2026-07-19",
+      "diagnosis": "Community-acquired pneumonia, right lower lobe",
+      "procedure": "Medical management (IV antibiotics, nebulisation, oxygen support)",
+      "is_accident": false,
+      "comorbidities": []
+    },
+    "bill_lines": [
+      {
+        "code": "RM01",
+        "head": "room",
+        "description": "Room Rent - Deluxe Single Room (incl. nursing & boarding)",
+        "qty": 5.0,
+        "rate": 8000.0,
+        "amount": 40000.0
+      },
+      {
+        "code": "DR01",
+        "head": "doctor",
+        "description": "Consultant Visits - Dr. S. Pillai (Pulmonology)",
+        "qty": 10.0,
+        "rate": 1200.0,
+        "amount": 12000.0
+      },
+      {
+        "code": "PH01",
+        "head": "pharmacy",
+        "description": "Pharmacy - Antibiotics, Nebulisation Drugs & IV Fluids",
+        "qty": 1.0,
+        "rate": 38400.0,
+        "amount": 38400.0
+      },
+      {
+        "code": "IN01",
+        "head": "investigations",
+        "description": "Investigations - HRCT Chest, Blood Cultures, CBC, CRP, Procalcitonin, ABG",
+        "qty": 1.0,
+        "rate": 22400.0,
+        "amount": 22400.0
+      },
+      {
+        "code": "CS01",
+        "head": "consumable",
+        "description": "Examination Gloves (pairs)",
+        "qty": 20.0,
+        "rate": 40.0,
+        "amount": 800.0
+      },
+      {
+        "code": "MS01",
+        "head": "misc",
+        "description": "Attendant Bed Charges",
+        "qty": 5.0,
+        "rate": 500.0,
+        "amount": 2500.0
+      }
+    ],
+    "decision": {
+      "letter_type": "settlement",
+      "letter_date": "2026-08-04",
+      "claim_number": "CLM-NHI-26-0791240",
+      "documents_received_date": "2026-07-24",
+      "amount_claimed": 116100.0,
+      "total_deducted": 45600.0,
+      "admissible_amount": 70500.0,
+      "co_payment": 3525.0,
+      "amount_paid": 66975.0,
+      "deductions": [
+        {
+          "line_code": "CS01",
+          "description": "Examination Gloves (pairs)",
+          "billed": 800.0,
+          "deducted": 800.0,
+          "reason": "Non-payable item - List I"
+        },
+        {
+          "line_code": "MS01",
+          "description": "Attendant Bed Charges",
+          "billed": 2500.0,
+          "deducted": 2500.0,
+          "reason": "Non-payable item - List I"
+        },
+        {
+          "line_code": null,
+          "description": "Room rent and associated hospital charges",
+          "billed": null,
+          "deducted": 42300.0,
+          "reason": "Proportionate deduction - room rent Rs 8,000/day exceeds eligible Rs 5,000/day (62.5% payable)"
+        }
+      ],
+      "repudiation_reason": null,
+      "clauses_cited": []
+    }
+  },
+  "report": {
+    "generated_at": "2026-09-17T10:16:25.207474Z",
+    "policy_wording_id": "AS-NIVA-2026",
+    "policy_wording_name": "Arogya Sanjeevani Policy, Niva Bupa Health Insurance Co. Ltd. (UIN NBHHLIP27056V042627)",
+    "headline": "You can challenge ₹22,800 of the ₹45,600 deducted",
+    "summary": "1 of 3 deductions doesn't hold up against your policy wording and IRDAI rules. If the insurer accepts, you could get about ₹21,660 more after the 5% co-pay.",
+    "totals": {
+      "claimed": 116100.0,
+      "paid": 66975.0,
+      "total_deducted": 45600.0,
+      "challengeable_amount": 22800.0,
+      "needs_more_info_amount": 0.0,
+      "ask_hospital_amount": 0.0,
+      "estimated_additional_payable": 21660.0,
+      "claim_rejected": false
+    },
+    "deduction_findings": [
+      {
+        "id": "D01",
+        "line_code": "CS01",
+        "description": "Examination Gloves (pairs)",
+        "billed": 800.0,
+        "deducted": 800.0,
+        "insurer_reason": "Non-payable item - List I",
+        "category": "non_payable_item",
+        "verdict": "fair",
+        "strength": null,
+        "amount_challengeable": 0.0,
+        "explanation": "\"Examination Gloves (pairs)\" is listed as \"Gloves\", which is in List I of your policy's Annexure-A (not covered). This deduction is correct.",
+        "citations": [
+          "NP-AS-LI-056"
+        ],
+        "matched_item": "GLOVES"
+      },
+      {
+        "id": "D02",
+        "line_code": "MS01",
+        "description": "Attendant Bed Charges",
+        "billed": 2500.0,
+        "deducted": 2500.0,
+        "insurer_reason": "Non-payable item - List I",
+        "category": "non_payable_item",
+        "verdict": "fair",
+        "strength": null,
+        "amount_challengeable": 0.0,
+        "explanation": "\"Attendant Bed Charges\" is listed as \"Attendant charges\", which is in List I of your policy's Annexure-A (not covered). This deduction is correct.",
+        "citations": [
+          "NP-AS-LI-024"
+        ],
+        "matched_item": "ATTENDANT CHARGES"
+      },
+      {
+        "id": "D03",
+        "line_code": null,
+        "description": "Room rent and associated hospital charges",
+        "billed": null,
+        "deducted": 42300.0,
+        "insurer_reason": "Proportionate deduction - room rent Rs 8,000/day exceeds eligible Rs 5,000/day (62.5% payable)",
+        "category": "proportionate_deduction",
+        "verdict": "challengeable",
+        "strength": "strong",
+        "amount_challengeable": 22800.0,
+        "explanation": "Your room cost ₹8,000/day against a limit of ₹5,000/day, so the policy lets the insurer pay 62.5% of room rent, nursing charges, medical practitioners' fees and operation theatre charges. That comes to a deduction of ₹19,500. The insurer cut ₹42,300, which means it also applied the cut to medicines and tests, which this clause doesn't allow. You can challenge ₹22,800.",
+        "citations": [
+          "NIVA-AS-4.1-ROOM",
+          "NIVA-AS-4.1-PRORATA",
+          "R-POLICY-MUST-STATE-SUBLIMITS-PROPORTIONATE-DEDUCTIONS",
+          "R-NO-DEDUCTION-OUTSIDE-LISTED-EXCLUSIONS"
+        ],
+        "matched_item": null
+      }
+    ],
+    "check_findings": [
+      {
+        "id": "C-COPAY",
+        "issue": "Co-payment computation",
+        "verdict": "fair",
+        "strength": null,
+        "explanation": "The 5% co-pay (₹3,525) was correctly applied to the admissible amount after deductions (₹70,500).",
+        "citations": [
+          "NIVA-AS-9.5-COPAY"
+        ],
+        "computed": {
+          "admissible": 70500.0,
+          "co_payment": 3525.0
+        }
+      },
+      {
+        "id": "C-TIMELINE",
+        "issue": "Settlement timeline",
+        "verdict": "fair",
+        "strength": null,
+        "explanation": "Documents received 24 Jul 2026, decided 04 Aug 2026: 11 days, within the 15-day limit.",
+        "citations": [
+          "NIVA-AS-9.6-SETTLEMENT",
+          "R-REIMBURSEMENT-SETTLEMENT-15-DAYS"
+        ],
+        "computed": {
+          "documents_received": "2026-07-24",
+          "decision_date": "2026-08-04",
+          "days_taken": 11,
+          "allowed_days": 15
+        }
+      }
+    ],
+    "similar_cases": [
+      {
+        "case_id": "CASE-004",
+        "forum": "State Commission Gujarat (Consumer Disputes Redressal Commission, Gujarat State, Ahmedabad)",
+        "decision_date": "2023-05-10",
+        "decision": "partly_allowed",
+        "category": "proportionate_deduction",
+        "insurer_reason": "Room rent eligibility was 1% of sum insured (Rs 3,000/day) and a higher room was taken, so proportionate deduction applied; the silver plan carries a 10% co-payment; nursing and non-medical items not payable; OT consumables and procedure charges included in OT charges.",
+        "reasoning": "The State Commission found that the policy wording justified only four deductions: excess room rent (Rs 3,000), nursing charges (Rs 1,050), non-medical items (Rs 6,456) and the 10% co-payment on implants (Rs 16,065), totalling Rs 26,571. The insurer could not justify the proportionate cuts on surgeon/doctor fees, investigations, gases and physiotherapy or the 'included in OT' deductions (Rs 65,792), which amounted to deficiency in service. The District Commission's award was reduced from Rs 92,363 to Rs 65,792.",
+        "amount_awarded_inr": 65792.0,
+        "decided_before_2024_health_rules": true,
+        "source_url": "https://indiankanoon.org/doc/63692738/"
+      },
+      {
+        "case_id": "CASE-003",
+        "forum": "State Commission Karnataka (Karnataka State Consumer Disputes Redressal Commission, Bengaluru)",
+        "decision_date": "2022-07-06",
+        "decision": "partly_allowed",
+        "category": "proportionate_deduction",
+        "insurer_reason": "Claim settled as per Mediclaim 2012 terms: room rent restricted to 1% of sum insured per day with proportionate deduction of other charges, consumables non-payable, and only 80% of the admissible claim payable for an insured over 55 years without 48 months of claim-free continuous cover.",
+        "reasoning": "Relying on the Supreme Court's decision in Jacob Punnen v. United India Insurance (2021), the Commission held that the insurer had not notified this long-standing policyholder of the revised, more restrictive terms before renewal, so settling the claim on those terms was deficient. It also relied on the NCDRC ruling in New India Assurance v. A.K. Kariappa that applying a mechanical proportionate deduction, instead of finding out what the hospital would have charged for the eligible room category, is a faulty procedure. The insurer was directed to pay up to the Rs 3,00,000 sum insured less the amount paid (Rs 1,76,029) with 6% interest, Rs 25,000 compensation and Rs 10,000 costs.",
+        "amount_awarded_inr": 176029.0,
+        "decided_before_2024_health_rules": true,
+        "source_url": "https://indiankanoon.org/doc/135438575/"
+      },
+      {
+        "case_id": "CASE-001",
+        "forum": "Insurance Ombudsman, Mumbai",
+        "decision_date": "2021-04-30",
+        "decision": "allowed",
+        "category": "proportionate_deduction",
+        "insurer_reason": "ICU charges of Rs 8,750/day exceeded the ICU limit of 2% of sum insured per day, so all other hospital expenses except medicines were paid in the same proportion under clause 3.2 (proportionate deduction); remaining deductions were non-medical items under Annexure 2.",
+        "reasoning": "The Forum accepted the hospital tariff showing that all charges other than the bed charge were the same whether the patient was in a ward or the ICU. Disallowing room rent above the limit and non-medical items was in order, but reducing other charges proportionately when the hospital has no class-based tariff was held unjustified and against IRDAI guidelines; the insurer itself conceded that proportionate deduction would not apply to doctor fees and investigations at this hospital. The balance admissible expenses deducted proportionately were ordered to be paid (amount not quantified in the award).",
+        "amount_awarded_inr": null,
+        "decided_before_2024_health_rules": true,
+        "source_url": "https://web.archive.org/web/20240620075806/https://www.cioins.co.in/AwardsMonthwise/Apr2021/Health_individual%20April%202021.pdf"
+      },
+      {
+        "case_id": "CASE-002",
+        "forum": "Insurance Ombudsman, Mumbai",
+        "decision_date": "2021-04-30",
+        "decision": "partly_allowed",
+        "category": "proportionate_deduction",
+        "insurer_reason": "Excess room and nursing charges disallowed (eligible Rs 3,000/day); doctor fees and hospital service charges paid in proportion to the eligible room rent under policy condition 3.1; diet charges not payable; PPE kits paid for only one day for a non-Covid patient; investigation charges lacked a break-up. On reassessment the TPA found a further Rs 6,538 payable.",
+        "reasoning": "The Forum held that deducting diet charges, excess room charges and the proportionate reduction of other charges were as per policy terms and in order. However, disallowing PPE kit charges during Covid times was not justified even for a non-Covid patient, and the additional investigation bills had to be considered. The insurer was directed to pay the PPE deduction, the admissible investigation charges and the Rs 6,538 it had already found payable.",
+        "amount_awarded_inr": null,
+        "decided_before_2024_health_rules": true,
+        "source_url": "https://web.archive.org/web/20240620075806/https://www.cioins.co.in/AwardsMonthwise/Apr2021/Health_individual%20April%202021.pdf"
+      },
+      {
+        "case_id": "CASE-005",
+        "forum": "State Commission West Bengal (West Bengal State Consumer Disputes Redressal Commission, Kolkata)",
+        "decision_date": "2019-12-31",
+        "decision": "dismissed",
+        "category": "proportionate_deduction",
+        "insurer_reason": "Clause 3.1(d): room rent, boarding and nursing limited to 1% of sum insured per day (2% for ICU/ICCU); if the room rate exceeds the limit, all other hospital expenses except medicines are paid in the same proportion as the admissible rate bears to the actual room rate.",
+        "reasoning": "Reading clause 3.1(d), the Commission held that once a patient is admitted to a room/ICU above the entitled category, all admissible expenses other than medicines are reimbursable at proportionate rates and not at actuals. It found no inaccuracy in the TPA's deductions and held that the complainant had misread the policy, so no relief was granted.",
+        "amount_awarded_inr": null,
+        "decided_before_2024_health_rules": true,
+        "source_url": "https://indiankanoon.org/doc/143370717/"
+      },
+      {
+        "case_id": "CASE-006",
+        "forum": "State Commission West Bengal (West Bengal State Consumer Disputes Redressal Commission, Kolkata)",
+        "decision_date": "2018-08-09",
+        "decision": "partly_allowed",
+        "category": "room_rent_cap",
+        "insurer_reason": "The patient occupied rooms above her entitlement, so room rent was capped and doctor, nursing and other expenses were reimbursed proportionately; doctor fees paid directly outside the hospital bill were not reimbursed.",
+        "reasoning": "The Commission upheld the room-rent deduction of Rs 12,950 as fully justified by the 1%-of-sum-insured cap (Rs 4,250 x 5 days). But it found the proportionate deductions were wrongly computed - for example, on a day when the room was 21.29% above eligibility, 52.77% of the OT equipment charge was deducted - and held that doctor fees paid directly could not be refused without written reasons, given the insurer's own head-office guideline. The insurer was ordered to recompute, pay the balance with 9% interest, furnish a calculation sheet and pay Rs 25,000 litigation costs.",
+        "amount_awarded_inr": null,
+        "decided_before_2024_health_rules": true,
+        "source_url": "https://indiankanoon.org/doc/147121355/"
+      }
+    ],
+    "escalation": [
+      {
+        "step": 1,
+        "title": "Write to the insurer's grievance officer",
+        "action": "Send the complaint letter ClaimBack drafts, listing each disputed amount and the clause or rule behind it. Keep proof of sending.",
+        "due_date": "2026-09-17",
+        "deadline_note": "The insurer must acknowledge immediately and resolve it within 14 days, by 01 Oct 2026.",
+        "citations": [
+          "R-GRIEVANCE-ACK-IMMEDIATE-RESOLVE-14-DAYS",
+          "R-OMBUDSMAN-PRECONDITION-APPROACH-INSURER-FIRST"
+        ]
+      },
+      {
+        "step": 2,
+        "title": "Register it on Bima Bharosa",
+        "action": "Also log the complaint on IRDAI's Bima Bharosa portal (bimabharosa.irdai.gov.in) so it's tracked.",
+        "due_date": "2026-09-17",
+        "deadline_note": "Optional, but it puts the complaint on IRDAI's record.",
+        "citations": [
+          "R-BIMA-BHAROSA-ONLINE-COMPLAINT"
+        ]
+      },
+      {
+        "step": 3,
+        "title": "Go to the Insurance Ombudsman, Bengaluru",
+        "action": "If the insurer rejects your complaint, doesn't reply, or replies unsatisfactorily, file with the Ombudsman online at cioins.co.in. It's free.",
+        "due_date": "2026-10-17",
+        "deadline_note": "Possible after 30 days without a satisfactory reply. File within 1 year of the insurer's reply. Claims up to Rs 50 lakh.",
+        "citations": [
+          "R-OMBUDSMAN-AFTER-30-DAYS-OR-UNSATISFACTORY-DECISION",
+          "R-OMBUDSMAN-ONE-YEAR-LIMIT",
+          "R-OMBUDSMAN-NO-FEE-FILING-MODES",
+          "R-OMBUDSMAN-CLAIMS-UP-TO-50-LAKH"
+        ]
+      },
+      {
+        "step": 4,
+        "title": "Consumer commission (last resort)",
+        "action": "If the Ombudsman route doesn't work for you, a district consumer commission can hear the dispute. You can't pursue both for the same dispute.",
+        "due_date": null,
+        "deadline_note": "General information only; consider advice before filing.",
+        "citations": [
+          "R-OMBUDSMAN-BAR-IF-COURT-OR-FORUM-CASE"
+        ]
+      }
+    ],
+    "ombudsman_office": {
+      "city": "Bengaluru",
+      "address": "Office of the Insurance Ombudsman, Jeevan Soudha Building, PID No. 57-27-N-19, Ground Floor, 19/19, 24th Main Road, JP Nagar, 1st Phase, Bengaluru - 560 078",
+      "email": "oio.bengaluru@cioins.co.in",
+      "phone": "080-26652048 / 26652049"
+    },
+    "citations": {
+      "NIVA-AS-4.1-PRORATA": {
+        "id": "NIVA-AS-4.1-PRORATA",
+        "kind": "policy_clause",
+        "title": "Proportionate deduction limited to associated medical expenses",
+        "quote": "If the Insured Person is admitted in a room / ICU / ICCU at rates exceeding the aforesaid limits, then We shall be liable to pay only a pro-rated portion of the total Associated Medical Expenses (including surcharge or taxes thereon) as per the following formula: (eligible Room limit / Room Rent actually incurred) * total Associated Medical Expenses Associated Medical Expenses shall include Room Rent, nursing charges, Medical Practitioners' fees and operation theatre charges",
+        "source": "Arogya Sanjeevani Policy, Niva Bupa Health Insurance Co. Ltd.",
+        "source_detail": null,
+        "clause_ref": "Section 4.1, Note 2",
+        "page": 6,
+        "url": "https://transactions.nivabupa.com/pages/doc/policy_wording/ArogyaSanjeevani-PolicyDocument.pdf?v=1.0"
+      },
+      "NIVA-AS-4.1-ROOM": {
+        "id": "NIVA-AS-4.1-ROOM",
+        "kind": "policy_clause",
+        "title": "Room rent and ICU limits",
+        "quote": "Room Rent, Boarding, Nursing Expenses as provided by the Hospital/ Nursing Home up to 2% of the sum insured subject to maximum of Rs.5000/- per day. ii. Intensive Care Unit (ICU) / Intensive Cardiac Care Unit (ICCU) expenses up to 5% of sum insured subject to maximum of Rs. 10,000/- per day.",
+        "source": "Arogya Sanjeevani Policy, Niva Bupa Health Insurance Co. Ltd.",
+        "source_detail": null,
+        "clause_ref": "Section 4.1(i)-(ii)",
+        "page": 6,
+        "url": "https://transactions.nivabupa.com/pages/doc/policy_wording/ArogyaSanjeevani-PolicyDocument.pdf?v=1.0"
+      },
+      "NIVA-AS-9.5-COPAY": {
+        "id": "NIVA-AS-9.5-COPAY",
+        "kind": "policy_clause",
+        "title": "5% co-payment on admissible amount",
+        "quote": "Each and every claim under the Policy shall be subject to a Copayment of 5% applicable to claim amount admissible and payable as per the terms and conditions of the Policy.",
+        "source": "Arogya Sanjeevani Policy, Niva Bupa Health Insurance Co. Ltd.",
+        "source_detail": null,
+        "clause_ref": "Section 9.5",
+        "page": 13,
+        "url": "https://transactions.nivabupa.com/pages/doc/policy_wording/ArogyaSanjeevani-PolicyDocument.pdf?v=1.0"
+      },
+      "NIVA-AS-9.6-SETTLEMENT": {
+        "id": "NIVA-AS-9.6-SETTLEMENT",
+        "kind": "policy_clause",
+        "title": "Settle or reject within 15 days, else penal interest",
+        "quote": "The Company shall settle or reject a claim, as the case may be, within 15 days from the claim submission date. ii. ln the case of delay in the payment of a claim, the Company shall be liable to pay interest from the date of receipt of claim intimation till the date of payment of claim at a rate of 2% above the bank rate.",
+        "source": "Arogya Sanjeevani Policy, Niva Bupa Health Insurance Co. Ltd.",
+        "source_detail": null,
+        "clause_ref": "Section 9.6",
+        "page": 13,
+        "url": "https://transactions.nivabupa.com/pages/doc/policy_wording/ArogyaSanjeevani-PolicyDocument.pdf?v=1.0"
+      },
+      "NP-AS-LI-024": {
+        "id": "NP-AS-LI-024",
+        "kind": "non_payable_item",
+        "title": "Items for which coverage is not available in the policy: ATTENDANT CHARGES",
+        "quote": "Printed in the policy wording's Annexure-A List I (coverage not available). Deduction is fair.",
+        "source": "Arogya Sanjeevani policy wording, Annexure-A",
+        "source_detail": null,
+        "clause_ref": "Annexure-A, List I, item 24",
+        "page": 20,
+        "url": null
+      },
+      "NP-AS-LI-056": {
+        "id": "NP-AS-LI-056",
+        "kind": "non_payable_item",
+        "title": "Items for which coverage is not available in the policy: GLOVES",
+        "quote": "Printed in the policy wording's Annexure-A List I (coverage not available). Deduction is fair.",
+        "source": "Arogya Sanjeevani policy wording, Annexure-A",
+        "source_detail": null,
+        "clause_ref": "Annexure-A, List I, item 56",
+        "page": 21,
+        "url": null
+      },
+      "R-BIMA-BHAROSA-ONLINE-COMPLAINT": {
+        "id": "R-BIMA-BHAROSA-ONLINE-COMPLAINT",
+        "kind": "rule",
+        "title": "Policyholders/claimants can also register a complaint online on IRDAI's Bima Bharosa portal.",
+        "quote": "The policyholder or the claimant also has the option to register the complaint on-line at IRDAI's Bima Bharosa by visiting https://bimabharosa.irdai.gov.in/.",
+        "source": "IRDAI Master Circular on Protection of Policyholders' Interests, 2024",
+        "source_detail": "Master Circular on Protection of Policyholders' Interests, 2024, Ref IRDAI/PP&GR/CIR/MISC/117/9/2024",
+        "clause_ref": "Section 1, Part B, VI(1)",
+        "page": 123,
+        "url": "https://irdai.gov.in/document-detail?documentId=5625747"
+      },
+      "R-GRIEVANCE-ACK-IMMEDIATE-RESOLVE-14-DAYS": {
+        "id": "R-GRIEVANCE-ACK-IMMEDIATE-RESOLVE-14-DAYS",
+        "kind": "rule",
+        "title": "Insurers must acknowledge a complaint immediately and resolve it within 14 days, giving reasons with specific reference to policy terms if the complaint is not accepted.",
+        "quote": "On receipt of a complaint, the complainant will have to be given an acknowledgement immediately. Insurers should provide resolution to the complaint within 14 days along with the reasons for not accepting the complaint with specific reference to the relevant terms and conditions of the policy.",
+        "source": "IRDAI Master Circular on Protection of Policyholders' Interests, 2024",
+        "source_detail": "Master Circular on Protection of Policyholders' Interests, 2024, Ref IRDAI/PP&GR/CIR/MISC/117/9/2024",
+        "clause_ref": "Section 1, Part B, VI(2)(i)",
+        "page": 123,
+        "url": "https://irdai.gov.in/document-detail?documentId=5625747"
+      },
+      "R-NO-DEDUCTION-OUTSIDE-LISTED-EXCLUSIONS": {
+        "id": "R-NO-DEDUCTION-OUTSIDE-LISTED-EXCLUSIONS",
+        "kind": "rule",
+        "title": "All applicable exclusions must be written into the policy document; the insurer cannot make further deductions from a claim in the name of any exclusion not in the policy.",
+        "quote": "Insurers shall mandatorily include in the policy document all the applicable exclusions for a particular product. No further deductions shall be made from the claim amount in the name of any other exclusions.",
+        "source": "IRDAI Master Circular on Protection of Policyholders' Interests, 2024",
+        "source_detail": "Master Circular on Protection of Policyholders' Interests, 2024, Ref IRDAI/PP&GR/CIR/MISC/117/9/2024",
+        "clause_ref": "Section 2, Chapter IV, para 16.3",
+        "page": 144,
+        "url": "https://irdai.gov.in/document-detail?documentId=5625747"
+      },
+      "R-OMBUDSMAN-AFTER-30-DAYS-OR-UNSATISFACTORY-DECISION": {
+        "id": "R-OMBUDSMAN-AFTER-30-DAYS-OR-UNSATISFACTORY-DECISION",
+        "kind": "rule",
+        "title": "A policyholder may approach the Insurance Ombudsman if the complaint is not resolved within 30 days or if the insurer's decision is not acceptable.",
+        "quote": "*(The policyholder may approach the Insurance Ombudsman if his / her complaint is not resolved within 30 days or if the decision of the company is not acceptable to the policyholder.)",
+        "source": "IRDAI Master Circular on Protection of Policyholders' Interests, 2024",
+        "source_detail": "Master Circular on Protection of Policyholders' Interests, 2024, Ref IRDAI/PP&GR/CIR/MISC/117/9/2024",
+        "clause_ref": "Schedule A, Citizens' Charter, note to item 6 'Complaints'",
+        "page": 157,
+        "url": "https://irdai.gov.in/document-detail?documentId=5625747"
+      },
+      "R-OMBUDSMAN-BAR-IF-COURT-OR-FORUM-CASE": {
+        "id": "R-OMBUDSMAN-BAR-IF-COURT-OR-FORUM-CASE",
+        "kind": "rule",
+        "title": "The Ombudsman cannot hear a complaint on the same subject matter that is pending before, or already decided by, a court, consumer forum or arbitrator.",
+        "quote": "No complaint before the Insurance Ombudsman shall be maintainable on the same subject matter on which proceedings are pending before or disposed of by any court or consumer forum or arbitrator.",
+        "source": "Insurance Ombudsman Rules, 2017 (as amended)",
+        "source_detail": "Insurance Ombudsman Rules, 2017 (as amended up to 09.11.2023; CIO consolidated copy)",
+        "clause_ref": "Rule 14(5)",
+        "page": 9,
+        "url": "https://www.cioins.co.in/notification/Insurance%20Ombudsman%20Rules,%202017(%20as%20amended%20till%2009.11.2023).pdf"
+      },
+      "R-OMBUDSMAN-CLAIMS-UP-TO-50-LAKH": {
+        "id": "R-OMBUDSMAN-CLAIMS-UP-TO-50-LAKH",
+        "kind": "rule",
+        "title": "If not satisfied with the insurer's grievance resolution, unresolved or partially resolved complaints can be escalated to the Insurance Ombudsman of the relevant jurisdiction where the claim amount is up to Rs 50 lakh.",
+        "quote": "In case the complainant is not satisfied with the resolution of grievance provided by the insurer, they can escalate the unresolved / partially resolved complaints to Insurance Ombudsman of concerned jurisdiction, in case the claim amount is up to Rs. 50 lakhs.",
+        "source": "IRDAI Master Circular on Protection of Policyholders' Interests, 2024",
+        "source_detail": "Master Circular on Protection of Policyholders' Interests, 2024, Ref IRDAI/PP&GR/CIR/MISC/117/9/2024",
+        "clause_ref": "Section 1, Part B, VI(3)(i)",
+        "page": 123,
+        "url": "https://irdai.gov.in/document-detail?documentId=5625747"
+      },
+      "R-OMBUDSMAN-NO-FEE-FILING-MODES": {
+        "id": "R-OMBUDSMAN-NO-FEE-FILING-MODES",
+        "kind": "rule",
+        "title": "An Ombudsman complaint is free of any charge/fee and can be filed in person, online at cioins.co.in, or in writing by post/email.",
+        "quote": "The policyholder has option to take up the matter before insurance ombudsman of competent jurisdiction without any charge / fee through any of the following options: a. In person; b. Online by visiting https://cioins.co.in/Complaint/Online; c. In writing through post or through email by giving complete details.",
+        "source": "IRDAI Master Circular on Protection of Policyholders' Interests, 2024",
+        "source_detail": "Master Circular on Protection of Policyholders' Interests, 2024, Ref IRDAI/PP&GR/CIR/MISC/117/9/2024",
+        "clause_ref": "Section 1, Part B, VI(3)(ii)",
+        "page": 123,
+        "url": "https://irdai.gov.in/document-detail?documentId=5625747"
+      },
+      "R-OMBUDSMAN-ONE-YEAR-LIMIT": {
+        "id": "R-OMBUDSMAN-ONE-YEAR-LIMIT",
+        "kind": "rule",
+        "title": "The Ombudsman complaint must be filed within one year of the insurer's rejection of the representation, of receiving its unsatisfactory decision, or of expiry of one month from sending the representation if no reply was received.",
+        "quote": "(b) The complaint is made within one year-- (i) after the order of the insurer 1 [or insurance broker, as the case may be,] rejecting the representation is received; or (ii) after receipt of decision of the insurer 1 [or insurance broker, as the case may be], which is not to the satisfaction of the complainant; (iii) after expiry of a period of one month from the date of sending the written representation to the insurer 1 [or insurance broker, as the case may be,] if the insurer or 1 [ insurance broker, as the case may be], named fails to furnish reply to the complainant.",
+        "source": "Insurance Ombudsman Rules, 2017 (as amended)",
+        "source_detail": "Insurance Ombudsman Rules, 2017 (as amended up to 09.11.2023; CIO consolidated copy)",
+        "clause_ref": "Rule 14(3)(b)",
+        "page": 9,
+        "url": "https://www.cioins.co.in/notification/Insurance%20Ombudsman%20Rules,%202017(%20as%20amended%20till%2009.11.2023).pdf"
+      },
+      "R-OMBUDSMAN-PRECONDITION-APPROACH-INSURER-FIRST": {
+        "id": "R-OMBUDSMAN-PRECONDITION-APPROACH-INSURER-FIRST",
+        "kind": "rule",
+        "title": "Before going to the Ombudsman, the complainant must have made a written/email/online representation to the insurer, and either it was rejected, no reply came within one month of the insurer receiving it, or the reply is unsatisfactory.",
+        "quote": "No complaint to the Insurance Ombudsman shall lie unless (a) the complainant 1 [has made a representation in writing or through electronic mail or online through website of the insurer or insurance broker concerned] named in the complaint and-- (i) either the insurer 1 [or insurance broker, as the case may be,] had rejected the complaint; or (ii) the complainant had not received any reply within a period of one month after the insurer 1 [or insurance broker, as the case may be,] received his representation; or (iii) the complainant is not satisfied with the reply given to him by the insurer 1 [or insurance broker, as the case may be.]",
+        "source": "Insurance Ombudsman Rules, 2017 (as amended)",
+        "source_detail": "Insurance Ombudsman Rules, 2017 (as amended up to 09.11.2023; CIO consolidated copy)",
+        "clause_ref": "Rule 14(3)(a) (as amended by G.S.R. 147(E) dated 02.03.2021)",
+        "page": 9,
+        "url": "https://www.cioins.co.in/notification/Insurance%20Ombudsman%20Rules,%202017(%20as%20amended%20till%2009.11.2023).pdf"
+      },
+      "R-POLICY-MUST-STATE-SUBLIMITS-PROPORTIONATE-DEDUCTIONS": {
+        "id": "R-POLICY-MUST-STATE-SUBLIMITS-PROPORTIONATE-DEDUCTIONS",
+        "kind": "rule",
+        "title": "A health policy must clearly state any sub-limits, proportionate deductions and package-rate provisions, with a cross reference to the relevant policy section. (The 2024 framework has no separate rule restricting which items proportionate deduction may apply to; that restriction lived in the superseded 2020 standardisation circular, so rely on the policy wording.)",
+        "quote": "The sub-limits, Proportionate Deductions and the existence of Package rates if any, with cross reference to the concerned policy section,",
+        "source": "IRDAI Master Circular on Protection of Policyholders' Interests, 2024",
+        "source_detail": "Master Circular on Protection of Policyholders' Interests, 2024, Ref IRDAI/PP&GR/CIR/MISC/117/9/2024",
+        "clause_ref": "Schedule C, para 3.1(ix)",
+        "page": 190,
+        "url": "https://irdai.gov.in/document-detail?documentId=5625747"
+      },
+      "R-REIMBURSEMENT-SETTLEMENT-15-DAYS": {
+        "id": "R-REIMBURSEMENT-SETTLEMENT-15-DAYS",
+        "kind": "rule",
+        "title": "Reimbursement (non-cashless) health claims must be settled within 15 days from submission of the claim.",
+        "quote": "Settlement of claims (other than cashless) shall be settled within fifteen days from submission of claim.",
+        "source": "IRDAI Master Circular on Protection of Policyholders' Interests, 2024",
+        "source_detail": "Master Circular on Protection of Policyholders' Interests, 2024, Ref IRDAI/PP&GR/CIR/MISC/117/9/2024",
+        "clause_ref": "Section 1, Part B, V(3)(iii)(6)",
+        "page": 121,
+        "url": "https://irdai.gov.in/document-detail?documentId=5625747"
+      }
+    },
+    "alternate_wordings": [
+      {
+        "policy_wording_id": "AS-STAR-2025",
+        "insurer": "Star Health and Allied Insurance Company Limited",
+        "challengeable_amount": 14400.0,
+        "note": "Under Star's wording the correct deduction would be ₹27,900."
+      }
+    ],
+    "reviewed_by_ai": false,
+    "disclaimer": "ClaimBack gives information, not legal advice. Check the cited clauses and rules before relying on them."
+  },
+  "letters": {
+    "grievance": {
+      "kind": "grievance",
+      "to": "Grievance Redressal Officer, Nirmaan Health Insurance Co. Ltd.",
+      "subject": "Grievance: claim no. CLM-NHI-26-0791240, policy no. NHI/AS/2025/0419087",
+      "body": "Date: 17 September 2026\n\nTo\nThe Grievance Redressal Officer\nNirmaan Health Insurance Co. Ltd.\n\nSubject: Grievance against deductions in claim no. CLM-NHI-26-0791240, policy no. NHI/AS/2025/0419087\n\nDear Sir/Madam,\n\nI am writing about the above claim for the hospitalisation of Rajesh Kumar at Greenfield Hospital from 14 July 2026 to 19 July 2026 (Community-acquired pneumonia, right lower lobe). Your office settled the claim by letter dated 04 August 2026, paying ₹66,975 against ₹1,16,100 claimed.\n\nI have checked the decision against the policy wording (Arogya Sanjeevani Policy, Niva Bupa Health Insurance Co. Ltd. (UIN NBHHLIP27056V042627)) and IRDAI's regulations, and I dispute the following:\n\n1. Room rent and associated hospital charges: ₹22,800 of the ₹42,300 deducted as \"Proportionate deduction - room rent Rs 8,000/day exceeds eligible Rs 5,000/day (62.5% payable)\". The room cost ₹8,000/day against a limit of ₹5,000/day, so the policy lets the insurer pay 62.5% of room rent, nursing charges, medical practitioners' fees and operation theatre charges. That comes to a deduction of ₹19,500. The insurer cut ₹42,300, which means it also applied the cut to medicines and tests, which this clause doesn't allow. I dispute ₹22,800. (Ref: Policy wording: Section 4.1(i)-(ii), Section 4.1, Note 2; IRDAI Master Circular on Protection of Policyholders' Interests, 2024: Schedule C, para 3.1(ix), Section 2, Chapter IV, para 16.3)\n\nI request you to pay the wrongly deducted ₹22,800 (about ₹21,660 after co-payment), and to reply with reasons that refer to the specific terms of the policy. I understand IRDAI requires grievances to be acknowledged immediately and resolved within 14 days. If the grievance is not resolved, I will approach the Insurance Ombudsman under the Insurance Ombudsman Rules, 2017.\n\nEnclosures: policy schedule, hospital bill, discharge summary, your settlement letter dated 04 August 2026.\n\nYours faithfully,\nRajesh Kumar\nPolicy no. NHI/AS/2025/0419087\n",
+      "generated_by": "template"
+    },
+    "ombudsman": {
+      "kind": "ombudsman",
+      "to": "Insurance Ombudsman, Bengaluru",
+      "subject": "Complaint against Nirmaan Health Insurance Co. Ltd.: claim no. CLM-NHI-26-0791240",
+      "body": "Date: 17 September 2026\n\nTo\nThe Insurance Ombudsman\nBengaluru\nOffice of the Insurance Ombudsman, Jeevan Soudha Building, PID No. 57-27-N-19, Ground Floor, 19/19, 24th Main Road, JP Nagar, 1st Phase, Bengaluru - 560 078\nEmail: oio.bengaluru@cioins.co.in\n\nSubject: Complaint against Nirmaan Health Insurance Co. Ltd. - claim no. CLM-NHI-26-0791240, policy no. NHI/AS/2025/0419087\n\nRespected Sir/Madam,\n\n1. Complainant: Rajesh Kumar, policyholder under policy no. NHI/AS/2025/0419087 (Arogya Sanjeevani Policy) issued by Nirmaan Health Insurance Co. Ltd.\n\n2. The claim: hospitalisation of Rajesh Kumar at Greenfield Hospital, Bengaluru, from 14 July 2026 to 19 July 2026 for Community-acquired pneumonia, right lower lobe. Amount claimed: ₹1,16,100. Amount paid: ₹66,975.\n\n3. The insurer's decision: partial settlement by letter dated 04 August 2026.\n\n4. I first represented to the insurer in writing on [date of your grievance] and [the insurer rejected it on (date) / did not reply within one month / replied on (date) and I am not satisfied]. (Insurance Ombudsman Rules, 2017 (as amended up to 09.11.2023; CIO consolidated copy), Rule 14(3)(a) (as amended by G.S.R. 147(E) dated 02.03.2021))\n\n5. Grounds of complaint:\n\n1. Room rent and associated hospital charges: ₹22,800 of the ₹42,300 deducted as \"Proportionate deduction - room rent Rs 8,000/day exceeds eligible Rs 5,000/day (62.5% payable)\". The room cost ₹8,000/day against a limit of ₹5,000/day, so the policy lets the insurer pay 62.5% of room rent, nursing charges, medical practitioners' fees and operation theatre charges. That comes to a deduction of ₹19,500. The insurer cut ₹42,300, which means it also applied the cut to medicines and tests, which this clause doesn't allow. I dispute ₹22,800. (Ref: Policy wording: Section 4.1(i)-(ii), Section 4.1, Note 2; IRDAI Master Circular on Protection of Policyholders' Interests, 2024: Schedule C, para 3.1(ix), Section 2, Chapter IV, para 16.3)\n\nRelief sought: direct the insurer to pay ₹21,660 (the wrongly deducted amount after co-payment) with interest at bank rate + 2% from the date the claim was reported.\n\nI confirm that the same dispute is not pending before, and has not been decided by, any court, consumer forum or arbitrator.\n\nEnclosures: policy schedule and wording, hospital bill, discharge summary, insurer's letter dated 04 August 2026, my grievance and the insurer's reply (if any).\n\nYours faithfully,\nRajesh Kumar\n[Address, phone, email]\n",
+      "generated_by": "template"
+    }
+  },
+  "error": null
+}
