@@ -1,0 +1,167 @@
+# How to escalate a health insurance claim dispute in India
+
+```json
+{
+  "title": "Escalation ladder for disputed health insurance claims in India (deduction, rejection, delay, cashless denial)",
+  "as_of": "2026-09-17",
+  "rules_file": "data/rules_regulatory.json",
+  "general_notes": [
+    "Timelines and conditions in steps 1-3 are taken from the documents in knowledge-base/regulations and are cited by rule id. Step 4 is general information that is NOT backed by a document in this knowledge base.",
+    "Before escalating, ask the insurer for (a) a rejection/deduction letter that cites the specific policy clause (R-REJECTION-MUST-CITE-SPECIFIC-CLAUSE) and (b) a copy of the proposal form if non-disclosure is alleged (R-PROPOSAL-FORM-COPY-WITHIN-15-DAYS).",
+    "Interest for delayed settlement (bank rate + 2% from date of intimation) is payable suo motu and can be claimed at every step (R-CLAIM-DELAY-INTEREST, R-BANK-RATE-DEFINITION).",
+    "The Insurance Ombudsman cannot hear a dispute that is pending before or already decided by a court, consumer forum or arbitrator, so pick the forum deliberately (R-OMBUDSMAN-BAR-IF-COURT-OR-FORUM-CASE).",
+    "Draft Insurance Ombudsman (Amendment) Rules, 2025 (G.S.R. 864(E), 25.11.2025) proposed an appellate authority against Ombudsman awards. No final notification was found as of 2026-09-17 and the draft is not included in this knowledge base. Treat the 2017 Rules as amended up to 09.11.2023 as current, and check again before relying on this."
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "name": "Written grievance to the insurer (Grievance Redressal Officer / insurer grievance portal; also the TPA if involved)",
+      "when_to_use": "The first step for any partial deduction, full rejection, settlement delay, cashless or discharge delay, or document-query harassment. It is also a mandatory precondition for the Ombudsman: a representation in writing, by email or online through the insurer's website.",
+      "how_to_file": [
+        "Visit the nearest branch",
+        "Letter or email to the insurer's grievance officer",
+        "Insurer's website grievance portal",
+        "Insurer's designated call centre (follow up in writing so there is a record for the Ombudsman)",
+        "Senior citizens: use the insurer's separate senior-citizen claims and grievance channel shown on its website"
+      ],
+      "timelines": {
+        "acknowledgement": "Immediately on receipt of the complaint",
+        "resolution": "Within 14 days, with reasons for not accepting the complaint that refer to the specific policy terms and conditions",
+        "if_not_resolved": "Within 14 days of the original complaint date, the insurer must tell the policyholder the options, including the Insurance Ombudsman or Consumer Court",
+        "ombudsman_contact_in_reply": "The insurer's grievance response must include the contact details of the relevant Insurance Ombudsman"
+      },
+      "what_to_include": [
+        "Policy number, claim number, patient name, hospital and dates",
+        "Amounts claimed, amounts paid and each deduction disputed",
+        "The specific rule relied on for each deduction or rejection, citing rule ids and clauses from rules_regulatory.json",
+        "Relief sought: the disallowed amount plus interest at bank rate + 2% where there was delay"
+      ],
+      "official_urls": [
+        {
+          "label": "IRDAI list of insurers' Grievance Redressal Officers",
+          "url": "https://irdai.gov.in/list-of-gros",
+          "verified": true
+        }
+      ],
+      "rule_refs": [
+        "R-GRIEVANCE-FILING-MODES",
+        "R-GRIEVANCE-ACK-IMMEDIATE-RESOLVE-14-DAYS",
+        "R-GRIEVANCE-UNRESOLVED-COMMUNICATE-OPTIONS",
+        "R-GRIEVANCE-REPLY-MUST-GIVE-OMBUDSMAN-DETAILS",
+        "R-SENIOR-CITIZEN-CHANNEL",
+        "R-NO-BAR-ON-COMPLAINING-TO-IRDAI",
+        "R-OMBUDSMAN-PRECONDITION-APPROACH-INSURER-FIRST"
+      ]
+    },
+    {
+      "step": 2,
+      "name": "IRDAI Bima Bharosa portal (online complaint registration and tracking)",
+      "when_to_use": "Optional. It can be used at the same time as step 1 or after it, for example when the insurer does not acknowledge the complaint or misses the 14-day deadline. It records the complaint on IRDAI's system, and insurers must mirror their grievance databases to Bima Bharosa in real time. It does not replace the Ombudsman, and to meet the Ombudsman precondition also keep a written, email or online representation made directly to the insurer.",
+      "how_to_file": [
+        "Register online at https://bimabharosa.irdai.gov.in/",
+        "Track status on Bima Bharosa, the insurer's grievance portal or the insurer's call centre"
+      ],
+      "timelines": {
+        "insurer_resolution": "The same insurer turnaround applies: acknowledge immediately and resolve within 14 days"
+      },
+      "official_urls": [
+        {
+          "label": "Bima Bharosa (IRDAI complaint registration portal)",
+          "url": "https://bimabharosa.irdai.gov.in/",
+          "verified": true
+        }
+      ],
+      "rule_refs": [
+        "R-BIMA-BHAROSA-ONLINE-COMPLAINT",
+        "R-BIMA-BHAROSA-INTEGRATION-TRACKING",
+        "R-GRIEVANCE-ACK-IMMEDIATE-RESOLVE-14-DAYS"
+      ]
+    },
+    {
+      "step": 3,
+      "name": "Insurance Ombudsman (Council for Insurance Ombudsmen)",
+      "when_to_use": "The insurer rejected the representation, did not reply within one month, or gave an unsatisfactory reply. The Master Circular's Citizens' Charter also allows approaching the Ombudsman if the complaint is not resolved within 30 days or the decision is not acceptable. Covers delay in claim settlement, partial or total repudiation, and non-observance of IRDAI regulations or circulars on these issues.",
+      "eligibility_conditions": [
+        "A prior representation to the insurer (in writing, by email or online through the insurer's website) was rejected, got no reply within one month, or got a reply that is not satisfactory",
+        "Filed within one year of the insurer's rejection or unsatisfactory decision, or within one year after the one-month no-reply period ends. The Ombudsman may condone delay after hearing the insurer's objections",
+        "The same subject matter is not pending before, and has not been decided by, a court, consumer forum or arbitrator",
+        "Claim amount up to Rs 50 lakh. The award cannot exceed Rs 50 lakh including expenses, or the actual loss",
+        "Can be filed by the insured person or through legal heirs, nominee or assignee"
+      ],
+      "monetary_limit": "Rs 50 lakh (raised from Rs 30 lakh by Insurance Ombudsman (Amendment) Rules, 2023, G.S.R. 828(E), 09.11.2023)",
+      "time_limit_to_file": "One year (see eligibility_conditions)",
+      "fee": "None. The Ombudsman can be approached without any charge or fee",
+      "jurisdiction": "The Ombudsman covering either the insurer's branch or office complained against, or the complainant's residence",
+      "how_to_file": [
+        "Online: https://cioins.co.in/Complaint/Online",
+        "In person at the Ombudsman office",
+        "In writing by post or email with complete details: name and address, insurer branch, facts, supporting documents, loss suffered and relief sought"
+      ],
+      "process_and_timelines": {
+        "insurer_reply_to_ombudsman": "Insurer must submit its Self-Contained Note with documents within 7 days of the Ombudsman office's notice, and additional documents within 3 days, all in one go. If it defaults, the office proceeds ex parte (IRDAI circular dated 23.07.2026)",
+        "mediation": "If both parties consent, the Ombudsman issues a recommendation within one month. The complainant has 15 days to accept it in writing as full and final, and the insurer must then comply within 15 days",
+        "award": "Within three months of receiving all requirements from the complainant. The award is binding on the insurer",
+        "insurer_compliance": "Within 30 days of receiving the award, plus penal interest at bank rate + 2% from the date the claim ought to have been settled",
+        "penalty_for_non_compliance": "Rs 5,000 per day payable to the complainant, on top of penal interest, unless the insurer has chosen to appeal. Insurer appeals must be filed within 30 days"
+      },
+      "official_urls": [
+        {
+          "label": "CIO online complaint registration",
+          "url": "https://cioins.co.in/Complaint/Online",
+          "verified": true
+        },
+        {
+          "label": "CIO list of Insurance Ombudsman offices",
+          "url": "https://www.cioins.co.in/Ombudsman",
+          "verified": true
+        },
+        {
+          "label": "Insurance Ombudsman Rules 2017 and amendments (CIO)",
+          "url": "https://www.cioins.co.in/OmbudsmanRules2017",
+          "verified": true
+        }
+      ],
+      "rule_refs": [
+        "R-OMBUDSMAN-AFTER-30-DAYS-OR-UNSATISFACTORY-DECISION",
+        "R-OMBUDSMAN-PRECONDITION-APPROACH-INSURER-FIRST",
+        "R-OMBUDSMAN-ONE-YEAR-LIMIT",
+        "R-OMBUDSMAN-DELAY-CONDONATION",
+        "R-OMBUDSMAN-BAR-IF-COURT-OR-FORUM-CASE",
+        "R-OMBUDSMAN-CLAIMS-UP-TO-50-LAKH",
+        "R-OMBUDSMAN-AWARD-CAP-50-LAKH",
+        "R-OMBUDSMAN-NO-FEE-FILING-MODES",
+        "R-OMBUDSMAN-JURISDICTION",
+        "R-OMBUDSMAN-GROUNDS-DELAY-REPUDIATION",
+        "R-OMBUDSMAN-GROUND-NONCOMPLIANCE-WITH-IRDAI-RULES",
+        "R-OMBUDSMAN-INSURER-SCN-7-DAYS",
+        "R-OMBUDSMAN-EX-PARTE-IF-INSURER-DELAYS",
+        "R-OMBUDSMAN-MEDIATION-ACCEPTANCE-IS-FINAL",
+        "R-OMBUDSMAN-AWARD-WITHIN-3-MONTHS",
+        "R-OMBUDSMAN-AWARD-BINDING-ON-INSURER",
+        "R-OMBUDSMAN-AWARD-30-DAYS-PENALTY-5000",
+        "R-OMBUDSMAN-AWARD-PENAL-INTEREST"
+      ]
+    },
+    {
+      "step": 4,
+      "name": "Consumer Commission under the Consumer Protection Act, 2019 (District / State / National)",
+      "general_info": true,
+      "verified_in_knowledge_base": false,
+      "when_to_use": "The claim is above the Ombudsman limit, the complainant wants compensation beyond the Ombudsman's powers, or the complainant prefers a judicial forum. Do not run it alongside an Ombudsman complaint on the same dispute.",
+      "summary": "General information, not from the knowledge base documents: complaints about deficiency in insurance service can be filed before the District Consumer Disputes Redressal Commission, with appeals to the State and National Commissions. Pecuniary jurisdiction under the Consumer Protection (Jurisdiction of the District Commission, the State Commission and the National Commission) Rules, 2021 is commonly stated as up to Rs 50 lakh for District, above Rs 50 lakh up to Rs 2 crore for State, and above Rs 2 crore for National. The limitation period is generally 2 years from the cause of action (Section 69, Consumer Protection Act, 2019). Confirm current limits and fees before advising.",
+      "official_urls": [
+        {
+          "label": "e-Jagriti consumer complaint e-filing platform (Department of Consumer Affairs)",
+          "url": "https://e-jagriti.gov.in/",
+          "verified": true,
+          "note": "The URL resolves to the official e-Jagriti platform. Filing procedures and limits were not checked against a document in this knowledge base."
+        }
+      ],
+      "rule_refs": [
+        "R-OMBUDSMAN-BAR-IF-COURT-OR-FORUM-CASE",
+        "R-GRIEVANCE-UNRESOLVED-COMMUNICATE-OPTIONS"
+      ]
+    }
+  ]
+}
+```

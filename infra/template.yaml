@@ -1,0 +1,278 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: >-
+  ClaimBack - checks Indian health insurance claim deductions against the policy wording, IRDAI rules and
+  real Ombudsman decisions, and drafts the complaint letter.
+
+Parameters:
+  ModelId:
+    Type: String
+    Default: global.anthropic.claude-opus-5
+    Description: Claude model id on Amazon Bedrock (inference-profile prefix required on the invoke path)
+  BedrockClient:
+    Type: String
+    Default: invoke
+    AllowedValues: [invoke, mantle]
+    Description: >-
+      How to call Claude. "invoke" uses bedrock-runtime InvokeModel and works in every region including ap-south-1.
+      "mantle" uses the Messages API endpoint, which is not available in ap-south-1 (404).
+  KnowledgeBaseId:
+    Type: String
+    Default: ""
+    Description: Bedrock Knowledge Base id from infra/setup_knowledge_base.py (leave empty to use the bundled local search)
+  FrontendOrigin:
+    Type: String
+    Default: http://localhost:5173
+    Description: Origin of the web app allowed by CORS, e.g. https://main.xxxx.amplifyapp.com
+
+Globals:
+  Function:
+    Runtime: python3.13
+    Architectures: [x86_64]
+    CodeUri: ../backend/.build/lambda
+    MemorySize: 1024
+    Tracing: Active
+    Environment:
+      Variables:
+        CLAIMBACK_LLM: bedrock
+        CLAIMBACK_STORAGE: aws
+        CLAIMBACK_TABLE: !Ref ClaimsTable
+        CLAIMBACK_BUCKET: !Ref DocumentsBucket
+        CLAIMBACK_MODEL_ID: !Ref ModelId
+        CLAIMBACK_BEDROCK_CLIENT: !Ref BedrockClient
+        CLAIMBACK_AWS_REGION: !Ref AWS::Region
+        CLAIMBACK_KB_ID: !Ref KnowledgeBaseId
+        CLAIMBACK_DATA_DIR: /var/task/data
+        CLAIMBACK_KNOWLEDGE_DIR: /var/task/knowledge-base
+        CLAIMBACK_SAMPLES_DIR: /var/task/samples
+        CLAIMBACK_STEP_DELAY: "0"
+        CLAIMBACK_CORS_ORIGINS: !Ref FrontendOrigin
+
+Resources:
+  # ---------------------------------------------------------------- data
+  ClaimsTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: id
+          AttributeType: S
+      KeySchema:
+        - AttributeName: id
+          KeyType: HASH
+      SSESpecification:
+        SSEEnabled: true
+
+  DocumentsBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      LifecycleConfiguration:
+        Rules:
+          - Id: delete-medical-documents-after-30-days
+            Status: Enabled
+            Prefix: claims/
+            ExpirationInDays: 30
+
+  KnowledgeBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+
+  KnowledgeBaseRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: bedrock.amazonaws.com
+            Action: sts:AssumeRole
+            Condition:
+              StringEquals:
+                aws:SourceAccount: !Ref AWS::AccountId
+      Policies:
+        - PolicyName: knowledge-base
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action: bedrock:InvokeModel
+                Resource: !Sub arn:aws:bedrock:${AWS::Region}::foundation-model/amazon.titan-embed-text-v2:0
+              - Effect: Allow
+                Action: [s3:GetObject, s3:ListBucket]
+                Resource:
+                  - !GetAtt KnowledgeBucket.Arn
+                  - !Sub ${KnowledgeBucket.Arn}/*
+              - Effect: Allow
+                Action: [s3vectors:PutVectors, s3vectors:GetVectors, s3vectors:DeleteVectors, s3vectors:QueryVectors, s3vectors:GetIndex]
+                Resource: !Sub arn:aws:s3vectors:${AWS::Region}:${AWS::AccountId}:bucket/claimback-*
+
+  # ---------------------------------------------------------------- API
+  HttpApi:
+    Type: AWS::Serverless::HttpApi
+    Properties:
+      CorsConfiguration:
+        AllowOrigins: [!Ref FrontendOrigin]
+        AllowMethods: [GET, POST, DELETE, OPTIONS]
+        AllowHeaders: [content-type, x-claimback-owner]
+        MaxAge: 600
+
+  ApiFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: claimback.handlers.api_handler
+      Timeout: 29
+      Environment:
+        Variables:
+          CLAIMBACK_STATE_MACHINE_ARN: !Ref ClaimStateMachine
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref ClaimsTable
+        - S3CrudPolicy:
+            BucketName: !Ref DocumentsBucket
+        - StepFunctionsExecutionPolicy:
+            StateMachineName: !GetAtt ClaimStateMachine.Name
+        - Statement:
+            - Effect: Allow
+              # letter polishing; the Anthropic SDK's Bedrock client signs requests for the bedrock-mantle service
+              Action: [bedrock:InvokeModel, bedrock:InvokeModelWithResponseStream, "bedrock-mantle:*"]
+              Resource: "*"
+      Events:
+        Api:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref HttpApi
+            Path: /{proxy+}
+            Method: ANY
+
+  # ---------------------------------------------------------------- analysis pipeline
+  StepFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: claimback.handlers.step_handler
+      Timeout: 600
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref ClaimsTable
+        - S3ReadPolicy:
+            BucketName: !Ref DocumentsBucket
+        - Statement:
+            - Effect: Allow
+              Action: [bedrock:InvokeModel, bedrock:InvokeModelWithResponseStream, "bedrock-mantle:*", bedrock:Retrieve]
+              Resource: "*"
+
+  FailFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: claimback.handlers.fail_handler
+      Timeout: 30
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref ClaimsTable
+
+  ClaimStateMachine:
+    Type: AWS::Serverless::StateMachine
+    Properties:
+      Type: STANDARD
+      Tracing:
+        Enabled: true
+      Policies:
+        - LambdaInvokePolicy:
+            FunctionName: !Ref StepFunction
+        - LambdaInvokePolicy:
+            FunctionName: !Ref FailFunction
+      DefinitionSubstitutions:
+        StepFunctionArn: !GetAtt StepFunction.Arn
+        FailFunctionArn: !GetAtt FailFunction.Arn
+      Definition:
+        Comment: ClaimBack analysis - read documents with Claude, run the rule engine, let Claude review open questions, write the report
+        StartAt: ReadDocuments
+        States:
+          ReadDocuments:
+            Type: Task
+            Resource: arn:aws:states:::lambda:invoke
+            Parameters: {FunctionName: "${StepFunctionArn}", Payload: {claim_id.$: $.claim_id, step: read_documents}}
+            OutputPath: $.Payload
+            Retry: [{ErrorEquals: [Lambda.ServiceException, Lambda.TooManyRequestsException, Lambda.SdkClientException], IntervalSeconds: 2, MaxAttempts: 3, BackoffRate: 2}]
+            Catch: [{ErrorEquals: [States.ALL], ResultPath: $.error, Next: MarkFailed}]
+            Next: CheckItems
+          CheckItems:
+            Type: Task
+            Resource: arn:aws:states:::lambda:invoke
+            Parameters: {FunctionName: "${StepFunctionArn}", Payload: {claim_id.$: $.claim_id, step: check_items}}
+            OutputPath: $.Payload
+            Catch: [{ErrorEquals: [States.ALL], ResultPath: $.error, Next: MarkFailed}]
+            Next: CheckPolicy
+          CheckPolicy:
+            Type: Task
+            Resource: arn:aws:states:::lambda:invoke
+            Parameters: {FunctionName: "${StepFunctionArn}", Payload: {claim_id.$: $.claim_id, step: check_policy}}
+            OutputPath: $.Payload
+            Catch: [{ErrorEquals: [States.ALL], ResultPath: $.error, Next: MarkFailed}]
+            Next: CheckRules
+          CheckRules:
+            Type: Task
+            Resource: arn:aws:states:::lambda:invoke
+            Parameters: {FunctionName: "${StepFunctionArn}", Payload: {claim_id.$: $.claim_id, step: check_rules}}
+            OutputPath: $.Payload
+            Catch: [{ErrorEquals: [States.ALL], ResultPath: $.error, Next: MarkFailed}]
+            Next: SimilarCases
+          SimilarCases:
+            Type: Task
+            Resource: arn:aws:states:::lambda:invoke
+            Parameters: {FunctionName: "${StepFunctionArn}", Payload: {claim_id.$: $.claim_id, step: similar_cases}}
+            OutputPath: $.Payload
+            Catch: [{ErrorEquals: [States.ALL], ResultPath: $.error, Next: MarkFailed}]
+            Next: AiReview
+          AiReview:
+            Type: Task
+            Resource: arn:aws:states:::lambda:invoke
+            Parameters: {FunctionName: "${StepFunctionArn}", Payload: {claim_id.$: $.claim_id, step: ai_review}}
+            OutputPath: $.Payload
+            Retry: [{ErrorEquals: [Lambda.ServiceException, Lambda.TooManyRequestsException], IntervalSeconds: 2, MaxAttempts: 2, BackoffRate: 2}]
+            Catch: [{ErrorEquals: [States.ALL], ResultPath: $.error, Next: MarkFailed}]
+            Next: WriteReport
+          WriteReport:
+            Type: Task
+            Resource: arn:aws:states:::lambda:invoke
+            Parameters: {FunctionName: "${StepFunctionArn}", Payload: {claim_id.$: $.claim_id, step: write_report}}
+            OutputPath: $.Payload
+            Catch: [{ErrorEquals: [States.ALL], ResultPath: $.error, Next: MarkFailed}]
+            End: true
+          MarkFailed:
+            Type: Task
+            Resource: arn:aws:states:::lambda:invoke
+            Parameters: {FunctionName: "${FailFunctionArn}", Payload: {claim_id.$: $.claim_id}}
+            Next: Failed
+          Failed:
+            Type: Fail
+
+Outputs:
+  ApiUrl:
+    Description: Set VITE_API_BASE to this URL when building the frontend
+    Value: !Sub https://${HttpApi}.execute-api.${AWS::Region}.amazonaws.com
+  KnowledgeBucketName:
+    Description: Upload knowledge-base/ here (infra/setup_knowledge_base.py does it)
+    Value: !Ref KnowledgeBucket
+  KnowledgeBaseRoleArn:
+    Value: !GetAtt KnowledgeBaseRole.Arn
+  StateMachineArn:
+    Value: !Ref ClaimStateMachine
