@@ -1,0 +1,118 @@
+name: Deploy to AWS
+
+# Every push to main redeploys the API (SAM) and the site (Amplify Hosting).
+# GitHub authenticates with OIDC by assuming AWS_DEPLOY_ROLE_ARN - no AWS keys are stored in GitHub.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - backend/**
+      - frontend/**
+      - infra/**
+      - data/**
+      - samples/**
+      - knowledge-base/**
+      - .github/workflows/deploy.yml
+  workflow_dispatch:
+
+permissions:
+  id-token: write # required to request the OIDC token
+  contents: read
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+env:
+  AWS_REGION: ap-south-1
+  STACK_NAME: claimback
+  MODEL_ID: global.anthropic.claude-opus-5
+  BEDROCK_CLIENT: invoke
+  KNOWLEDGE_BASE_ID: SIP3PORRNW
+  API_URL: https://pngg77cn4c.execute-api.ap-south-1.amazonaws.com
+  SITE_ORIGIN: https://main.d2nbtgk28gfk1k.amplifyapp.com
+
+jobs:
+  deploy:
+    name: Test, deploy API, deploy site
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up uv and Python 3.13
+        uses: astral-sh/setup-uv@v6
+        with:
+          python-version: "3.13"
+          enable-cache: true
+
+      - name: Run backend tests
+        working-directory: backend
+        run: uv run pytest -q
+
+      - name: Bundle the Lambda package
+        working-directory: backend
+        run: uv run python scripts/build_lambda.py
+
+      - name: Authenticate to AWS
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - uses: aws-actions/setup-sam@v2
+        with:
+          use-installer: true
+
+      - name: Deploy the API, pipeline and storage
+        run: |
+          sam deploy \
+            --template-file infra/template.yaml \
+            --stack-name "$STACK_NAME" \
+            --region "$AWS_REGION" \
+            --capabilities CAPABILITY_NAMED_IAM \
+            --resolve-s3 \
+            --no-confirm-changeset \
+            --no-fail-on-empty-changeset \
+            --parameter-overrides \
+              ModelId="$MODEL_ID" \
+              BedrockClient="$BEDROCK_CLIENT" \
+              KnowledgeBaseId="$KNOWLEDGE_BASE_ID" \
+              FrontendOrigin="$SITE_ORIGIN" \
+              GitHubRepo="${{ github.repository }}"
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Build the site
+        working-directory: frontend
+        env:
+          VITE_API_BASE: ${{ env.API_URL }}
+        run: |
+          npm ci
+          npm run build
+
+      - name: Deploy the site to Amplify Hosting
+        run: uv run --project backend python infra/deploy_frontend.py --region "$AWS_REGION"
+
+      - name: Smoke test the deployment
+        run: |
+          set -e
+          curl -fsS "$API_URL/api/health" | tee /dev/stderr | grep -q '"status":"ok"'
+          claim=$(curl -fsS -X POST "$API_URL/api/claims/sample" \
+            -H 'Content-Type: application/json' -H 'X-ClaimBack-Owner: ci-smoke-test' \
+            -d '{"sample_id":"S1"}' | python -c 'import sys,json; print(json.load(sys.stdin)["id"])')
+          for _ in $(seq 1 30); do
+            sleep 4
+            status=$(curl -fsS "$API_URL/api/claims/$claim" -H 'X-ClaimBack-Owner: ci-smoke-test' \
+              | python -c 'import sys,json; print(json.load(sys.stdin)["status"])')
+            [ "$status" = "processing" ] || break
+          done
+          echo "sample claim finished as: $status"
+          curl -fsS -X DELETE "$API_URL/api/claims/$claim" -H 'X-ClaimBack-Owner: ci-smoke-test' -o /dev/null
+          [ "$status" = "complete" ]
+          curl -fsS -o /dev/null -w 'site %{http_code}\n' "$SITE_ORIGIN"

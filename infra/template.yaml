@@ -24,6 +24,22 @@ Parameters:
     Type: String
     Default: http://localhost:5173
     Description: Origin of the web app allowed by CORS, e.g. https://main.xxxx.amplifyapp.com
+  GitHubRepo:
+    Type: String
+    Default: ""
+    Description: >-
+      owner/repo that may deploy this stack from GitHub Actions (e.g. HitanshGithub/claimback). Empty disables the
+      CI/CD role. GitHub authenticates with OIDC, so no AWS keys are stored in GitHub.
+  ExistingOidcProviderArn:
+    Type: String
+    Default: ""
+    Description: ARN of an existing token.actions.githubusercontent.com OIDC provider; empty creates one.
+
+Conditions:
+  HasGitHubRepo: !Not [!Equals [!Ref GitHubRepo, ""]]
+  CreateOidcProvider: !And
+    - !Condition HasGitHubRepo
+    - !Equals [!Ref ExistingOidcProviderArn, ""]
 
 Globals:
   Function:
@@ -265,6 +281,58 @@ Resources:
           Failed:
             Type: Fail
 
+  # ---------------------------------------------------------------- CI/CD (GitHub Actions -> this stack)
+  GitHubOidcProvider:
+    Type: AWS::IAM::OIDCProvider
+    Condition: CreateOidcProvider
+    Properties:
+      Url: https://token.actions.githubusercontent.com
+      ClientIdList: [sts.amazonaws.com]
+      ThumbprintList: [6938fd4d98bab03faadb97b34396831e3780aea1]
+
+  GitHubDeployRole:
+    Type: AWS::IAM::Role
+    Condition: HasGitHubRepo
+    Properties:
+      RoleName: claimback-github-deploy
+      Description: !Sub Lets GitHub Actions in ${GitHubRepo} deploy the claimback stack and frontend
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Federated: !If [CreateOidcProvider, !Ref GitHubOidcProvider, !Ref ExistingOidcProviderArn]
+            Action: sts:AssumeRoleWithWebIdentity
+            Condition:
+              StringEquals:
+                token.actions.githubusercontent.com:aud: sts.amazonaws.com
+              StringLike:
+                token.actions.githubusercontent.com:sub: !Sub repo:${GitHubRepo}:*
+      Policies:
+        - PolicyName: deploy-claimback
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              # CloudFormation drives the deployment; SAM uploads artifacts to its managed bucket
+              - Effect: Allow
+                Action: [cloudformation:*, apigateway:*, states:*, dynamodb:*, lambda:*, amplify:*, logs:*, xray:*, tag:GetResources]
+                Resource: "*"
+              - Effect: Allow
+                Action: s3:*
+                Resource:
+                  - arn:aws:s3:::aws-sam-cli-managed-default*
+                  - arn:aws:s3:::aws-sam-cli-managed-default*/*
+                  - !GetAtt DocumentsBucket.Arn
+                  - !Sub ${DocumentsBucket.Arn}/*
+                  - !GetAtt KnowledgeBucket.Arn
+                  - !Sub ${KnowledgeBucket.Arn}/*
+              # only the roles this stack owns - no account-wide IAM access
+              - Effect: Allow
+                Action: [iam:CreateRole, iam:DeleteRole, iam:GetRole, iam:TagRole, iam:UntagRole, iam:PassRole,
+                         iam:AttachRolePolicy, iam:DetachRolePolicy, iam:PutRolePolicy, iam:DeleteRolePolicy,
+                         iam:GetRolePolicy, iam:ListRolePolicies, iam:ListAttachedRolePolicies, iam:UpdateAssumeRolePolicy]
+                Resource: !Sub arn:aws:iam::${AWS::AccountId}:role/claimback-*
+
 Outputs:
   ApiUrl:
     Description: Set VITE_API_BASE to this URL when building the frontend
@@ -276,3 +344,7 @@ Outputs:
     Value: !GetAtt KnowledgeBaseRole.Arn
   StateMachineArn:
     Value: !Ref ClaimStateMachine
+  GitHubDeployRoleArn:
+    Condition: HasGitHubRepo
+    Description: Set this as the AWS_DEPLOY_ROLE_ARN variable in the GitHub repository
+    Value: !GetAtt GitHubDeployRole.Arn
