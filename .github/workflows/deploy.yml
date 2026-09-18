@@ -54,12 +54,6 @@ jobs:
         working-directory: backend
         run: uv run python scripts/build_lambda.py
 
-      - name: Show OIDC claims (temporary debug)
-        run: |
-          curl -sS -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
-            "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=sts.amazonaws.com" \
-          | python3 -c 'import sys, json, base64; t = json.load(sys.stdin)["value"].split(".")[1]; t += "=" * (-len(t) % 4); c = json.loads(base64.urlsafe_b64decode(t)); print(json.dumps({k: c.get(k) for k in ("iss", "aud", "sub", "repository", "ref", "repository_owner")}, indent=2))'
-
       - name: Authenticate to AWS
         uses: aws-actions/configure-aws-credentials@v4
         with:

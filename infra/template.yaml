@@ -307,7 +307,14 @@ Resources:
               StringEquals:
                 token.actions.githubusercontent.com:aud: sts.amazonaws.com
               StringLike:
-                token.actions.githubusercontent.com:sub: !Sub repo:${GitHubRepo}:*
+                # GitHub now issues subjects with immutable ids (repo:owner@123/repo@456:ref:...);
+                # accept that and the older plain form, both pinned to this repository
+                token.actions.githubusercontent.com:sub:
+                  - !Sub repo:${GitHubRepo}:*
+                  - !Sub
+                    - repo:${Owner}@*/${Name}@*:*
+                    - Owner: !Select [0, !Split ["/", !Ref GitHubRepo]]
+                      Name: !Select [1, !Split ["/", !Ref GitHubRepo]]
       Policies:
         - PolicyName: deploy-claimback
           PolicyDocument:
