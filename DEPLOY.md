@@ -48,7 +48,11 @@ both forms.
 
 ## Still to do on this account
 
-- [ ] **Submit the Anthropic use-case form** for Claude Opus 5 in the Bedrock console (Mumbai). Until then every Claude call returns 403 "not available for this account". The app degrades gracefully: sample claims work, uploads fail, and the AI review step is skipped with a note.
+- [x] **Reading documents works** - it runs on Ministral 3 14B (`LlmProvider=converse`), which needed no agreement. Uploads,
+  AI review and letter polishing are live and were tested in production on 19 Sep 2026 with a phone photo of a bill.
+- [ ] **Optional: submit the Anthropic use-case form** for Claude Opus 5 in the Bedrock console (Mumbai) if you want to
+  compare. Claude is then one parameter away: `LlmProvider=anthropic`. Until the agreement exists, every Claude call
+  returns 403 "not available for this account".
 - [ ] **Re-run Knowledge Base ingestion** once verification clears: `uv run --project backend python infra/setup_knowledge_base.py --stack claimback --region ap-south-1 --ingest-only`
 - [ ] **Set a budget alert** (Billing -> Budgets), e.g. $20/month.
 

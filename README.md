@@ -17,16 +17,16 @@ flowchart LR
     A --> D[(DynamoDB<br/>claims)]
     A --> S[(S3<br/>documents, 30-day expiry)]
     A -->|start| SF[Step Functions<br/>analysis pipeline]
-    SF --> R[Read documents<br/>Claude Opus 5 on Bedrock]
+    SF --> R[Read documents<br/>Ministral 3 on Bedrock]
     R --> E[Rule engine<br/>146 items · 60 rules · 25 clauses]
     E --> V[AI review<br/>Claude + tools]
     V --> KB[Bedrock Knowledge Base<br/>on S3 Vectors]
     V --> W[Report + letters]
 ```
 
-1. **Read.** Claude Opus 5 on Amazon Bedrock reads the PDFs or phone photos into structured data (bill lines, deductions, dates, policy history).
+1. **Read.** A model on Amazon Bedrock reads the PDFs or phone photos into structured data (bill lines, deductions, dates, policy history). Today that is **Ministral 3 14B**, chosen by a setting; Claude and Nova work through the same code.
 2. **Check.** A deterministic rule engine judges every deduction. There's no guessing: each verdict cites a verbatim policy clause, an IRDAI rule or a List I–IV item, with page numbers.
-3. **Review.** Claude researches only what the rules can't settle, using read-only tools (Knowledge Base search, rule and clause lookup, the non-payable item matcher). It can only cite ids that exist in the curated data.
+3. **Review.** The model judges only what the rules can't settle, given Knowledge Base passages and a list of allowed citations. It can only cite ids that exist in the curated data, and an unusable answer is discarded.
 4. **Act.** The user gets a marked-up bill, similar real decisions (wins and losses), deadlines for the insurer → Bima Bharosa → Ombudsman route, and ready-to-send letters.
 
 ## Try it locally (no AWS needed)
@@ -45,7 +45,24 @@ npm install
 npm run dev          # http://localhost:5173, proxies /api to :8000
 ```
 
-To use Claude on Bedrock locally (reads uploads, AI review, letter polishing), set `CLAIMBACK_LLM=bedrock` and `CLAIMBACK_AWS_REGION=ap-south-1`, with AWS credentials that have Bedrock access.
+To read your own uploads locally (extraction, AI review, letter polishing), set `CLAIMBACK_LLM=bedrock` and
+`CLAIMBACK_AWS_REGION=ap-south-1`, with AWS credentials that have Bedrock access.
+
+### How accurate is the reading?
+
+`backend/scripts/eval_extraction.py` scores a model against the five samples, whose correct answers are known.
+Ministral 3 14B, measured on 19 Sep 2026:
+
+| | Result |
+|---|---|
+| Scalar fields (dates, amounts, policy history) | 78 / 80 |
+| Bill lines | 60 / 60 |
+| Deduction rows | exact on all 5 |
+| **Rule engine reached the same challengeable amount** | **5 / 5** |
+| From the creased phone photo instead of the bill PDF | same result |
+
+Cost is about **$0.02 per claim** against roughly $0.90 for Claude Opus 5. Swap models with `CLAIMBACK_MODEL_EXTRACT`,
+`CLAIMBACK_MODEL_REVIEW` and `CLAIMBACK_MODEL_LETTER`, then re-run the eval to see what changes.
 
 ## Tests
 
