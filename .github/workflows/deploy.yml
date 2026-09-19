@@ -29,6 +29,10 @@ env:
   STACK_NAME: claimback
   MODEL_ID: global.anthropic.claude-opus-5
   BEDROCK_CLIENT: invoke
+  LLM_PROVIDER: converse
+  MODEL_EXTRACT: mistral.ministral-3-14b-instruct
+  MODEL_REVIEW: mistral.ministral-3-14b-instruct
+  MODEL_LETTER: mistral.ministral-3-8b-instruct
   KNOWLEDGE_BASE_ID: SIP3PORRNW
   API_URL: https://pngg77cn4c.execute-api.ap-south-1.amazonaws.com
   SITE_ORIGIN: https://main.d2nbtgk28gfk1k.amplifyapp.com
@@ -77,6 +81,10 @@ jobs:
             --parameter-overrides \
               ModelId="$MODEL_ID" \
               BedrockClient="$BEDROCK_CLIENT" \
+              LlmProvider="$LLM_PROVIDER" \
+              ModelExtract="$MODEL_EXTRACT" \
+              ModelReview="$MODEL_REVIEW" \
+              ModelLetter="$MODEL_LETTER" \
               KnowledgeBaseId="$KNOWLEDGE_BASE_ID" \
               FrontendOrigin="$SITE_ORIGIN" \
               GitHubRepo="${{ github.repository }}"

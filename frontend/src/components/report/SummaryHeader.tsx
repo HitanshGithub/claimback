@@ -316,7 +316,7 @@ export function SummaryHeader({ claim, report }: { claim: Claim; report: Report 
             {report.reviewed_by_ai ? (
               <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-200 bg-brand-50 px-3 py-1 text-xs font-medium text-brand-800">
                 <BadgeCheck className="size-3.5" aria-hidden="true" />
-                Reviewed by Claude
+                Reviewed by AI
               </span>
             ) : (
               <span className="inline-flex items-center gap-1.5 rounded-full border border-line bg-white px-3 py-1 text-xs font-medium text-stone-600">

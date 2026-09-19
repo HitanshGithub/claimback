@@ -9,6 +9,25 @@ Parameters:
     Type: String
     Default: global.anthropic.claude-opus-5
     Description: Claude model id on Amazon Bedrock (inference-profile prefix required on the invoke path)
+  LlmProvider:
+    Type: String
+    Default: converse
+    AllowedValues: [converse, anthropic]
+    Description: >-
+      "converse" calls any Bedrock model through the Converse API (Ministral 3, Mistral Large, Nova, ...).
+      "anthropic" calls Claude through the Anthropic SDK and needs Anthropic model access on the account.
+  ModelExtract:
+    Type: String
+    Default: mistral.ministral-3-14b-instruct
+    Description: Converse provider - reads the claim documents (must accept images)
+  ModelReview:
+    Type: String
+    Default: mistral.ministral-3-14b-instruct
+    Description: Converse provider - reviews deductions the rule engine cannot settle
+  ModelLetter:
+    Type: String
+    Default: mistral.ministral-3-8b-instruct
+    Description: Converse provider - polishes the complaint letters
   BedrockClient:
     Type: String
     Default: invoke
@@ -55,6 +74,10 @@ Globals:
         CLAIMBACK_TABLE: !Ref ClaimsTable
         CLAIMBACK_BUCKET: !Ref DocumentsBucket
         CLAIMBACK_MODEL_ID: !Ref ModelId
+        CLAIMBACK_LLM_PROVIDER: !Ref LlmProvider
+        CLAIMBACK_MODEL_EXTRACT: !Ref ModelExtract
+        CLAIMBACK_MODEL_REVIEW: !Ref ModelReview
+        CLAIMBACK_MODEL_LETTER: !Ref ModelLetter
         CLAIMBACK_BEDROCK_CLIENT: !Ref BedrockClient
         CLAIMBACK_AWS_REGION: !Ref AWS::Region
         CLAIMBACK_KB_ID: !Ref KnowledgeBaseId

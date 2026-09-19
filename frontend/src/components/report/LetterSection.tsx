@@ -112,7 +112,7 @@ function LetterEditor({
             <FileSignature className="size-4 shrink-0 text-brand-700" aria-hidden="true" />
             <span className="truncate text-sm font-semibold text-stone-900">{meta.title}</span>
             <span className="hidden rounded-full bg-white px-2 py-0.5 text-[11px] font-medium text-stone-500 ring-1 ring-line sm:inline">
-              {draft.generated_by === 'claude' ? 'Drafted by Claude' : 'Drafted from your report'}
+              {draft.generated_by === 'ai' ? 'Drafted from your report, polished by AI' : 'Drafted from your report'}
             </span>
           </div>
           <div className="flex flex-wrap gap-2">

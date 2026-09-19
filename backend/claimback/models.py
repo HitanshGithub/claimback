@@ -31,9 +31,9 @@ class BillLine(BaseModel):
 
 
 class Deduction(BaseModel):
-    line_code: str | None = Field(description="Code of the bill line this deduction applies to; null for whole-bill deductions such as proportionate deduction")
+    line_code: str | None = Field(default=None, description="Code of the bill line this deduction applies to; null for whole-bill deductions such as proportionate deduction")
     description: str = Field(description="Item as named in the insurer's letter")
-    billed: float | None
+    billed: float | None = None
     deducted: float
     reason: str = Field(description="Reason exactly as written by the insurer")
 
@@ -42,7 +42,7 @@ class PolicyInfo(BaseModel):
     policy_number: str
     insurer_name: str
     product_name: str
-    policy_wording_id: str | None = Field(description="Id of a supported policy wording, e.g. AS-NIVA-2026, or null if not supported")
+    policy_wording_id: str | None = Field(default=None, description="Id of a supported policy wording, e.g. AS-NIVA-2026, or null if not supported")
     sum_insured: float
     cumulative_bonus: float = 0
     policy_period_start: date | None = None
@@ -209,7 +209,7 @@ class Letter(BaseModel):
     to: str
     subject: str
     body: str
-    generated_by: Literal["template", "claude"]
+    generated_by: Literal["template", "ai"]
 
 
 # ----------------------------------------------------------------------------------------------------------------

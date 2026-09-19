@@ -28,4 +28,4 @@ def polish(letter: Letter) -> Letter:
     )
     check_refusal(message)
     draft = message.parsed_output
-    return letter.model_copy(update={"subject": draft.subject, "body": draft.body, "generated_by": "claude"})
+    return letter.model_copy(update={"subject": draft.subject, "body": draft.body, "generated_by": "ai"})

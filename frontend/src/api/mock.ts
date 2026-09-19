@@ -12,7 +12,7 @@
  *   /claims/sample-s1        complete report (letters as exported)
  *   /claims/mock-live-s1     processing that starts when the page first loads it
  *   /claims/mock-failed-s1   a failed claim
- *   ?mock_llm=bedrock        pretend Claude on Bedrock is on (enables uploads)
+ *   ?mock_llm=bedrock        pretend the Bedrock model is on (enables uploads)
  */
 import healthJson from '../mocks/health.json'
 import { buildMockLetter } from '../mocks/letter-template'
@@ -52,7 +52,7 @@ const DEFAULT_STEPS: ProgressStep[] = [
   { name: 'check_policy', label: 'Checking your policy wording', status: 'pending', detail: null },
   { name: 'check_rules', label: 'Checking IRDAI rules and deadlines', status: 'pending', detail: null },
   { name: 'similar_cases', label: 'Finding similar Ombudsman and court decisions', status: 'pending', detail: null },
-  { name: 'ai_review', label: "Claude reviews anything the rules can't settle", status: 'pending', detail: null },
+  { name: 'ai_review', label: "AI reviews anything the rules can't settle", status: 'pending', detail: null },
   { name: 'write_report', label: 'Writing your report', status: 'pending', detail: null },
 ]
 
@@ -268,7 +268,7 @@ export const mockApi: ClaimBackApi = {
     if (llmMode() === 'offline') {
       throw new ApiError(
         503,
-        "Reading your own documents needs Claude on Amazon Bedrock, which isn't switched on in this build.",
+        "Reading your own documents needs a model on Amazon Bedrock, which isn't switched on in this build.",
       )
     }
     const doc = (kind: ClaimDocument['kind'], file: File): ClaimDocument => ({

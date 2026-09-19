@@ -24,9 +24,16 @@ STEPS: list[tuple[StepName, str]] = [
     ("check_policy", "Checking your policy wording"),
     ("check_rules", "Checking IRDAI rules and deadlines"),
     ("similar_cases", "Finding similar Ombudsman and court decisions"),
-    ("ai_review", "Claude reviews anything the rules can't settle"),
+    ("ai_review", "AI reviews anything the rules can't settle"),
     ("write_report", "Writing your report"),
 ]
+
+
+def model_label() -> str:
+    """Friendly name of the model doing the AI work, e.g. 'Ministral 3 14B' or 'Claude Opus 5'."""
+    model = settings.model_id if settings.llm_provider == "anthropic" else settings.model_extract
+    name = model.split(".", 1)[-1].replace("-instruct", "").replace("-", " ")
+    return name.title().replace("Claude", "Claude").replace("Ministral 3 14B", "Ministral 3 14B")
 
 
 def new_claim(source: str, title: str, sample_id: str | None = None) -> Claim:
@@ -75,14 +82,14 @@ def _read_documents(claim: Claim, store: Storage) -> tuple[str, str]:
         source = "Sample documents"
     else:
         if settings.llm != "bedrock":
-            raise RuntimeError("Reading uploaded documents needs Claude on Amazon Bedrock, which is not enabled.")
-        from .llm.extract import extract_claim
+            raise RuntimeError("Reading uploaded documents needs a model on Amazon Bedrock, which is not enabled.")
+        from .llm import extract_claim
 
         docs = [(d.kind, d.filename, d.content_type, store.read_document(claim.id, d)) for d in claim.documents]
         claim.claim_input = extract_claim(docs, claim.policy_wording_id)
         a = claim.claim_input.admission
         claim.title = f"{a.hospital_name} - {a.diagnosis}"
-        source = "Read by Claude"
+        source = f"Read by {model_label()}"
     c = claim.claim_input
     return f"{source}: {len(c.bill_lines)} bill lines, {len(c.decision.deductions)} deductions", "done"
 
@@ -120,14 +127,14 @@ def _ai_review(claim: Claim, store: Storage) -> tuple[str, str]:
     if not any(f.verdict == "needs_more_info" for f in claim.report.deduction_findings):
         return "Nothing left unresolved", "skipped"
     try:
-        from .llm.review import review
+        from .llm import review
 
         claim.report, changed = review(claim.claim_input, claim.report)
     except Exception as exc:  # the rule-engine report stands on its own; never fail a claim over the review
         log.exception("AI review failed for claim %s", claim.id)
-        return f"Claude review unavailable ({type(exc).__name__}) - showing the rule engine's findings", "skipped"
+        return f"AI review unavailable ({type(exc).__name__}) - showing the rule engine's findings", "skipped"
     claim.report.reviewed_by_ai = True
-    return ("Claude updated unresolved deductions" if changed else "Claude agreed more information is needed"), "done"
+    return (f"{model_label()} updated unresolved deductions" if changed else f"{model_label()} agreed more information is needed"), "done"
 
 
 def _write_report(claim: Claim, store: Storage) -> tuple[str, str]:

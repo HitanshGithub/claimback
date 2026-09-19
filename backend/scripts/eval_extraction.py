@@ -20,7 +20,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from claimback.engine.analyze import analyze  # noqa: E402
-from claimback.llm.extract import extract_claim  # noqa: E402
+from claimback.llm import extract_claim  # noqa: E402
 from claimback.models import ClaimInput  # noqa: E402
 
 SAMPLES = Path(__file__).resolve().parents[2] / "samples"

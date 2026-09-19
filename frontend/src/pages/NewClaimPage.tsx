@@ -83,7 +83,7 @@ export function NewClaimPage() {
           <div className="flex-1">
             <p className="font-semibold text-brand-900">Checking your own documents isn’t switched on here</p>
             <p className="mt-1 text-sm leading-relaxed text-brand-900/80">
-              Reading your documents needs Claude on Amazon Bedrock, which isn’t switched on in this local build. You can
+              Reading your documents needs a model on Amazon Bedrock, which isn’t switched on in this local build. You can
               still see exactly how ClaimBack works with a sample claim.
             </p>
           </div>

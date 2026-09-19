@@ -16,8 +16,12 @@ class Settings:
     samples_dir: Path
     local_store_dir: Path
     aws_region: str
+    llm_provider: str  # "anthropic" (Claude via the Anthropic SDK) | "converse" (any Bedrock model)
     bedrock_client: str  # "invoke" (bedrock-runtime, works in every region) | "mantle" (Messages API endpoint)
-    model_id: str
+    model_id: str  # Claude model for the anthropic provider
+    model_extract: str  # converse provider: reading documents (needs vision)
+    model_review: str  # converse provider: reviewing unresolved deductions
+    model_letter: str  # converse provider: polishing letters
     knowledge_base_id: str | None
     table_name: str | None
     bucket_name: str | None
@@ -35,8 +39,12 @@ def load_settings() -> Settings:
         samples_dir=Path(env("CLAIMBACK_SAMPLES_DIR", str(REPO_ROOT / "samples"))),
         local_store_dir=Path(env("CLAIMBACK_LOCAL_STORE", str(REPO_ROOT / "backend" / ".claims"))),
         aws_region=env("CLAIMBACK_AWS_REGION", env("AWS_REGION", "ap-south-1")),
+        llm_provider=env("CLAIMBACK_LLM_PROVIDER", "converse"),
         bedrock_client=env("CLAIMBACK_BEDROCK_CLIENT", "invoke"),
         model_id=env("CLAIMBACK_MODEL_ID", "global.anthropic.claude-opus-5"),
+        model_extract=env("CLAIMBACK_MODEL_EXTRACT", "mistral.ministral-3-14b-instruct"),
+        model_review=env("CLAIMBACK_MODEL_REVIEW", "mistral.ministral-3-14b-instruct"),
+        model_letter=env("CLAIMBACK_MODEL_LETTER", "mistral.ministral-3-8b-instruct"),
         knowledge_base_id=env("CLAIMBACK_KB_ID"),
         table_name=env("CLAIMBACK_TABLE"),
         bucket_name=env("CLAIMBACK_BUCKET"),

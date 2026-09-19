@@ -34,7 +34,7 @@ def main() -> None:
     # Linux wheels for the Lambda runtime, so no Docker build is needed
     subprocess.run(
         ["uv", "pip", "install", "--target", str(OUT), "--requirement", str(OUT / "requirements.txt"),
-         "--python-platform", "x86_64-manylinux2014", "--python-version", "3.13", "--no-installer-metadata", "--quiet"],
+         "--python-platform", "x86_64-manylinux_2_28", "--python-version", "3.13", "--no-installer-metadata", "--quiet"],
         cwd=BACKEND, check=True,
     )
     # keep *.dist-info: some packages (httpx2) read their version from installed metadata at import time

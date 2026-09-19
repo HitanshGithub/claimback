@@ -188,7 +188,7 @@ def create_letter(claim_id: str, body: LetterRequest, owner: OwnerHeader = None)
     letter = build(claim.claim_input, claim.report)
     if settings.llm == "bedrock":
         try:
-            from .llm.letter import polish
+            from .llm import polish
 
             letter = polish(letter)
         except Exception:

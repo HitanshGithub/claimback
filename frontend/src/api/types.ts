@@ -238,7 +238,7 @@ export interface Letter {
   to: string
   subject: string
   body: string
-  generated_by: 'template' | 'claude'
+  generated_by: 'template' | 'ai'
 }
 
 // ---------------------------------------------------------------------------
